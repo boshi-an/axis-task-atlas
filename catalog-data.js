@@ -480,7 +480,7 @@ window.AXIS_ATLAS = {
       },
       "render": {
         "file": "images/i2rt_inserting.webp",
-        "caption": "RTX rendering of a seeded simulator reset. The physically authored I2RT link primitives are displayed in slate.",
+        "caption": "Simulator reset viewed from across the table. From the arms, the key is on the left and the slot is on the right, 24 cm apart at the same reach depth.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       }
@@ -1073,7 +1073,7 @@ window.AXIS_ATLAS = {
       },
       "render": {
         "file": "images/i2rt_task10717.webp",
-        "caption": "RTX rendering of a seeded simulator reset. The physically authored I2RT link primitives are displayed in slate.",
+        "caption": "Simulator reset viewed from across the table. The red, red and blue buttons form a row across the arms. Each digit card sits 12 cm farther from the arms than its red button.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       }

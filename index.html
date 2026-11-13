@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f6f1">
+  <meta name="description" content="A visual catalog of Axis OmniReset simulation tasks, robot setups, expert policies and reference trajectories.">
+  <title>Robot task atlas · Axis OmniReset</title>
+  <link rel="icon" href="data:,">
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="atlas.css">
+  <script defer src="catalog-data.js"></script>
+  <script defer src="atlas.js"></script>
+</head>
+<body>
+  <a href="#library" class="skip">Skip to environments</a>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <a class="brand" href="#top" aria-label="Axis OmniReset task atlas"><span class="axis-mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>AXIS</strong><span class="brand-divider"></span><span>OmniReset</span></a>
+      <nav aria-label="Documentation"><a href="expert-evidence.json">Evaluation records</a><a class="repo" href="https://github.com/boshi-an/axis-task-atlas">Site repository <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <div class="hero wrap">
+      <div class="hero-copy">
+        <p class="branch-line"><span class="branch-icon" aria-hidden="true">⑂</span><span>dev/refactor</span><span class="small-rule"></span><span>Environment registry</span></p>
+        <h1>Robot task atlas<span>.</span></h1>
+        <p class="lede">Explore the robot setups, expert policies, and reference trajectories behind each simulation task.</p>
+      </div>
+      <a class="compare" href="#compare-wood" id="compare" aria-label="Compare the Panda and I2RT versions of Stack the second block">
+        <div class="compare-views">
+          <figure><img id="hero-panda" alt="Panda in the wood-block stacking environment"><figcaption>Panda</figcaption></figure>
+          <figure><img id="hero-i2rt" alt="Dual I2RT in the wood-block stacking environment"><figcaption>I2RT</figcaption></figure>
+        </div>
+        <div class="compare-caption"><span>One task, two robots</span><strong>Stack the second block <span aria-hidden="true">↗</span></strong></div>
+      </a>
+    </div>
+    <section id="library" class="library" aria-labelledby="library-title">
+      <div class="wrap">
+        <div class="library-heading">
+          <div class="library-title"><h2 id="library-title">Environments</h2><span id="total" class="total"></span></div>
+          <label class="search"><span class="search-icon" aria-hidden="true"></span><span class="sr">Search tasks</span><input id="query" type="search" placeholder="Search tasks, IDs or skills" autocomplete="off"></label>
+        </div>
+        <div class="toolbar">
+          <div id="robots" class="filters" role="group" aria-label="Filter by robot"></div>
+          <div class="view-switch" role="group" aria-label="Display layout">
+            <button id="grid-button" type="button" aria-label="Gallery view" title="Gallery view" aria-pressed="true"><i class="grid-icon" aria-hidden="true"></i></button>
+            <button id="list-button" type="button" aria-label="List view" title="List view" aria-pressed="false"><i class="list-icon" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <p id="results-status" class="sr" aria-live="polite"></p>
+        <noscript><p>Turn on JavaScript to browse the catalog, or read the <a href="catalog-data.js">task records</a>.</p></noscript>
+        <div id="cards" class="cards"></div>
+        <div id="empty" class="empty" hidden><h3>No matching environments</h3><p>Try a different task name, registry ID, or robot.</p><button id="clear-filters" type="button">Clear search and filters</button></div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><span>Axis OmniReset <span class="foot-slash">/</span> Task atlas</span><span>9 Nov 2026 <span aria-hidden="true">·</span> Registry <code>9130fe1</code></span></footer>
+</body>
+</html>

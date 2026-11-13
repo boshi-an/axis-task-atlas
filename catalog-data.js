@@ -1170,30 +1170,38 @@ window.AXIS_ATLAS = {
       "robot": "Dual I2RT",
       "group": "I2RT",
       "profile": "Shared tabletop",
-      "description": "Start with one of five objects held by either arm. Carry it to the rectangular tray and lower it until the release gate opens the gripper.",
+      "description": "Either arm starts holding one of five objects. Carry it to a requested point in the tray and release it. The default target is the center of the tray floor.",
       "actionDim": 14,
-      "action": "14 normalized values, seven per arm. The executing arm uses six world-frame TCP increments bounded by 0.01 m and 0.04 rad per axis. The passive arm holds its reset targets. A geometry and clearance check opens the executing gripper and latches it open.",
-      "obsDim": 247,
-      "obs": "189 task features encode both arms and drive targets, six rigid bodies, TCP poses, the chosen object and arm, geometry, measured contacts and release history. Another 58 measured values cover both arms’ joint positions and velocities, TCP poses and linear and angular velocities.",
+      "action": "14 normalized values, seven per arm. The policy supplies six world-frame TCP increments for the executing arm, up to 0.01 m of translation and 0.04 rad of rotation per axis. The passive arm holds its reset pose. The release controller opens the gripper when the footprint, height and clearance checks pass.",
+      "obsDim": 256,
+      "obs": "189 task values cover both arms and their drive targets, six rigid bodies, TCP poses, the selected object and arm, geometry, contacts and release history. Another 58 values describe the measured state of both arms. The final nine values give the target XYZ in scene axes, the TCP-to-target vector in TCP axes, and the target offset from the center and bottom of the object’s footprint in scene axes.",
       "clock": "15 Hz control · 150 Hz physics · 10 substeps",
       "aliases": [],
-      "schemaNote": "",
+      "schemaNote": "At reset, the target can be offset up to ±25 mm along the tray and ±8 mm across it. Success requires physical containment after release. The task reports XY distance to the requested point separately.",
       "sources": [
         {
           "label": "Environment implementation",
-          "path": "https://github.com/MurphyZhao04/axis-omnireset/blob/8690e20c63ebeec151d861c5125134d1d2f5c098/src/axis_omnireset/tasks/i2rt_watch_place/task.py"
+          "path": "https://github.com/MurphyZhao04/axis-omnireset/blob/d9ebd2af7426446d997608a75139cb13122d0f54/src/axis_omnireset/tasks/i2rt_watch_place/task.py"
         },
         {
           "label": "Task and reset contract",
-          "path": "https://github.com/MurphyZhao04/axis-omnireset/blob/8690e20c63ebeec151d861c5125134d1d2f5c098/src/axis_omnireset/tasks/i2rt_watch_place/README.md"
+          "path": "https://github.com/MurphyZhao04/axis-omnireset/blob/d9ebd2af7426446d997608a75139cb13122d0f54/src/axis_omnireset/tasks/i2rt_watch_place/README.md"
         }
       ],
       "expert": {
         "runnable": true,
-        "name": "Five-object containment v3 frozen actor",
+        "name": "The bundled containment policy handles center targets. For off-center targets, supply a goal-conditioned checkpoint that reads all 256 values. A success rate for the goal-conditioned task has yet to be reported.",
         "trainer": "Chenan’s I2RT Place team.",
-        "recipe": "Behavior cloning on successful episodes trained the PointNet and actor. With PointNet frozen, FlashSAC refined the actor using intermediate states and random held starts. The shared controller projects the actor’s six pose commands onto the designated arm.",
-        "evaluation": {
+        "recipe": "The bundled center policy used behavior cloning on successful episodes, followed by FlashSAC training with a frozen PointNet on intermediate states and held starts.",
+        "sources": [
+          {
+            "label": "Shared and native Place evaluation receipts",
+            "path": "./expert-evidence.json"
+          }
+        ],
+        "nativeBenchmark": "i2rt_multi_place_cascade",
+        "availability": "Center policy bundled",
+        "previousEvaluation": {
           "taskId": "i2rt_watch_place",
           "revision": "1de0b6147b8e830d4b647d9f946e4d76b59484c2",
           "obsDim": 247,
@@ -1201,14 +1209,7 @@ window.AXIS_ATLAS = {
           "successes": 9,
           "attempts": 10,
           "protocol": "Ten held-out TEST starts selected with seed 42, one per object and arm. All ten passed shared-physics reset qualification. Deterministic episodes ran to termination or the 32 s limit. The right-arm candy episode ended on a physical validity check."
-        },
-        "sources": [
-          {
-            "label": "Shared and native Place evaluation receipts",
-            "path": "./expert-evidence.json"
-          }
-        ],
-        "nativeBenchmark": "i2rt_multi_place_cascade"
+        }
       },
       "refs": {
         "count": 0,
@@ -1224,7 +1225,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "RTX render from the measured shared Isaac scene on axis, R2 seed 42, slot 0."
       },
-      "taskRevision": "1de0b6147b8e830d4b647d9f946e4d76b59484c2"
+      "taskRevision": "d9ebd2af7426446d997608a75139cb13122d0f54"
     },
     {
       "id": "pick10",

@@ -88,7 +88,7 @@
     heading.append(title, symbol);
     copy.append(heading, el('code','env-id',task.id), el('span','card-desc',task.description));
     const stats = el('span','metrics');
-    stats.append(metric('Expert',task.expert?.runnable ? 'Available' : 'None verified'));
+    stats.append(metric('Expert',task.expert?.runnable ? (task.expert.availability || 'Available') : 'None verified'));
     const result = targetEvaluation(task);
     if (task.profile === 'Shared tabletop' && result) stats.append(metric('Shared success',successRate(result)));
     stats.append(metric('Trajectories',formatCount(task.refs.count)));
@@ -172,12 +172,16 @@
     body.append(act,obs);
     const expert = task.expert?.runnable ? task.expert : null;
     const result = targetEvaluation(task);
-    const benchmark = result && nativeBenchmarks[expert.nativeBenchmark];
+    const previous = expert?.previousEvaluation;
+    const hasPrevious = hasScore(previous) && previous.taskId === task.id && previous.revision !== task.taskRevision;
+    const benchmark = (result || hasPrevious) && nativeBenchmarks[expert.nativeBenchmark];
     const showNative = hasScore(benchmark);
     if (expert) {
       const ex = section('Trained expert');
       ex.append(facts([['Policy',expert.name],[task.profile === 'Shared tabletop' ? 'Shared success' : 'Success on this setup',result && successRate(result)],
-        ['Evaluation',result?.protocol],['Native success',showNative && successRate(benchmark)],
+        ['Evaluation',result?.protocol],
+        ['Earlier shared evaluation',hasPrevious && successRate(previous) + ' on the ' + previous.obsDim + '-value task. ' + previous.protocol],
+        ['Native success',showNative && successRate(benchmark)],
         ['Native evaluation',showNative && benchmark.protocol],['Recipe',expert.recipe],['Trained by',expert.trainer]]));
       body.append(ex);
     }

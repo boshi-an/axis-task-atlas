@@ -333,19 +333,16 @@
   }
   document.querySelector('#list-button').addEventListener('click',() => changeLayout('list'));
   document.querySelector('#grid-button').addEventListener('click',() => changeLayout('grid'));
-  function compare() {
-    filter('All robots','wood_stack_second','compare-wood');
-    document.querySelector('#library').scrollIntoView({block:'start'});
-  }
-  document.querySelector('#compare').addEventListener('click',event => {event.preventDefault();compare();});
-  document.querySelector('#hero-panda').src = byId.get('panda_wood_stack_second').render.file;
-  document.querySelector('#hero-i2rt').src = byId.get('i2rt_wood_stack_second').render.file;
   document.addEventListener('keydown',event => {
     if (event.key==='Escape' && selected) closePanel(true);
   });
   window.addEventListener('resize', () => { if (selected && columns()!==previousColumns) placePanel(); });
   function followHash() {
-    if (location.hash==='#compare-wood') { compare();return; }
+    if (location.hash==='#compare-wood') {
+      filter('All robots','wood_stack_second','compare-wood');
+      document.querySelector('#library').scrollIntoView({block:'start'});
+      return;
+    }
     const match = /^#task\/([a-z0-9_]+)$/.exec(location.hash);
     const id = match?.[1];
     if (nativeI2rt.has(id)) {

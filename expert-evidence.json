@@ -1300,6 +1300,29 @@
       ]
     },
     {
+      "task": "panda_wood_stack_second",
+      "policy": "panda_wood_stack_second",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 3,
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "checkpoint_sha256": {
+        "actor.pt": "db88a9b485c9f7fdd0110f0593068a949ad6acf8008dad117b0b186c620a4568"
+      },
+      "receipt_sha256": "a04ba73d55e5d4dd1124ebf18a8f9c6e4b9ae08af6fcd45e30a1e5c8bb52c7de",
+      "server_receipt": "evaluations/pinned/panda_wood_stack_second/result.json",
+      "seed": 42,
+      "controls": 272,
+      "timeouts": 1,
+      "success_by_env": [
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
       "task": "pick10",
       "policy": "pick10",
       "scope": "registered task",

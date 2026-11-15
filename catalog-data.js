@@ -631,7 +631,21 @@ window.AXIS_ATLAS = {
           "path": "doc/pipeline/active/state_rl/atomic_skills/wood_blocks.md"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "panda_wood_stack_second frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "panda_wood_stack_second",
+          "revision": "e465d482",
+          "obsDim": 122,
+          "actionDim": 6,
+          "successes": 3,
+          "attempts": 4,
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 32,
         "summary": "Source teacher episodes",
@@ -661,7 +675,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "e465d482"
     },
     {
       "id": "franka1000",

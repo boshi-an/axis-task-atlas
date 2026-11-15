@@ -455,7 +455,9 @@
       },
       "by_task": "by-task/panda_wood_stack_second",
       "expert_status": "Frozen weights on axis",
-      "scores": [],
+      "scores": [
+        27
+      ],
       "archived_scores": [],
       "aliases": [
         "wood_stack_second"
@@ -488,7 +490,9 @@
       },
       "by_task": "by-task/wood_stack_second",
       "expert_status": "Frozen weights on axis",
-      "scores": [],
+      "scores": [
+        27
+      ],
       "archived_scores": [],
       "aliases": []
     },
@@ -543,9 +547,9 @@
       "by_task": "by-task/i2rt_example",
       "expert_status": "Historical fixed-layout checkpoints",
       "scores": [
-        34,
         35,
-        36
+        36,
+        37
       ],
       "archived_scores": [],
       "aliases": []
@@ -752,8 +756,8 @@
       "by_task": "by-task/i2rt_task10717",
       "expert_status": "Approved I2RT Press actor, normalization, four-call controller, native button assets and replay evidence, plus a historical fixed-layout checkpoint.",
       "scores": [
-        33,
-        45
+        34,
+        46
       ],
       "archived_scores": [],
       "aliases": []
@@ -953,14 +957,14 @@
       "expert_status": "Frozen weights on axis",
       "scores": [
         21,
-        37,
         38,
         39,
         40,
         41,
         42,
         43,
-        44
+        44,
+        45
       ],
       "archived_scores": [],
       "aliases": []
@@ -1550,7 +1554,7 @@
       "expert_status": "Frozen weights on axis",
       "scores": [
         5,
-        27
+        28
       ],
       "archived_scores": [
         2
@@ -1582,7 +1586,7 @@
       "by_task": "by-task/pick100",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        28
+        29
       ],
       "archived_scores": [],
       "aliases": []
@@ -1619,7 +1623,7 @@
       "scores": [
         6,
         7,
-        29
+        30
       ],
       "archived_scores": [
         3
@@ -1663,7 +1667,7 @@
       "scores": [
         8,
         9,
-        30
+        31
       ],
       "archived_scores": [
         4,
@@ -1714,7 +1718,7 @@
         4,
         11,
         12,
-        31
+        32
       ],
       "archived_scores": [
         0
@@ -1974,7 +1978,7 @@
       "by_task": "by-task/10724",
       "expert_status": "All five frozen actors from the retained v107 chain are on axis, including the v89 pair-placement SAC policy.",
       "scores": [
-        32
+        33
       ],
       "archived_scores": [],
       "aliases": []
@@ -2928,6 +2932,29 @@
         true,
         true,
         false,
+        true
+      ]
+    },
+    {
+      "task": "panda_wood_stack_second",
+      "policy": "panda_wood_stack_second",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 3,
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "checkpoint_sha256": {
+        "actor.pt": "db88a9b485c9f7fdd0110f0593068a949ad6acf8008dad117b0b186c620a4568"
+      },
+      "receipt_sha256": "a04ba73d55e5d4dd1124ebf18a8f9c6e4b9ae08af6fcd45e30a1e5c8bb52c7de",
+      "server_receipt": "evaluations/pinned/panda_wood_stack_second/result.json",
+      "seed": 42,
+      "controls": 272,
+      "timeouts": 1,
+      "success_by_env": [
+        false,
+        true,
+        true,
         true
       ]
     },
@@ -4360,7 +4387,8 @@
       "seed": 2311007716,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/teachers-6674-extra/eval_000.json",
-      "receipt_sha256": "3329799c71264e0d18affd5f60788355233d43cad3eddaf0f1bd9ec8ed74e6ae"
+      "receipt_sha256": "3329799c71264e0d18affd5f60788355233d43cad3eddaf0f1bd9ec8ed74e6ae",
+      "sampling_note": "Additional seed after the initial four normal starts yielded zero valid Place handoffs. Both cohorts are reported."
     },
     {
       "object_id": 6675,

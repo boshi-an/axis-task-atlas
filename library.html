@@ -157,6 +157,7 @@
 <tr><td>6674 · teacher</td><td>8/8</td><td>4/4</td><td>50% (4/8)</td></tr>
 <tr><td>6675 · teacher</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
 </tbody></table>
+<p>Object 6674 has a second teacher batch of eight after the first four yielded no valid Place handoffs. Both batches count toward end-to-end results.</p>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/jf</code></li><li><code>packages/yam-geometry-20261106</code></li><li><code>central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028</code></li><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts</code></li></ul></dd>
 <dt>Policy files</dt><dd><ul><li><code>central/store/jf/models/pick_teacher</code></li><li><code>central/store/jf/models/pick_student</code></li></ul></dd>
@@ -191,6 +192,7 @@
 <tr><td>6674 · teacher</td><td>8/8</td><td>4/4</td><td>50% (4/8)</td></tr>
 <tr><td>6675 · teacher</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
 </tbody></table>
+<p>Object 6674 has a second teacher batch of eight after the first four yielded no valid Place handoffs. Both batches count toward end-to-end results.</p>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/jf</code></li><li><code>packages/yam-geometry-20261106</code></li><li><code>central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028</code></li><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts</code></li></ul></dd>
 <dt>Policy files</dt><dd><ul><li><code>central/store/jf/models/place_teacher</code></li><li><code>central/store/jf/models/place_student</code></li></ul></dd>
@@ -563,13 +565,16 @@
 <dt>Trajectories and replay</dt><dd><ul><li><code>packages/wood-demonstrations/wood_pick_mp20_training_integration_20261102_v1/teachers/place.json</code></li></ul></dd>
 <dt>Reset banks</dt><dd><ul><li><code>packages/wood/place_base.sqlite</code></li></ul></dd>
 </dl></div></details>
-<details id="panda_wood_stack_second" data-aliases="wood_stack_second" data-search="panda_wood_stack_second stack the second block wood_stack_second"><summary><strong>Stack the second block</strong><code>panda_wood_stack_second</code><small>Frozen weights on axis</small></summary><div><dl>
+<details id="panda_wood_stack_second" data-aliases="wood_stack_second" data-search="panda_wood_stack_second stack the second block wood_stack_second"><summary><strong>Stack the second block</strong><code>panda_wood_stack_second</code><small>75% (3/4)</small></summary><div><dl>
 <dt>Aliases</dt><dd>wood_stack_second</dd>
 <dt>Start</dt><dd>Role-specific physical reset bank. Start with the second cube held and the base supported.</dd>
 <dt>Success</dt><dd>Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.</dd>
 <dt>Observation / action</dt><dd>122 / 6 · Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals</dd>
 <dt>Expert availability</dt><dd>Frozen weights on axis</dd>
 <dt>Server directory</dt><dd><code>by-task/panda_wood_stack_second/</code></dd></dl>
+<table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
+<tr><td>panda_wood_stack_second</td><td>75% (3/4)</td><td>Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. Code <code>e465d482</code>.</td></tr>
+</tbody></table>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/wood</code></li><li><code>packages/franka-runtime</code></li></ul></dd>
 <dt>Policy files</dt><dd><ul><li><code>central/store/wood/runs/fusion_stack_second_formal_20261110_v2/checkpoint_final/learner/actor.pt</code></li></ul></dd>

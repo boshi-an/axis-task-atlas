@@ -30,42 +30,7 @@ window.AXIS_ATLAS = {
           "path": "doc/pipeline/active/state_rl/general_grasp/shared_grasp1000.md"
         }
       ],
-      "expert": {
-        "runnable": true,
-        "name": "Fixed-home Grasp1000 with I2RT action projection",
-        "recipe": "FlashSAC with 3-step returns, a 0.99 discount, BPS object features and 20 Hz SysID control. The frozen policy averages actor parameters and batch-normalization statistics from rounds 15 and 20. At evaluation the actor reads the 981 source features. The task projects its commands to the left I2RT tool and gripper.",
-        "trainer": "Franka1000 delivery team (jupiter2143).",
-        "evaluation": {
-          "taskId": "i2rt_grasp1000",
-          "revision": "e465d482",
-          "obsDim": 1039,
-          "actionDim": 14,
-          "successes": 0,
-          "attempts": 4,
-          "protocol": "Frozen grasp actor on the shared I2RT tabletop with the Panda policy projection, four starts, seed 42. See the full task library for checkpoints and evaluation receipts."
-        },
-        "sources": [
-          {
-            "label": "Evaluation receipts",
-            "path": "./expert-evidence.json"
-          },
-          {
-            "label": "Frozen-policy evaluator",
-            "path": "src/axis_omnireset/training/grasp1000_evaluation.py"
-          }
-        ],
-        "nativeBenchmark": "franka1000",
-        "availability": "Evaluated on axis",
-        "previousEvaluation": {
-          "taskId": "i2rt_grasp1000",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
-          "obsDim": 1039,
-          "actionDim": 14,
-          "successes": 0,
-          "attempts": 4,
-          "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout."
-        }
-      },
+      "expert": null,
       "refs": {
         "count": 0,
         "summary": "No reference recordings bundled",
@@ -89,7 +54,13 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Shared robot and grasp population with fixed home and sampled object pose.",
+      "successCondition": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.",
+      "originalTask": "franka1000",
+      "sourceExpertLabel": "No I2RT expert",
+      "sourceExpertNote": "No I2RT-trained checkpoint located."
     },
     {
       "robot": "Dual I2RT",
@@ -135,8 +106,12 @@ window.AXIS_ATLAS = {
         "caption": "Shared I2RT desk at reset, object 6671. The inset shows the butter at its measured pose."
       },
       "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
-      "sourceExpertLabel": "FR3v2 policies",
-      "sourceExpertNote": "Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable."
+      "sourceExpertLabel": "No I2RT expert",
+      "sourceExpertNote": "No I2RT-trained checkpoint located.",
+      "embodimentId": "i2rt_yam",
+      "start": "Open grippers on the shared desk. Sample target, container and clutter positions and yaw. Five groceries use a wicker basket. The sixth target is a marker with a box.",
+      "successCondition": "Lift the target center of mass by 5 cm. For 0.4 s, both fingertips of the same hand must exceed 0.001 N and other measured contacts must stay at or below that threshold.",
+      "originalTask": "fr3v2_jf_pick"
     },
     {
       "robot": "Dual I2RT",
@@ -182,8 +157,12 @@ window.AXIS_ATLAS = {
         "caption": "Shared I2RT desk at reset, object 6703. The inset shows the marker at its measured pose."
       },
       "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
-      "sourceExpertLabel": "FR3v2 policies",
-      "sourceExpertNote": "Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable."
+      "sourceExpertLabel": "No I2RT expert",
+      "sourceExpertNote": "No I2RT-trained checkpoint located.",
+      "embodimentId": "i2rt_yam",
+      "start": "Target on the shared desk at reset with randomized positions and yaw. Five groceries use a wicker basket. The sixth target is a marker with a box.",
+      "successCondition": "Grasp the target, carry and release it inside its container. Container tilt must be at most 30 degrees. The object must pass the container contact check, the grasping hand must command opening and all four fingers must be clear. Pose change must stay at or below 2 mm and 0.05 rad per 0.2 s interval for two successive intervals.",
+      "originalTask": "fr3v2_jf_place"
     },
     {
       "id": "5033",
@@ -219,7 +198,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 27,
           "attempts": 28,
-          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "franka_panda",
+          "evaluationEmbodiment": "franka_panda"
         }
       },
       "refs": {
@@ -255,7 +236,13 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/task5033-scene.jpg"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "franka_panda",
+      "start": "Native Franka reset bank with qualified chess starts.",
+      "successCondition": "Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.",
+      "i2rtVariants": [
+        "i2rt_task5033"
+      ]
     },
     {
       "id": "10717",
@@ -302,7 +289,13 @@ window.AXIS_ATLAS = {
         "source": "environment-snapshots/task10717-scene.jpg"
       },
       "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
-      "sourceExpertNote": "The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256. The archived original score was 144/150."
+      "sourceExpertNote": "The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256. The archived original score was 144/150.",
+      "embodimentId": "dual_arx_x5",
+      "start": "RoboDojo card and button layout with both arms at home.",
+      "successCondition": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
+      "i2rtVariants": [
+        "i2rt_task10717"
+      ]
     },
     {
       "id": "i2rt_wood_stack_second",
@@ -352,7 +345,11 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "i2rt_yam",
+      "start": "Role bank mapped into the shared left-arm workspace. Start with the second cube held and the base supported.",
+      "successCondition": "Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.",
+      "originalTask": "panda_wood_stack_second"
     },
     {
       "id": "10724",
@@ -400,7 +397,10 @@ window.AXIS_ATLAS = {
       },
       "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
       "sourceExpertLabel": "Frozen controller",
-      "sourceExpertNote": "Five-stage ARX v107 chain scored 40% (6/15). Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode."
+      "sourceExpertNote": "Five-stage ARX v107 chain scored 40% (6/15). Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode.",
+      "embodimentId": "dual_arx_x5",
+      "start": "RoboDojo layout with three differently textured blocks.",
+      "successCondition": "Stack all three in any order to the layout’s alignment criterion, then return both arms home."
     },
     {
       "id": "panda_grasp1000",
@@ -438,7 +438,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "franka_panda",
+          "evaluationEmbodiment": "franka_panda"
         },
         "sources": [
           {
@@ -450,7 +452,6 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/grasp1000_evaluation.py"
           }
         ],
-        "nativeBenchmark": "franka1000",
         "availability": "Evaluated on axis",
         "previousEvaluation": {
           "taskId": "panda_grasp1000",
@@ -459,7 +460,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout."
+          "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout.",
+          "trainingEmbodiment": "franka_panda",
+          "evaluationEmbodiment": "franka_panda"
         }
       },
       "refs": {
@@ -485,7 +488,10 @@ window.AXIS_ATLAS = {
         "kind": "Evaluation frame",
         "source": "reports/shared-i2rt/grasp1000-integration/panda.mp4"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "franka_panda",
+      "start": "Fixed Franka home, sampled object pose in the 1,000-slot grasp population.",
+      "successCondition": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls."
     },
     {
       "id": "i2rt_inserting",
@@ -531,7 +537,11 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "i2rt_yam",
+      "start": "Folded shared-robot home with key and fixed slot.",
+      "successCondition": "Keep the key bottom more than 25 mm below the slot top and above the base minus 2 mm. XY error must be under 7 mm, tilt within 7°, and key-to-slot alignment within 30° for three consecutive controls.",
+      "originalTask": "inserting"
     },
     {
       "id": "handover_butter",
@@ -565,7 +575,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "archive-handover_butter_sac. Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "archive-handover_butter_sac. Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -603,13 +615,16 @@ window.AXIS_ATLAS = {
       },
       "taskRevision": "e465d482",
       "sourceExpertLabel": "Frozen controller",
-      "sourceExpertNote": "Native MA-v2 chain scored 95% (285/300). Three frozen MA-v2 stages on the author’s 300 train/validation starting points."
+      "sourceExpertNote": "Native MA-v2 chain scored 95% (285/300). Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
+      "embodimentId": "i2rt_yam",
+      "start": "Native demonstration bank. Select skill_index 0, 1 or 2 for grasp, handover or complete placement.",
+      "successCondition": "Stage 0 ends at donor capture. Stage 1 requires receiver capture and donor release. The full course ends after placement on the target mat and receiver release."
     },
     {
       "id": "panda_wood_stack_second",
       "title": "Stack the second block",
-      "robot": "Franka FR3v2 (Panda)",
-      "group": "Panda",
+      "robot": "Franka FR3v2",
+      "group": "FR3v2",
       "profile": "Native wood blocks",
       "description": "Place the held cube on a supported base. The tower must settle with at most 3 mm of center offset and at least 80% overlap.",
       "actionDim": 6,
@@ -643,7 +658,9 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 3,
           "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "franka_fr3v2",
+          "evaluationEmbodiment": "franka_fr3v2"
         }
       },
       "refs": {
@@ -675,7 +692,13 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "franka_fr3v2",
+      "start": "Role-specific physical reset bank. Start with the second cube held and the base supported.",
+      "successCondition": "Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.",
+      "i2rtVariants": [
+        "i2rt_wood_stack_second"
+      ]
     },
     {
       "id": "franka1000",
@@ -713,7 +736,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "franka_panda",
+          "evaluationEmbodiment": "franka_panda"
         }
       },
       "refs": {
@@ -739,13 +764,19 @@ window.AXIS_ATLAS = {
         "kind": "Evaluation frame",
         "source": "reports/shared-i2rt/grasp1000-integration/panda.mp4"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "franka_panda",
+      "start": "Fixed Franka home, sampled object pose in the 1,000-slot grasp population.",
+      "successCondition": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.",
+      "i2rtVariants": [
+        "i2rt_grasp1000"
+      ]
     },
     {
       "id": "panda_wood_pick",
       "title": "Wood block pick",
-      "robot": "Franka FR3v2 (Panda)",
-      "group": "Panda",
+      "robot": "Franka FR3v2",
+      "group": "FR3v2",
       "profile": "Native wood blocks",
       "description": "Acquire the designated 20 mm cube with both fingers and sustain 30 mm of bottom clearance for 0.30 seconds.",
       "actionDim": 6,
@@ -779,7 +810,9 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "franka_fr3v2",
+          "evaluationEmbodiment": "franka_fr3v2"
         }
       },
       "refs": {
@@ -811,7 +844,13 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "franka_fr3v2",
+      "start": "Role-specific physical reset bank. Designated 20 mm cube unheld.",
+      "successCondition": "Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.",
+      "i2rtVariants": [
+        "i2rt_wood_pick"
+      ]
     },
     {
       "id": "i2rt_wood_pick",
@@ -861,13 +900,17 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "i2rt_yam",
+      "start": "Role bank mapped into the shared left-arm workspace. Designated 20 mm cube unheld.",
+      "successCondition": "Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.",
+      "originalTask": "panda_wood_pick"
     },
     {
       "id": "panda_wood_place_base",
       "title": "Place the base block",
-      "robot": "Franka FR3v2 (Panda)",
-      "group": "Panda",
+      "robot": "Franka FR3v2",
+      "group": "FR3v2",
       "profile": "Native wood blocks",
       "description": "Starting with a held cube, place it at the tower target, open the gripper and withdraw while the base stays stable.",
       "actionDim": 6,
@@ -901,7 +944,9 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 3,
           "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "franka_fr3v2",
+          "evaluationEmbodiment": "franka_fr3v2"
         }
       },
       "refs": {
@@ -933,7 +978,13 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "franka_fr3v2",
+      "start": "Role-specific physical reset bank. Start with the base cube held.",
+      "successCondition": "Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.",
+      "i2rtVariants": [
+        "i2rt_wood_place_base"
+      ]
     },
     {
       "id": "i2rt_wood_place_base",
@@ -983,7 +1034,11 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "i2rt_yam",
+      "start": "Role bank mapped into the shared left-arm workspace. Start with the base cube held.",
+      "successCondition": "Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.",
+      "originalTask": "panda_wood_place_base"
     },
     {
       "id": "5716",
@@ -1019,7 +1074,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 29,
           "attempts": 29,
-          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "franka_panda",
+          "evaluationEmbodiment": "franka_panda"
         }
       },
       "refs": {
@@ -1055,7 +1112,13 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/task5716-scene.jpg"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "franka_panda",
+      "start": "Native V48 apple scenes with physically admitted placement or curriculum starts.",
+      "successCondition": "Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.",
+      "i2rtVariants": [
+        "i2rt_task5716"
+      ]
     },
     {
       "id": "i2rt_task5716",
@@ -1086,7 +1149,7 @@ window.AXIS_ATLAS = {
         "count": 1202,
         "summary": "Retargeted source recordings",
         "length": "Source controls at 5 Hz: min 12, Q1 32, median 38, Q3 47, max 403.",
-        "success": "100% (1,202/1,202) carry the original goal-achieved label. Shared-I2RT trajectory success has not been measured.",
+        "success": "These retargeted recordings have no measured I2RT completion rate.",
         "notes": "Two Apple scenes, with 603 and 599 recordings. All 51,602 frames were mapped; 1,313 fell outside the IK tolerance and were retained in the unscreened reset bank. A pose replay does not score closed-loop task completion.",
         "sources": [
           {
@@ -1115,7 +1178,11 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "i2rt_yam",
+      "start": "Folded shared-robot home and apple layout. Optional retargeted reference banks.",
+      "successCondition": "Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.",
+      "originalTask": "5716"
     },
     {
       "id": "i2rt_task5033",
@@ -1146,7 +1213,7 @@ window.AXIS_ATLAS = {
         "count": 302,
         "summary": "Retargeted source recordings",
         "length": "Source controls at 5 Hz: min 13, Q1 41, median 54, Q3 83, max 475.",
-        "success": "100% (302/302) carry the original goal-achieved label. Shared-I2RT trajectory success has not been measured.",
+        "success": "These retargeted recordings have no measured I2RT completion rate.",
         "notes": "One Chess scene. All 22,541 frames were mapped; 550 fell outside the IK tolerance and were retained in the unscreened reset bank. A pose replay does not score closed-loop task completion.",
         "sources": [
           {
@@ -1175,7 +1242,11 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "i2rt_yam",
+      "start": "Folded shared-robot home and chess layout. Optional retargeted reference banks.",
+      "successCondition": "Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.",
+      "originalTask": "5033"
     },
     {
       "id": "i2rt_task10717",
@@ -1223,7 +1294,11 @@ window.AXIS_ATLAS = {
       },
       "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
       "sourceExpertLabel": "Frozen controller",
-      "sourceExpertNote": "Approved I2RT v20 four-call Press controller scored 100% (12/12). Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds."
+      "sourceExpertNote": "Approved I2RT v20 four-call Press controller scored 100% (12/12). Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
+      "embodimentId": "i2rt_yam",
+      "start": "Home pose, released spring buttons, card-defined counts. Default digits are 1 and 2.",
+      "successCondition": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
+      "originalTask": "10717"
     },
     {
       "id": "inserting",
@@ -1265,7 +1340,13 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/inserting-scene.jpg"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "dual_arx_x5",
+      "start": "Reset the ARX arm and key poses against a fixed slot.",
+      "successCondition": "Keep the key bottom more than 25 mm below the slot top and above the base minus 2 mm. XY error must be under 7 mm, tilt within 7°, and key-to-slot alignment within 30° for three consecutive controls.",
+      "i2rtVariants": [
+        "i2rt_inserting"
+      ]
     },
     {
       "id": "i2rt_watch_basket_place",
@@ -1311,7 +1392,10 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/i2rt_watch_basket_place-scene.jpg"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "i2rt_yam",
+      "start": "One wristwatch already held in a physically requalified native start.",
+      "successCondition": "Place the whole watch in the basket, release onto bottom support and withdraw. The watch must stay stable and clear of the robot. The hybrid controller handles descent, release and retreat."
     },
     {
       "id": "i2rt_watch_place",
@@ -1348,7 +1432,6 @@ window.AXIS_ATLAS = {
             "path": "./expert-evidence.json"
           }
         ],
-        "nativeBenchmark": "i2rt_multi_place_cascade",
         "availability": "Evaluated on axis",
         "previousEvaluation": {
           "taskId": "i2rt_watch_place",
@@ -1357,7 +1440,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 9,
           "attempts": 10,
-          "protocol": "Ten held-out TEST starts selected with seed 42, one per object and arm. All ten passed shared-physics reset qualification. Deterministic episodes ran to termination or the 32 s limit. The right-arm candy episode ended on a physical validity check."
+          "protocol": "Ten held-out TEST starts selected with seed 42, one per object and arm. All ten passed shared-physics reset qualification. Deterministic episodes ran to termination or the 32 s limit. The right-arm candy episode ended on a physical validity check.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         },
         "evaluation": {
           "taskId": "i2rt_watch_place",
@@ -1366,7 +1451,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 15,
           "attempts": 16,
-          "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -1383,7 +1470,10 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "RTX render from the measured shared Isaac scene on axis, R2 seed 42, slot 0."
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "One of five objects already held by the left or right arm over a rectangular tray.",
+      "successCondition": "Lower until the release gate opens. The object must separate from the hand inside the 5 mm tray inset and meet floor/rim height bounds. Tray displacement must be ≤15 mm."
     },
     {
       "id": "pick10",
@@ -1417,7 +1507,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 16,
           "attempts": 16,
-          "protocol": "pick10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "pick10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -1453,7 +1545,10 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/pick10-scene.jpg"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Native ten-object layouts and demonstration-derived starts.",
+      "successCondition": "Grasp with both fingertips and hold the object bottom more than 5 cm above the basket rim for nine controls."
     },
     {
       "id": "i2rt_pick10",
@@ -1491,7 +1586,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         },
         "sources": [
           {
@@ -1503,7 +1600,6 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "pick10",
         "availability": "Evaluated on axis",
         "previousEvaluation": {
           "taskId": "i2rt_pick10",
@@ -1512,7 +1608,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -1552,7 +1650,10 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Shared home and selected object layout. Default cube_2. Optional reference starts.",
+      "successCondition": "Grasp with both fingertips and hold the object bottom more than 5 cm above the basket rim for nine controls."
     },
     {
       "id": "pick100",
@@ -1586,7 +1687,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 247,
           "attempts": 512,
-          "protocol": "Deterministic author checkpoint on 512 native reset-bank slots, seed 42, original policy observation prefix. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Deterministic author checkpoint on 512 native reset-bank slots, seed 42, original policy observation prefix. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -1608,7 +1711,10 @@ window.AXIS_ATLAS = {
         "kind": "Source-bank rendering",
         "source": "Prepared Pick100 initial-state bank, state 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "100-object population with randomized ungrasped starts. The audited recipe used 512 slots.",
+      "successCondition": "Meet adjacent approach and orientation deadlines, establish bilateral grasp, clear the 1 cm and 3 cm lift milestones and hold the bottom ≥5 cm above the table for nine controls."
     },
     {
       "id": "push10",
@@ -1642,7 +1748,9 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 0,
           "attempts": 16,
-          "protocol": "push10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "push10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -1678,7 +1786,10 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/push10-scene.jpg"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Native ten-object layouts and demonstration-derived push starts.",
+      "successCondition": "Keep the gripper open and push the object into a table-supported goal within 5 mm on each position axis."
     },
     {
       "id": "i2rt_push10",
@@ -1716,7 +1827,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         },
         "sources": [
           {
@@ -1728,7 +1841,6 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "push10",
         "availability": "Evaluated on axis",
         "previousEvaluation": {
           "taskId": "i2rt_push10",
@@ -1737,7 +1849,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -1777,7 +1891,10 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Shared home and selected object on the table. Optional reference starts.",
+      "successCondition": "Keep the gripper open and push the object into a table-supported goal within 5 mm on each position axis."
     },
     {
       "id": "track10",
@@ -1811,7 +1928,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 0,
           "attempts": 16,
-          "protocol": "track10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "track10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -1847,7 +1966,10 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/track10-scene.jpg"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Native ten-object layouts with demonstration first-frame or intermediate starts.",
+      "successCondition": "Grasp, lift at least 25 mm, move past the obstacles and release on the goal support. For six controls require position error under 12 mm, angle error under 0.12 rad, speed under 25 mm/s and clearance from disqualifying collisions."
     },
     {
       "id": "i2rt_track10",
@@ -1885,7 +2007,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         },
         "sources": [
           {
@@ -1897,7 +2021,6 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "track10",
         "availability": "Evaluated on axis",
         "previousEvaluation": {
           "taskId": "i2rt_track10",
@@ -1906,7 +2029,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -1946,7 +2071,10 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Shared home, selected object, obstacles and goal. Optional reference starts.",
+      "successCondition": "Grasp, lift at least 25 mm, move past the obstacles and release on the goal support. For six controls require position error under 12 mm, angle error under 0.12 rad, speed under 25 mm/s and clearance from disqualifying collisions."
     },
     {
       "id": "i2rt_handover_butter",
@@ -1984,7 +2112,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         },
         "sources": [
           {
@@ -1996,7 +2126,6 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "handover_butter",
         "availability": "Evaluated on axis",
         "previousEvaluation": {
           "taskId": "i2rt_handover_butter",
@@ -2005,7 +2134,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. The default checker ends at the donor’s first capture (milestone 0)."
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. The default checker ends at the donor’s first capture (milestone 0).",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -2035,7 +2166,10 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Shared home, butter and target mat. The default course starts at milestone zero.",
+      "successCondition": "Stage 0 ends at donor capture. Stage 1 requires receiver capture and donor release. The full course ends after placement on the target mat and receiver release."
     },
     {
       "id": "blind_assembly",
@@ -2069,7 +2203,9 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 15,
           "attempts": 32,
-          "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -2105,7 +2241,10 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/blind_assembly-scene.jpg"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Native peg/fixture geometry and insertion starts. The evaluated cascade includes a grasp prefix across 24 geometries.",
+      "successCondition": "Align the peg and matching fixture. Capture the peg in the opening, then maintain slow, stable seating for the checker’s required interval."
     },
     {
       "id": "i2rt_blind_assembly",
@@ -2143,7 +2282,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         },
         "sources": [
           {
@@ -2155,7 +2296,6 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "blind_assembly",
         "availability": "Evaluated on axis",
         "previousEvaluation": {
           "taskId": "i2rt_blind_assembly",
@@ -2164,7 +2304,9 @@ window.AXIS_ATLAS = {
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used peg variant 00. None reached the handoff to the insertion policy."
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used peg variant 00. None reached the handoff to the insertion policy.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         }
       },
       "refs": {
@@ -2204,7 +2346,10 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Fresh upright tabletop peg in the default shared scene. Variant 00 by default. Optional reference banks.",
+      "successCondition": "Align the peg and matching fixture. Capture the peg in the opening, then maintain slow, stable seating for the checker’s required interval."
     },
     {
       "id": "dual_arx_x5",
@@ -2246,7 +2391,10 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/dual_arx_x5-scene.jpg"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "dual_arx_x5",
+      "start": "Two ARX arms and grippers over an empty desk.",
+      "successCondition": "Base scene. It exposes motion and state with no task success condition."
     },
     {
       "id": "i2rt_base",
@@ -2292,7 +2440,10 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "i2rt_yam",
+      "start": "Two YAM arms and grippers over the shared desk.",
+      "successCondition": "Base scene. It exposes motion and state with no task success condition."
     },
     {
       "id": "example",
@@ -2334,7 +2485,10 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/example-scene.jpg"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "embodimentId": "point_mass",
+      "start": "Default scene starts at (0, 0) with zero velocity and a goal at (1, 1).",
+      "successCondition": "Accelerate in XY to within 5 cm of the goal before the 100-step horizon."
     },
     {
       "id": "i2rt_example",
@@ -2382,7 +2536,10 @@ window.AXIS_ATLAS = {
       },
       "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
       "sourceExpertLabel": "Archived policy",
-      "sourceExpertNote": "Historical fixed-layout checkpoints"
+      "sourceExpertNote": "Historical fixed-layout checkpoints",
+      "embodimentId": "i2rt_yam",
+      "start": "Target is 10 cm forward of the left TCP at reset.",
+      "successCondition": "Move the left TCP to within 5 cm of the target."
     },
     {
       "id": "i2rt_pick5000",
@@ -2411,7 +2568,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 15,
           "attempts": 16,
-          "protocol": "Deterministic mean policy from fixed I1 home, 30 Hz control over five 150 Hz physics steps, four qualified objects with four replicas each, seed 42. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Deterministic mean policy from fixed I1 home, 30 Hz control over five 150 Hz physics steps, four qualified objects with four replicas each, seed 42. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam"
         },
         "recipe": "The original fixed-I1 delivery recorded 29,398 successes in 30,000 episodes (97.9933%)."
       },
@@ -2426,7 +2585,10 @@ window.AXIS_ATLAS = {
         "alt": "I2RT left-arm Pick5000 rollout on axis",
         "caption": "A frame from the fixed-I1 expert rollout. The Rendering page includes the full episode."
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "i2rt_yam",
+      "start": "Fixed I1 home, a settled object on the table and a sampled object pose. The full population covers 5,000 objects.",
+      "successCondition": "Establish bilateral finger contact, lift the object 5 cm clear of its support, and hold the final condition for 14 control steps."
     },
     {
       "id": "franka_push5000",
@@ -2455,7 +2617,9 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 2,
           "attempts": 4,
-          "protocol": "franka_push5000-baked. Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "franka_push5000-baked. Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run. See the full task library for checkpoints and evaluation receipts.",
+          "trainingEmbodiment": "franka_panda",
+          "evaluationEmbodiment": "franka_panda"
         }
       },
       "refs": {
@@ -2469,7 +2633,160 @@ window.AXIS_ATLAS = {
         "alt": "Franka Push5000 training curve",
         "caption": "Training progress recorded by the task authors. The axis results use separate frozen evaluations."
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "embodimentId": "franka_panda",
+      "start": "Open gripper, one prepared object and a sampled reachable tabletop start and XY goal. The audited recipe instantiated 5,000 slots.",
+      "successCondition": "Make contact for two controls, pass the progress milestones, and leave the object supported within 20 mm of the goal at ≤20 mm/s XY speed for four controls."
+    },
+    {
+      "id": "fr3v2_jf_pick",
+      "title": "JF object pick",
+      "group": "FR3v2",
+      "robot": "Franka FR3v2",
+      "embodimentId": "franka_fr3v2",
+      "profile": "Native JF",
+      "description": "From the Pick-entry baseline, lift the target center of mass at least 3 cm. Both fingertips must each exert more than 0.001 N and every other measured contact must stay at or below 0.001 N for 48 consecutive 120 Hz physics ticks (0.4 s).",
+      "start": "From randomized object, basket and clutter poses, the arm starts open at home. A global-depth planner brings it to the local Pick entry.",
+      "successCondition": "From the Pick-entry baseline, lift the target center of mass at least 3 cm. Both fingertips must each exert more than 0.001 N and every other measured contact must stay at or below 0.001 N for 48 consecutive 120 Hz physics ticks (0.4 s).",
+      "aliases": [],
+      "actionDim": 7,
+      "obsDim": 1033,
+      "action": "Three incremental translations, three incremental rotations and one continuous jaw command for one arm.",
+      "clock": "5 Hz policy · 120 Hz physics · 24 substeps",
+      "obs": "State-teacher observations. 26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.",
+      "schemaNote": "Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.",
+      "taskRevision": "JF frozen delivery 2026-11-06",
+      "sources": [],
+      "expert": {
+        "name": "Frozen visual student",
+        "availability": "Source policies",
+        "runnable": true,
+        "sources": [],
+        "evaluation": {
+          "taskId": "fr3v2_jf_pick",
+          "revision": "JF frozen delivery 2026-11-06",
+          "obsDim": 1033,
+          "actionDim": 7,
+          "trainingEmbodiment": "franka_fr3v2",
+          "evaluationEmbodiment": "franka_fr3v2",
+          "successes": 20,
+          "attempts": 20,
+          "protocol": "Five groceries, four normal starts per object. Local Pick entries after the planned approach."
+        }
+      },
+      "refs": {
+        "count": null,
+        "summary": "Native rollout receipts are linked in the task library.",
+        "sources": []
+      },
+      "render": {
+        "kind": "Source recording",
+        "file": "images/fr3v2-jf-pick.jpg",
+        "alt": "Franka FR3v2 in the original JF pick scene",
+        "caption": "Frame from the original FR3v2 pick simulator recording, object 6671."
+      },
+      "i2rtVariants": [
+        "i2rt_jf_pick"
+      ]
+    },
+    {
+      "id": "fr3v2_jf_place",
+      "title": "JF object placement",
+      "group": "FR3v2",
+      "robot": "Franka FR3v2",
+      "embodimentId": "franka_fr3v2",
+      "profile": "Native JF",
+      "description": "Release the object inside the upright container, satisfy the source placement/contact check, command the jaw open and clear both fingers. Three qualifying samples spaced 0.2 s apart must differ by at most 2 mm in position and 0.05 rad in orientation per interval.",
+      "start": "A Pick policy grasps and lifts the target. A camera-guided planner carries it toward the basket. Local Place starts only at a valid pre-action handoff. A drop before handoff is excluded. All subsequent failures count.",
+      "successCondition": "Release the object inside the upright container, satisfy the source placement/contact check, command the jaw open and clear both fingers. Three qualifying samples spaced 0.2 s apart must differ by at most 2 mm in position and 0.05 rad in orientation per interval.",
+      "aliases": [],
+      "actionDim": 7,
+      "obsDim": 107,
+      "action": "Three incremental translations, three incremental rotations and one continuous jaw command for one arm.",
+      "clock": "5 Hz policy · 120 Hz physics · 24 substeps",
+      "obs": "State-teacher observations. 26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.",
+      "schemaNote": "Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.",
+      "taskRevision": "JF frozen delivery 2026-11-06",
+      "sources": [],
+      "expert": {
+        "name": "Frozen visual student",
+        "availability": "Source policies",
+        "runnable": true,
+        "sources": [],
+        "evaluation": {
+          "taskId": "fr3v2_jf_place",
+          "revision": "JF frozen delivery 2026-11-06",
+          "obsDim": 107,
+          "actionDim": 7,
+          "trainingEmbodiment": "franka_fr3v2",
+          "evaluationEmbodiment": "franka_fr3v2",
+          "successes": 11,
+          "attempts": 11,
+          "protocol": "Five groceries, four normal starts per object. Valid physical handoffs before the first Place action."
+        }
+      },
+      "refs": {
+        "count": null,
+        "summary": "Native rollout receipts are linked in the task library.",
+        "sources": []
+      },
+      "render": {
+        "kind": "Source recording",
+        "file": "images/fr3v2-jf-place.jpg",
+        "alt": "Franka FR3v2 in the original JF place scene",
+        "caption": "Frame from the original FR3v2 place simulator recording, object 6671."
+      },
+      "i2rtVariants": [
+        "i2rt_jf_place"
+      ]
+    },
+    {
+      "id": "fr3v2_jf_pick_place",
+      "title": "JF pick and place",
+      "group": "FR3v2",
+      "robot": "Franka FR3v2",
+      "embodimentId": "franka_fr3v2",
+      "profile": "Native JF",
+      "description": "Complete Pick, carry the held object and complete Place in the same simulation episode. Failed grasps, transport failures and failed releases all count. The physical completion checker gates both stages.",
+      "start": "One randomized home scene per episode, with an open gripper, a target, a basket and clutter. Global depth guides the approach and transport. The published normal-start cohort has four starts per grocery.",
+      "successCondition": "Complete Pick, carry the held object and complete Place in the same simulation episode. Failed grasps, transport failures and failed releases all count. The physical completion checker gates both stages.",
+      "aliases": [],
+      "actionDim": 7,
+      "obsDim": "Pick 1,033 / Place 107",
+      "action": "Three incremental translations, three incremental rotations and one continuous jaw command for one arm.",
+      "clock": "5 Hz policy · 120 Hz physics · 24 substeps",
+      "obs": "State-teacher observations. 26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.",
+      "schemaNote": "Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.",
+      "taskRevision": "JF frozen delivery 2026-11-06",
+      "sources": [],
+      "expert": {
+        "name": "Frozen visual Pick and Place students",
+        "availability": "Source policies",
+        "runnable": true,
+        "sources": [],
+        "evaluation": {
+          "taskId": "fr3v2_jf_pick_place",
+          "revision": "JF frozen delivery 2026-11-06",
+          "obsDim": "Pick 1,033 / Place 107",
+          "actionDim": 7,
+          "trainingEmbodiment": "franka_fr3v2",
+          "evaluationEmbodiment": "franka_fr3v2",
+          "successes": 11,
+          "attempts": 20,
+          "protocol": "Five groceries, four normal starts per object. Every admitted home start, including failures during transport."
+        }
+      },
+      "refs": {
+        "count": null,
+        "summary": "Native rollout receipts are linked in the task library.",
+        "sources": []
+      },
+      "render": {
+        "kind": "Source recording",
+        "file": "images/fr3v2-jf-place.jpg",
+        "alt": "Franka FR3v2 in the original JF place scene",
+        "caption": "Frame from the original FR3v2 place simulator recording, object 6671."
+      }
     }
   ],
   "nativeBenchmarks": {
@@ -2480,7 +2797,10 @@ window.AXIS_ATLAS = {
       "source": {
         "label": "Native pick10 evaluation receipt",
         "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      }
+      },
+      "taskId": "pick10",
+      "trainingEmbodiment": "i2rt_yam",
+      "evaluationEmbodiment": "i2rt_yam"
     },
     "push10": {
       "successes": 0,
@@ -2489,7 +2809,10 @@ window.AXIS_ATLAS = {
       "source": {
         "label": "Native push10 evaluation receipt",
         "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      }
+      },
+      "taskId": "push10",
+      "trainingEmbodiment": "i2rt_yam",
+      "evaluationEmbodiment": "i2rt_yam"
     },
     "track10": {
       "successes": 0,
@@ -2498,7 +2821,10 @@ window.AXIS_ATLAS = {
       "source": {
         "label": "Native track10 evaluation receipt",
         "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      }
+      },
+      "taskId": "track10",
+      "trainingEmbodiment": "i2rt_yam",
+      "evaluationEmbodiment": "i2rt_yam"
     },
     "handover_butter": {
       "successes": 285,
@@ -2507,7 +2833,10 @@ window.AXIS_ATLAS = {
       "source": {
         "label": "Native handover_butter evaluation receipt",
         "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      }
+      },
+      "taskId": "handover_butter",
+      "trainingEmbodiment": "i2rt_yam",
+      "evaluationEmbodiment": "i2rt_yam"
     },
     "blind_assembly": {
       "successes": 6093,
@@ -2516,7 +2845,10 @@ window.AXIS_ATLAS = {
       "source": {
         "label": "Native blind_assembly evaluation receipt",
         "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      }
+      },
+      "taskId": "blind_assembly",
+      "trainingEmbodiment": "i2rt_yam",
+      "evaluationEmbodiment": "i2rt_yam"
     },
     "i2rt_multi_place_cascade": {
       "successes": 482,
@@ -2525,7 +2857,10 @@ window.AXIS_ATLAS = {
       "source": {
         "label": "Native five-object Place evaluation receipt",
         "path": "./expert-evidence.json"
-      }
+      },
+      "taskId": "i2rt_multi_place_cascade",
+      "trainingEmbodiment": "i2rt_yam",
+      "evaluationEmbodiment": "i2rt_yam"
     },
     "franka1000": {
       "successes": 89807,
@@ -2534,7 +2869,10 @@ window.AXIS_ATLAS = {
       "source": {
         "label": "Native Panda fixed-home evaluation",
         "path": "doc/pipeline/active/state_rl/general_grasp/franka1000.md"
-      }
+      },
+      "taskId": "franka1000",
+      "trainingEmbodiment": "franka_panda",
+      "evaluationEmbodiment": "franka_panda"
     }
   }
 };

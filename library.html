@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Task library and expert evaluations · Axis OmniReset</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{font:16px/1.5 Inter,Arial,sans-serif;color:#232721;background:#f6f6f1;margin:0}@font-face{font-family:Inter;src:url(assets/inter-latin.woff2)}header,main,footer{max-width:1160px;margin:auto;padding:22px clamp(16px,3vw,40px)}header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #bebfb7}header strong{letter-spacing:.08em}a{color:#255d49;text-underline-offset:.18em}h1{font-size:clamp(34px,5vw,62px);line-height:1.05;margin:1em 0 .25em;letter-spacing:-.05em}h2{margin:2em 0 .5em}p{max-width:82ch}nav{display:flex;gap:14px;flex-wrap:wrap}code{font-size:.88em;overflow-wrap:anywhere}details{scroll-margin-top:12px;background:#fff;border:1px solid #ddded7;border-radius:6px;margin:6px 0}details[open]{border-color:#759883}summary{cursor:pointer;padding:14px 16px}summary strong{margin-right:12px}summary small{float:right;color:#43584c}details>div{padding:0 18px 12px}dt{font-weight:650;margin-top:12px}dd{margin:2px 0}ul{padding-left:22px}li{margin:.25em 0}table{border-collapse:collapse;width:100%}td,th{text-align:left;border-bottom:1px solid #ddd;padding:7px 8px;vertical-align:top}input{width:100%;padding:10px 12px;font:inherit;border:1px solid #afb8ae;border-radius:4px}footer{margin-top:3em} @media(max-width:650px){summary small{float:none;display:block}td,th{padding:4px;font-size:14px}}</style></head><body><header><strong>AXIS / OmniReset</strong><a href="index.html">Task atlas</a></header><main><h1>Task library</h1>
-<p>39 environments and 5 aliases on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. Updated 2026-11-15.</p>
+<p>39 OmniReset environments, 5 aliases and 3 original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. Each score uses the robot on which the policy trained. Updated 2026-11-15.</p>
 <p>Server library root <code>/localdisk/artifacts_shared/axis-omnireset/task-library/v1</code>. Resource paths are relative to this directory. <a href="task-library.json">Download the inventory and evaluation results</a>.</p>
 <nav aria-label="Embodiments"><a href="#group-0">I2RT / YAM</a><a href="#group-1">Franka Panda</a><a href="#group-2">Franka FR3v2</a><a href="#group-3">Dual ARX X5</a><a href="#group-4">Planar point mass</a></nav><p><label for="filter">Find a task or alias</label><input type="search" id="filter" placeholder="Task ID or name"></p>
 <section id="group-0"><h2>I2RT / YAM</h2>
@@ -88,18 +88,16 @@
 <dt>Trajectories and replay</dt><dd>No released resource located.</dd>
 <dt>Reset banks</dt><dd>No released resource located.</dd>
 </dl></div></details>
-<details id="i2rt_grasp1000" data-aliases="" data-search="i2rt_grasp1000 grasp1000"><summary><strong>Grasp1000</strong><code>i2rt_grasp1000</code><small>0% (0/4)</small></summary><div><dl>
+<details id="i2rt_grasp1000" data-aliases="" data-search="i2rt_grasp1000 grasp1000"><summary><strong>Grasp1000</strong><code>i2rt_grasp1000</code><small>No I2RT-trained checkpoint located.</small></summary><div><dl>
 <dt>Start</dt><dd>Shared robot and grasp population with fixed home and sampled object pose.</dd>
 <dt>Success</dt><dd>Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.</dd>
 <dt>Observation / action</dt><dd>1039 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
-<dt>Expert availability</dt><dd>Frozen weights on axis</dd>
+<dt>Expert availability</dt><dd>No I2RT-trained checkpoint located.</dd>
+<dt>Original robot task</dt><dd><a href="#franka1000">Grasp1000 training environment · <code>franka1000</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_grasp1000/</code></dd></dl>
-<table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
-<tr><td>i2rt_grasp1000</td><td>0% (0/4)</td><td>Frozen grasp actor on the shared I2RT tabletop with the Panda policy projection, four starts, seed 42. Code <code>e465d482</code>.</td></tr>
-</tbody></table>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/grasp1000</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
-<dt>Policy files</dt><dd><ul><li><code>packages/grasp1000/experts/franka1000_fixed_home_average_sysid20_v1/actor.pt</code></li></ul></dd>
+<dt>Policy files</dt><dd>No released resource located.</dd>
 <dt>Trajectories and replay</dt><dd>No released resource located.</dd>
 <dt>Reset banks</dt><dd>No released resource located.</dd>
 </dl></div></details>
@@ -123,6 +121,7 @@
 <dt>Success</dt><dd>Keep the key bottom more than 25 mm below the slot top and above the base minus 2 mm. XY error must be under 7 mm, tilt within 7°, and key-to-slot alignment within 30° for three consecutive controls.</dd>
 <dt>Observation / action</dt><dd>110 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>No checkpoint located</dd>
+<dt>Original robot task</dt><dd><a href="#inserting">Key insertion · <code>inserting</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_inserting/</code></dd></dl>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/tabletop/inserting</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
@@ -130,74 +129,31 @@
 <dt>Trajectories and replay</dt><dd>No released resource located.</dd>
 <dt>Reset banks</dt><dd>No released resource located.</dd>
 </dl></div></details>
-<details id="i2rt_jf_pick" data-aliases="" data-search="i2rt_jf_pick jf object pick"><summary><strong>JF object pick</strong><code>i2rt_jf_pick</code><small>Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable.</small></summary><div><dl>
-<dt>Start</dt><dd>Randomized clutter layout with one of six target objects. Butter is the default.</dd>
+<details id="i2rt_jf_pick" data-aliases="" data-search="i2rt_jf_pick jf object pick"><summary><strong>JF object pick</strong><code>i2rt_jf_pick</code><small>No I2RT-trained checkpoint located.</small></summary><div><dl>
+<dt>Start</dt><dd>Open grippers on the shared desk. Sample target, container and clutter positions and yaw. Five groceries use a wicker basket. The sixth target is a marker with a box.</dd>
 <dt>Success</dt><dd>Lift the target center of mass by 5 cm. For 0.4 s, both fingertips of the same hand must exceed 0.001 N and other measured contacts must stay at or below that threshold.</dd>
 <dt>Observation / action</dt><dd>172 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
-<dt>Expert availability</dt><dd>Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable.</dd>
+<dt>Expert availability</dt><dd>No I2RT-trained checkpoint located.</dd>
+<dt>Original robot task</dt><dd><a href="#fr3v2_jf_pick">JF object pick · <code>fr3v2_jf_pick</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_jf_pick/</code></dd></dl>
-<table><caption>Original FR3v2 source evaluations</caption><thead><tr><th>Network</th><th>Success</th><th>Population</th></tr></thead><tbody>
-<tr><td>Pick teacher · 6671</td><td>99.51% (1,019/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
-<tr><td>Pick teacher · 6672</td><td>99.22% (1,016/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
-<tr><td>Pick teacher · 6673</td><td>99.12% (1,015/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
-<tr><td>Pick teacher · 6674</td><td>100% (1,024/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
-<tr><td>Pick teacher · 6675</td><td>99.41% (1,018/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
-<tr><td>Pick student</td><td>98.44% (630/640)</td><td>FR3v2 visual Pick student, 128 episodes on each of five objects.</td></tr>
-</tbody></table>
-<table><caption>Fresh FR3v2 rollouts on axis2 · normal starts</caption><thead><tr><th>Object / policy</th><th>Pick</th><th>Place after handoff</th><th>Complete task</th></tr></thead><tbody>
-<tr><td>6671 · student</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
-<tr><td>6672 · student</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
-<tr><td>6673 · student</td><td>4/4</td><td>2/2</td><td>50% (2/4)</td></tr>
-<tr><td>6674 · student</td><td>4/4</td><td>1/1</td><td>25% (1/4)</td></tr>
-<tr><td>6675 · student</td><td>4/4</td><td>2/2</td><td>50% (2/4)</td></tr>
-<tr><td>6671 · teacher</td><td>4/4</td><td>2/2</td><td>50% (2/4)</td></tr>
-<tr><td>6672 · teacher</td><td>4/4</td><td>3/4</td><td>75% (3/4)</td></tr>
-<tr><td>6673 · teacher</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
-<tr><td>6674 · teacher</td><td>4/4</td><td>No valid handoffs</td><td>0% (0/4)</td></tr>
-<tr><td>6674 · teacher</td><td>8/8</td><td>4/4</td><td>50% (4/8)</td></tr>
-<tr><td>6675 · teacher</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
-</tbody></table>
-<p>Object 6674 has a second teacher batch of eight after the first four yielded no valid Place handoffs. Both batches count toward end-to-end results.</p>
 <dl>
-<dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/jf</code></li><li><code>packages/yam-geometry-20261106</code></li><li><code>central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028</code></li><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts</code></li></ul></dd>
-<dt>Policy files</dt><dd><ul><li><code>central/store/jf/models/pick_teacher</code></li><li><code>central/store/jf/models/pick_student</code></li></ul></dd>
+<dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/jf</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
+<dt>Policy files</dt><dd>No released resource located.</dd>
 <dt>Trajectories and replay</dt><dd>No released resource located.</dd>
-<dt>Reset banks</dt><dd><ul><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data</code></li></ul></dd>
+<dt>Reset banks</dt><dd>No released resource located.</dd>
 </dl></div></details>
-<details id="i2rt_jf_place" data-aliases="" data-search="i2rt_jf_place jf object placement"><summary><strong>JF object placement</strong><code>i2rt_jf_place</code><small>Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable.</small></summary><div><dl>
-<dt>Start</dt><dd>Target starts on the table among clutter. Five groceries use a basket. The marker uses a box.</dd>
-<dt>Success</dt><dd>Grasp, carry and release inside the container with all fingers clear. Meet container tilt and contact checks and stabilize for two 0.2 s intervals within 2 mm and 0.05 rad.</dd>
+<details id="i2rt_jf_place" data-aliases="" data-search="i2rt_jf_place jf object placement"><summary><strong>JF object placement</strong><code>i2rt_jf_place</code><small>No I2RT-trained checkpoint located.</small></summary><div><dl>
+<dt>Start</dt><dd>Target on the shared desk at reset with randomized positions and yaw. Five groceries use a wicker basket. The sixth target is a marker with a box.</dd>
+<dt>Success</dt><dd>Grasp the target, carry and release it inside its container. Container tilt must be at most 30 degrees. The object must pass the container contact check, the grasping hand must command opening and all four fingers must be clear. Pose change must stay at or below 2 mm and 0.05 rad per 0.2 s interval for two successive intervals.</dd>
 <dt>Observation / action</dt><dd>172 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
-<dt>Expert availability</dt><dd>Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable.</dd>
+<dt>Expert availability</dt><dd>No I2RT-trained checkpoint located.</dd>
+<dt>Original robot task</dt><dd><a href="#fr3v2_jf_place">JF object placement · <code>fr3v2_jf_place</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_jf_place/</code></dd></dl>
-<table><caption>Original FR3v2 source evaluations</caption><thead><tr><th>Network</th><th>Success</th><th>Population</th></tr></thead><tbody>
-<tr><td>Place teacher · 6671</td><td>100% (496/496)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.</td></tr>
-<tr><td>Place teacher · 6672</td><td>99.65% (572/574)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.</td></tr>
-<tr><td>Place teacher · 6673</td><td>99.72% (357/358)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.</td></tr>
-<tr><td>Place teacher · 6674</td><td>98.57% (69/70)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Development selection.</td></tr>
-<tr><td>Place teacher · 6675</td><td>99.58% (479/481)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.</td></tr>
-<tr><td>Place student</td><td>100% (282/282)</td><td>FR3v2 visual Place student, development set with valid pre-action handoffs.</td></tr>
-<tr><td>Place student</td><td>97.28% (465/478)</td><td>Expanded BBQ sauce cohort. Nine failed initializations excluded before student handoff.</td></tr>
-</tbody></table>
-<table><caption>Fresh FR3v2 rollouts on axis2 · normal starts</caption><thead><tr><th>Object / policy</th><th>Pick</th><th>Place after handoff</th><th>Complete task</th></tr></thead><tbody>
-<tr><td>6671 · student</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
-<tr><td>6672 · student</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
-<tr><td>6673 · student</td><td>4/4</td><td>2/2</td><td>50% (2/4)</td></tr>
-<tr><td>6674 · student</td><td>4/4</td><td>1/1</td><td>25% (1/4)</td></tr>
-<tr><td>6675 · student</td><td>4/4</td><td>2/2</td><td>50% (2/4)</td></tr>
-<tr><td>6671 · teacher</td><td>4/4</td><td>2/2</td><td>50% (2/4)</td></tr>
-<tr><td>6672 · teacher</td><td>4/4</td><td>3/4</td><td>75% (3/4)</td></tr>
-<tr><td>6673 · teacher</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
-<tr><td>6674 · teacher</td><td>4/4</td><td>No valid handoffs</td><td>0% (0/4)</td></tr>
-<tr><td>6674 · teacher</td><td>8/8</td><td>4/4</td><td>50% (4/8)</td></tr>
-<tr><td>6675 · teacher</td><td>4/4</td><td>3/3</td><td>75% (3/4)</td></tr>
-</tbody></table>
-<p>Object 6674 has a second teacher batch of eight after the first four yielded no valid Place handoffs. Both batches count toward end-to-end results.</p>
 <dl>
-<dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/jf</code></li><li><code>packages/yam-geometry-20261106</code></li><li><code>central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028</code></li><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts</code></li></ul></dd>
-<dt>Policy files</dt><dd><ul><li><code>central/store/jf/models/place_teacher</code></li><li><code>central/store/jf/models/place_student</code></li></ul></dd>
+<dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/jf</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
+<dt>Policy files</dt><dd>No released resource located.</dd>
 <dt>Trajectories and replay</dt><dd>No released resource located.</dd>
-<dt>Reset banks</dt><dd><ul><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data</code></li></ul></dd>
+<dt>Reset banks</dt><dd>No released resource located.</dd>
 </dl></div></details>
 <details id="i2rt_pick10" data-aliases="" data-search="i2rt_pick10 pick10"><summary><strong>Pick10</strong><code>i2rt_pick10</code><small>0% (0/16)</small></summary><div><dl>
 <dt>Start</dt><dd>Shared home and selected object layout. Default cube_2. Optional reference starts.</dd>
@@ -258,6 +214,7 @@
 <dt>Success</dt><dd>Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.</dd>
 <dt>Observation / action</dt><dd>172 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>Approved I2RT Press actor, normalization, four-call controller, native button assets and replay evidence, plus a historical fixed-layout checkpoint.</dd>
+<dt>Original robot task</dt><dd><a href="#10717">Press by number · <code>10717</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_task10717/</code></dd></dl>
 <table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
 <tr><td>Approved I2RT v20 four-call Press controller</td><td>100% (12/12)</td><td>Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds. Code <code>frozen v20 I2RT delivery</code>.</td></tr>
@@ -279,6 +236,7 @@
 <dt>Success</dt><dd>Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.</dd>
 <dt>Observation / action</dt><dd>163 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>No checkpoint located</dd>
+<dt>Original robot task</dt><dd><a href="#5033">Chess-piece placement · <code>5033</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_task5033/</code></dd></dl>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/tabletop/task5033</code></li><li><code>packages/robot-interface</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
@@ -291,6 +249,7 @@
 <dt>Success</dt><dd>Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.</dd>
 <dt>Observation / action</dt><dd>174 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>No checkpoint located</dd>
+<dt>Original robot task</dt><dd><a href="#5716">Apple to basket · <code>5716</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_task5716/</code></dd></dl>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/tabletop/task5716</code></li><li><code>packages/robot-interface</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
@@ -345,6 +304,7 @@
 <dt>Success</dt><dd>Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.</dd>
 <dt>Observation / action</dt><dd>130 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>No checkpoint located</dd>
+<dt>Original robot task</dt><dd><a href="#panda_wood_pick">Wood block pick · <code>panda_wood_pick</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_wood_pick/</code></dd></dl>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/wood</code></li><li><code>packages/robot-interface</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
@@ -357,6 +317,7 @@
 <dt>Success</dt><dd>Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.</dd>
 <dt>Observation / action</dt><dd>130 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>No checkpoint located</dd>
+<dt>Original robot task</dt><dd><a href="#panda_wood_place_base">Place the base block · <code>panda_wood_place_base</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_wood_place_base/</code></dd></dl>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/wood</code></li><li><code>packages/robot-interface</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
@@ -369,6 +330,7 @@
 <dt>Success</dt><dd>Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.</dd>
 <dt>Observation / action</dt><dd>130 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>No checkpoint located</dd>
+<dt>Original robot task</dt><dd><a href="#panda_wood_stack_second">Stack the second block · <code>panda_wood_stack_second</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/i2rt_wood_stack_second/</code></dd></dl>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/tabletop/provider.json</code></li><li><code>packages/wood</code></li><li><code>packages/robot-interface</code></li><li><code>packages/yam-geometry-20261106</code></li></ul></dd>
@@ -459,6 +421,7 @@
 <dt>Success</dt><dd>Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.</dd>
 <dt>Observation / action</dt><dd>105 / 7 · 24 Hz control · 120 Hz physics · 5 substeps</dd>
 <dt>Expert availability</dt><dd>Frozen weights on axis</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_task5033">Chess-piece placement · <code>i2rt_task5033</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/5033/</code></dd></dl>
 <table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
 <tr><td>5033</td><td>96.43% (27/28)</td><td>First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. Code <code>e465d482</code>.</td></tr>
@@ -475,6 +438,7 @@
 <dt>Success</dt><dd>Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.</dd>
 <dt>Observation / action</dt><dd>116 / 7 · 24 Hz control · 120 Hz physics · 5 substeps</dd>
 <dt>Expert availability</dt><dd>Frozen weights on axis</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_task5716">Apple to basket · <code>i2rt_task5716</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/5716/</code></dd></dl>
 <table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
 <tr><td>5716</td><td>100% (29/29)</td><td>First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. Code <code>e465d482</code>.</td></tr>
@@ -490,6 +454,7 @@
 <dt>Success</dt><dd>Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.</dd>
 <dt>Observation / action</dt><dd>981 / 7 · 20 Hz control · 120 Hz physics · 6 substeps</dd>
 <dt>Expert availability</dt><dd>Frozen weights on axis</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_grasp1000">Grasp1000 · <code>i2rt_grasp1000</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/franka1000/</code></dd></dl>
 <table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
 <tr><td>franka1000</td><td>100% (4/4)</td><td>Deterministic delivered Panda actor, four fixed-home native slots, seed 42. Code <code>e465d482</code>.</td></tr>
@@ -533,12 +498,83 @@
 </dl></div></details>
 </section>
 <section id="group-2"><h2>Franka FR3v2</h2>
+<details id="fr3v2_jf_pick" data-aliases="" data-search="fr3v2_jf_pick jf object pick"><summary><strong>JF object pick</strong><code>fr3v2_jf_pick</code><small>Visual student · 100% (20/20)</small></summary><div><dl>
+<dt>Start</dt><dd>From randomized object, basket and clutter poses, the arm starts open at home. A global-depth planner brings it to the local Pick entry.</dd>
+<dt>Success</dt><dd>From the Pick-entry baseline, lift the target center of mass at least 3 cm. Both fingertips must each exert more than 0.001 N and every other measured contact must stay at or below 0.001 N for 48 consecutive 120 Hz physics ticks (0.4 s).</dd>
+<dt>Observation / action</dt><dd>1033 / 7 · 5 Hz policy · 120 Hz physics · 24 substeps</dd>
+<dt>Visual student input</dt><dd>26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.</dd>
+<dt>Objects</dt><dd>Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.</dd>
+<dt>Runtime</dt><dd>Source simulator on axis2 via evaluate_jf.py fr3v2_jf_pick</dd>
+<dt>Expert availability</dt><dd>Five object-specific state teachers and one shared visual student.</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_jf_pick">JF object pick · <code>i2rt_jf_pick</code></a></dd>
+<dt>Related FR3v2 tasks</dt><dd><a href="#fr3v2_jf_place">JF object placement · <code>fr3v2_jf_place</code></a>, <a href="#fr3v2_jf_pick_place">JF pick and place · <code>fr3v2_jf_pick_place</code></a></dd>
+<dt>Server directory</dt><dd><code>by-task/fr3v2_jf_pick/</code></dd></dl>
+<h3>Frozen FR3v2 evaluations</h3><p>Normal starts on axis2, scored over Pick entries.</p><p><strong>Student</strong> · 100% (20/20)</p><p><strong>Teacher</strong> · 100% (28/28)</p><table><caption>Object-level results</caption><thead><tr><th>Object</th><th>Policy</th><th>Seed</th><th>Success</th></tr></thead><tbody><tr><td>Butter (6671)</td><td>student</td><td>2311006713</td><td>100% (4/4)</td></tr><tr><td>Orange juice (6672)</td><td>student</td><td>2311006714</td><td>100% (4/4)</td></tr><tr><td>Chocolate pudding (6673)</td><td>student</td><td>2311006715</td><td>100% (4/4)</td></tr><tr><td>Barbecue sauce (6674)</td><td>student</td><td>2311006716</td><td>100% (4/4)</td></tr><tr><td>Tomato sauce (6675)</td><td>student</td><td>2311006717</td><td>100% (4/4)</td></tr><tr><td>Butter (6671)</td><td>teacher</td><td>2311006713</td><td>100% (4/4)</td></tr><tr><td>Orange juice (6672)</td><td>teacher</td><td>2311006714</td><td>100% (4/4)</td></tr><tr><td>Chocolate pudding (6673)</td><td>teacher</td><td>2311006715</td><td>100% (4/4)</td></tr><tr><td>Barbecue sauce (6674)</td><td>teacher</td><td>2311006716</td><td>100% (4/4)</td></tr><tr><td>Barbecue sauce (6674)</td><td>teacher</td><td>2311007716</td><td>100% (8/8)</td></tr><tr><td>Tomato sauce (6675)</td><td>teacher</td><td>2311006717</td><td>100% (4/4)</td></tr></tbody></table><p>The barbecue sauce teacher had a second batch of eight after the first four starts yielded no valid Place handoffs. Both batches are shown.</p>
+<table><caption>Original FR3v2 source evaluations</caption><thead><tr><th>Network</th><th>Success</th><th>Population</th></tr></thead><tbody>
+<tr><td>Pick teacher · 6671</td><td>99.51% (1,019/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
+<tr><td>Pick teacher · 6672</td><td>99.22% (1,016/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
+<tr><td>Pick teacher · 6673</td><td>99.12% (1,015/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
+<tr><td>Pick teacher · 6674</td><td>100% (1,024/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
+<tr><td>Pick teacher · 6675</td><td>99.41% (1,018/1,024)</td><td>Source FR3v2 teacher evaluation on this object.</td></tr>
+<tr><td>Pick student</td><td>98.44% (630/640)</td><td>FR3v2 visual Pick student, 128 episodes on each of five objects.</td></tr>
+</tbody></table>
+<dl>
+<dt>Assets</dt><dd><ul><li><code>central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028</code></li><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts</code></li><li><code>central/store/jf/runs/final_pick_place_20261106</code></li></ul></dd>
+<dt>Policy files</dt><dd><ul><li><code>central/store/jf/models/pick_teacher</code></li><li><code>central/store/jf/models/pick_student</code></li></ul></dd>
+<dt>Trajectories and replay</dt><dd>No released resource located.</dd>
+<dt>Reset banks</dt><dd><ul><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data</code></li></ul></dd>
+</dl></div></details>
+<details id="fr3v2_jf_pick_place" data-aliases="" data-search="fr3v2_jf_pick_place jf pick and place"><summary><strong>JF pick and place</strong><code>fr3v2_jf_pick_place</code><small>Visual student · 55% (11/20)</small></summary><div><dl>
+<dt>Start</dt><dd>One randomized home scene per episode, with an open gripper, a target, a basket and clutter. Global depth guides the approach and transport. The published normal-start cohort has four starts per grocery.</dd>
+<dt>Success</dt><dd>Complete Pick, carry the held object and complete Place in the same simulation episode. Failed grasps, transport failures and failed releases all count. The physical completion checker gates both stages.</dd>
+<dt>Observation / action</dt><dd>Pick 1,033 / Place 107 / 7 · 5 Hz policy · 120 Hz physics · 24 substeps</dd>
+<dt>Visual student input</dt><dd>26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.</dd>
+<dt>Objects</dt><dd>Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.</dd>
+<dt>Runtime</dt><dd>Source simulator on axis2 via evaluate_jf.py fr3v2_jf_pick_place</dd>
+<dt>Expert availability</dt><dd>Five object-specific state teachers and one shared visual student for each stage.</dd>
+<dt>Related FR3v2 tasks</dt><dd><a href="#fr3v2_jf_pick">JF object pick · <code>fr3v2_jf_pick</code></a>, <a href="#fr3v2_jf_place">JF object placement · <code>fr3v2_jf_place</code></a></dd>
+<dt>Server directory</dt><dd><code>by-task/fr3v2_jf_pick_place/</code></dd></dl>
+<h3>Frozen FR3v2 evaluations</h3><p>Normal starts on axis2, scored over all home starts.</p><p><strong>Student</strong> · 55% (11/20)</p><p><strong>Teacher</strong> · 53.57% (15/28)</p><table><caption>Object-level results</caption><thead><tr><th>Object</th><th>Policy</th><th>Seed</th><th>Success</th></tr></thead><tbody><tr><td>Butter (6671)</td><td>student</td><td>2311006713</td><td>75% (3/4)</td></tr><tr><td>Orange juice (6672)</td><td>student</td><td>2311006714</td><td>75% (3/4)</td></tr><tr><td>Chocolate pudding (6673)</td><td>student</td><td>2311006715</td><td>50% (2/4)</td></tr><tr><td>Barbecue sauce (6674)</td><td>student</td><td>2311006716</td><td>25% (1/4)</td></tr><tr><td>Tomato sauce (6675)</td><td>student</td><td>2311006717</td><td>50% (2/4)</td></tr><tr><td>Butter (6671)</td><td>teacher</td><td>2311006713</td><td>50% (2/4)</td></tr><tr><td>Orange juice (6672)</td><td>teacher</td><td>2311006714</td><td>75% (3/4)</td></tr><tr><td>Chocolate pudding (6673)</td><td>teacher</td><td>2311006715</td><td>75% (3/4)</td></tr><tr><td>Barbecue sauce (6674)</td><td>teacher</td><td>2311006716</td><td>0% (0/4)</td></tr><tr><td>Barbecue sauce (6674)</td><td>teacher</td><td>2311007716</td><td>50% (4/8)</td></tr><tr><td>Tomato sauce (6675)</td><td>teacher</td><td>2311006717</td><td>75% (3/4)</td></tr></tbody></table><p>The barbecue sauce teacher had a second batch of eight after the first four starts yielded no valid Place handoffs. Both batches are shown.</p>
+<dl>
+<dt>Assets</dt><dd><ul><li><code>central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028</code></li><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts</code></li><li><code>central/store/jf/runs/final_pick_place_20261106</code></li></ul></dd>
+<dt>Policy files</dt><dd><ul><li><code>central/store/jf/models/pick_teacher</code></li><li><code>central/store/jf/models/pick_student</code></li><li><code>central/store/jf/models/place_teacher</code></li><li><code>central/store/jf/models/place_student</code></li></ul></dd>
+<dt>Trajectories and replay</dt><dd>No released resource located.</dd>
+<dt>Reset banks</dt><dd><ul><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data</code></li></ul></dd>
+</dl></div></details>
+<details id="fr3v2_jf_place" data-aliases="" data-search="fr3v2_jf_place jf object placement"><summary><strong>JF object placement</strong><code>fr3v2_jf_place</code><small>Visual student · 100% (11/11)</small></summary><div><dl>
+<dt>Start</dt><dd>A Pick policy grasps and lifts the target. A camera-guided planner carries it toward the basket. Local Place starts only at a valid pre-action handoff. A drop before handoff is excluded. All subsequent failures count.</dd>
+<dt>Success</dt><dd>Release the object inside the upright container, satisfy the source placement/contact check, command the jaw open and clear both fingers. Three qualifying samples spaced 0.2 s apart must differ by at most 2 mm in position and 0.05 rad in orientation per interval.</dd>
+<dt>Observation / action</dt><dd>107 / 7 · 5 Hz policy · 120 Hz physics · 24 substeps</dd>
+<dt>Visual student input</dt><dd>26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.</dd>
+<dt>Objects</dt><dd>Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.</dd>
+<dt>Runtime</dt><dd>Source simulator on axis2 via evaluate_jf.py fr3v2_jf_place</dd>
+<dt>Expert availability</dt><dd>Five object-specific state teachers and one shared visual student.</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_jf_place">JF object placement · <code>i2rt_jf_place</code></a></dd>
+<dt>Related FR3v2 tasks</dt><dd><a href="#fr3v2_jf_pick">JF object pick · <code>fr3v2_jf_pick</code></a>, <a href="#fr3v2_jf_pick_place">JF pick and place · <code>fr3v2_jf_pick_place</code></a></dd>
+<dt>Server directory</dt><dd><code>by-task/fr3v2_jf_place/</code></dd></dl>
+<h3>Frozen FR3v2 evaluations</h3><p>Normal starts on axis2, scored over valid Place handoffs.</p><p><strong>Student</strong> · 100% (11/11)</p><p><strong>Teacher</strong> · 93.75% (15/16)</p><table><caption>Object-level results</caption><thead><tr><th>Object</th><th>Policy</th><th>Seed</th><th>Success</th></tr></thead><tbody><tr><td>Butter (6671)</td><td>student</td><td>2311006713</td><td>100% (3/3)</td></tr><tr><td>Orange juice (6672)</td><td>student</td><td>2311006714</td><td>100% (3/3)</td></tr><tr><td>Chocolate pudding (6673)</td><td>student</td><td>2311006715</td><td>100% (2/2)</td></tr><tr><td>Barbecue sauce (6674)</td><td>student</td><td>2311006716</td><td>100% (1/1)</td></tr><tr><td>Tomato sauce (6675)</td><td>student</td><td>2311006717</td><td>100% (2/2)</td></tr><tr><td>Butter (6671)</td><td>teacher</td><td>2311006713</td><td>100% (2/2)</td></tr><tr><td>Orange juice (6672)</td><td>teacher</td><td>2311006714</td><td>75% (3/4)</td></tr><tr><td>Chocolate pudding (6673)</td><td>teacher</td><td>2311006715</td><td>100% (3/3)</td></tr><tr><td>Barbecue sauce (6674)</td><td>teacher</td><td>2311006716</td><td>No valid handoffs</td></tr><tr><td>Barbecue sauce (6674)</td><td>teacher</td><td>2311007716</td><td>100% (4/4)</td></tr><tr><td>Tomato sauce (6675)</td><td>teacher</td><td>2311006717</td><td>100% (3/3)</td></tr></tbody></table><p>The barbecue sauce teacher had a second batch of eight after the first four starts yielded no valid Place handoffs. Both batches are shown.</p>
+<table><caption>Original FR3v2 source evaluations</caption><thead><tr><th>Network</th><th>Success</th><th>Population</th></tr></thead><tbody>
+<tr><td>Place teacher · 6671</td><td>100% (496/496)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.</td></tr>
+<tr><td>Place teacher · 6672</td><td>99.65% (572/574)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.</td></tr>
+<tr><td>Place teacher · 6673</td><td>99.72% (357/358)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.</td></tr>
+<tr><td>Place teacher · 6674</td><td>98.57% (69/70)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Development selection.</td></tr>
+<tr><td>Place teacher · 6675</td><td>99.58% (479/481)</td><td>FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.</td></tr>
+<tr><td>Place student</td><td>100% (282/282)</td><td>FR3v2 visual Place student, development set with valid pre-action handoffs.</td></tr>
+<tr><td>Place student</td><td>97.28% (465/478)</td><td>Expanded BBQ sauce cohort. Nine failed initializations excluded before student handoff.</td></tr>
+</tbody></table>
+<dl>
+<dt>Assets</dt><dd><ul><li><code>central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028</code></li><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts</code></li><li><code>central/store/jf/runs/final_pick_place_20261106</code></li></ul></dd>
+<dt>Policy files</dt><dd><ul><li><code>central/store/jf/models/place_teacher</code></li><li><code>central/store/jf/models/place_student</code></li></ul></dd>
+<dt>Trajectories and replay</dt><dd>No released resource located.</dd>
+<dt>Reset banks</dt><dd><ul><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data</code></li></ul></dd>
+</dl></div></details>
 <details id="panda_wood_pick" data-aliases="wood_pick" data-search="panda_wood_pick wood block pick wood_pick"><summary><strong>Wood block pick</strong><code>panda_wood_pick</code><small>100% (4/4)</small></summary><div><dl>
 <dt>Aliases</dt><dd>wood_pick</dd>
 <dt>Start</dt><dd>Role-specific physical reset bank. Designated 20 mm cube unheld.</dd>
 <dt>Success</dt><dd>Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.</dd>
 <dt>Observation / action</dt><dd>122 / 6 · Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals</dd>
 <dt>Expert availability</dt><dd>Frozen weights on axis</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_wood_pick">Wood block pick · <code>i2rt_wood_pick</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/panda_wood_pick/</code></dd></dl>
 <table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
 <tr><td>panda_wood_pick</td><td>100% (4/4)</td><td>Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. Code <code>e465d482</code>.</td></tr>
@@ -555,6 +591,7 @@
 <dt>Success</dt><dd>Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.</dd>
 <dt>Observation / action</dt><dd>122 / 6 · Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals</dd>
 <dt>Expert availability</dt><dd>Frozen weights on axis</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_wood_place_base">Place the base block · <code>i2rt_wood_place_base</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/panda_wood_place_base/</code></dd></dl>
 <table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
 <tr><td>panda_wood_place_base</td><td>75% (3/4)</td><td>Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. Code <code>e465d482</code>.</td></tr>
@@ -571,6 +608,7 @@
 <dt>Success</dt><dd>Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.</dd>
 <dt>Observation / action</dt><dd>122 / 6 · Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals</dd>
 <dt>Expert availability</dt><dd>Frozen weights on axis</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_wood_stack_second">Stack the second block · <code>i2rt_wood_stack_second</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/panda_wood_stack_second/</code></dd></dl>
 <table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>
 <tr><td>panda_wood_stack_second</td><td>75% (3/4)</td><td>Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. Code <code>e465d482</code>.</td></tr>
@@ -588,6 +626,7 @@
 <dt>Success</dt><dd>Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.</dd>
 <dt>Observation / action</dt><dd>114 / 12 · 25 Hz control · 250 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256.</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_task10717">Press by number · <code>i2rt_task10717</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/10717/</code></dd></dl>
 <p><b>Archived source benchmarks</b></p><ul>
 <li>October ARX native policy · 96% (144/150) · Archived original ARX official cases. Actor unavailable for a fresh rollout.</li>
@@ -634,6 +673,7 @@
 <dt>Success</dt><dd>Keep the key bottom more than 25 mm below the slot top and above the base minus 2 mm. XY error must be under 7 mm, tilt within 7°, and key-to-slot alignment within 30° for three consecutive controls.</dd>
 <dt>Observation / action</dt><dd>52 / 14 · 15 Hz control · 150 Hz physics · 10 substeps</dd>
 <dt>Expert availability</dt><dd>No checkpoint located</dd>
+<dt>I2RT versions</dt><dd><a href="#i2rt_inserting">Key insertion · <code>i2rt_inserting</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/inserting/</code></dd></dl>
 <dl>
 <dt>Assets</dt><dd><ul><li><code>packages/key-insertion</code></li></ul></dd>

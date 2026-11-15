@@ -2,8 +2,7 @@
 (() => {
   'use strict';
   const { tasks: registry, revision, nativeBenchmarks = {} } = window.AXIS_ATLAS;
-  const tasks = registry.filter(task => task.profile !== 'Native setup');
-  const hiddenNativeIds = new Set(registry.filter(task => task.profile === 'Native setup').map(task => task.id));
+  const tasks = registry;
   const byId = new Map(tasks.flatMap(task => [task.id, ...task.aliases].map(id => [id, task])));
   const gallery = document.querySelector('#cards');
   const query = document.querySelector('#query');
@@ -50,10 +49,15 @@
       Number.isInteger(result.successes) && result.successes >= 0 && result.successes <= result.attempts;
   }
 
+  function trainedHere(task, result) {
+    return Boolean(task.embodimentId && result?.trainingEmbodiment === task.embodimentId &&
+      result.evaluationEmbodiment === task.embodimentId);
+  }
+
   function targetEvaluation(task) {
     const expert = task.expert;
     const result = expert?.evaluation;
-    if (!expert?.runnable || !hasScore(result) || result.taskId !== task.id ||
+    if (!expert?.runnable || !trainedHere(task, result) || !hasScore(result) || result.taskId !== task.id ||
         result.revision !== (task.taskRevision || revision) || result.obsDim !== task.obsDim || result.actionDim !== task.actionDim) return null;
     return result;
   }
@@ -169,19 +173,29 @@
     const obs = section('Observation space',task.obsDim.toLocaleString('en-US') + 'D');
     obs.append(el('p',null,task.obs));
     if (task.schemaNote) obs.append(el('p',null,task.schemaNote));
-    body.append(act,obs);
+    const conditions = section('Task conditions');
+    conditions.append(facts([['Start',task.start],['Success',task.successCondition]]));
+    for (const id of [task.originalTask,...(task.i2rtVariants || [])].filter(Boolean)) {
+      const related = byId.get(id);
+      if (related) {
+        const link = el('a',null,related.robot + ' · ' + related.title);
+        link.href = '#task/' + id;
+        conditions.append(link);
+      }
+    }
+    body.append(conditions,act,obs);
     const expert = task.expert?.runnable ? task.expert : null;
     const result = targetEvaluation(task);
     const previous = expert?.previousEvaluation;
-    const hasPrevious = hasScore(previous) && previous.taskId === task.id && previous.revision !== task.taskRevision;
-    const benchmark = (result || hasPrevious) && nativeBenchmarks[expert.nativeBenchmark];
-    const showNative = hasScore(benchmark);
+    const hasPrevious = trainedHere(task, previous) && hasScore(previous) && previous.taskId === task.id && previous.revision !== task.taskRevision;
+    const benchmark = nativeBenchmarks[task.id];
+    const showNative = trainedHere(task, benchmark) && benchmark.taskId === task.id && hasScore(benchmark);
     if (expert) {
       const ex = section('Trained expert');
       ex.append(facts([['Policy',expert.name],[task.profile === 'Shared tabletop' ? 'Shared success' : 'Success on this setup',result && successRate(result)],
         ['Evaluation',result?.protocol],
         ['Earlier shared evaluation',hasPrevious && successRate(previous) + ' on the ' + previous.obsDim + '-value task. ' + previous.protocol],
-        ['Native success',showNative && successRate(benchmark)],
+        ['Archived native success',showNative && successRate(benchmark)],
         ['Native evaluation',showNative && benchmark.protocol],['Recipe',expert.recipe],['Trained by',expert.trainer]]));
       body.append(ex);
     }
@@ -279,7 +293,7 @@
     setAddress(hash);
   }
 
-  for (const robot of ['All robots','I2RT','Panda','ARX X5','Point mass']) {
+  for (const robot of ['All robots','I2RT','Panda','FR3v2','ARX X5','Point mass']) {
     const button = el('button',null,robot);
     button.dataset.group = robot;
     button.type = 'button';
@@ -312,15 +326,7 @@
     if (location.hash==='#compare-wood') { compare();return; }
     const match = /^#task\/([a-z0-9_]+)$/.exec(location.hash);
     const id = match?.[1];
-    let task = byId.get(id);
-    if (hiddenNativeIds.has(id)) {
-      task = tasks.find(entry => entry.expert?.nativeBenchmark === id);
-      if (!task) {
-        filter('All robots','');
-        document.querySelector('#library').scrollIntoView({block:'start'});
-        return;
-      }
-    }
+    const task = byId.get(id);
     if (task) {
       if (!visible.includes(task)) {group='All robots';query.value='';render();}
       showPanel(task,true);

@@ -43,40 +43,9 @@
       },
       "result_sha256": "8bb21a49ff3c6ac918288b70bf91351afca554eea2439be4a0544a12a2258a22",
       "scene_config_sha256": "6b5e2f2dce0ee29c4557da41e5080badb0df309471f03dcbf8161cc27e07adef",
-      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used peg variant 00. None reached the handoff to the insertion policy."
-    },
-    "i2rt_grasp1000": {
-      "task": "i2rt_grasp1000",
-      "seed": 42,
-      "observation": [
-        4,
-        1039
-      ],
-      "action": [
-        4,
-        14
-      ],
-      "attempts": 4,
-      "successes": 0,
-      "failures": 0,
-      "timeouts": 4,
-      "controls": 128,
-      "physics_steps": 1280,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false
-      ],
-      "projection_max_m_rad": [
-        0.0021719082724303007,
-        0.023432856425642967
-      ],
-      "checkpoint_sha256": {
-        "experts/franka1000_fixed_home_average_sysid20_v1/actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
-      },
-      "result_sha256": "c3fd9911ecfc024b65689808b60b25b7ddb2d98719e3a93e6d490ff6617634ad",
-      "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout."
+      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used peg variant 00. None reached the handoff to the insertion policy.",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     "i2rt_handover_butter": {
       "task": "i2rt_handover_butter",
@@ -121,7 +90,9 @@
       },
       "result_sha256": "2dc1aecad7bc8e08ca6b359962fdff415b47eda2eb5a7db1b80d3b820f043585",
       "scene_config_sha256": "ccb945266f199ca3c8caf8cbb539bcc5f337233d84da4f2f9a883a1260daf51a",
-      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. The default checker ends at the donor’s first capture (milestone 0)."
+      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. The default checker ends at the donor’s first capture (milestone 0).",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     "i2rt_pick10": {
       "task": "i2rt_pick10",
@@ -163,7 +134,9 @@
       },
       "result_sha256": "37971cb1c293d1cb66958594b4ac89ce5266c712f184f9ba437ce2232858d5bd",
       "scene_config_sha256": "d7188ef4948a188c89a78469dcd9c4de746408f6f2f45c0fc3d265ef8e508fa7",
-      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2.",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     "i2rt_push10": {
       "task": "i2rt_push10",
@@ -205,7 +178,9 @@
       },
       "result_sha256": "d6152b8844f5105a98f102ef2fc60b34ae240bc8951b81c92ac855f10daec045",
       "scene_config_sha256": "9b64b77a08c8a0be566bc5c847f6dd59882aa9c740e55c4e4163ca8b2ef1bb47",
-      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2.",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     "i2rt_track10": {
       "task": "i2rt_track10",
@@ -247,7 +222,9 @@
       },
       "result_sha256": "3b48252ed706acbb20329d0ef382818bb8446539c659d056472c15ab70113046",
       "scene_config_sha256": "a69b343cdec8b69c35641ebdc1ddc07102b4b852490add6ead001af9732fa358",
-      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+      "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2.",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     "panda_grasp1000": {
       "task": "panda_grasp1000",
@@ -277,7 +254,9 @@
         "experts/franka1000_fixed_home_average_sysid20_v1/actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
       },
       "result_sha256": "a2bb986eeb6946a6bb42e3adef68b691d09dabc2c9d769d7a287edc9edb2ec6e",
-      "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout."
+      "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout.",
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     "i2rt_watch_place": {
       "environment_revision": "1de0b6147b8e830d4b647d9f946e4d76b59484c2",
@@ -402,7 +381,9 @@
       "result_sha256": "0250ba5363983b579be313e106702b739791dcd039f09e6ada619b9f56d3832b",
       "evaluator_sha256": "d2f1f74d4cac9518bc7461ef5de983211b2898a45e9d2bb2a22b5c19a724f6d0",
       "scene_config_sha256": "2ee8b96dd8e2b96368f7325cc34a678daa4d2df332c43ab54bfc54233fe0d322",
-      "protocol": "Ten held-out TEST starts selected with seed 42, one per object and arm. All ten passed shared-physics reset qualification. Deterministic episodes ran to termination or the 32 s limit. The right-arm candy episode ended on a physical validity check."
+      "protocol": "Ten held-out TEST starts selected with seed 42, one per object and arm. All ten passed shared-physics reset qualification. Deterministic episodes ran to termination or the 32 s limit. The right-arm candy episode ended on a physical validity check.",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     }
   },
   "native_place_benchmark": {
@@ -414,7 +395,9 @@
     "attempts": 500,
     "admitted": 499,
     "rejected_in_denominator": 1,
-    "checkpoint_sha256": "65088d07aed797a795ea25992ade091142fed7381b89d0256a148a294b190969"
+    "checkpoint_sha256": "65088d07aed797a795ea25992ade091142fed7381b89d0256a148a294b190969",
+    "training_embodiment": "i2rt_yam",
+    "evaluation_embodiment": "i2rt_yam"
   },
   "axis_2026_11_15": [
     {
@@ -462,7 +445,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "5716",
@@ -510,7 +495,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "blind_assembly",
@@ -525,7 +512,9 @@
         "ppo.pt": "74df074853415fdd736dca9ef4fea46108ca8426b75180245592ad520d6a093b"
       },
       "receipt_sha256": "b7071317b441755bd0fecb22bc131a620b0830f452e20be6522ac5ca7c4863f2",
-      "server_receipt": "evaluations/pinned/archive-assembly-cascade/result.json"
+      "server_receipt": "evaluations/pinned/archive-assembly-cascade/result.json",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -561,7 +550,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -597,7 +588,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "pick10",
@@ -633,7 +626,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "push10",
@@ -669,7 +664,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "push10",
@@ -705,7 +702,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "track10",
@@ -721,7 +720,9 @@
       "receipt_sha256": "294de4d32411b8ee871c876d24d99a1e885031df144e56f7d0ac08461a25f047",
       "server_receipt": "evaluations/pinned/archive-track-milestones/result.json",
       "seed": 42,
-      "controls": 679
+      "controls": 679,
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "track10",
@@ -757,7 +758,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "blind_assembly",
@@ -808,7 +811,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -843,7 +848,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -878,7 +885,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "franka1000",
@@ -902,7 +911,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "franka_push5000",
@@ -925,7 +936,9 @@
         false,
         true,
         false
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "franka_push5000",
@@ -948,7 +961,9 @@
         false,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "i2rt_blind_assembly",
@@ -985,31 +1000,9 @@
         false,
         false,
         false
-      ]
-    },
-    {
-      "task": "i2rt_grasp1000",
-      "policy": "i2rt_grasp1000",
-      "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 0,
-      "protocol": "Frozen grasp actor on the shared I2RT tabletop with the Panda policy projection, four starts, seed 42.",
-      "checkpoint_sha256": {
-        "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
-      },
-      "receipt_sha256": "d193d619cc8687a8363283d60f9d7f3fcd812ac79f67c4c4fbb957eec15a34d1",
-      "server_receipt": "evaluations/pinned/i2rt_grasp1000/result.json",
-      "seed": 42,
-      "controls": 128,
-      "timeouts": 4,
-      "failures": 0,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_handover_butter",
@@ -1047,7 +1040,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_pick10",
@@ -1083,7 +1078,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_pick5000",
@@ -1119,7 +1116,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -1155,7 +1154,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_track10",
@@ -1191,7 +1192,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_watch_place",
@@ -1227,7 +1230,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "panda_grasp1000",
@@ -1251,7 +1256,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "panda_wood_pick",
@@ -1274,7 +1281,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "task": "panda_wood_place_base",
@@ -1297,7 +1306,9 @@
         true,
         false,
         true
-      ]
+      ],
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "task": "panda_wood_stack_second",
@@ -1320,7 +1331,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "task": "pick10",
@@ -1355,7 +1368,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "pick100",
@@ -1887,7 +1902,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "push10",
@@ -1922,7 +1939,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "track10",
@@ -1957,7 +1976,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -1974,7 +1995,9 @@
       },
       "receipt_sha256": "b509b7ed7f9e0d8ca27e147c071898b824190165998869ad311c45af2baf8a0e",
       "server_receipt": "evaluations/pinned/handover_butter/evaluation/result.json",
-      "controls": 674
+      "controls": 674,
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "10724",
@@ -2014,7 +2037,9 @@
         "evaluations/arx10724-v107/dev-seed0/ledger.json": "087bf225bd36c546cb63cc1af9c21f10c39d1cdfbe358376c7a04ffdda5f73b5",
         "evaluations/arx10724-v107/dev-seed1/ledger.json": "a5249059bc84f6d5a112207051bc5ec72f583c7c6531d8a42dc64509a46f159b",
         "evaluations/arx10724-v107/dev-seed2/ledger.json": "fc8dde4a19f55fb5072893066113a267f8759b08288c67a1088103434c0b4ff1"
-      }
+      },
+      "training_embodiment": "dual_arx_x5",
+      "evaluation_embodiment": "dual_arx_x5"
     },
     {
       "task": "i2rt_task10717",
@@ -2032,7 +2057,9 @@
       "server_receipt": "evaluations/press-v20/result.json",
       "source_receipts": {
         "evaluations/press-v20/cohort.json": "d07216f95f78dad90eb2bc23e7e0400ff4c1a6bc4d80e3325c71dd7a802c08d7"
-      }
+      },
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_example",
@@ -2056,7 +2083,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_example",
@@ -2080,7 +2109,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_example",
@@ -2104,7 +2135,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2128,7 +2161,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2152,7 +2187,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2176,7 +2213,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2200,7 +2239,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2224,7 +2265,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2248,7 +2291,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2272,7 +2317,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2296,7 +2343,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_task10717",
@@ -2320,7 +2369,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     }
   ]
 }

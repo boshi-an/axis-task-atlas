@@ -6,6 +6,12 @@
   "coverage": {
     "registry_ids": 44,
     "implementations": 39,
+    "native_source_tasks": [
+      "fr3v2_jf_pick",
+      "fr3v2_jf_place",
+      "fr3v2_jf_pick_place"
+    ],
+    "catalog_ids": 47,
     "aliases": {
       "panda_task5033": "5033",
       "panda_task5716": "5716",
@@ -13,7 +19,7 @@
       "wood_place_base": "panda_wood_place_base",
       "wood_stack_second": "panda_wood_stack_second"
     },
-    "view": ".task-views/e636250e63776110f0a484cc1de329cecd07a45b5d8955ba1873d35654683554",
+    "view": ".task-views/6f569f2455d8ba13914a7c1d867e2d1a9cf3a956d2848505a93320163fb9ad20",
     "base_packages": 28,
     "base_files": 84503,
     "base_bytes": 36753962229,
@@ -92,6 +98,11 @@
       "archived_scores": [],
       "aliases": [
         "panda_task5033"
+      ],
+      "embodiment_id": "franka_panda",
+      "runtime": "OmniReset",
+      "i2rt_variants": [
+        "i2rt_task5033"
       ]
     },
     {
@@ -127,7 +138,9 @@
         0
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "franka_panda",
+      "runtime": "OmniReset"
     },
     {
       "id": "5716",
@@ -161,6 +174,11 @@
       "archived_scores": [],
       "aliases": [
         "panda_task5716"
+      ],
+      "embodiment_id": "franka_panda",
+      "runtime": "OmniReset",
+      "i2rt_variants": [
+        "i2rt_task5716"
       ]
     },
     {
@@ -193,7 +211,9 @@
         1
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "franka_panda",
+      "runtime": "OmniReset"
     },
     {
       "id": "franka1000",
@@ -224,7 +244,12 @@
         13
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "franka_panda",
+      "runtime": "OmniReset",
+      "i2rt_variants": [
+        "i2rt_grasp1000"
+      ]
     },
     {
       "id": "panda_grasp1000",
@@ -252,10 +277,12 @@
       "by_task": "by-task/panda_grasp1000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        24
+        23
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "franka_panda",
+      "runtime": "OmniReset"
     },
     {
       "id": "franka_push5000",
@@ -290,7 +317,9 @@
         15
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "franka_panda",
+      "runtime": "OmniReset"
     },
     {
       "id": "panda_wood_pick",
@@ -320,11 +349,16 @@
       "by_task": "by-task/panda_wood_pick",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        25
+        24
       ],
       "archived_scores": [],
       "aliases": [
         "wood_pick"
+      ],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "OmniReset",
+      "i2rt_variants": [
+        "i2rt_wood_pick"
       ]
     },
     {
@@ -355,10 +389,12 @@
       "by_task": "by-task/wood_pick",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        25
+        24
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "OmniReset"
     },
     {
       "id": "panda_wood_place_base",
@@ -388,11 +424,16 @@
       "by_task": "by-task/panda_wood_place_base",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        26
+        25
       ],
       "archived_scores": [],
       "aliases": [
         "wood_place_base"
+      ],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "OmniReset",
+      "i2rt_variants": [
+        "i2rt_wood_place_base"
       ]
     },
     {
@@ -423,10 +464,12 @@
       "by_task": "by-task/wood_place_base",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        26
+        25
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "OmniReset"
     },
     {
       "id": "panda_wood_stack_second",
@@ -456,11 +499,16 @@
       "by_task": "by-task/panda_wood_stack_second",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        27
+        26
       ],
       "archived_scores": [],
       "aliases": [
         "wood_stack_second"
+      ],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "OmniReset",
+      "i2rt_variants": [
+        "i2rt_wood_stack_second"
       ]
     },
     {
@@ -491,10 +539,12 @@
       "by_task": "by-task/wood_stack_second",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        27
+        26
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_base",
@@ -519,7 +569,9 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_example",
@@ -547,12 +599,14 @@
       "by_task": "by-task/i2rt_example",
       "expert_status": "Historical fixed-layout checkpoints",
       "scores": [
+        34,
         35,
-        36,
-        37
+        36
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_inserting",
@@ -578,7 +632,10 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "inserting"
     },
     {
       "id": "i2rt_task5033",
@@ -618,7 +675,10 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "5033"
     },
     {
       "id": "i2rt_task5716",
@@ -658,7 +718,10 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "5716"
     },
     {
       "id": "i2rt_task10717",
@@ -756,11 +819,14 @@
       "by_task": "by-task/i2rt_task10717",
       "expert_status": "Approved I2RT Press actor, normalization, four-call controller, native button assets and replay evidence, plus a historical fixed-layout checkpoint.",
       "scores": [
-        34,
-        46
+        33,
+        45
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "10717"
     },
     {
       "id": "i2rt_pick10",
@@ -852,10 +918,12 @@
       "by_task": "by-task/i2rt_pick10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        19
+        18
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_push10",
@@ -956,18 +1024,20 @@
       "by_task": "by-task/i2rt_push10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        21,
+        20,
+        37,
         38,
         39,
         40,
         41,
         42,
         43,
-        44,
-        45
+        44
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_track10",
@@ -1059,10 +1129,12 @@
       "by_task": "by-task/i2rt_track10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        22
+        21
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_handover_butter",
@@ -1108,10 +1180,12 @@
       "by_task": "by-task/i2rt_handover_butter",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        18
+        17
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_blind_assembly",
@@ -1291,7 +1365,9 @@
         16
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_watch_place",
@@ -1336,10 +1412,12 @@
       "by_task": "by-task/i2rt_watch_place",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        23
+        22
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_grasp1000",
@@ -1359,17 +1437,16 @@
         ],
         "trajectories": [],
         "reset_banks": [],
-        "experts": [
-          "packages/grasp1000/experts/franka1000_fixed_home_average_sysid20_v1/actor.pt"
-        ]
+        "experts": []
       },
       "by_task": "by-task/i2rt_grasp1000",
-      "expert_status": "Frozen weights on axis",
-      "scores": [
-        17
-      ],
+      "expert_status": "No I2RT-trained checkpoint located.",
+      "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "franka1000"
     },
     {
       "id": "i2rt_wood_pick",
@@ -1398,7 +1475,10 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "panda_wood_pick"
     },
     {
       "id": "i2rt_wood_place_base",
@@ -1427,7 +1507,10 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "panda_wood_place_base"
     },
     {
       "id": "i2rt_wood_stack_second",
@@ -1456,13 +1539,16 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "panda_wood_stack_second"
     },
     {
       "id": "i2rt_jf_pick",
       "embodiment": "Dual I2RT/YAM · shared tabletop",
       "task": "JF object pick",
-      "start": "Randomized clutter layout with one of six target objects. Butter is the default.",
+      "start": "Open grippers on the shared desk. Sample target, container and clutter positions and yaw. Five groceries use a wicker basket. The sixth target is a marker with a box.",
       "success": "Lift the target center of mass by 5 cm. For 0.4 s, both fingertips of the same hand must exceed 0.001 N and other measured contacts must stay at or below that threshold.",
       "observation_dim": 172,
       "action_dim": 14,
@@ -1472,31 +1558,27 @@
         "assets": [
           "packages/tabletop/provider.json",
           "packages/jf",
-          "packages/yam-geometry-20261106",
-          "central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028",
-          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts"
+          "packages/yam-geometry-20261106"
         ],
         "trajectories": [],
-        "reset_banks": [
-          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data"
-        ],
-        "experts": [
-          "central/store/jf/models/pick_teacher",
-          "central/store/jf/models/pick_student"
-        ]
+        "reset_banks": [],
+        "experts": []
       },
       "by_task": "by-task/i2rt_jf_pick",
-      "expert_status": "Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable.",
+      "expert_status": "No I2RT-trained checkpoint located.",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "fr3v2_jf_pick"
     },
     {
       "id": "i2rt_jf_place",
       "embodiment": "Dual I2RT/YAM · shared tabletop",
       "task": "JF object placement",
-      "start": "Target starts on the table among clutter. Five groceries use a basket. The marker uses a box.",
-      "success": "Grasp, carry and release inside the container with all fingers clear. Meet container tilt and contact checks and stabilize for two 0.2 s intervals within 2 mm and 0.05 rad.",
+      "start": "Target on the shared desk at reset with randomized positions and yaw. Five groceries use a wicker basket. The sixth target is a marker with a box.",
+      "success": "Grasp the target, carry and release it inside its container. Container tilt must be at most 30 degrees. The object must pass the container contact check, the grasping hand must command opening and all four fingers must be clear. Pose change must stay at or below 2 mm and 0.05 rad per 0.2 s interval for two successive intervals.",
       "observation_dim": 172,
       "action_dim": 14,
       "clock": "15 Hz control · 150 Hz physics · 10 substeps",
@@ -1505,24 +1587,20 @@
         "assets": [
           "packages/tabletop/provider.json",
           "packages/jf",
-          "packages/yam-geometry-20261106",
-          "central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028",
-          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts"
+          "packages/yam-geometry-20261106"
         ],
         "trajectories": [],
-        "reset_banks": [
-          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data"
-        ],
-        "experts": [
-          "central/store/jf/models/place_teacher",
-          "central/store/jf/models/place_student"
-        ]
+        "reset_banks": [],
+        "experts": []
       },
       "by_task": "by-task/i2rt_jf_place",
-      "expert_status": "Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable.",
+      "expert_status": "No I2RT-trained checkpoint located.",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset",
+      "original_task": "fr3v2_jf_place"
     },
     {
       "id": "pick10",
@@ -1554,12 +1632,14 @@
       "expert_status": "Frozen weights on axis",
       "scores": [
         5,
-        28
+        27
       ],
       "archived_scores": [
         2
       ],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "pick100",
@@ -1586,10 +1666,12 @@
       "by_task": "by-task/pick100",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        29
+        28
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "push10",
@@ -1623,12 +1705,14 @@
       "scores": [
         6,
         7,
-        30
+        29
       ],
       "archived_scores": [
         3
       ],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "track10",
@@ -1667,13 +1751,15 @@
       "scores": [
         8,
         9,
-        31
+        30
       ],
       "archived_scores": [
         4,
         5
       ],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "handover_butter",
@@ -1718,12 +1804,14 @@
         4,
         11,
         12,
-        32
+        31
       ],
       "archived_scores": [
         0
       ],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "blind_assembly",
@@ -1778,7 +1866,9 @@
       "archived_scores": [
         1
       ],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_watch_basket_place",
@@ -1810,7 +1900,9 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
     },
     {
       "id": "dual_arx_x5",
@@ -1834,7 +1926,9 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "dual_arx_x5",
+      "runtime": "OmniReset"
     },
     {
       "id": "inserting",
@@ -1858,7 +1952,12 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "dual_arx_x5",
+      "runtime": "OmniReset",
+      "i2rt_variants": [
+        "i2rt_inserting"
+      ]
     },
     {
       "id": "10717",
@@ -1882,7 +1981,12 @@
       "expert_status": "The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256.",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "dual_arx_x5",
+      "runtime": "OmniReset",
+      "i2rt_variants": [
+        "i2rt_task10717"
+      ]
     },
     {
       "id": "10724",
@@ -1978,10 +2082,12 @@
       "by_task": "by-task/10724",
       "expert_status": "All five frozen actors from the retained v107 chain are on axis, including the v89 pair-placement SAC policy.",
       "scores": [
-        33
+        32
       ],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "dual_arx_x5",
+      "runtime": "OmniReset"
     },
     {
       "id": "example",
@@ -2005,7 +2111,9 @@
       "expert_status": "No checkpoint located",
       "scores": [],
       "archived_scores": [],
-      "aliases": []
+      "aliases": [],
+      "embodiment_id": "point_mass",
+      "runtime": "OmniReset"
     },
     {
       "id": "i2rt_pick5000",
@@ -2041,15 +2149,135 @@
       "by_task": "by-task/i2rt_pick5000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        20
+        19
       ],
       "archived_scores": [],
       "aliases": [],
       "original_benchmark": {
         "successes": 29398,
         "attempts": 30000,
-        "protocol": "Original A100 frozen I1 full population. Six trials per object across 5,000 objects."
-      }
+        "protocol": "Original A100 frozen I1 full population. Six trials per object across 5,000 objects.",
+        "training_embodiment": "i2rt_yam",
+        "evaluation_embodiment": "i2rt_yam"
+      },
+      "embodiment_id": "i2rt_yam",
+      "runtime": "OmniReset"
+    },
+    {
+      "id": "fr3v2_jf_pick",
+      "canonical_id": "fr3v2_jf_pick",
+      "task": "JF object pick",
+      "embodiment": "Franka FR3v2",
+      "start": "From randomized object, basket and clutter poses, the arm starts open at home. A global-depth planner brings it to the local Pick entry.",
+      "success": "From the Pick-entry baseline, lift the target center of mass at least 3 cm. Both fingertips must each exert more than 0.001 N and every other measured contact must stay at or below 0.001 N for 48 consecutive 120 Hz physics ticks (0.4 s).",
+      "observation_dim": 1033,
+      "observation_detail": "26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.",
+      "variants": "Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.",
+      "action_dim": 7,
+      "clock": "5 Hz policy · 120 Hz physics · 24 substeps",
+      "entrypoint": "Source simulator on axis2 via evaluate_jf.py fr3v2_jf_pick",
+      "expert_status": "Five object-specific state teachers and one shared visual student.",
+      "resources": {
+        "assets": [
+          "central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028",
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts",
+          "central/store/jf/runs/final_pick_place_20261106"
+        ],
+        "reset_banks": [
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data"
+        ],
+        "experts": [
+          "central/store/jf/models/pick_teacher",
+          "central/store/jf/models/pick_student"
+        ],
+        "trajectories": []
+      },
+      "aliases": [],
+      "by_task": "by-task/fr3v2_jf_pick",
+      "scores": [],
+      "archived_scores": [],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "JF source simulator",
+      "i2rt_variants": [
+        "i2rt_jf_pick"
+      ]
+    },
+    {
+      "id": "fr3v2_jf_place",
+      "canonical_id": "fr3v2_jf_place",
+      "task": "JF object placement",
+      "embodiment": "Franka FR3v2",
+      "start": "A Pick policy grasps and lifts the target. A camera-guided planner carries it toward the basket. Local Place starts only at a valid pre-action handoff. A drop before handoff is excluded. All subsequent failures count.",
+      "success": "Release the object inside the upright container, satisfy the source placement/contact check, command the jaw open and clear both fingers. Three qualifying samples spaced 0.2 s apart must differ by at most 2 mm in position and 0.05 rad in orientation per interval.",
+      "observation_dim": 107,
+      "observation_detail": "26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.",
+      "variants": "Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.",
+      "action_dim": 7,
+      "clock": "5 Hz policy · 120 Hz physics · 24 substeps",
+      "entrypoint": "Source simulator on axis2 via evaluate_jf.py fr3v2_jf_place",
+      "expert_status": "Five object-specific state teachers and one shared visual student.",
+      "resources": {
+        "assets": [
+          "central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028",
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts",
+          "central/store/jf/runs/final_pick_place_20261106"
+        ],
+        "reset_banks": [
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data"
+        ],
+        "experts": [
+          "central/store/jf/models/place_teacher",
+          "central/store/jf/models/place_student"
+        ],
+        "trajectories": []
+      },
+      "aliases": [],
+      "by_task": "by-task/fr3v2_jf_place",
+      "scores": [],
+      "archived_scores": [],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "JF source simulator",
+      "i2rt_variants": [
+        "i2rt_jf_place"
+      ]
+    },
+    {
+      "id": "fr3v2_jf_pick_place",
+      "canonical_id": "fr3v2_jf_pick_place",
+      "task": "JF pick and place",
+      "embodiment": "Franka FR3v2",
+      "start": "One randomized home scene per episode, with an open gripper, a target, a basket and clutter. Global depth guides the approach and transport. The published normal-start cohort has four starts per grocery.",
+      "success": "Complete Pick, carry the held object and complete Place in the same simulation episode. Failed grasps, transport failures and failed releases all count. The physical completion checker gates both stages.",
+      "observation_dim": "Pick 1,033 / Place 107",
+      "observation_detail": "26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.",
+      "variants": "Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.",
+      "action_dim": 7,
+      "clock": "5 Hz policy · 120 Hz physics · 24 substeps",
+      "entrypoint": "Source simulator on axis2 via evaluate_jf.py fr3v2_jf_pick_place",
+      "expert_status": "Five object-specific state teachers and one shared visual student for each stage.",
+      "resources": {
+        "assets": [
+          "central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028",
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts",
+          "central/store/jf/runs/final_pick_place_20261106"
+        ],
+        "reset_banks": [
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data"
+        ],
+        "experts": [
+          "central/store/jf/models/pick_teacher",
+          "central/store/jf/models/pick_student",
+          "central/store/jf/models/place_teacher",
+          "central/store/jf/models/place_student"
+        ],
+        "trajectories": []
+      },
+      "aliases": [],
+      "by_task": "by-task/fr3v2_jf_pick_place",
+      "scores": [],
+      "archived_scores": [],
+      "embodiment_id": "franka_fr3v2",
+      "runtime": "JF source simulator"
     }
   ],
   "evaluations": [
@@ -2098,7 +2326,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "5716",
@@ -2146,7 +2376,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "blind_assembly",
@@ -2161,7 +2393,9 @@
         "ppo.pt": "74df074853415fdd736dca9ef4fea46108ca8426b75180245592ad520d6a093b"
       },
       "receipt_sha256": "b7071317b441755bd0fecb22bc131a620b0830f452e20be6522ac5ca7c4863f2",
-      "server_receipt": "evaluations/pinned/archive-assembly-cascade/result.json"
+      "server_receipt": "evaluations/pinned/archive-assembly-cascade/result.json",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -2197,7 +2431,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -2233,7 +2469,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "pick10",
@@ -2269,7 +2507,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "push10",
@@ -2305,7 +2545,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "push10",
@@ -2341,7 +2583,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "track10",
@@ -2357,7 +2601,9 @@
       "receipt_sha256": "294de4d32411b8ee871c876d24d99a1e885031df144e56f7d0ac08461a25f047",
       "server_receipt": "evaluations/pinned/archive-track-milestones/result.json",
       "seed": 42,
-      "controls": 679
+      "controls": 679,
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "track10",
@@ -2393,7 +2639,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "blind_assembly",
@@ -2444,7 +2692,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -2479,7 +2729,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -2514,7 +2766,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "franka1000",
@@ -2538,7 +2792,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "franka_push5000",
@@ -2561,7 +2817,9 @@
         false,
         true,
         false
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "franka_push5000",
@@ -2584,7 +2842,9 @@
         false,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "i2rt_blind_assembly",
@@ -2621,31 +2881,9 @@
         false,
         false,
         false
-      ]
-    },
-    {
-      "task": "i2rt_grasp1000",
-      "policy": "i2rt_grasp1000",
-      "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 0,
-      "protocol": "Frozen grasp actor on the shared I2RT tabletop with the Panda policy projection, four starts, seed 42.",
-      "checkpoint_sha256": {
-        "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
-      },
-      "receipt_sha256": "d193d619cc8687a8363283d60f9d7f3fcd812ac79f67c4c4fbb957eec15a34d1",
-      "server_receipt": "evaluations/pinned/i2rt_grasp1000/result.json",
-      "seed": 42,
-      "controls": 128,
-      "timeouts": 4,
-      "failures": 0,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_handover_butter",
@@ -2683,7 +2921,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_pick10",
@@ -2719,7 +2959,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_pick5000",
@@ -2755,7 +2997,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -2791,7 +3035,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_track10",
@@ -2827,7 +3073,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_watch_place",
@@ -2863,7 +3111,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "panda_grasp1000",
@@ -2887,7 +3137,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda"
     },
     {
       "task": "panda_wood_pick",
@@ -2910,7 +3162,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "task": "panda_wood_place_base",
@@ -2933,7 +3187,9 @@
         true,
         false,
         true
-      ]
+      ],
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "task": "panda_wood_stack_second",
@@ -2956,7 +3212,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "task": "pick10",
@@ -2991,7 +3249,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "pick100",
@@ -3523,7 +3783,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "push10",
@@ -3558,7 +3820,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "track10",
@@ -3593,7 +3857,9 @@
         false,
         false,
         false
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "handover_butter",
@@ -3610,7 +3876,9 @@
       },
       "receipt_sha256": "b509b7ed7f9e0d8ca27e147c071898b824190165998869ad311c45af2baf8a0e",
       "server_receipt": "evaluations/pinned/handover_butter/evaluation/result.json",
-      "controls": 674
+      "controls": 674,
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "10724",
@@ -3650,7 +3918,9 @@
         "evaluations/arx10724-v107/dev-seed0/ledger.json": "087bf225bd36c546cb63cc1af9c21f10c39d1cdfbe358376c7a04ffdda5f73b5",
         "evaluations/arx10724-v107/dev-seed1/ledger.json": "a5249059bc84f6d5a112207051bc5ec72f583c7c6531d8a42dc64509a46f159b",
         "evaluations/arx10724-v107/dev-seed2/ledger.json": "fc8dde4a19f55fb5072893066113a267f8759b08288c67a1088103434c0b4ff1"
-      }
+      },
+      "training_embodiment": "dual_arx_x5",
+      "evaluation_embodiment": "dual_arx_x5"
     },
     {
       "task": "i2rt_task10717",
@@ -3668,7 +3938,9 @@
       "server_receipt": "evaluations/press-v20/result.json",
       "source_receipts": {
         "evaluations/press-v20/cohort.json": "d07216f95f78dad90eb2bc23e7e0400ff4c1a6bc4d80e3325c71dd7a802c08d7"
-      }
+      },
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_example",
@@ -3692,7 +3964,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_example",
@@ -3716,7 +3990,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_example",
@@ -3740,7 +4016,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -3764,7 +4042,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -3788,7 +4068,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -3812,7 +4094,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -3836,7 +4120,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -3860,7 +4146,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -3884,7 +4172,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -3908,7 +4198,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_push10",
@@ -3932,7 +4224,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "i2rt_task10717",
@@ -3956,7 +4250,9 @@
         true,
         true,
         true
-      ]
+      ],
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     }
   ],
   "archived_evaluations": [
@@ -3968,7 +4264,9 @@
       "starts": "curriculum",
       "scope": "Original author evaluation, 2026-11-01",
       "checkpoint_sha256": "6043a8763bb87bcb35cd01f20eede2a9930d1e060faf6c754ca3ce7502849aef",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/handover_butter_skills/selection.json"
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/handover_butter_skills/selection.json",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "blind_assembly",
@@ -3978,7 +4276,9 @@
       "starts": "curriculum",
       "scope": "Original author evaluation, 2026-11-01",
       "checkpoint_sha256": "74df074853415fdd736dca9ef4fea46108ca8426b75180245592ad520d6a093b",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/i2rt_blind_assembly/selection.json"
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/i2rt_blind_assembly/selection.json",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "pick10",
@@ -3988,7 +4288,9 @@
       "starts": "curriculum",
       "scope": "Original author evaluation, 2026-11-01",
       "checkpoint_sha256": "1ec714409a780856ae43b95f114eccc334b262c0b2ca2d5a45e916bf1d8415a9",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/pick10/selection.json"
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/pick10/selection.json",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "push10",
@@ -3998,7 +4300,9 @@
       "starts": "curriculum",
       "scope": "Original author evaluation, 2026-11-01",
       "checkpoint_sha256": "caa38f9378a1b3bab7c4541bd8e0cd956d394c203fe757e3a5e9bca3be848fcc",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/push10/selection.json"
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/push10/selection.json",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "track10",
@@ -4008,7 +4312,9 @@
       "starts": "curriculum",
       "scope": "Original author evaluation, 2026-11-01",
       "checkpoint_sha256": "8614364e5e52a7418168efe9f4a52e768fb526c0dbd0b47c32cc34c1b0267e3d",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10/selection.json"
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10/selection.json",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     },
     {
       "task": "track10",
@@ -4018,7 +4324,9 @@
       "starts": "curriculum",
       "scope": "Original author evaluation, 2026-11-01",
       "checkpoint_sha256": "ede508b38ec546d5aed22aa8c00204ba17d999fd13a57f1fa57b0b253ae508a0",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10_milestones/selection.json"
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10_milestones/selection.json",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam"
     }
   ],
   "receipt_root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1/central",
@@ -4108,134 +4416,160 @@
   },
   "source_fr3v2_benchmarks": [
     {
-      "task": "i2rt_jf_pick",
+      "task": "fr3v2_jf_pick",
       "kind": "pick_teacher",
       "object_id": 6671,
       "attempts": 1024,
       "successes": 1019,
       "protocol": "Source FR3v2 teacher evaluation on this object.",
       "checkpoint_sha256": "96136219111f94041528c18eb99afce1161054ad681740a7e540641bca053648",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_pick",
+      "task": "fr3v2_jf_pick",
       "kind": "pick_teacher",
       "object_id": 6672,
       "attempts": 1024,
       "successes": 1016,
       "protocol": "Source FR3v2 teacher evaluation on this object.",
       "checkpoint_sha256": "f74ec9b397f43e36ef7217cfd7d2d0ba25fcb6c42c0096419e17b1f9a27fe994",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_pick",
+      "task": "fr3v2_jf_pick",
       "kind": "pick_teacher",
       "object_id": 6673,
       "attempts": 1024,
       "successes": 1015,
       "protocol": "Source FR3v2 teacher evaluation on this object.",
       "checkpoint_sha256": "81b289c81f7f0158da0a7458b07c5df254c314d719ca17fdbeb6874aab3c0f68",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_pick",
+      "task": "fr3v2_jf_pick",
       "kind": "pick_teacher",
       "object_id": 6674,
       "attempts": 1024,
       "successes": 1024,
       "protocol": "Source FR3v2 teacher evaluation on this object.",
       "checkpoint_sha256": "15c76c45806b7b1538d4f9831a5e2dce25104b07b58402e7de4dadedd361c2b3",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_pick",
+      "task": "fr3v2_jf_pick",
       "kind": "pick_teacher",
       "object_id": 6675,
       "attempts": 1024,
       "successes": 1018,
       "protocol": "Source FR3v2 teacher evaluation on this object.",
       "checkpoint_sha256": "c4d2c49bdcca29bb9cf4b0edb138e0c0048c271be47eaaec5c7357c5773da01b",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_place",
+      "task": "fr3v2_jf_place",
       "kind": "place_teacher",
       "object_id": 6671,
       "attempts": 496,
       "successes": 496,
       "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
       "checkpoint_sha256": "7598d2a35b516948392bf9e863d9c05becaa1d30cfb44d1a3089423ef4611148",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_place",
+      "task": "fr3v2_jf_place",
       "kind": "place_teacher",
       "object_id": 6672,
       "attempts": 574,
       "successes": 572,
       "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
       "checkpoint_sha256": "c71b8e74b278faa4da185035685903471254055e4dc03924dc8d24174ee0ed69",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_place",
+      "task": "fr3v2_jf_place",
       "kind": "place_teacher",
       "object_id": 6673,
       "attempts": 358,
       "successes": 357,
       "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
       "checkpoint_sha256": "a6b3d3970c7c36cbe3775efb5fbf2eaf2653e54b5f8ec383b76f54071b18b17a",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_place",
+      "task": "fr3v2_jf_place",
       "kind": "place_teacher",
       "object_id": 6674,
       "attempts": 70,
       "successes": 69,
       "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Development selection.",
       "checkpoint_sha256": "e4bcc8408a9dd00236cb51ca6e14b6448d4aa8bcf748a44b4c27044ecc59218b",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_place",
+      "task": "fr3v2_jf_place",
       "kind": "place_teacher",
       "object_id": 6675,
       "attempts": 481,
       "successes": 479,
       "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
       "checkpoint_sha256": "6c7598f2dddf7b9e1c7cc6d508f396cc1ca7dc60d19c5603fa624973157dfb48",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_pick",
+      "task": "fr3v2_jf_pick",
       "kind": "pick_student",
       "object_id": null,
       "attempts": 640,
       "successes": 630,
       "protocol": "FR3v2 visual Pick student, 128 episodes on each of five objects.",
       "checkpoint_sha256": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
-      "server_receipt": "store/jf-source/my_manipgen/runs/universal_pick_teacher_aligned_flashsac_20261103/best.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/universal_pick_teacher_aligned_flashsac_20261103/best.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_place",
+      "task": "fr3v2_jf_place",
       "kind": "place_student",
       "object_id": null,
       "attempts": 282,
       "successes": 282,
       "protocol": "FR3v2 visual Place student, development set with valid pre-action handoffs.",
       "checkpoint_sha256": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8",
-      "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/best_student.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/best_student.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
-      "task": "i2rt_jf_place",
+      "task": "fr3v2_jf_place",
       "kind": "place_student",
       "object_id": null,
       "attempts": 478,
       "successes": 465,
       "protocol": "Expanded BBQ sauce cohort. Nine failed initializations excluded before student handoff.",
       "checkpoint_sha256": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8",
-      "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/bbq_expanded_20261106/valid_handoff_result.json"
+      "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/bbq_expanded_20261106/valid_handoff_result.json",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     }
   ],
   "source_fr3v2_full_episodes": [
@@ -4252,7 +4586,10 @@
       "seed": 2311006713,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/students-6671/eval_000.json",
-      "receipt_sha256": "22c4497ef887e18efaa406d236562b9eb75f5518bc51853e7843b0cf89835d6e"
+      "receipt_sha256": "22c4497ef887e18efaa406d236562b9eb75f5518bc51853e7843b0cf89835d6e",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6672,
@@ -4267,7 +4604,10 @@
       "seed": 2311006714,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/students-6672/eval_000.json",
-      "receipt_sha256": "3ef90cc015805984e52e287b05f25af61b78fbd217365e624c1a62f5e3d18bee"
+      "receipt_sha256": "3ef90cc015805984e52e287b05f25af61b78fbd217365e624c1a62f5e3d18bee",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6673,
@@ -4282,7 +4622,10 @@
       "seed": 2311006715,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/students-6673/eval_000.json",
-      "receipt_sha256": "7b68702a530a92ec537f24be2784dad663c1de22e40fbfea2e3c81c2e46ec0ec"
+      "receipt_sha256": "7b68702a530a92ec537f24be2784dad663c1de22e40fbfea2e3c81c2e46ec0ec",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6674,
@@ -4297,7 +4640,10 @@
       "seed": 2311006716,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/students-6674/eval_000.json",
-      "receipt_sha256": "9e6238cc78767d9ad7cae674ff99ec678244aa2a2494302ae86e13fb2b86ab14"
+      "receipt_sha256": "9e6238cc78767d9ad7cae674ff99ec678244aa2a2494302ae86e13fb2b86ab14",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6675,
@@ -4312,7 +4658,10 @@
       "seed": 2311006717,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/students-6675/eval_000.json",
-      "receipt_sha256": "09d2ca56d7b30d2736a737e63e42a285950f423e914e617eb979210f653ad8bd"
+      "receipt_sha256": "09d2ca56d7b30d2736a737e63e42a285950f423e914e617eb979210f653ad8bd",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6671,
@@ -4327,7 +4676,10 @@
       "seed": 2311006713,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/teachers-6671/eval_000.json",
-      "receipt_sha256": "e7b38164d6b3b5cd8261d8d5c4d7c7203c26a86c1ec50515f3ee39be1f78168b"
+      "receipt_sha256": "e7b38164d6b3b5cd8261d8d5c4d7c7203c26a86c1ec50515f3ee39be1f78168b",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6672,
@@ -4342,7 +4694,10 @@
       "seed": 2311006714,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/teachers-6672/eval_000.json",
-      "receipt_sha256": "24ca62eac9c596560a01d898b800439b761cbbd8ae6a4a00d40e489cb891fa6d"
+      "receipt_sha256": "24ca62eac9c596560a01d898b800439b761cbbd8ae6a4a00d40e489cb891fa6d",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6673,
@@ -4357,7 +4712,10 @@
       "seed": 2311006715,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/teachers-6673/eval_000.json",
-      "receipt_sha256": "52b6e6952be35f03eb2271f805a2d2a360a76b675523818a177947181180f9dd"
+      "receipt_sha256": "52b6e6952be35f03eb2271f805a2d2a360a76b675523818a177947181180f9dd",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6674,
@@ -4372,7 +4730,10 @@
       "seed": 2311006716,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/teachers-6674/eval_000.json",
-      "receipt_sha256": "733e882587ae60b2b258d030fc2282609504ccb3c6801624b5e6814d7ea8a521"
+      "receipt_sha256": "733e882587ae60b2b258d030fc2282609504ccb3c6801624b5e6814d7ea8a521",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6674,
@@ -4388,7 +4749,10 @@
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/teachers-6674-extra/eval_000.json",
       "receipt_sha256": "3329799c71264e0d18affd5f60788355233d43cad3eddaf0f1bd9ec8ed74e6ae",
-      "sampling_note": "Additional seed after the initial four normal starts yielded zero valid Place handoffs. Both cohorts are reported."
+      "sampling_note": "Additional seed after the initial four normal starts yielded zero valid Place handoffs. Both cohorts are reported.",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     },
     {
       "object_id": 6675,
@@ -4403,7 +4767,10 @@
       "seed": 2311006717,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
       "server_receipt": "evaluations/jf-episode-receipts/teachers-6675/eval_000.json",
-      "receipt_sha256": "32a6791addc8631bf389979b2d474ebabdc6ae5e08aad05d42892f420bcda78f"
+      "receipt_sha256": "32a6791addc8631bf389979b2d474ebabdc6ae5e08aad05d42892f420bcda78f",
+      "task": "fr3v2_jf_pick_place",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2"
     }
   ],
   "arx10717_availability_receipt": "receipts/arx10717-source-search.json",
@@ -4413,13 +4780,19 @@
         "policy": "Retained ARX five-stage chain",
         "attempts": 15,
         "successes": 7,
-        "protocol": "Development layouts, policy seed 773. The independent policy-noise seed 1543 also scored 7/15 on the same layouts."
+        "protocol": "Development layouts, policy seed 773. The independent policy-noise seed 1543 also scored 7/15 on the same layouts.",
+        "task": "10724",
+        "training_embodiment": "dual_arx_x5",
+        "evaluation_embodiment": "dual_arx_x5"
       },
       {
         "policy": "Retained ARX five-stage chain",
         "attempts": 117,
         "successes": 77,
-        "protocol": "Full training partition, policy seed 773."
+        "protocol": "Full training partition, policy seed 773.",
+        "task": "10724",
+        "training_embodiment": "dual_arx_x5",
+        "evaluation_embodiment": "dual_arx_x5"
       }
     ],
     "10717": [
@@ -4427,7 +4800,10 @@
         "policy": "October ARX native policy",
         "attempts": 150,
         "successes": 144,
-        "protocol": "Archived original ARX official cases. Actor unavailable for a fresh rollout."
+        "protocol": "Archived original ARX official cases. Actor unavailable for a fresh rollout.",
+        "task": "10717",
+        "training_embodiment": "dual_arx_x5",
+        "evaluation_embodiment": "dual_arx_x5"
       }
     ],
     "i2rt_task10717": [
@@ -4435,19 +4811,28 @@
         "policy": "Approved I2RT Press v20 controller",
         "attempts": 150,
         "successes": 149,
-        "protocol": "Original digit requests; fixed I2RT layout and fresh default robot start."
+        "protocol": "Original digit requests; fixed I2RT layout and fresh default robot start.",
+        "task": "i2rt_task10717",
+        "training_embodiment": "i2rt_yam",
+        "evaluation_embodiment": "i2rt_yam"
       },
       {
         "policy": "Approved I2RT Press v20 controller",
         "attempts": 150,
         "successes": 148,
-        "protocol": "Repeated fixed digits [1,2] on the same layout."
+        "protocol": "Repeated fixed digits [1,2] on the same layout.",
+        "task": "i2rt_task10717",
+        "training_embodiment": "i2rt_yam",
+        "evaluation_embodiment": "i2rt_yam"
       },
       {
         "policy": "Atomic Press actor",
         "attempts": 1800,
         "successes": 1789,
-        "protocol": "Held-out single-skill test at the source."
+        "protocol": "Held-out single-skill test at the source.",
+        "task": "i2rt_task10717",
+        "training_embodiment": "i2rt_yam",
+        "evaluation_embodiment": "i2rt_yam"
       }
     ]
   }

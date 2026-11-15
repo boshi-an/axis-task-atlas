@@ -1,3 +1,4 @@
+from fractions import Fraction
 from pathlib import Path
 from html import escape as h
 import json
@@ -41,6 +42,34 @@ def stage_rate(wins, count):
     return fmt({"successes": wins, "attempts": count}) if count else "No valid handoffs"
 
 
+OBJECT_NAMES = {
+    6671: "Butter", 6672: "Orange juice", 6673: "Chocolate pudding",
+    6674: "Barbecue sauce", 6675: "Tomato sauce",
+}
+
+
+def native_policy_scores(task_id, runs):
+    # The visual student shares weights across groceries. Each teacher has its own weights.
+    policies = {}
+    for run in runs:
+        name = ("Visual student" if run["policy"] == "student" else
+                f"{OBJECT_NAMES[run['object_id']]} state teacher")
+        result = policies.setdefault(name, dict(policy=name, successes=0, attempts=0))
+        wins, attempts = native_counts(task_id, run)
+        result["successes"] += wins
+        result["attempts"] += attempts
+    population = {"fr3v2_jf_pick": "Pick entries", "fr3v2_jf_place": "valid Place handoffs",
+                  "fr3v2_jf_pick_place": "full episodes from home"}[task_id]
+    for name, result in policies.items():
+        objects = "all five groceries" if name == "Visual student" else name.removesuffix(" state teacher").lower()
+        result["protocol"] = f"Normal starts on axis2, {objects}. Scored over {population}."
+    return list(policies.values())
+
+
+def success_fraction(run):
+    return Fraction(run["successes"], run["attempts"])
+
+
 def native_table(task, runs):
     key = task["id"]
     population = {
@@ -59,17 +88,10 @@ def native_table(task, runs):
     html.append(
         "<table><caption>Object-level results</caption><thead><tr><th>Object</th><th>Policy</th><th>Seed</th><th>Success</th></tr></thead><tbody>"
     )
-    names = {
-        6671: "Butter",
-        6672: "Orange juice",
-        6673: "Chocolate pudding",
-        6674: "Barbecue sauce",
-        6675: "Tomato sauce",
-    }
     for r in runs:
         wins, n = native_counts(key, r)
         html.append(
-            f"<tr><td>{names[r['object_id']]} ({r['object_id']})</td><td>{h(r['policy'])}</td><td>{r['seed']}</td><td>{stage_rate(wins, n)}</td></tr>"
+            f"<tr><td>{h(OBJECT_NAMES[r['object_id']])} ({r['object_id']})</td><td>{h(r['policy'])}</td><td>{r['seed']}</td><td>{stage_rate(wins, n)}</td></tr>"
         )
     html.append(
         "</tbody></table><p>The barbecue sauce teacher had a second batch of eight after the first four starts yielded no valid Place handoffs. Both batches are shown.</p>"
@@ -96,7 +118,7 @@ parts = [
     '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Task library and expert evaluations · Axis OmniReset</title><style>'
     + style
     + '</style></head><body><header><strong>AXIS / OmniReset</strong><a href="index.html">Task atlas</a></header><main><h1>Task library</h1>',
-    f"<p>{full['coverage']['implementations']} OmniReset environments, {len(rows) - len(core)} aliases and {len(full['coverage']['native_source_tasks'])} original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. Each score uses the robot on which the policy trained. Updated {full['as_of']}.</p>",
+    f"<p>{full['coverage']['implementations']} OmniReset environments, {len(rows) - len(core)} aliases and {len(full['coverage']['native_source_tasks'])} original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. For tasks with several evaluated experts, the summary shows the highest measured success rate on that task and robot. Results below identify the policy and evaluation conditions. Updated {full['as_of']}.</p>",
     f"<p>All {full['i2rt_physics_qualification']['tasks_verified']} I2RT tasks share the dual-arm ABC Box V4 robot, its USD joint gains and friction, and a 15 Hz control loop over ten 150 Hz physics ticks. PhysX uses TGS with 64 position iterations and one velocity iteration. Each task passed a live robot-parameter comparison on axis.</p>",
     "<p>Server library root <code>"
     + h(full["root"])
@@ -111,6 +133,7 @@ names = {
     "trajectories": "Trajectories and replay",
     "reset_banks": "Reset banks",
 }
+best_experts = {}
 for i, g in enumerate(groups):
     parts.append(f'<section id="group-{i}"><h2>{h(g)}</h2>')
     for r in sorted([r for r in core if heading(r) == g], key=lambda x: x["id"]):
@@ -120,31 +143,36 @@ for i, g in enumerate(groups):
             for j in r["scores"]
             if matches(r, scores[j]) and scores[j]["task"] == k
         ]
-        normal = [e for e in qs if e["scope"] == "registered task"]
-        delivered = [e for e in qs if e["scope"] == "native delivery"]
-        score = (
-            fmt(normal[0])
-            if len(normal) == 1
-            else f"{len(normal)} evaluated policies"
-            if normal
-            else (
-                "Frozen delivery · " + fmt(delivered[0])
-                if delivered
-                else r["expert_status"]
-            )
-        )
         fresh = (
-            [run for run in full["source_fr3v2_full_episodes"] if matches(r, run)]
+            [run for run in full["source_fr3v2_full_episodes"]
+             if run["task"] == "fr3v2_jf_pick_place" and matches(r, run)]
             if k in full["coverage"]["native_source_tasks"]
             else []
         )
+        candidates = qs.copy()
         if fresh:
-            pairs = [
-                native_counts(k, run) for run in fresh if run["policy"] == "student"
-            ]
-            score = "Visual student · " + stage_rate(
-                sum(w for w, n in pairs), sum(n for w, n in pairs)
-            )
+            candidates.extend(native_policy_scores(k, fresh))
+        ranked = sorted((e for e in candidates if e["attempts"] > 0),
+                        key=lambda e: (success_fraction(e), e["attempts"]), reverse=True)
+        multiple = len({e["policy"] for e in ranked}) > 1
+        score = r["expert_status"]
+        winner_label = None
+        if ranked:
+            best = ranked[0]
+            score = fmt(best)
+            if multiple:
+                score = "Best expert · " + score
+                tied = {e["policy"] for e in ranked if success_fraction(e) == success_fraction(best)}
+                winner_label = best["policy"]
+                others = len(tied) - 1
+                if others:
+                    noun = "policy" if others == 1 else "policies"
+                    winner_label += f" (tied with {others} other {noun})"
+                best_experts[k] = dict(policy=best["policy"], successes=best["successes"],
+                                       attempts=best["attempts"], protocol=best["protocol"],
+                                       tiedPolicies=len(tied), embodimentId=r["embodiment_id"])
+            elif best.get("scope") == "native delivery":
+                score = "Frozen delivery · " + score
         parts.append(
             f'<details id="{k}" data-aliases="{h(" ".join(r["aliases"]))}" data-search="{h(" ".join([k, r["task"], *r["aliases"]]).lower())}"><summary><strong>{h(r["task"])}</strong><code>{h(k)}</code><small>{h(score)}</small></summary><div><dl>'
         )
@@ -165,6 +193,8 @@ for i, g in enumerate(groups):
             ("Runtime", r.get("entrypoint")),
             ("Expert availability", r["expert_status"]),
         ]
+        if winner_label:
+            vals.append(("Highest-scoring policy", winner_label))
         for label, val in vals:
             if val:
                 parts.append(f"<dt>{label}</dt><dd>{h(val)}</dd>")
@@ -192,13 +222,15 @@ for i, g in enumerate(groups):
         parts.append(
             f"<dt>Server directory</dt><dd><code>{h(r['by_task'])}/</code></dd></dl>"
         )
-        if qs:
+        if ranked:
+            location = "axis2" if fresh else "axis"
             parts.append(
-                "<table><caption>Frozen-policy evaluations on axis</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>"
+                f"<table><caption>Frozen-policy evaluations on {location}</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>"
             )
-            for e in qs:
+            for e in ranked:
+                code = f" Code <code>{h(e['revision'])}</code>." if e.get("revision") else ""
                 parts.append(
-                    f"<tr><td>{h(e['policy'])}</td><td>{fmt(e)}</td><td>{h(e['protocol'])} Code <code>{h(e['revision'])}</code>.</td></tr>"
+                    f"<tr><td>{h(e['policy'])}</td><td>{fmt(e)}</td><td>{h(e['protocol'])}{code}</td></tr>"
                 )
             parts.append("</tbody></table>")
         if fresh:
@@ -267,8 +299,15 @@ for i, g in enumerate(groups):
         parts.append("</dl></div></details>")
     parts.append("</section>")
 parts.append("""</main><footer><a href="index.html">Back to the atlas</a></footer><script>
-const entries=Array.from(document.querySelectorAll('details'));
+const entries=Array.from(document.querySelectorAll('details[data-search]'));
 function locate(){const id=decodeURIComponent(location.hash.slice(1));if(!id)return;const node=document.getElementById(id)||entries.find(row=>row.dataset.aliases.split(' ').includes(id));if(node&&node.tagName==='DETAILS'){node.open=true;node.scrollIntoView();}}
-document.getElementById('filter').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();for(const row of entries)row.hidden=!row.dataset.search.includes(q);for(const group of document.querySelectorAll('main section'))group.hidden=!group.querySelector('details:not([hidden])');});window.addEventListener('hashchange',locate);locate();
+document.getElementById('filter').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();for(const row of entries)row.hidden=!row.dataset.search.includes(q);for(const group of document.querySelectorAll('main section'))group.hidden=!group.querySelector('details[data-search]:not([hidden])');});window.addEventListener('hashchange',locate);locate();
 </script></body></html>""")
 (web / "library.html").write_text("\n".join(parts) + "\n")
+
+# Embed the same winners for the gallery, including when opened directly from disk.
+gallery_file = web / "catalog-data.js"
+header, assignment, payload = gallery_file.read_text().partition("window.AXIS_ATLAS = ")
+gallery = json.loads(payload.rstrip().removesuffix(";"))
+gallery["bestExperts"] = best_experts
+gallery_file.write_text(header + assignment + json.dumps(gallery, ensure_ascii=False, indent=2) + ";\n")

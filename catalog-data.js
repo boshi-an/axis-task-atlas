@@ -2874,5 +2874,103 @@ window.AXIS_ATLAS = {
       "trainingEmbodiment": "franka_panda",
       "evaluationEmbodiment": "franka_panda"
     }
+  },
+  "bestExperts": {
+    "blind_assembly": {
+      "policy": "Archived SAC approach and PPO insertion",
+      "successes": 5,
+      "attempts": 24,
+      "protocol": "Continuous frozen SAC approach and PPO insertion from home. One layout in each of the 24 geometry variants. The robot and object were never reset between stages.",
+      "tiedPolicies": 1,
+      "embodimentId": "i2rt_yam"
+    },
+    "handover_butter": {
+      "policy": "Native MA-v2 chain",
+      "successes": 113,
+      "attempts": 300,
+      "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
+      "tiedPolicies": 1,
+      "embodimentId": "i2rt_yam"
+    },
+    "i2rt_example": {
+      "policy": "i2rt_example_default · 0095a6ff",
+      "successes": 4,
+      "attempts": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
+      "tiedPolicies": 3,
+      "embodimentId": "i2rt_yam"
+    },
+    "i2rt_push10": {
+      "policy": "i2rt_push10_bottle_16 · 45742742",
+      "successes": 4,
+      "attempts": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_bottle_16. The actor receives its training-time observation fields from the active scene.",
+      "tiedPolicies": 8,
+      "embodimentId": "i2rt_yam"
+    },
+    "i2rt_task10717": {
+      "policy": "Approved I2RT v20 four-call Press controller",
+      "successes": 12,
+      "attempts": 12,
+      "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
+      "tiedPolicies": 1,
+      "embodimentId": "i2rt_yam"
+    },
+    "pick10": {
+      "policy": "archive-pick10",
+      "successes": 16,
+      "attempts": 16,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "tiedPolicies": 2,
+      "embodimentId": "i2rt_yam"
+    },
+    "push10": {
+      "policy": "archive-push10",
+      "successes": 0,
+      "attempts": 16,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "tiedPolicies": 3,
+      "embodimentId": "i2rt_yam"
+    },
+    "track10": {
+      "policy": "archive-track10",
+      "successes": 0,
+      "attempts": 16,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "tiedPolicies": 3,
+      "embodimentId": "i2rt_yam"
+    },
+    "franka_push5000": {
+      "policy": "franka_push5000-baked",
+      "successes": 2,
+      "attempts": 4,
+      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
+      "tiedPolicies": 2,
+      "embodimentId": "franka_panda"
+    },
+    "fr3v2_jf_pick": {
+      "policy": "Visual student",
+      "successes": 20,
+      "attempts": 20,
+      "protocol": "Normal starts on axis2, all five groceries. Scored over Pick entries.",
+      "tiedPolicies": 6,
+      "embodimentId": "franka_fr3v2"
+    },
+    "fr3v2_jf_pick_place": {
+      "policy": "Orange juice state teacher",
+      "successes": 3,
+      "attempts": 4,
+      "protocol": "Normal starts on axis2, orange juice. Scored over full episodes from home.",
+      "tiedPolicies": 3,
+      "embodimentId": "franka_fr3v2"
+    },
+    "fr3v2_jf_place": {
+      "policy": "Visual student",
+      "successes": 11,
+      "attempts": 11,
+      "protocol": "Normal starts on axis2, all five groceries. Scored over valid Place handoffs.",
+      "tiedPolicies": 5,
+      "embodimentId": "franka_fr3v2"
+    }
   }
 };

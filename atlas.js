@@ -1,7 +1,7 @@
 /* The atlas reads its packaged records directly so the same page works over HTTP and file URLs. */
 (() => {
   'use strict';
-  const { tasks: registry, revision, nativeBenchmarks = {} } = window.AXIS_ATLAS;
+  const { tasks: registry, revision, nativeBenchmarks = {}, bestExperts = {} } = window.AXIS_ATLAS;
   const tasks = registry.filter(task => !task.libraryOnly);
   const nativeI2rt = new Set(registry.filter(task => task.libraryOnly).map(task => task.id));
   const byId = new Map(tasks.flatMap(task => [task.id, ...task.aliases].map(id => [id, task])));
@@ -63,6 +63,11 @@
     return result;
   }
 
+  function bestExpert(task) {
+    const best = bestExperts[task.id];
+    return best && best.embodimentId === task.embodimentId && hasScore(best) ? best : null;
+  }
+
   function successRate(result) {
     return (result.successes / result.attempts).toLocaleString('en-US', {
       style: 'percent', maximumFractionDigits: 2
@@ -94,8 +99,9 @@
     copy.append(heading, el('code','env-id',task.id), el('span','card-desc',task.description));
     const stats = el('span','metrics');
     stats.append(metric('Expert',task.expert?.runnable ? (task.expert.availability || 'Available') : (task.sourceExpertLabel || 'None verified')));
-    const result = targetEvaluation(task);
-    if (result) stats.append(metric('Expert success',successRate(result)));
+    const best = bestExpert(task);
+    const result = best || targetEvaluation(task);
+    if (result) stats.append(metric(best ? 'Best expert success' : 'Expert success',successRate(result)));
     stats.append(metric('Trajectories',formatCount(task.refs.count)));
     button.append(photo, copy, stats);
     button.addEventListener('click', () => {
@@ -191,13 +197,28 @@
     const hasPrevious = trainedHere(task, previous) && hasScore(previous) && previous.taskId === task.id && previous.revision !== task.taskRevision;
     const benchmark = nativeBenchmarks[task.id];
     const showNative = trainedHere(task, benchmark) && benchmark.taskId === task.id && hasScore(benchmark);
-    if (expert) {
-      const ex = section('Trained expert');
-      ex.append(facts([['Policy',expert.name],[task.profile === 'Shared tabletop' ? 'Shared success' : 'Success on this setup',result && successRate(result)],
-        ['Evaluation',result?.protocol],
-        ['Earlier shared evaluation',hasPrevious && successRate(previous) + ' on the ' + previous.obsDim + '-value task. ' + previous.protocol],
-        ['Archived native success',showNative && successRate(benchmark)],
-        ['Native evaluation',showNative && benchmark.protocol],['Recipe',expert.recipe],['Trained by',expert.trainer]]));
+    const best = bestExpert(task);
+    if (best || expert) {
+      const ex = section(best ? 'Highest-scoring expert' : 'Trained expert');
+      if (best) {
+        const otherWinners = best.tiedPolicies - 1;
+        ex.append(facts([['Policy',best.policy],['Best expert success',successRate(best)],
+          ['Tied at this rate',otherWinners && (otherWinners + (otherWinners === 1 ? ' other policy' : ' other policies'))],
+          ['Evaluation',best.protocol]]));
+        ex.append(sourceItem('All policy results','./library.html#'+task.id));
+      }
+      if (expert) {
+        const info = facts([['Policy',expert.name],[task.profile === 'Shared tabletop' ? 'Shared success' : 'Success on this setup',result && successRate(result)],
+          ['Evaluation',result?.protocol],
+          ['Earlier shared evaluation',hasPrevious && successRate(previous) + ' on the ' + previous.obsDim + '-value task. ' + previous.protocol],
+          ['Archived native success',showNative && successRate(benchmark)],
+          ['Native evaluation',showNative && benchmark.protocol],['Recipe',expert.recipe],['Trained by',expert.trainer]]);
+        if (best) {
+          const details = el('details');
+          details.append(el('summary',null,expert.name + ' details'),info);
+          ex.append(details);
+        } else ex.append(info);
+      }
       body.append(ex);
     }
     if (task.sourceExpertNote) {
@@ -209,7 +230,7 @@
     refs.append(facts([['Count',formatCount(task.refs.count)],['Collection',task.refs.summary],
       ['Length distribution',task.refs.length],['Trajectory success',task.refs.success],['Scope',task.refs.notes]]));
     if (task.refs.quartiles) refs.append(lengthPlot(task.refs.quartiles));
-    if (!expert) refs.classList.add('wide');
+    if (!expert && !best) refs.classList.add('wide');
     body.append(refs);
     const bottom = el('div','panel-foot');
     const sources = el('div','panel-sources');

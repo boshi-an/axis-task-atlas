@@ -2,8 +2,8 @@
 (() => {
   'use strict';
   const { tasks: registry, revision, nativeBenchmarks = {} } = window.AXIS_ATLAS;
-  const tasks = registry.filter(task => task.profile !== 'Native setup' || task.group !== 'I2RT');
-  const nativeI2rt = new Set(registry.filter(task => task.profile === 'Native setup' && task.group === 'I2RT').map(task => task.id));
+  const tasks = registry.filter(task => !task.libraryOnly);
+  const nativeI2rt = new Set(registry.filter(task => task.libraryOnly).map(task => task.id));
   const byId = new Map(tasks.flatMap(task => [task.id, ...task.aliases].map(id => [id, task])));
   const gallery = document.querySelector('#cards');
   const query = document.querySelector('#query');

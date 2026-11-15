@@ -97,6 +97,7 @@ parts = [
     + style
     + '</style></head><body><header><strong>AXIS / OmniReset</strong><a href="index.html">Task atlas</a></header><main><h1>Task library</h1>',
     f"<p>{full['coverage']['implementations']} OmniReset environments, {len(rows) - len(core)} aliases and {len(full['coverage']['native_source_tasks'])} original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. Each score uses the robot on which the policy trained. Updated {full['as_of']}.</p>",
+    f"<p>All {full['i2rt_physics_qualification']['tasks_verified']} I2RT tasks share the dual-arm ABC Box V4 robot, its USD joint gains and friction, and a 15 Hz control loop over ten 150 Hz physics ticks. PhysX uses TGS with 64 position iterations and one velocity iteration. Each task passed a live robot-parameter comparison on axis.</p>",
     "<p>Server library root <code>"
     + h(full["root"])
     + '</code>. Resource paths are relative to this directory. <a href="task-library.json">Download the inventory and evaluation results</a>.</p>',
@@ -219,6 +220,12 @@ for i, g in enumerate(groups):
                     f"<tr><td>{h(label)}</td><td>{fmt(e)}</td><td>{h(e['protocol'])}</td></tr>"
                 )
             parts.append("</tbody></table>")
+        if r.get("prior_physics_evaluations"):
+            parts.append("<details><summary>Archived evaluations on earlier physics</summary><ul>")
+            for z in r["prior_physics_evaluations"]:
+                if matches(r, z):
+                    parts.append(f"<li>{h(z['policy'])} · {fmt(z)}. {h(z['protocol'])}</li>")
+            parts.append("</ul></details>")
         if r.get("archived_scores"):
             parts.append("<p><b>Original author evaluations</b> (1 Nov 2026)</p><ul>")
             for j in r["archived_scores"]:
@@ -241,7 +248,7 @@ for i, g in enumerate(groups):
         if "original_benchmark" in r and matches(r, r["original_benchmark"]):
             z = r["original_benchmark"]
             parts.append(
-                f"<p><b>A100 delivery benchmark</b> · 97.9933% ({z['successes']:,}/{z['attempts']:,}). {h(z['protocol'])}</p>"
+                f"<p><b>Archived fixed-I1 A100 delivery benchmark</b> · 97.9933% ({z['successes']:,}/{z['attempts']:,}). {h(z['protocol'])}</p>"
             )
         parts.append("<dl>")
         for role, label in names.items():

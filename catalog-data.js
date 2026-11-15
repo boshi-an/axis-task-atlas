@@ -546,7 +546,21 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/handover_butter/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "2 evaluated checkpoints",
+        "name": "handover_butter frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "handover_butter",
+          "revision": "e465d482",
+          "obsDim": 209,
+          "actionDim": 14,
+          "successes": 0,
+          "attempts": 16,
+          "protocol": "archive-handover_butter_sac. Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 1200,
         "summary": "Retained successful demonstrations",
@@ -580,7 +594,7 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/handover_butter-scene.jpg"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "e465d482"
     },
     {
       "id": "panda_wood_stack_second",
@@ -1345,7 +1359,7 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
+        "availability": "2 evaluated checkpoints",
         "name": "pick10 frozen policy",
         "sources": [],
         "evaluation": {
@@ -1355,7 +1369,7 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 16,
           "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "pick10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
         }
       },
       "refs": {
@@ -1570,7 +1584,7 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
+        "availability": "3 evaluated checkpoints",
         "name": "push10 frozen policy",
         "sources": [],
         "evaluation": {
@@ -1580,7 +1594,7 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "push10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
         }
       },
       "refs": {
@@ -1739,7 +1753,7 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
+        "availability": "2 evaluated checkpoints",
         "name": "track10 frozen policy",
         "sources": [],
         "evaluation": {
@@ -1749,7 +1763,7 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "track10. Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
         }
       },
       "refs": {
@@ -2383,7 +2397,7 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "name": "Push5000 frozen policy",
         "sources": [],
-        "availability": "Evaluated on axis",
+        "availability": "2 evaluated checkpoints",
         "evaluation": {
           "taskId": "franka_push5000",
           "revision": "e465d482",
@@ -2391,7 +2405,7 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 2,
           "attempts": 4,
-          "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "franka_push5000-baked. Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run. See the full task library for checkpoints and evaluation receipts."
         }
       },
       "refs": {

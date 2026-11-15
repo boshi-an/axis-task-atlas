@@ -215,7 +215,7 @@
       "by_task": "by-task/franka1000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        5
+        13
       ],
       "archived_scores": [],
       "aliases": []
@@ -246,7 +246,7 @@
       "by_task": "by-task/panda_grasp1000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        14
+        23
       ],
       "archived_scores": [],
       "aliases": []
@@ -280,7 +280,8 @@
       "by_task": "by-task/franka_push5000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        6
+        14,
+        15
       ],
       "archived_scores": [],
       "aliases": []
@@ -313,7 +314,7 @@
       "by_task": "by-task/panda_wood_pick",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        15
+        24
       ],
       "archived_scores": [],
       "aliases": [
@@ -348,7 +349,7 @@
       "by_task": "by-task/wood_pick",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        15
+        24
       ],
       "archived_scores": [],
       "aliases": []
@@ -532,9 +533,9 @@
       "by_task": "by-task/i2rt_example",
       "expert_status": "Historical fixed-layout checkpoints",
       "scores": [
-        21,
-        22,
-        23
+        30,
+        31,
+        32
       ],
       "archived_scores": [],
       "aliases": []
@@ -690,7 +691,7 @@
       "by_task": "by-task/i2rt_task10717",
       "expert_status": "Historical fixed-layout checkpoints",
       "scores": [
-        32
+        41
       ],
       "archived_scores": [],
       "aliases": []
@@ -785,7 +786,7 @@
       "by_task": "by-task/i2rt_pick10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        10
+        19
       ],
       "archived_scores": [],
       "aliases": []
@@ -889,15 +890,15 @@
       "by_task": "by-task/i2rt_push10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        12,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31
+        21,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
       ],
       "archived_scores": [],
       "aliases": []
@@ -992,7 +993,7 @@
       "by_task": "by-task/i2rt_track10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        13
+        22
       ],
       "archived_scores": [],
       "aliases": []
@@ -1041,7 +1042,7 @@
       "by_task": "by-task/i2rt_handover_butter",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        9
+        18
       ],
       "archived_scores": [],
       "aliases": []
@@ -1221,7 +1222,7 @@
       "by_task": "by-task/i2rt_blind_assembly",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        7
+        16
       ],
       "archived_scores": [],
       "aliases": []
@@ -1297,7 +1298,7 @@
       "by_task": "by-task/i2rt_grasp1000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        8
+        17
       ],
       "archived_scores": [],
       "aliases": []
@@ -1476,7 +1477,8 @@
       "by_task": "by-task/pick10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        16
+        5,
+        25
       ],
       "archived_scores": [
         2
@@ -1508,7 +1510,7 @@
       "by_task": "by-task/pick100",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        17
+        26
       ],
       "archived_scores": [],
       "aliases": []
@@ -1543,7 +1545,9 @@
       "by_task": "by-task/push10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        18
+        6,
+        7,
+        27
       ],
       "archived_scores": [
         3
@@ -1585,7 +1589,9 @@
       "by_task": "by-task/track10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        19
+        8,
+        9,
+        28
       ],
       "archived_scores": [
         4,
@@ -1634,7 +1640,9 @@
       "scores": [
         3,
         4,
-        20
+        11,
+        12,
+        29
       ],
       "archived_scores": [
         0
@@ -1688,7 +1696,8 @@
       "by_task": "by-task/blind_assembly",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        2
+        2,
+        10
       ],
       "archived_scores": [
         1
@@ -1929,7 +1938,7 @@
       "by_task": "by-task/i2rt_pick5000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        11
+        20
       ],
       "archived_scores": [],
       "aliases": [],
@@ -2034,6 +2043,253 @@
         true,
         true,
         true
+      ]
+    },
+    {
+      "task": "blind_assembly",
+      "policy": "Archived SAC approach and PPO insertion",
+      "scope": "source protocol",
+      "revision": "e465d482",
+      "attempts": 24,
+      "successes": 18,
+      "protocol": "Continuous frozen SAC approach and PPO insertion from home. One layout in each of the 24 geometry variants. The robot and object were never reset between stages.",
+      "checkpoint_sha256": {
+        "approach.pt": "9773fcc871a5bf8867b3d3e59fc5bda12e93b8adf27d045c610df104c789ef23",
+        "ppo.pt": "74df074853415fdd736dca9ef4fea46108ca8426b75180245592ad520d6a093b"
+      },
+      "receipt_sha256": "b7071317b441755bd0fecb22bc131a620b0830f452e20be6522ac5ca7c4863f2",
+      "server_receipt": "evaluations/pinned/archive-assembly-cascade/result.json"
+    },
+    {
+      "task": "handover_butter",
+      "policy": "archive-handover_butter_sac",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
+      "checkpoint_sha256": {
+        "original.pt": "e25213944f0e4b1a14c45c2d0ebab5f9e5f6896f9de05270a2f16b7f24ccfdcf",
+        "actor-pack.pt": "30b4e0a9478206cfb4848fc3b4670af5bf2e7855c5e9a9cbe93b1d72e2a956cd"
+      },
+      "receipt_sha256": "dc117a72e231f0e190152773f1f714f219c355eb2e10768f4338775c6e6a3bec",
+      "server_receipt": "evaluations/pinned/archive-handover_butter_sac/result.json",
+      "seed": 42,
+      "controls": 254,
+      "timeouts": 16,
+      "episode_success": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "handover_butter",
+      "policy": "archive-handover_butter_skills",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
+      "checkpoint_sha256": {
+        "original.pt": "6043a8763bb87bcb35cd01f20eede2a9930d1e060faf6c754ca3ce7502849aef",
+        "actor-pack.pt": "38e638d51d9b26c0bb1a6d4ee2a4e5206486593d79287bc7208599d9386f8468"
+      },
+      "receipt_sha256": "c56824dc85cc6c386a4319c39aa61ced5c28e177d0a72bbfa38b5980e23b2c0c",
+      "server_receipt": "evaluations/pinned/archive-handover_butter_skills/result.json",
+      "seed": 42,
+      "controls": 254,
+      "timeouts": 16,
+      "episode_success": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "pick10",
+      "policy": "archive-pick10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 16,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "checkpoint_sha256": {
+        "original.pt": "1ec714409a780856ae43b95f114eccc334b262c0b2ca2d5a45e916bf1d8415a9",
+        "actor-pack.pt": "824bb4616ae22e2123e54476aab336541a43ef7e04e4a0add045473814ca7715"
+      },
+      "receipt_sha256": "a626ddea958a580848c4a246de4acfb47cac08fed93377a5c808671e63dbd84a",
+      "server_receipt": "evaluations/pinned/archive-pick10/result.json",
+      "seed": 42,
+      "controls": 256,
+      "timeouts": 0,
+      "episode_success": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "push10",
+      "policy": "archive-push10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "checkpoint_sha256": {
+        "original.pt": "caa38f9378a1b3bab7c4541bd8e0cd956d394c203fe757e3a5e9bca3be848fcc",
+        "actor-pack.pt": "ad1c132223eae87ffa5e73c79bfe3e12532b6628c602435946280702649ca128"
+      },
+      "receipt_sha256": "a64b17debb1409b05bca764f1a4210cf7fffd1809b56360d9a21765b8036cb8b",
+      "server_receipt": "evaluations/pinned/archive-push10/result.json",
+      "seed": 42,
+      "controls": 394,
+      "timeouts": 16,
+      "episode_success": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "push10",
+      "policy": "archive-push10_per",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "checkpoint_sha256": {
+        "original.pt": "99006380d4c633ef024cbc8da9ac8528a9ed577836f121c16d06291c76b1ce96",
+        "actor-pack.pt": "16d835f14e952bd4b94da4c2bb68eb7997d10cbc1d399bf1712ce425d01587d5"
+      },
+      "receipt_sha256": "ff2df93aa1b4bb5671fe9dbf12f535d58b668408c2af91284d353f79d713ee1d",
+      "server_receipt": "evaluations/pinned/archive-push10_per/result.json",
+      "seed": 42,
+      "controls": 394,
+      "timeouts": 16,
+      "episode_success": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "track10",
+      "policy": "Archived lift and target milestone actor",
+      "scope": "source protocol",
+      "revision": "e465d482",
+      "attempts": 10,
+      "successes": 0,
+      "protocol": "Source milestone feature and reward contract. One qualified first-frame trajectory per available object, seed 42. Episodes ran to termination or their native horizon.",
+      "checkpoint_sha256": {
+        "original.pt": "ede508b38ec546d5aed22aa8c00204ba17d999fd13a57f1fa57b0b253ae508a0"
+      },
+      "receipt_sha256": "294de4d32411b8ee871c876d24d99a1e885031df144e56f7d0ac08461a25f047",
+      "server_receipt": "evaluations/pinned/archive-track-milestones/result.json",
+      "seed": 42,
+      "controls": 679
+    },
+    {
+      "task": "track10",
+      "policy": "archive-track10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "checkpoint_sha256": {
+        "original.pt": "8614364e5e52a7418168efe9f4a52e768fb526c0dbd0b47c32cc34c1b0267e3d",
+        "actor-pack.pt": "e91d421fdfceb1ac4e0ded0aff5d6fe006d683ae58b4577c90cc19aadea53c19"
+      },
+      "receipt_sha256": "c2e0dbba6f1774dfd86d5080045042490b22a56b9e52c4b0200504c7d1bf10ac",
+      "server_receipt": "evaluations/pinned/archive-track10/result.json",
+      "seed": 42,
+      "controls": 206,
+      "timeouts": 0,
+      "episode_success": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
       ]
     },
     {
@@ -2179,6 +2435,29 @@
         true,
         true,
         true
+      ]
+    },
+    {
+      "task": "franka_push5000",
+      "policy": "franka_push5000-baked",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 2,
+      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
+      "checkpoint_sha256": {
+        "best_frozen.pt": "f2ce99de72f1d769820fa23ea0441d6ad42a83b64b377ca9186849d468ecf3d5"
+      },
+      "receipt_sha256": "ac1e6bae193430edfd00b5718b8ab8d9488295011114dc00e2b061cce7bed83c",
+      "server_receipt": "evaluations/pinned/franka_push5000-baked/result.json",
+      "seed": 42,
+      "controls": 156,
+      "timeouts": 2,
+      "success_by_env": [
+        true,
+        false,
+        true,
+        false
       ]
     },
     {
@@ -3582,5 +3861,138 @@
         "parameters": 28435880
       }
     ]
-  }
+  },
+  "source_fr3v2_benchmarks": [
+    {
+      "task": "i2rt_jf_pick",
+      "kind": "pick_teacher",
+      "object_id": 6671,
+      "attempts": 1024,
+      "successes": 1019,
+      "protocol": "Source FR3v2 teacher evaluation on this object.",
+      "checkpoint_sha256": "96136219111f94041528c18eb99afce1161054ad681740a7e540641bca053648",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+    },
+    {
+      "task": "i2rt_jf_pick",
+      "kind": "pick_teacher",
+      "object_id": 6672,
+      "attempts": 1024,
+      "successes": 1016,
+      "protocol": "Source FR3v2 teacher evaluation on this object.",
+      "checkpoint_sha256": "f74ec9b397f43e36ef7217cfd7d2d0ba25fcb6c42c0096419e17b1f9a27fe994",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+    },
+    {
+      "task": "i2rt_jf_pick",
+      "kind": "pick_teacher",
+      "object_id": 6673,
+      "attempts": 1024,
+      "successes": 1015,
+      "protocol": "Source FR3v2 teacher evaluation on this object.",
+      "checkpoint_sha256": "81b289c81f7f0158da0a7458b07c5df254c314d719ca17fdbeb6874aab3c0f68",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+    },
+    {
+      "task": "i2rt_jf_pick",
+      "kind": "pick_teacher",
+      "object_id": 6674,
+      "attempts": 1024,
+      "successes": 1024,
+      "protocol": "Source FR3v2 teacher evaluation on this object.",
+      "checkpoint_sha256": "15c76c45806b7b1538d4f9831a5e2dce25104b07b58402e7de4dadedd361c2b3",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+    },
+    {
+      "task": "i2rt_jf_pick",
+      "kind": "pick_teacher",
+      "object_id": 6675,
+      "attempts": 1024,
+      "successes": 1018,
+      "protocol": "Source FR3v2 teacher evaluation on this object.",
+      "checkpoint_sha256": "c4d2c49bdcca29bb9cf4b0edb138e0c0048c271be47eaaec5c7357c5773da01b",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json"
+    },
+    {
+      "task": "i2rt_jf_place",
+      "kind": "place_teacher",
+      "object_id": 6671,
+      "attempts": 496,
+      "successes": 496,
+      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
+      "checkpoint_sha256": "7598d2a35b516948392bf9e863d9c05becaa1d30cfb44d1a3089423ef4611148",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+    },
+    {
+      "task": "i2rt_jf_place",
+      "kind": "place_teacher",
+      "object_id": 6672,
+      "attempts": 574,
+      "successes": 572,
+      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
+      "checkpoint_sha256": "c71b8e74b278faa4da185035685903471254055e4dc03924dc8d24174ee0ed69",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+    },
+    {
+      "task": "i2rt_jf_place",
+      "kind": "place_teacher",
+      "object_id": 6673,
+      "attempts": 358,
+      "successes": 357,
+      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
+      "checkpoint_sha256": "a6b3d3970c7c36cbe3775efb5fbf2eaf2653e54b5f8ec383b76f54071b18b17a",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+    },
+    {
+      "task": "i2rt_jf_place",
+      "kind": "place_teacher",
+      "object_id": 6674,
+      "attempts": 70,
+      "successes": 69,
+      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Development selection.",
+      "checkpoint_sha256": "e4bcc8408a9dd00236cb51ca6e14b6448d4aa8bcf748a44b4c27044ecc59218b",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+    },
+    {
+      "task": "i2rt_jf_place",
+      "kind": "place_teacher",
+      "object_id": 6675,
+      "attempts": 481,
+      "successes": 479,
+      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
+      "checkpoint_sha256": "6c7598f2dddf7b9e1c7cc6d508f396cc1ca7dc60d19c5603fa624973157dfb48",
+      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json"
+    },
+    {
+      "task": "i2rt_jf_pick",
+      "kind": "pick_student",
+      "object_id": null,
+      "attempts": 640,
+      "successes": 630,
+      "protocol": "FR3v2 visual Pick student, 128 episodes on each of five objects.",
+      "checkpoint_sha256": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
+      "server_receipt": "store/jf-source/my_manipgen/runs/universal_pick_teacher_aligned_flashsac_20261103/best.json"
+    },
+    {
+      "task": "i2rt_jf_place",
+      "kind": "place_student",
+      "object_id": null,
+      "attempts": 282,
+      "successes": 282,
+      "protocol": "FR3v2 visual Place student, development set with valid pre-action handoffs.",
+      "checkpoint_sha256": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8",
+      "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/best_student.json"
+    },
+    {
+      "task": "i2rt_jf_place",
+      "kind": "place_student",
+      "object_id": null,
+      "attempts": 478,
+      "successes": 465,
+      "protocol": "Expanded BBQ sauce cohort. Nine failed initializations excluded before student handoff.",
+      "checkpoint_sha256": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8",
+      "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/bbq_expanded_20261106/valid_handoff_result.json"
+    }
+  ],
+  "source_fr3v2_full_episodes": []
 }

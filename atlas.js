@@ -2,7 +2,8 @@
 (() => {
   'use strict';
   const { tasks: registry, revision, nativeBenchmarks = {} } = window.AXIS_ATLAS;
-  const tasks = registry;
+  const tasks = registry.filter(task => task.profile !== 'Native setup' || task.group !== 'I2RT');
+  const nativeI2rt = new Set(registry.filter(task => task.profile === 'Native setup' && task.group === 'I2RT').map(task => task.id));
   const byId = new Map(tasks.flatMap(task => [task.id, ...task.aliases].map(id => [id, task])));
   const gallery = document.querySelector('#cards');
   const query = document.querySelector('#query');
@@ -326,6 +327,10 @@
     if (location.hash==='#compare-wood') { compare();return; }
     const match = /^#task\/([a-z0-9_]+)$/.exec(location.hash);
     const id = match?.[1];
+    if (nativeI2rt.has(id)) {
+      location.replace('./library.html#' + id);
+      return;
+    }
     const task = byId.get(id);
     if (task) {
       if (!visible.includes(task)) {group='All robots';query.value='';render();}

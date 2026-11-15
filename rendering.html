@@ -27,13 +27,23 @@
   <header class="mast"><div class="mast-inner wrap"><a class="brand" href="./"><span class="axis-mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>AXIS</strong><span class="brand-divider"></span><span>OmniReset</span></a><nav aria-label="Documentation"><a href="./">Task atlas</a></nav></div></header>
   <main class="render-guide">
     <h1>Task rendering</h1>
-    <p>The spectator viewer follows measured robot links and task objects. Tasks on the same embodiment share their default camera direction and recording format. The viewer fits the camera to the moving parts, so a small tabletop scene and a larger robot can both fill the frame.</p>
+    <p>The spectator viewer follows measured robot links and task objects. Tasks on the same embodiment share a camera distance, viewing angle and 42° vertical field of view. The spectator camera follows the robot base at reset.</p>
     <div class="views">
       <figure><a href="images/rendering/i2rt.jpg"><img src="images/rendering/i2rt.jpg" width="960" height="720" alt="Dual I2RT arms at the button-pressing workstation"></a><figcaption><strong>I2RT YAM</strong><br>Button pressing · <code>i2rt_task10717</code></figcaption></figure>
       <figure><a href="images/rendering/panda.jpg"><img src="images/rendering/panda.jpg" width="960" height="720" alt="Panda robot and task objects on the worktable in environment 5716"></a><figcaption><strong>Franka / Panda</strong><br>Environment <code>5716</code></figcaption></figure>
       <figure><a href="images/rendering/dual-arx.jpg"><img src="images/rendering/dual-arx.jpg" width="960" height="720" alt="ARX X5 insertion environment viewed from the working side"></a><figcaption><strong>Dual ARX X5</strong><br>Insertion · <code>inserting</code></figcaption></figure>
     </div>
-    <p>These images are reset frames from simulations on the axis server. The I2RT and Panda cameras look in from negative Y. The ARX camera looks in from positive Y.</p>
+    <p>These images are reset frames from simulations on the axis server. The camera sits 2.35 m from the target on I2RT, 2.05 m on Panda and 1.65 m on dual ARX X5.</p>
+    <section id="i2rt-scale">
+      <h2>Comparing I2RT tasks at the same scale</h2>
+      <p>In these three resets the chassis and camera mast line up. The arms, table and task objects are shown at their measured poses.</p>
+      <div class="views">
+        <figure><a href="images/spectator/push10.jpg"><img loading="lazy" src="images/spectator/push10.jpg" width="960" height="720" alt="Push at the shared I2RT camera distance"></a><figcaption>Push · <code>push10</code></figcaption></figure>
+        <figure><a href="images/spectator/track10.jpg"><img loading="lazy" src="images/spectator/track10.jpg" width="960" height="720" alt="Track at the shared I2RT camera distance"></a><figcaption>Track · <code>track10</code></figcaption></figure>
+        <figure><a href="images/spectator/i2rt_wood_stack_second.jpg"><img loading="lazy" src="images/spectator/i2rt_wood_stack_second.jpg" width="960" height="720" alt="Stack the second block at the shared I2RT camera distance"></a><figcaption>Stack the second block · <code>i2rt_wood_stack_second</code></figcaption></figure>
+      </div>
+      <p>Dual-arm I2RT tasks show the authored ABC Box V4 meshes on 21 measured links. In <a href="images/spectator/i2rt_watch_basket_place.jpg">watch basket placement</a>, the base is mounted 90° around from the <a href="images/spectator/i2rt_watch_place.jpg">tabletop watch task</a>. The camera turns with the base. Pick5000 uses the single left arm from its I1 delivery.</p>
+    </section>
     <h2>I2RT Pick5000 expert replay</h2>
     <video controls playsinline preload="metadata" width="960" height="720" style="display:block;width:100%;max-width:680px;height:auto;border-radius:8px" poster="images/rendering/i2rt-pick5000.jpg">
       <source src="assets/rendering/i2rt-pick5000.mp4" type="video/mp4">

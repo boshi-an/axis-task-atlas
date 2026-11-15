@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-11-15",
+  "as_of": "2026-11-16",
   "host": "axis",
   "root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1",
-  "source_revision": "f06da37b1c9bd5c227971eee1b384d33084f6c0b",
+  "source_revision": "f97139a7c2336afb3ac803beb3bc81550e090469",
   "coverage": {
     "registry_ids": 44,
     "implementations": 39,
@@ -95,7 +95,6 @@
       "scores": [
         0
       ],
-      "archived_scores": [],
       "aliases": [
         "panda_task5033"
       ],
@@ -137,7 +136,6 @@
       "scores": [
         0
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "franka_panda",
       "runtime": "OmniReset"
@@ -171,7 +169,6 @@
       "scores": [
         1
       ],
-      "archived_scores": [],
       "aliases": [
         "panda_task5716"
       ],
@@ -210,7 +207,6 @@
       "scores": [
         1
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "franka_panda",
       "runtime": "OmniReset"
@@ -243,7 +239,6 @@
       "scores": [
         13
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "franka_panda",
       "runtime": "OmniReset",
@@ -279,7 +274,6 @@
       "scores": [
         23
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "franka_panda",
       "runtime": "OmniReset"
@@ -316,7 +310,6 @@
         14,
         15
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "franka_panda",
       "runtime": "OmniReset"
@@ -351,7 +344,6 @@
       "scores": [
         24
       ],
-      "archived_scores": [],
       "aliases": [
         "wood_pick"
       ],
@@ -391,7 +383,6 @@
       "scores": [
         24
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "OmniReset"
@@ -426,7 +417,6 @@
       "scores": [
         25
       ],
-      "archived_scores": [],
       "aliases": [
         "wood_place_base"
       ],
@@ -466,7 +456,6 @@
       "scores": [
         25
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "OmniReset"
@@ -501,7 +490,6 @@
       "scores": [
         26
       ],
-      "archived_scores": [],
       "aliases": [
         "wood_stack_second"
       ],
@@ -541,7 +529,6 @@
       "scores": [
         26
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "OmniReset"
@@ -554,7 +541,7 @@
       "success": "Base scene. It exposes motion and state with no task success condition.",
       "observation_dim": 90,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_base",
       "resources": {
         "assets": [
@@ -568,12 +555,10 @@
       "by_task": "by-task/i2rt_base",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_base/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_base/physics.json"
     },
     {
       "id": "i2rt_example",
@@ -583,7 +568,7 @@
       "success": "Move the left TCP to within 5 cm of the target.",
       "observation_dim": 64,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_example",
       "resources": {
         "assets": [
@@ -605,12 +590,10 @@
         35,
         36
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_example/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_example/physics.json"
     },
     {
       "id": "i2rt_inserting",
@@ -620,7 +603,7 @@
       "success": "Keep the key bottom more than 25 mm below the slot top and above the base minus 2 mm. XY error must be under 7 mm, tilt within 7°, and key-to-slot alignment within 30° for three consecutive controls.",
       "observation_dim": 110,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_inserting",
       "resources": {
         "assets": [
@@ -635,13 +618,11 @@
       "by_task": "by-task/i2rt_inserting",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "inserting",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_inserting/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_inserting/physics.json"
     },
     {
       "id": "i2rt_task5033",
@@ -651,7 +632,7 @@
       "success": "Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.",
       "observation_dim": 163,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_task5033",
       "resources": {
         "assets": [
@@ -680,13 +661,11 @@
       "by_task": "by-task/i2rt_task5033",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "5033",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_task5033/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_task5033/physics.json"
     },
     {
       "id": "i2rt_task5716",
@@ -696,7 +675,7 @@
       "success": "Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.",
       "observation_dim": 174,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_task5716",
       "resources": {
         "assets": [
@@ -725,13 +704,11 @@
       "by_task": "by-task/i2rt_task5716",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "5716",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_task5716/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_task5716/physics.json"
     },
     {
       "id": "i2rt_task10717",
@@ -741,7 +718,7 @@
       "success": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
       "observation_dim": 172,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_task10717",
       "resources": {
         "assets": [
@@ -832,13 +809,11 @@
         33,
         45
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "10717",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_task10717/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_task10717/physics.json"
     },
     {
       "id": "i2rt_pick10",
@@ -848,7 +823,7 @@
       "success": "Grasp with both fingertips and hold the object bottom more than 5 cm above the basket rim for nine controls.",
       "observation_dim": 1033,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_pick10",
       "resources": {
         "assets": [
@@ -932,12 +907,10 @@
       "scores": [
         18
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_pick10/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_pick10/physics.json"
     },
     {
       "id": "i2rt_push10",
@@ -947,7 +920,7 @@
       "success": "Keep the gripper open and push the object into a table-supported goal within 5 mm on each position axis.",
       "observation_dim": 1023,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_push10",
       "resources": {
         "assets": [
@@ -1048,12 +1021,10 @@
         43,
         44
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_push10/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_push10/physics.json"
     },
     {
       "id": "i2rt_track10",
@@ -1063,7 +1034,7 @@
       "success": "Grasp, lift at least 25 mm, move past the obstacles and release on the goal support. For six controls require position error under 12 mm, angle error under 0.12 rad, speed under 25 mm/s and clearance from disqualifying collisions.",
       "observation_dim": 1097,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_track10",
       "resources": {
         "assets": [
@@ -1147,12 +1118,10 @@
       "scores": [
         21
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_track10/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_track10/physics.json"
     },
     {
       "id": "i2rt_handover_butter",
@@ -1162,7 +1131,7 @@
       "success": "Stage 0 ends at donor capture. Stage 1 requires receiver capture and donor release. The full course ends after placement on the target mat and receiver release.",
       "observation_dim": 209,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_handover_butter",
       "resources": {
         "assets": [
@@ -1200,12 +1169,10 @@
       "scores": [
         17
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_handover_butter/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_handover_butter/physics.json"
     },
     {
       "id": "i2rt_blind_assembly",
@@ -1215,7 +1182,7 @@
       "success": "Align the peg and matching fixture. Capture the peg in the opening, then maintain slow, stable seating for the checker’s required interval.",
       "observation_dim": 616,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_blind_assembly",
       "resources": {
         "assets": [
@@ -1384,12 +1351,10 @@
       "scores": [
         16
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_blind_assembly/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_blind_assembly/physics.json"
     },
     {
       "id": "i2rt_watch_place",
@@ -1399,7 +1364,7 @@
       "success": "Lower until the release gate opens. The object must separate from the hand inside the 5 mm tray inset and meet floor/rim height bounds. Tray displacement must be ≤15 mm.",
       "observation_dim": 247,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_watch_place",
       "resources": {
         "assets": [
@@ -1436,12 +1401,10 @@
       "scores": [
         22
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_watch_place/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_watch_place/physics.json"
     },
     {
       "id": "i2rt_grasp1000",
@@ -1451,7 +1414,7 @@
       "success": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.",
       "observation_dim": 1039,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_grasp1000",
       "resources": {
         "assets": [
@@ -1466,13 +1429,11 @@
       "by_task": "by-task/i2rt_grasp1000",
       "expert_status": "No I2RT-trained checkpoint located.",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "franka1000",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_grasp1000/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_grasp1000/physics.json"
     },
     {
       "id": "i2rt_wood_pick",
@@ -1482,7 +1443,7 @@
       "success": "Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.",
       "observation_dim": 130,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_wood_pick",
       "resources": {
         "assets": [
@@ -1500,13 +1461,11 @@
       "by_task": "by-task/i2rt_wood_pick",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "panda_wood_pick",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_wood_pick/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_wood_pick/physics.json"
     },
     {
       "id": "i2rt_wood_place_base",
@@ -1516,7 +1475,7 @@
       "success": "Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.",
       "observation_dim": 130,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_wood_place_base",
       "resources": {
         "assets": [
@@ -1534,13 +1493,11 @@
       "by_task": "by-task/i2rt_wood_place_base",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "panda_wood_place_base",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_wood_place_base/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_wood_place_base/physics.json"
     },
     {
       "id": "i2rt_wood_stack_second",
@@ -1550,7 +1507,7 @@
       "success": "Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.",
       "observation_dim": 130,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_wood_stack_second",
       "resources": {
         "assets": [
@@ -1568,13 +1525,11 @@
       "by_task": "by-task/i2rt_wood_stack_second",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "panda_wood_stack_second",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_wood_stack_second/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_wood_stack_second/physics.json"
     },
     {
       "id": "i2rt_jf_pick",
@@ -1584,7 +1539,7 @@
       "success": "Lift the target center of mass by 5 cm. For 0.4 s, both fingertips of the same hand must exceed 0.001 N and other measured contacts must stay at or below that threshold.",
       "observation_dim": 172,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_jf_pick",
       "resources": {
         "assets": [
@@ -1599,13 +1554,11 @@
       "by_task": "by-task/i2rt_jf_pick",
       "expert_status": "No I2RT-trained checkpoint located.",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "fr3v2_jf_pick",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_jf_pick/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_jf_pick/physics.json"
     },
     {
       "id": "i2rt_jf_place",
@@ -1615,7 +1568,7 @@
       "success": "Grasp the target, carry and release it inside its container. Container tilt must be at most 30 degrees. The object must pass the container contact check, the grasping hand must command opening and all four fingers must be clear. Pose change must stay at or below 2 mm and 0.05 rad per 0.2 s interval for two successive intervals.",
       "observation_dim": 172,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_jf_place",
       "resources": {
         "assets": [
@@ -1630,13 +1583,11 @@
       "by_task": "by-task/i2rt_jf_place",
       "expert_status": "No I2RT-trained checkpoint located.",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "fr3v2_jf_place",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_jf_place/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_jf_place/physics.json"
     },
     {
       "id": "pick10",
@@ -1646,7 +1597,7 @@
       "success": "Grasp with both fingertips and hold the object bottom more than 5 cm above the basket rim for nine controls.",
       "observation_dim": 1033,
       "action_dim": 7,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "pick10",
       "resources": {
         "assets": [
@@ -1670,37 +1621,10 @@
         5,
         27
       ],
-      "archived_scores": [
-        2
-      ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/pick10/physics.json",
-      "prior_physics_evaluations": [
-        {
-          "task": "pick10",
-          "policy": "archive-pick10",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "server_receipt": "evaluations/pinned/archive-pick10/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "pick10",
-          "policy": "pick10",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "server_receipt": "evaluations/pinned/pick10/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        }
-      ]
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-pick10/physics.json"
     },
     {
       "id": "pick100",
@@ -1710,7 +1634,7 @@
       "success": "Meet adjacent approach and orientation deadlines, establish bilateral grasp, clear the 1 cm and 3 cm lift milestones and hold the bottom ≥5 cm above the table for nine controls.",
       "observation_dim": 1034,
       "action_dim": 7,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "pick100",
       "resources": {
         "assets": [
@@ -1729,24 +1653,10 @@
       "scores": [
         28
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/pick100/physics.json",
-      "prior_physics_evaluations": [
-        {
-          "task": "pick100",
-          "policy": "pick100",
-          "revision": "e465d482",
-          "attempts": 512,
-          "successes": 247,
-          "protocol": "Deterministic author checkpoint on 512 native reset-bank slots, seed 42, original policy observation prefix.",
-          "server_receipt": "evaluations/pinned/pick100/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        }
-      ]
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-pick100/physics.json"
     },
     {
       "id": "push10",
@@ -1756,7 +1666,7 @@
       "success": "Keep the gripper open and push the object into a table-supported goal within 5 mm on each position axis.",
       "observation_dim": 1023,
       "action_dim": 6,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "push10",
       "resources": {
         "assets": [
@@ -1782,48 +1692,10 @@
         7,
         29
       ],
-      "archived_scores": [
-        3
-      ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/push10/physics.json",
-      "prior_physics_evaluations": [
-        {
-          "task": "push10",
-          "policy": "archive-push10",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 0,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "server_receipt": "evaluations/pinned/archive-push10/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "push10",
-          "policy": "archive-push10_per",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 0,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "server_receipt": "evaluations/pinned/archive-push10_per/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "push10",
-          "policy": "push10",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 0,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "server_receipt": "evaluations/pinned/push10/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        }
-      ]
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-push10/physics.json"
     },
     {
       "id": "track10",
@@ -1833,7 +1705,7 @@
       "success": "Grasp, lift at least 25 mm, move past the obstacles and release on the goal support. For six controls require position error under 12 mm, angle error under 0.12 rad, speed under 25 mm/s and clearance from disqualifying collisions.",
       "observation_dim": 1097,
       "action_dim": 7,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "track10",
       "resources": {
         "assets": [
@@ -1864,49 +1736,10 @@
         9,
         30
       ],
-      "archived_scores": [
-        4,
-        5
-      ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/track10/physics.json",
-      "prior_physics_evaluations": [
-        {
-          "task": "track10",
-          "policy": "Archived lift and target milestone actor",
-          "revision": "e465d482",
-          "attempts": 10,
-          "successes": 0,
-          "protocol": "Source milestone feature and reward contract. One qualified first-frame trajectory per available object, seed 42. Episodes ran to termination or their native horizon.",
-          "server_receipt": "evaluations/pinned/archive-track-milestones/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "track10",
-          "policy": "archive-track10",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 0,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "server_receipt": "evaluations/pinned/archive-track10/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "track10",
-          "policy": "track10",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 0,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "server_receipt": "evaluations/pinned/track10/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        }
-      ]
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-track10/physics.json"
     },
     {
       "id": "handover_butter",
@@ -1916,7 +1749,7 @@
       "success": "Stage 0 ends at donor capture. Stage 1 requires receiver capture and donor release. The full course ends after placement on the target mat and receiver release.",
       "observation_dim": 209,
       "action_dim": 14,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "handover_butter",
       "resources": {
         "assets": [
@@ -1953,70 +1786,10 @@
         12,
         31
       ],
-      "archived_scores": [
-        0
-      ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-handover_butter/physics.json",
-      "prior_physics_evaluations": [
-        {
-          "task": "handover_butter",
-          "policy": "archive-handover_butter_sac",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 0,
-          "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
-          "server_receipt": "evaluations/pinned/archive-handover_butter_sac/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "handover_butter",
-          "policy": "archive-handover_butter_skills",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 0,
-          "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
-          "server_receipt": "evaluations/pinned/archive-handover_butter_skills/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "handover_butter",
-          "policy": "butter-left_to_right",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 16,
-          "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 30 Hz; left_to_right",
-          "server_receipt": "evaluations/pinned/butter-left_to_right/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "handover_butter",
-          "policy": "butter-right_to_left",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 16,
-          "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 30 Hz; right_to_left",
-          "server_receipt": "evaluations/pinned/butter-right_to_left/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "handover_butter",
-          "policy": "Native MA-v2 chain",
-          "revision": "frozen MA-v2 delivery",
-          "attempts": 300,
-          "successes": 285,
-          "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
-          "server_receipt": "evaluations/pinned/handover_butter/evaluation/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        }
-      ]
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-handover_butter/physics.json"
     },
     {
       "id": "blind_assembly",
@@ -2026,7 +1799,7 @@
       "success": "Align the peg and matching fixture. Capture the peg in the opening, then maintain slow, stable seating for the checker’s required interval.",
       "observation_dim": 616,
       "action_dim": 6,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "blind_assembly",
       "resources": {
         "assets": [
@@ -2068,37 +1841,10 @@
         2,
         10
       ],
-      "archived_scores": [
-        1
-      ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/blind_assembly/physics.json",
-      "prior_physics_evaluations": [
-        {
-          "task": "blind_assembly",
-          "policy": "Archived SAC approach and PPO insertion",
-          "revision": "e465d482",
-          "attempts": 24,
-          "successes": 18,
-          "protocol": "Continuous frozen SAC approach and PPO insertion from home. One layout in each of the 24 geometry variants. The robot and object were never reset between stages.",
-          "server_receipt": "evaluations/pinned/archive-assembly-cascade/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        },
-        {
-          "task": "blind_assembly",
-          "policy": "blind_assembly",
-          "revision": "e465d482",
-          "attempts": 32,
-          "successes": 15,
-          "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz.",
-          "server_receipt": "evaluations/pinned/blind_assembly/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        }
-      ]
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-blind_assembly/physics.json"
     },
     {
       "id": "i2rt_watch_basket_place",
@@ -2108,7 +1854,7 @@
       "success": "Place the whole watch in the basket, release onto bottom support and withdraw. The watch must stay stable and clear of the robot. The hybrid controller handles descent, release and retreat.",
       "observation_dim": 1205,
       "action_dim": 8,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "canonical_id": "i2rt_watch_basket_place",
       "resources": {
         "assets": [
@@ -2129,12 +1875,10 @@
       "by_task": "by-task/i2rt_watch_basket_place",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/verify-i2rt_watch_basket_place/physics.json",
-      "prior_physics_evaluations": []
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_watch_basket_place/physics.json"
     },
     {
       "id": "dual_arx_x5",
@@ -2157,7 +1901,6 @@
       "by_task": "by-task/dual_arx_x5",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "dual_arx_x5",
       "runtime": "OmniReset"
@@ -2183,7 +1926,6 @@
       "by_task": "by-task/inserting",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "dual_arx_x5",
       "runtime": "OmniReset",
@@ -2212,7 +1954,6 @@
       "by_task": "by-task/10717",
       "expert_status": "The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256.",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "dual_arx_x5",
       "runtime": "OmniReset",
@@ -2316,7 +2057,6 @@
       "scores": [
         32
       ],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "dual_arx_x5",
       "runtime": "OmniReset"
@@ -2342,7 +2082,6 @@
       "by_task": "by-task/example",
       "expert_status": "No checkpoint located",
       "scores": [],
-      "archived_scores": [],
       "aliases": [],
       "embodiment_id": "point_mass",
       "runtime": "OmniReset"
@@ -2356,7 +2095,7 @@
       "success": "Establish bilateral finger contact, lift the object 5 cm clear of its support, and hold the final condition for 14 control steps.",
       "observation_dim": 957,
       "action_dim": 7,
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "resources": {
         "assets": [
           "central/source/tasks/i2rt_pick5000/sysid.json",
@@ -2383,31 +2122,10 @@
       "scores": [
         19
       ],
-      "archived_scores": [],
       "aliases": [],
-      "original_benchmark": {
-        "successes": 29398,
-        "attempts": 30000,
-        "protocol": "Original A100 frozen I1 full population. Six trials per object across 5,000 objects.",
-        "training_embodiment": "i2rt_yam",
-        "evaluation_embodiment": "i2rt_yam"
-      },
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
-      "physics_receipt": "evaluations/shared-tabletop-final/i2rt_pick5000/physics.json",
-      "prior_physics_evaluations": [
-        {
-          "task": "i2rt_pick5000",
-          "policy": "i2rt_pick5000",
-          "revision": "e465d482",
-          "attempts": 16,
-          "successes": 15,
-          "protocol": "Deterministic mean policy from fixed I1 home, 30 Hz control over five 150 Hz physics steps, four qualified objects with four replicas each, seed 42.",
-          "server_receipt": "evaluations/pinned/i2rt_pick5000/result.json",
-          "training_embodiment": "i2rt_yam",
-          "evaluation_embodiment": "i2rt_yam"
-        }
-      ]
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_pick5000/physics.json"
     },
     {
       "id": "fr3v2_jf_pick",
@@ -2441,7 +2159,6 @@
       "aliases": [],
       "by_task": "by-task/fr3v2_jf_pick",
       "scores": [],
-      "archived_scores": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator",
       "i2rt_variants": [
@@ -2480,7 +2197,6 @@
       "aliases": [],
       "by_task": "by-task/fr3v2_jf_place",
       "scores": [],
-      "archived_scores": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator",
       "i2rt_variants": [
@@ -2521,7 +2237,6 @@
       "aliases": [],
       "by_task": "by-task/fr3v2_jf_pick_place",
       "scores": [],
-      "archived_scores": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator"
     }
@@ -2531,15 +2246,12 @@
       "task": "5033",
       "policy": "5033",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 28,
-      "successes": 27,
-      "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "checkpoint.pt": "0c84df428c69f4c94f62df16652943207c05fc23907e5233280f1ab1a17aaf22"
       },
-      "receipt_sha256": "8c6efb3c0407053f0a17cab2c90081c6ad600e25246de49ef30f8e14dcfcb8c5",
-      "server_receipt": "evaluations/pinned/5033/result.json",
+      "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
       "seed": 42,
       "controls": 384,
       "timeouts": 28,
@@ -2558,7 +2270,7 @@
         true,
         true,
         true,
-        true,
+        false,
         true,
         true,
         true,
@@ -2573,22 +2285,22 @@
         true,
         true
       ],
-      "training_embodiment": "franka_panda",
-      "evaluation_embodiment": "franka_panda"
+      "successes": 26,
+      "attempts": 28,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/5033/result.json",
+      "receipt_sha256": "56fa195553414a483de5f35f550c309dd1d09b86f29c71c5f4de505787d0fd37"
     },
     {
       "task": "5716",
       "policy": "5716",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 29,
-      "successes": 29,
-      "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "checkpoint.pt": "a452cb75e04e15fd346245cc68dae715b80aa48a460956fa57ba27aac97a975a"
       },
-      "receipt_sha256": "4e2573a10b51cf92d7c4109d7f55a7fd2d2e43b839f3a4dccbeb1f0e69c423ec",
-      "server_receipt": "evaluations/pinned/5716/result.json",
+      "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
       "seed": 42,
       "controls": 384,
       "timeouts": 29,
@@ -2623,8 +2335,11 @@
         true,
         true
       ],
-      "training_embodiment": "franka_panda",
-      "evaluation_embodiment": "franka_panda"
+      "successes": 29,
+      "attempts": 29,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/5716/result.json",
+      "receipt_sha256": "4e2573a10b51cf92d7c4109d7f55a7fd2d2e43b839f3a4dccbeb1f0e69c423ec"
     },
     {
       "task": "blind_assembly",
@@ -2636,13 +2351,16 @@
         "approach.pt": "9773fcc871a5bf8867b3d3e59fc5bda12e93b8adf27d045c610df104c789ef23",
         "ppo.pt": "74df074853415fdd736dca9ef4fea46108ca8426b75180245592ad520d6a093b"
       },
-      "revision": "f06da37b",
-      "attempts": 24,
-      "successes": 5,
       "protocol": "Continuous frozen SAC approach and PPO insertion from home. One layout in each of the 24 geometry variants. The robot and object were never reset between stages.",
+      "successes": 14,
+      "attempts": 24,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/archive-assembly-cascade/result.json",
+      "receipt_sha256": "c11641a265cf6c4fd6c13dd3becd9587b90da171124aeaa383a488b41d387886",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/archive-assembly-cascade/result.json",
-      "receipt_sha256": "50cd66ee0e41c5d75c1fe91acdd3a6c3c911033ca23280aefedd3047ddf62d1c"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "handover_butter",
@@ -2654,6 +2372,7 @@
         "original.pt": "e25213944f0e4b1a14c45c2d0ebab5f9e5f6896f9de05270a2f16b7f24ccfdcf",
         "actor-pack.pt": "30b4e0a9478206cfb4848fc3b4670af5bf2e7855c5e9a9cbe93b1d72e2a956cd"
       },
+      "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
       "seed": 42,
       "controls": 254,
       "timeouts": 16,
@@ -2675,13 +2394,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/archive-handover_butter_sac/result.json",
+      "receipt_sha256": "90282bfb4cba8164b217721a248deefad30de51b4ccaa8d62ec2552ed6fe6f4b",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/archive-handover_butter_sac/result.json",
-      "receipt_sha256": "0a422bb768d9733b5b2cadad8c1125197fa224f49fe744d44f3ad764dee22ec0"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "handover_butter",
@@ -2693,6 +2414,7 @@
         "original.pt": "6043a8763bb87bcb35cd01f20eede2a9930d1e060faf6c754ca3ce7502849aef",
         "actor-pack.pt": "38e638d51d9b26c0bb1a6d4ee2a4e5206486593d79287bc7208599d9386f8468"
       },
+      "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
       "seed": 42,
       "controls": 254,
       "timeouts": 16,
@@ -2714,13 +2436,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/archive-handover_butter_skills/result.json",
+      "receipt_sha256": "e9531b7aab44c1c3c7dde2d2527580717fedf4f607a59f5033f14f0fac468fcd",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/archive-handover_butter_skills/result.json",
-      "receipt_sha256": "f26fdf04751898898526544a14f684ef1324a8e618a2b1e9d29c2c6267cd4fcc"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "pick10",
@@ -2732,16 +2456,17 @@
         "original.pt": "1ec714409a780856ae43b95f114eccc334b262c0b2ca2d5a45e916bf1d8415a9",
         "actor-pack.pt": "824bb4616ae22e2123e54476aab336541a43ef7e04e4a0add045473814ca7715"
       },
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "seed": 42,
-      "controls": 134,
-      "timeouts": 0,
+      "controls": 297,
+      "timeouts": 1,
       "episode_success": [
         true,
         true,
         true,
         true,
         true,
-        true,
+        false,
         true,
         true,
         true,
@@ -2753,13 +2478,15 @@
         true,
         true
       ],
-      "revision": "f06da37b",
+      "successes": 15,
       "attempts": 16,
-      "successes": 16,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/archive-pick10/result.json",
+      "receipt_sha256": "7d7ba19d866a5b9d627ff9d29d42fcfae030a2ccd4813b279b64798580ac9953",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/archive-pick10/result.json",
-      "receipt_sha256": "19a32891d376044c25b74c5b296f679e53b051b8fa48a326276bcdbe53c45675"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "push10",
@@ -2771,6 +2498,7 @@
         "original.pt": "caa38f9378a1b3bab7c4541bd8e0cd956d394c203fe757e3a5e9bca3be848fcc",
         "actor-pack.pt": "ad1c132223eae87ffa5e73c79bfe3e12532b6628c602435946280702649ca128"
       },
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "seed": 42,
       "controls": 394,
       "timeouts": 16,
@@ -2792,13 +2520,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/archive-push10/result.json",
+      "receipt_sha256": "c269c49e17bafe6293ea7a8973752f9a38435db9bd88dbfcdd774f12c68c9759",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/archive-push10/result.json",
-      "receipt_sha256": "76dc0bc5c2829c8a0a0b4969583cec80b9674bc2a3dc363723d11fa1c299c886"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "push10",
@@ -2810,6 +2540,7 @@
         "original.pt": "99006380d4c633ef024cbc8da9ac8528a9ed577836f121c16d06291c76b1ce96",
         "actor-pack.pt": "16d835f14e952bd4b94da4c2bb68eb7997d10cbc1d399bf1712ce425d01587d5"
       },
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "seed": 42,
       "controls": 394,
       "timeouts": 16,
@@ -2831,13 +2562,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/archive-push10_per/result.json",
+      "receipt_sha256": "fe52242141894ebda5ba5e9e0cacdbb193a43d5352cd8e32ab4fc8931af490e9",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/archive-push10_per/result.json",
-      "receipt_sha256": "d8282e1972d34ae2b94648de8a99b65dd225754ac95b60b71d9021b383b7794b"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "track10",
@@ -2848,15 +2581,18 @@
       "checkpoint_sha256": {
         "original.pt": "ede508b38ec546d5aed22aa8c00204ba17d999fd13a57f1fa57b0b253ae508a0"
       },
-      "seed": 42,
-      "controls": 693,
-      "revision": "f06da37b",
-      "attempts": 10,
-      "successes": 0,
       "protocol": "Source milestone feature and reward contract. One qualified first-frame trajectory per available object, seed 42. Episodes ran to termination or their native horizon.",
+      "seed": 42,
+      "controls": 679,
+      "successes": 0,
+      "attempts": 10,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/archive-track-milestones/result.json",
+      "receipt_sha256": "294de4d32411b8ee871c876d24d99a1e885031df144e56f7d0ac08461a25f047",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/archive-track-milestones/result.json",
-      "receipt_sha256": "d7fe2e5260e143d51db732fa727aaa1b49863fa6638380c6a7856d9ebde0d602"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "track10",
@@ -2868,9 +2604,10 @@
         "original.pt": "8614364e5e52a7418168efe9f4a52e768fb526c0dbd0b47c32cc34c1b0267e3d",
         "actor-pack.pt": "e91d421fdfceb1ac4e0ded0aff5d6fe006d683ae58b4577c90cc19aadea53c19"
       },
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "seed": 42,
-      "controls": 568,
-      "timeouts": 2,
+      "controls": 544,
+      "timeouts": 1,
       "episode_success": [
         false,
         false,
@@ -2889,13 +2626,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/archive-track10/result.json",
+      "receipt_sha256": "7d0a02027cd36c5dc19f29d68ed4de5b27900ba4e6ba2f53a504460c34c9363a",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/archive-track10/result.json",
-      "receipt_sha256": "403d0b70af980b19e2768776ea20968f46b230245c1dd86530884b812cd9c67c"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "blind_assembly",
@@ -2906,50 +2645,53 @@
       "checkpoint_sha256": {
         "policy": "312c0c84deb68bd51f781ad0c13e7656188577f3768f4e5711e2460028be8a70"
       },
+      "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz.",
       "seed": 42,
-      "controls": 75,
-      "timeouts": 29,
+      "controls": 150,
+      "timeouts": 20,
       "episode_success": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
         false,
         false,
         true,
         true,
-        false,
+        true,
+        true,
         true,
         false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        true,
+        true
       ],
-      "revision": "f06da37b",
+      "successes": 12,
       "attempts": 32,
-      "successes": 3,
-      "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 15 Hz.",
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/blind_assembly/result.json",
+      "receipt_sha256": "a928c815c0e516186c67de611e493124242745992bc6df26445cbec856b30a11",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/blind_assembly/result.json",
-      "receipt_sha256": "e1b1307413c2be7172173def96de2152bb9022d8c56efbc5b67012579da539c7"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "handover_butter",
@@ -2960,34 +2702,37 @@
       "checkpoint_sha256": {
         "best_frozen.pt": "69e9c7efcaf0331fee5404b6c4dcdea83eb716c618e458f4e751f61343f68c8c"
       },
+      "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 30 Hz; left_to_right",
       "seed": 42,
-      "controls": 227,
-      "timeouts": 13,
+      "controls": 266,
+      "timeouts": 12,
       "success_by_env": [
         false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
         true,
         false,
         false,
         false,
-        false,
-        false,
-        false,
-        false,
         true,
-        false,
         true,
-        false,
-        false,
-        false,
         false
       ],
-      "revision": "f06da37b",
+      "successes": 4,
       "attempts": 16,
-      "successes": 3,
-      "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 15 Hz; left_to_right",
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/butter-left_to_right/result.json",
+      "receipt_sha256": "50bc294d78f811beb0f1bee1b5de087bbfe2f7e1b3b395ec6b5abb4b9b24147c",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/butter-left_to_right/result.json",
-      "receipt_sha256": "7cefa0e9535700d01158325e983d9257ee76a063b476cb48fdae3aa95fbb4247"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "handover_butter",
@@ -2998,48 +2743,48 @@
       "checkpoint_sha256": {
         "best_frozen.pt": "49f810f84b284f95d6a8be695072c140d6507e2d34effc1b509ac7f3b4d82610"
       },
+      "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 30 Hz; right_to_left",
       "seed": 42,
-      "controls": 255,
-      "timeouts": 16,
+      "controls": 272,
+      "timeouts": 9,
       "success_by_env": [
+        true,
+        true,
         false,
         false,
         false,
         false,
+        true,
+        true,
         false,
         false,
+        true,
         false,
+        true,
         false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
+        true,
         false
       ],
-      "revision": "f06da37b",
+      "successes": 7,
       "attempts": 16,
-      "successes": 0,
-      "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 15 Hz; right_to_left",
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/butter-right_to_left/result.json",
+      "receipt_sha256": "8a9f046713259a131ea56dbfd5a2c7f14f7c131d0885ae81db9dc641c298aabb",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/butter-right_to_left/result.json",
-      "receipt_sha256": "05534ce442b9114e4be4162d26dadd003f119cf5c89435a2ad00f34178f04ab8"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "franka1000",
       "policy": "franka1000",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 4,
-      "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42.",
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
       },
-      "receipt_sha256": "cd81300d426a5414c909bdf14fcbcec8ef97b881b7656b716ab587a959184ff0",
-      "server_receipt": "evaluations/pinned/franka1000/result.json",
+      "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42.",
       "seed": 42,
       "controls": 61,
       "timeouts": 0,
@@ -3050,22 +2795,22 @@
         true,
         true
       ],
-      "training_embodiment": "franka_panda",
-      "evaluation_embodiment": "franka_panda"
+      "successes": 4,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/franka1000/result.json",
+      "receipt_sha256": "cd81300d426a5414c909bdf14fcbcec8ef97b881b7656b716ab587a959184ff0"
     },
     {
       "task": "franka_push5000",
       "policy": "franka_push5000-baked",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 2,
-      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "best_frozen.pt": "f2ce99de72f1d769820fa23ea0441d6ad42a83b64b377ca9186849d468ecf3d5"
       },
-      "receipt_sha256": "ac1e6bae193430edfd00b5718b8ab8d9488295011114dc00e2b061cce7bed83c",
-      "server_receipt": "evaluations/pinned/franka_push5000-baked/result.json",
+      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
       "seed": 42,
       "controls": 156,
       "timeouts": 2,
@@ -3075,22 +2820,22 @@
         true,
         false
       ],
-      "training_embodiment": "franka_panda",
-      "evaluation_embodiment": "franka_panda"
+      "successes": 2,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/franka_push5000-baked/result.json",
+      "receipt_sha256": "ac1e6bae193430edfd00b5718b8ab8d9488295011114dc00e2b061cce7bed83c"
     },
     {
       "task": "franka_push5000",
       "policy": "franka_push5000-legacy",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 2,
-      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "best_frozen.pt": "4341f41d2cbaba105a3d1fb91de50ef2f5094fc097ad0f8f4601273171269615"
       },
-      "receipt_sha256": "4a38b7e8822fd467e236c1c9451d06648df02e6d598d7d0ab30b5f429d2ea764",
-      "server_receipt": "evaluations/pinned/franka_push5000-legacy/result.json",
+      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
       "seed": 42,
       "controls": 128,
       "timeouts": 1,
@@ -3100,8 +2845,11 @@
         true,
         true
       ],
-      "training_embodiment": "franka_panda",
-      "evaluation_embodiment": "franka_panda"
+      "successes": 2,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/franka_push5000-legacy/result.json",
+      "receipt_sha256": "4a38b7e8822fd467e236c1c9451d06648df02e6d598d7d0ab30b5f429d2ea764"
     },
     {
       "task": "i2rt_blind_assembly",
@@ -3113,8 +2861,9 @@
         "blind_assembly.pt": "312c0c84deb68bd51f781ad0c13e7656188577f3768f4e5711e2460028be8a70",
         "skill_0_complete.pt": "9773fcc871a5bf8867b3d3e59fc5bda12e93b8adf27d045c610df104c789ef23"
       },
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
       "seed": 42,
-      "controls": 75,
+      "controls": 150,
       "timeouts": 16,
       "failures": 0,
       "success_by_env": [
@@ -3135,13 +2884,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/i2rt_blind_assembly/result.json",
+      "receipt_sha256": "77ec9742c1872fc89980991dd20415c671d90ffc7c7e5c6e6a3be5cd8c0d67ec",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/i2rt_blind_assembly/result.json",
-      "receipt_sha256": "6f241fa8286a8407bad16df1bed931fa76b7e17f6ca28bf21670716b30dc4bb5"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_handover_butter",
@@ -3154,35 +2905,38 @@
         "butter1.pt": "64c835a84c8e4d94a3a484dc2d533e07d7a5ce1f19db5a9c42a7c4ac4ee0a925",
         "butter2.pt": "3643aede5829cbe4e5ade636d37e84e6b2df0e080b82d1dea57ea7f7a96aab48"
       },
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
       "seed": 42,
-      "controls": 468,
-      "timeouts": 16,
+      "controls": 935,
+      "timeouts": 6,
       "failures": 0,
       "success_by_env": [
         false,
+        true,
+        true,
+        true,
+        true,
+        true,
         false,
         false,
         false,
         false,
         false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        true,
+        true,
+        true,
+        true,
+        true
       ],
-      "revision": "f06da37b",
+      "successes": 10,
       "attempts": 16,
-      "successes": 0,
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/i2rt_handover_butter/result.json",
+      "receipt_sha256": "6c28871da387db548d950640a3ef69e21b1e8f8a64fd000ab66dc24e489628df",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/i2rt_handover_butter/result.json",
-      "receipt_sha256": "97e6ba71fb4dd87fc7ab4d74c1e2ffd1ffd049b57fc9612a472f4e27e0df8156"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_pick10",
@@ -3193,8 +2947,9 @@
       "checkpoint_sha256": {
         "pick10.pt": "a32b7f4b8f5628fa5e65fd87c7aba904be1bf34118a6591ae92626c8c836e67f"
       },
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
       "seed": 42,
-      "controls": 150,
+      "controls": 300,
       "timeouts": 16,
       "failures": 0,
       "success_by_env": [
@@ -3215,13 +2970,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/i2rt_pick10/result.json",
+      "receipt_sha256": "2756be0a18c2af3b7dc110907d9e45fd2762cd620cc575b5f739c380bdf63102",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/i2rt_pick10/result.json",
-      "receipt_sha256": "1723acac67c9532a05a58ae76b13bd79a5394aaedd72fc0572bf0b8552aea3c6"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_pick5000",
@@ -3232,35 +2989,38 @@
       "checkpoint_sha256": {
         "actor.pt": "8388b39d348b5a4bc5aa70e3749512b5e38b58af2e6d8b4e6c6dde07c3aaadae"
       },
+      "protocol": "Four qualified objects with four resets each, seed 42. Frozen I1-trained mean actor, left arm of the shared dual-arm robot.",
       "seed": 42,
-      "controls": 208,
-      "timeouts": 4,
-      "failures": 1,
+      "controls": 328,
+      "timeouts": 3,
+      "failures": 0,
       "success_by_env": [
         true,
         true,
-        false,
-        true,
-        false,
         true,
         true,
-        true,
-        false,
         false,
         true,
         true,
         true,
         false,
+        false,
+        true,
+        true,
+        true,
+        true,
         true,
         true
       ],
-      "revision": "f06da37b",
+      "successes": 13,
       "attempts": 16,
-      "successes": 11,
-      "protocol": "Four qualified objects with four resets each, seed 42. Frozen I1-trained mean actor, left arm of the shared dual-arm robot.",
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/i2rt_pick5000/result.json",
+      "receipt_sha256": "f96e3fbc173b51cb21015c77351ff3b1304c12cfc8efafc67b8d5102dc58d19d",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/i2rt_pick5000/result.json",
-      "receipt_sha256": "f76176dad09d4b2e12dc6a74bb41afff0c53c4e778c9fdb50f0055ae6da64ac4"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_push10",
@@ -3271,8 +3031,9 @@
       "checkpoint_sha256": {
         "push10.pt": "08d279ce7fa38f81e334671932e4df4636825ccdf8538bf5e8d57b23ab5b06e8"
       },
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
       "seed": 42,
-      "controls": 150,
+      "controls": 300,
       "timeouts": 16,
       "failures": 0,
       "success_by_env": [
@@ -3293,13 +3054,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/i2rt_push10/result.json",
+      "receipt_sha256": "757d45e3fdb96ab2a59b158d62d0081622f921864956fab4499161df8f498fa0",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/i2rt_push10/result.json",
-      "receipt_sha256": "ca28963f2139a36aa7a699f371399de95478259a00dad8cb21e7c2dcd2dc16f1"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_track10",
@@ -3310,8 +3073,9 @@
       "checkpoint_sha256": {
         "track10.pt": "0b0a641029f6d9f135c3873100fcfe9e1838ba24bd7f13d4f905d59847ce04f9"
       },
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
       "seed": 42,
-      "controls": 92,
+      "controls": 154,
       "timeouts": 0,
       "failures": 16,
       "success_by_env": [
@@ -3332,13 +3096,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/i2rt_track10/result.json",
+      "receipt_sha256": "42d0dbec7c6326eba9a629e5c91e5a146c76453bf4b092b4dedad53ba159ffb1",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/i2rt_track10/result.json",
-      "receipt_sha256": "a6e40c4b638c0cdb3b43f9ced9e657624d51c5f5f1fb55c8a0ccb129071d86af"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_watch_place",
@@ -3349,10 +3115,11 @@
       "checkpoint_sha256": {
         "actor.pt": "65088d07aed797a795ea25992ade091142fed7381b89d0256a148a294b190969"
       },
+      "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings.",
       "seed": 42,
-      "controls": 480,
+      "controls": 960,
       "timeouts": 1,
-      "failures": 0,
+      "failures": 2,
       "success_by_env": [
         true,
         true,
@@ -3362,36 +3129,35 @@
         true,
         false,
         true,
+        false,
         true,
         true,
         true,
         true,
         true,
         true,
-        true,
-        true
+        false
       ],
-      "revision": "f06da37b",
+      "successes": 13,
       "attempts": 16,
-      "successes": 15,
-      "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings.",
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/i2rt_watch_place/result.json",
+      "receipt_sha256": "c423816dc9f0a3fbe20ecd6b3d3315063cb29bcfe51b6eb347899664b5ebf0ff",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/i2rt_watch_place/result.json",
-      "receipt_sha256": "4f5a5cd138d6276500f719dab810ab2d9b4029cbc2c558aaf12dbdf1ecfb9555"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "panda_grasp1000",
       "policy": "panda_grasp1000",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 4,
-      "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42.",
+      "training_embodiment": "franka_panda",
+      "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
       },
-      "receipt_sha256": "81263000dce6b02c4bbf6120b760d309ec35b1f3c6239b9a30b22b0236ca836f",
-      "server_receipt": "evaluations/pinned/panda_grasp1000/result.json",
+      "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42.",
       "seed": 42,
       "controls": 61,
       "timeouts": 0,
@@ -3402,22 +3168,22 @@
         true,
         true
       ],
-      "training_embodiment": "franka_panda",
-      "evaluation_embodiment": "franka_panda"
+      "successes": 4,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/panda_grasp1000/result.json",
+      "receipt_sha256": "b9b4857ccabbf8c140173a0d3683f23860371a5fe4d14d3aa1c5009f4461613a"
     },
     {
       "task": "panda_wood_pick",
       "policy": "panda_wood_pick",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 4,
-      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
       "checkpoint_sha256": {
         "actor.pt": "2c4ccc8451e48eccb00fec30071a4c2da1d10a911cc9af9f82219c0b9444704a"
       },
-      "receipt_sha256": "ad58934f7db6db4d4c224723c3529197514d238fa8b40018adbda38ef627a159",
-      "server_receipt": "evaluations/pinned/panda_wood_pick/result.json",
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
       "seed": 42,
       "controls": 58,
       "timeouts": 0,
@@ -3427,22 +3193,22 @@
         true,
         true
       ],
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
+      "successes": 4,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/panda_wood_pick/result.json",
+      "receipt_sha256": "ad58934f7db6db4d4c224723c3529197514d238fa8b40018adbda38ef627a159"
     },
     {
       "task": "panda_wood_place_base",
       "policy": "panda_wood_place_base",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 3,
-      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
       "checkpoint_sha256": {
         "actor.pt": "bee209c3e63908b53d43da89b5ff65446c74b8ed4e45eb30ddbe3bd53072ae32"
       },
-      "receipt_sha256": "3c55541aa6b85f06adbdf747829b8399b54c4a10b518ccd8b8db71795e07560a",
-      "server_receipt": "evaluations/pinned/panda_wood_place_base/result.json",
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
       "seed": 42,
       "controls": 230,
       "timeouts": 0,
@@ -3452,22 +3218,22 @@
         false,
         true
       ],
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
+      "successes": 3,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/panda_wood_place_base/result.json",
+      "receipt_sha256": "3c55541aa6b85f06adbdf747829b8399b54c4a10b518ccd8b8db71795e07560a"
     },
     {
       "task": "panda_wood_stack_second",
       "policy": "panda_wood_stack_second",
       "scope": "registered task",
-      "revision": "e465d482",
-      "attempts": 4,
-      "successes": 3,
-      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
       "checkpoint_sha256": {
         "actor.pt": "db88a9b485c9f7fdd0110f0593068a949ad6acf8008dad117b0b186c620a4568"
       },
-      "receipt_sha256": "a04ba73d55e5d4dd1124ebf18a8f9c6e4b9ae08af6fcd45e30a1e5c8bb52c7de",
-      "server_receipt": "evaluations/pinned/panda_wood_stack_second/result.json",
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
       "seed": 42,
       "controls": 272,
       "timeouts": 1,
@@ -3477,8 +3243,11 @@
         true,
         true
       ],
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
+      "successes": 3,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/panda_wood_stack_second/result.json",
+      "receipt_sha256": "a04ba73d55e5d4dd1124ebf18a8f9c6e4b9ae08af6fcd45e30a1e5c8bb52c7de"
     },
     {
       "task": "pick10",
@@ -3489,8 +3258,9 @@
       "checkpoint_sha256": {
         "policy": "a32b7f4b8f5628fa5e65fd87c7aba904be1bf34118a6591ae92626c8c836e67f"
       },
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "seed": 42,
-      "controls": 228,
+      "controls": 157,
       "timeouts": 0,
       "episode_success": [
         true,
@@ -3510,13 +3280,15 @@
         true,
         true
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 16,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/pick10/result.json",
+      "receipt_sha256": "498b0696980d8fdbf5ad0422a188d00d5fe51d601e27aabe999d980724888531",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/pick10/result.json",
-      "receipt_sha256": "4b52671c2b380db692edf39671cde0b7f3afb03f12a5b904dd18fc0f4723cb61"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "pick100",
@@ -3527,20 +3299,21 @@
       "checkpoint_sha256": {
         "skill_00.pt": "51051c5484734a4defcec4eaee9ac34b1dd1514ce0ad6aa495011d845222beaf"
       },
+      "protocol": "Deterministic author checkpoint on 512 reset-bank slots, seed 42, original policy observation prefix.",
       "seed": 42,
-      "controls": 126,
+      "controls": 153,
       "timeouts": 0,
-      "failures": 335,
+      "failures": 306,
       "success_by_env": [
         false,
         true,
         false,
         false,
-        false,
         true,
-        false,
+        true,
         false,
         true,
+        true,
         false,
         true,
         true,
@@ -3555,56 +3328,56 @@
         true,
         false,
         true,
-        false,
         false,
         true,
         false,
         false,
-        false,
-        true,
         false,
         false,
+        true,
+        true,
         false,
         false,
         false,
         false,
+        true,
         false,
         true,
         false,
         false,
-        true,
         false,
+        false,
         true,
         true,
         false,
+        true,
         false,
         false,
-        true,
         false,
         false,
         false,
         false,
         false,
         false,
-        true,
         false,
         false,
         false,
         false,
         false,
+        true,
         false,
         false,
         false,
         false,
         false,
-        true,
         true,
-        true,
         false,
+        true,
         false,
         false,
         false,
         false,
+        true,
         false,
         false,
         false,
@@ -3624,8 +3397,8 @@
         true,
         false,
         true,
-        false,
         true,
+        true,
         false,
         false,
         true,
@@ -3636,19 +3409,22 @@
         false,
         true,
         false,
-        true,
         false,
         false,
+        false,
+        true,
         true,
         false,
         false,
         false,
         false,
+        true,
+        true,
+        true,
         false,
         false,
         false,
         true,
-        false,
         true,
         true,
         false,
@@ -3667,22 +3443,19 @@
         false,
         true,
         false,
-        false,
-        true,
         false,
         false,
         true,
         true,
         false,
         true,
-        false,
+        true,
         true,
         true,
         true,
         false,
         false,
         false,
-        true,
         false,
         true,
         true,
@@ -3692,51 +3465,50 @@
         false,
         true,
         false,
-        true,
         true,
-        true,
-        true,
         false,
         true,
         true,
+        false,
         true,
         true,
-        false,
         false,
         true,
-        false,
         true,
         true,
         true,
         true,
         false,
         true,
+        false,
         true,
         false,
+        false,
+        true,
         false,
+        true,
+        true,
         false,
         false,
         false,
         false,
         true,
+        false,
         true,
         false,
         true,
         true,
-        false,
         true,
         false,
         true,
-        true,
         false,
         true,
+        false,
         true,
         true,
         true,
-        false,
         true,
         false,
-        true,
         true,
         true,
         true,
@@ -3749,22 +3521,23 @@
         false,
         false,
         false,
-        false,
-        false,
         true,
-        false,
         true,
         true,
         true,
         true,
-        false,
-        false,
+        true,
         true,
         true,
+        true,
         false,
+        true,
         true,
+        true,
         false,
+        true,
         true,
+        false,
         true,
         true,
         true,
@@ -3772,7 +3545,7 @@
         true,
         false,
         false,
-        true,
+        false,
         true,
         false,
         false,
@@ -3786,12 +3559,12 @@
         true,
         false,
         true,
-        false,
-        false,
         true,
         false,
+        true,
         false,
         false,
+        true,
         false,
         false,
         false,
@@ -3808,8 +3581,8 @@
         true,
         false,
         true,
-        true,
         false,
+        true,
         false,
         false,
         true,
@@ -3820,19 +3593,19 @@
         false,
         false,
         false,
-        false,
         true,
+        false,
         false,
         false,
         false,
         false,
         true,
         true,
-        false,
         true,
         false,
-        true,
         false,
+        true,
+        true,
         false,
         false,
         false,
@@ -3840,28 +3613,28 @@
         false,
         false,
         false,
+        true,
         false,
         false,
         true,
-        false,
         true,
         false,
         false,
         false,
         false,
         false,
-        false,
-        false,
+        true,
         false,
+        true,
         false,
         false,
         false,
         true,
         true,
-        false,
         true,
-        false,
+        true,
         false,
+        true,
         false,
         true,
         true,
@@ -3869,26 +3642,26 @@
         false,
         true,
         false,
-        false,
-        false,
         true,
         false,
         true,
         true,
         true,
-        false,
+        true,
         false,
         true,
         false,
+        true,
+        true,
         false,
         false,
         true,
         false,
         false,
         false,
+        true,
         false,
         false,
-        true,
         false,
         false,
         true,
@@ -3901,7 +3674,7 @@
         false,
         false,
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -3932,7 +3705,7 @@
         true,
         true,
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -3943,49 +3716,48 @@
         false,
         true,
         true,
-        false,
-        false,
-        false,
         true,
         false,
         false,
         false,
         false,
         false,
+        true,
+        true,
+        true,
         false,
         false,
         true,
         false,
         false,
-        false,
+        true,
         false,
         false,
         false,
         true,
         false,
-        false,
-        false,
         true,
         false,
         false,
         false,
         false,
         false,
-        true,
         false,
         false,
         false,
-        true,
         false,
         false,
         true,
+        true,
+        true,
         false,
         true,
         false,
         false,
         false,
-        true,
+        false,
         false,
+        true,
         false,
         false,
         false,
@@ -3999,6 +3771,7 @@
         false,
         false,
         false,
+        true,
         false,
         false,
         true,
@@ -4014,20 +3787,20 @@
         false,
         false,
         true,
-        false,
-        false,
         true,
         false,
+        true,
         false,
         false,
+        true,
         false,
         false,
         false,
         true,
         true,
-        false,
         true,
-        false,
+        true,
+        true,
         false,
         true,
         false,
@@ -4038,20 +3811,22 @@
         true,
         false,
         true,
-        true,
+        false,
         false,
         false,
         false,
         false,
         false
       ],
-      "revision": "f06da37b",
+      "successes": 206,
       "attempts": 512,
-      "successes": 177,
-      "protocol": "Deterministic author checkpoint on 512 reset-bank slots, seed 42, original policy observation prefix.",
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/pick100/result.json",
+      "receipt_sha256": "0177f8dfe463af06e877ec8c14397b7169529c95082a4a8742b698330801731b",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/pick100/result.json",
-      "receipt_sha256": "ef2e8a8e90bb81d50acee37ad01f9e1d1b3208a1b8355f9a0d1e461f3268d1ef"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "push10",
@@ -4062,6 +3837,7 @@
       "checkpoint_sha256": {
         "policy": "08d279ce7fa38f81e334671932e4df4636825ccdf8538bf5e8d57b23ab5b06e8"
       },
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "seed": 42,
       "controls": 394,
       "timeouts": 16,
@@ -4083,13 +3859,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/push10/result.json",
+      "receipt_sha256": "854f7e36d0a8d3b54c1f72b3ec013433b493ba46f8e88061cefc548ff40bfd67",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/push10/result.json",
-      "receipt_sha256": "817dcf964a4454199058f28875912f7493aa653495b584aaec919022ffeb5478"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "track10",
@@ -4100,8 +3878,9 @@
       "checkpoint_sha256": {
         "policy": "0b0a641029f6d9f135c3873100fcfe9e1838ba24bd7f13d4f905d59847ce04f9"
       },
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "seed": 42,
-      "controls": 198,
+      "controls": 229,
       "timeouts": 0,
       "episode_success": [
         false,
@@ -4121,13 +3900,15 @@
         false,
         false
       ],
-      "revision": "f06da37b",
-      "attempts": 16,
       "successes": 0,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "attempts": 16,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/track10/result.json",
+      "receipt_sha256": "6054edb829494bd108748f2faad061e1341d5a350749fd00ab3fedb13df4abef",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/track10/result.json",
-      "receipt_sha256": "0fc51eae702ba67ee214aacea9beb7afb072cf445aace041cc00e3244bdde85f"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "handover_butter",
@@ -4140,23 +3921,24 @@
         "stage_1": "e65d96a15e0788581265e0143662b508d3a3c91edfc5859a973470aa88fdddd9",
         "stage_2": "af864fd1e6838eee75abfe7b3f87c2e7f227405106b0f606632d45a9d631afea"
       },
-      "controls": 845,
-      "revision": "f06da37b",
-      "attempts": 300,
-      "successes": 113,
       "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
+      "controls": 842,
+      "successes": 244,
+      "attempts": 300,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/ma-v2/result.json",
+      "receipt_sha256": "6ced0dcff56d9f4780bbd373e33124624c4d98d2b21c4667b02e29908721a986",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/ma-v2/result.json",
-      "receipt_sha256": "bc89bcc6b917a35cf881e8ab4cb34fb041379667477742f895f7477e42dc7acc"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "10724",
       "policy": "Five-stage ARX v107 chain",
       "scope": "native delivery",
-      "revision": "retained v107 evaluation snapshot",
-      "attempts": 15,
-      "successes": 6,
-      "protocol": "Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode.",
+      "training_embodiment": "dual_arx_x5",
+      "evaluation_embodiment": "dual_arx_x5",
       "checkpoint_sha256": {
         "pair_grasp.pt": "39a7e8cece064b62dca79e1483220df0a29f7ca57bfb980d35c119db15964c3e",
         "pair_place.pt": "069632f79658cdad1bb6877486b0301d4ef2b30719ce7e759f2c149833e3e2ec",
@@ -4164,8 +3946,7 @@
         "place.pt": "f7cf21c39c1cae2fd1a43a5ae6e792d7b4157a3c2f22e69a9a0006eb1c9c3d69",
         "home.pt": "cb586d46d8f4bd2616f700bdacdc65915fee37e7ee41eb2cf55dde6b833faa37"
       },
-      "receipt_sha256": "3f4936052b1143c7942998bc996ba12f9a628cc52d8bc900276f53f4cbb64e15",
-      "server_receipt": "evaluations/arx10724-v107/result.json",
+      "protocol": "Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode.",
       "episode_success": [
         false,
         false,
@@ -4183,13 +3964,16 @@
         false,
         false
       ],
+      "successes": 6,
+      "attempts": 15,
+      "revision": "retained v107 evaluation snapshot",
+      "server_receipt": "evaluations/experts-30hz-1116/arx10724-v107/result.json",
+      "receipt_sha256": "47ba715de097998f27f1f90caa34d8febff24dc97cfd694647850ad831e325b0",
       "source_receipts": {
-        "evaluations/arx10724-v107/dev-seed0/ledger.json": "087bf225bd36c546cb63cc1af9c21f10c39d1cdfbe358376c7a04ffdda5f73b5",
-        "evaluations/arx10724-v107/dev-seed1/ledger.json": "a5249059bc84f6d5a112207051bc5ec72f583c7c6531d8a42dc64509a46f159b",
-        "evaluations/arx10724-v107/dev-seed2/ledger.json": "fc8dde4a19f55fb5072893066113a267f8759b08288c67a1088103434c0b4ff1"
-      },
-      "training_embodiment": "dual_arx_x5",
-      "evaluation_embodiment": "dual_arx_x5"
+        "evaluations/experts-30hz-1116/arx10724-v107/dev-seed0/ledger.json": "c5607e18a5cbc8dd11ce57268626b5b4bc2d97254c0245b0086fc49171751ee4",
+        "evaluations/experts-30hz-1116/arx10724-v107/dev-seed1/ledger.json": "a36331e5a5c2762b9f8860375ffb075cf10e653ada729c5bc65f9862bab59278",
+        "evaluations/experts-30hz-1116/arx10724-v107/dev-seed2/ledger.json": "0e01b0b6eee28c4a3cf0e0175deffe681147b932c92f37bd41c35f028700495a"
+      }
     },
     {
       "task": "i2rt_task10717",
@@ -4201,14 +3985,19 @@
         "actor.pt": "6654440688e2ff9a5ef1100ae9aacdc4d08c839384f493a63445748b5f0056cf",
         "normalization.pt": "000f9189f04131001c241ef0a7d7ccbde227b5a77e4f292ce28ea21335c79321"
       },
-      "failures": {},
-      "revision": "f06da37b",
-      "attempts": 12,
-      "successes": 12,
       "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
+      "failures": {
+        "official_timeout_missing_presses": 8
+      },
+      "successes": 4,
+      "attempts": 12,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/press-v20/cohort.json",
+      "receipt_sha256": "2cf288cf61747604055105f8c4cecee42d55ddbc1e194a4f663fec880074cf7a",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/press-v20/cohort.json",
-      "receipt_sha256": "d07216f95f78dad90eb2bc23e7e0400ff4c1a6bc4d80e3325c71dd7a802c08d7"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_example",
@@ -4219,8 +4008,9 @@
       "checkpoint_sha256": {
         "actor.pt": "0095a6ff754d2e59bf7be708d246135bca4c73bf6445ff240e96297fb4c9e4c0"
       },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
       "seed": 42,
-      "controls": 7,
+      "controls": 11,
       "timeouts": 0,
       "success_by_env": [
         true,
@@ -4229,13 +4019,15 @@
         true
       ],
       "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
       "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_example-0095a6ff754d/result.json",
+      "receipt_sha256": "3f6ab4087ebdeee40e265e361fd0eab455f9ee15f28864f036b2b40c424151c0",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_example-0095a6ff754d/result.json",
-      "receipt_sha256": "271be34ce2448104f19566de77dd7647fed8bcf21d598f187e89fd8fe50337ca"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_example",
@@ -4246,8 +4038,9 @@
       "checkpoint_sha256": {
         "actor.pt": "009a421cf531956fd0bbb9f670a51fdcc596fdbf7211b3a3ade1872946e73850"
       },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
       "seed": 42,
-      "controls": 7,
+      "controls": 11,
       "timeouts": 0,
       "success_by_env": [
         true,
@@ -4256,13 +4049,15 @@
         true
       ],
       "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
       "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_example-009a421cf531/result.json",
+      "receipt_sha256": "caf41e683a17aa98127b8eba07dbee72bfeafe3a1d598c4b9de97f577ff4849b",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_example-009a421cf531/result.json",
-      "receipt_sha256": "695b2b26ee447cdce6e8af175b4e862363bef3b1071660f1dd90c2e192fe9602"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_example",
@@ -4273,8 +4068,9 @@
       "checkpoint_sha256": {
         "actor.pt": "340f32539acb941e5803b102ca209cbe5b0d6d7da7624f176524eacf423ccdf1"
       },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
       "seed": 42,
-      "controls": 12,
+      "controls": 21,
       "timeouts": 0,
       "success_by_env": [
         true,
@@ -4283,13 +4079,15 @@
         true
       ],
       "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
       "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_example-340f32539acb/result.json",
+      "receipt_sha256": "b881b3b09d101f9d79c58ba531105b768af71f6ef09d81f1c1719b7f71d016fc",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_example-340f32539acb/result.json",
-      "receipt_sha256": "f7a4351f58fd07f1ae460a2dc1172beb53034b99d769dfe9861dfb3e59c43704"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_push10",
@@ -4300,114 +4098,7 @@
       "checkpoint_sha256": {
         "actor.pt": "45742742503df16c98f7d3ac56d7df5f9e209f641a8b839e868ccea4808b2b8d"
       },
-      "seed": 42,
-      "controls": 35,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
-      "successes": 4,
       "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_bottle_16. The actor receives its training-time observation fields from the active scene.",
-      "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_push10-45742742503d/result.json",
-      "receipt_sha256": "a3d460787be5c853fa037101c793d4871a8c68c7e86060ad03c93c8443f6b831"
-    },
-    {
-      "task": "i2rt_push10",
-      "policy": "i2rt_push10_can_1 · 4fa34a6e",
-      "scope": "historical",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "actor.pt": "4fa34a6e0656c264fe36042b6c18f06eef16d87e6df395248a5b601a1329fd3f"
-      },
-      "seed": 42,
-      "controls": 101,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
-      "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_can_1. The actor receives its training-time observation fields from the active scene.",
-      "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_push10-4fa34a6e0656/result.json",
-      "receipt_sha256": "9308a2d64595e3925c9d202c749989a31dc9571b33a04e86a577c8fac6e77afd"
-    },
-    {
-      "task": "i2rt_push10",
-      "policy": "i2rt_push10_chocolate_bar_14 · 59c40805",
-      "scope": "historical",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "actor.pt": "59c40805e8c1342c787f8bea0380739d75fa3dd9c8c85e791c81e7c30f331477"
-      },
-      "seed": 42,
-      "controls": 31,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
-      "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_chocolate_bar_14. The actor receives its training-time observation fields from the active scene.",
-      "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_push10-59c40805e8c1/result.json",
-      "receipt_sha256": "6baae978968ff0ee1f6e4fc3db0b3d2caeedffce93bfe24ab71ca246da8c9bbe"
-    },
-    {
-      "task": "i2rt_push10",
-      "policy": "i2rt_push10_mug_54 · 83725ab5",
-      "scope": "historical",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "actor.pt": "83725ab5d2119f9bc82303ec2d360b50d7877496aed3110376643353ccf1ebc0"
-      },
-      "seed": 42,
-      "controls": 32,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
-      "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_mug_54. The actor receives its training-time observation fields from the active scene.",
-      "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_push10-83725ab5d211/result.json",
-      "receipt_sha256": "d808efbbec5817feb503a662f10ced7a7b476ad8ec0f12911a72b576174f805c"
-    },
-    {
-      "task": "i2rt_push10",
-      "policy": "i2rt_push10_mouse_48 · 8c970bb0",
-      "scope": "historical",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "actor.pt": "8c970bb0e0b3a726c4171493a4edfaa4758a8c777accc15a346772814c72527a"
-      },
       "seed": 42,
       "controls": 58,
       "timeouts": 0,
@@ -4418,13 +4109,135 @@
         true
       ],
       "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
       "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_mouse_48. The actor receives its training-time observation fields from the active scene.",
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-45742742503d/result.json",
+      "receipt_sha256": "9f5d011e9f92e45be28548b54db46d440f3232cd37f6304ecfd552ae091497e9",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_push10-8c970bb0e0b3/result.json",
-      "receipt_sha256": "23491a94ab32c8051e63d5d1de52434a57372f2b89dd6a6d51101367292494f6"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_can_1 · 4fa34a6e",
+      "scope": "historical",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "4fa34a6e0656c264fe36042b6c18f06eef16d87e6df395248a5b601a1329fd3f"
+      },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_can_1. The actor receives its training-time observation fields from the active scene.",
+      "seed": 42,
+      "controls": 177,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "config_identity_matches": true,
+      "successes": 4,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-4fa34a6e0656/result.json",
+      "receipt_sha256": "118a3725f3a804c9df37d9f5503d1c37132c5a2a804eb3dde842e77e13b41c0e",
+      "physics": "shared_i2rt_tabletop",
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_chocolate_bar_14 · 59c40805",
+      "scope": "historical",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "59c40805e8c1342c787f8bea0380739d75fa3dd9c8c85e791c81e7c30f331477"
+      },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_chocolate_bar_14. The actor receives its training-time observation fields from the active scene.",
+      "seed": 42,
+      "controls": 51,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "config_identity_matches": true,
+      "successes": 4,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-59c40805e8c1/result.json",
+      "receipt_sha256": "4a5492d408899dee50236ff0f83c8436146336c63db02037bb3f52629c5b6df5",
+      "physics": "shared_i2rt_tabletop",
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_mug_54 · 83725ab5",
+      "scope": "historical",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "83725ab5d2119f9bc82303ec2d360b50d7877496aed3110376643353ccf1ebc0"
+      },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_mug_54. The actor receives its training-time observation fields from the active scene.",
+      "seed": 42,
+      "controls": 53,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "config_identity_matches": true,
+      "successes": 4,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-83725ab5d211/result.json",
+      "receipt_sha256": "4e1708ff63a55007edcd8f7e2d9756b3563c97550df2b081fa4b8951e16b5b3b",
+      "physics": "shared_i2rt_tabletop",
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_mouse_48 · 8c970bb0",
+      "scope": "historical",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "8c970bb0e0b3a726c4171493a4edfaa4758a8c777accc15a346772814c72527a"
+      },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_mouse_48. The actor receives its training-time observation fields from the active scene.",
+      "seed": 42,
+      "controls": 102,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "config_identity_matches": true,
+      "successes": 4,
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-8c970bb0e0b3/result.json",
+      "receipt_sha256": "167498ee35984c3f6e1660025479e07f332007ad000fbe7465dc292afb03a713",
+      "physics": "shared_i2rt_tabletop",
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_push10",
@@ -4435,8 +4248,9 @@
       "checkpoint_sha256": {
         "actor.pt": "9e51ad6c6b0b3b45bbc70039c24985b16d7f08aa6d3b75755c506c3c40d96ffe"
       },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_t_shaped_block_0. The actor receives its training-time observation fields from the active scene.",
       "seed": 42,
-      "controls": 31,
+      "controls": 51,
       "timeouts": 0,
       "success_by_env": [
         true,
@@ -4445,13 +4259,15 @@
         true
       ],
       "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
       "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_t_shaped_block_0. The actor receives its training-time observation fields from the active scene.",
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-9e51ad6c6b0b/result.json",
+      "receipt_sha256": "71eab9688c59931e2b472d1da9621d58bf6a6af49bedad192abbe671edf5795f",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_push10-9e51ad6c6b0b/result.json",
-      "receipt_sha256": "7e50ae219aaf917040c2621960de5ebf597687516c658ec7e060621747f1f051"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_push10",
@@ -4462,8 +4278,9 @@
       "checkpoint_sha256": {
         "actor.pt": "e61f8a4868eef2ff5ded6fb8768d7e282baef70d842080c9a9ac4e009a3dff8d"
       },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_default. The actor receives its training-time observation fields from the active scene.",
       "seed": 42,
-      "controls": 27,
+      "controls": 45,
       "timeouts": 0,
       "success_by_env": [
         true,
@@ -4472,13 +4289,15 @@
         true
       ],
       "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
       "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_default. The actor receives its training-time observation fields from the active scene.",
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-e61f8a4868ee/result.json",
+      "receipt_sha256": "590275de9cc32a0c95bd0c25be2e53b30e643f198d0ec99406021e78c9e2537f",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_push10-e61f8a4868ee/result.json",
-      "receipt_sha256": "1cd1fe00dc1f9f7e0f54027e1571063c023ed1ed1fea5d5e8bcae1769b76d491"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_push10",
@@ -4489,8 +4308,9 @@
       "checkpoint_sha256": {
         "actor.pt": "eaac161698c48a9d39e72a929198cd0607370c5c8a813cd885f2e7f3e5a97058"
       },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_hammer_16. The actor receives its training-time observation fields from the active scene.",
       "seed": 42,
-      "controls": 35,
+      "controls": 59,
       "timeouts": 0,
       "success_by_env": [
         true,
@@ -4499,13 +4319,15 @@
         true
       ],
       "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
       "successes": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_hammer_16. The actor receives its training-time observation fields from the active scene.",
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-eaac161698c4/result.json",
+      "receipt_sha256": "71fe098f71c6e3cfcb31c1b53cc52fce795c67d53c7210b2668e0a9fdc456085",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_push10-eaac161698c4/result.json",
-      "receipt_sha256": "28f3a5c587b6814124c61eb9dc6fc376f773f420a51cb9bff90abd146c3dd84c"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     },
     {
       "task": "i2rt_task10717",
@@ -4516,8 +4338,9 @@
       "checkpoint_sha256": {
         "actor.pt": "63bab1cf299bd9718e4453349a6fce6a0b71e598c3f856d3c94a5896fe1a3cf3"
       },
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_task10717_1_1. The actor receives its training-time observation fields from the active scene.",
       "seed": 42,
-      "controls": 450,
+      "controls": 900,
       "timeouts": 4,
       "success_by_env": [
         false,
@@ -4526,87 +4349,15 @@
         false
       ],
       "config_identity_matches": true,
-      "revision": "f06da37b",
-      "attempts": 4,
       "successes": 0,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_task10717_1_1. The actor receives its training-time observation fields from the active scene.",
+      "attempts": 4,
+      "revision": "f97139a7",
+      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_task10717-63bab1cf299b/result.json",
+      "receipt_sha256": "4c2679da389b716562cf4c62244aa6d8d93ac1f9dc86d54f69470895b3866d57",
       "physics": "shared_i2rt_tabletop",
-      "server_receipt": "evaluations/shared-tabletop-final/historical/i2rt_task10717-63bab1cf299b/result.json",
-      "receipt_sha256": "2be70368a341cf52deaebb1888f8902ac4abd94e1be0fb5a041a41a7cdff7866"
-    }
-  ],
-  "archived_evaluations": [
-    {
-      "task": "handover_butter",
-      "policy": "handover_butter_skills",
-      "successes": 46,
-      "attempts": 128,
-      "starts": "curriculum",
-      "scope": "Original author evaluation, 2026-11-01",
-      "checkpoint_sha256": "6043a8763bb87bcb35cd01f20eede2a9930d1e060faf6c754ca3ce7502849aef",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/handover_butter_skills/selection.json",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam"
-    },
-    {
-      "task": "blind_assembly",
-      "policy": "i2rt_blind_assembly",
-      "successes": 89,
-      "attempts": 96,
-      "starts": "curriculum",
-      "scope": "Original author evaluation, 2026-11-01",
-      "checkpoint_sha256": "74df074853415fdd736dca9ef4fea46108ca8426b75180245592ad520d6a093b",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/i2rt_blind_assembly/selection.json",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam"
-    },
-    {
-      "task": "pick10",
-      "policy": "pick10",
-      "successes": 115,
-      "attempts": 120,
-      "starts": "curriculum",
-      "scope": "Original author evaluation, 2026-11-01",
-      "checkpoint_sha256": "1ec714409a780856ae43b95f114eccc334b262c0b2ca2d5a45e916bf1d8415a9",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/pick10/selection.json",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam"
-    },
-    {
-      "task": "push10",
-      "policy": "push10",
-      "successes": 84,
-      "attempts": 120,
-      "starts": "curriculum",
-      "scope": "Original author evaluation, 2026-11-01",
-      "checkpoint_sha256": "caa38f9378a1b3bab7c4541bd8e0cd956d394c203fe757e3a5e9bca3be848fcc",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/push10/selection.json",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam"
-    },
-    {
-      "task": "track10",
-      "policy": "track10",
-      "successes": 4,
-      "attempts": 10,
-      "starts": "curriculum",
-      "scope": "Original author evaluation, 2026-11-01",
-      "checkpoint_sha256": "8614364e5e52a7418168efe9f4a52e768fb526c0dbd0b47c32cc34c1b0267e3d",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10/selection.json",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam"
-    },
-    {
-      "task": "track10",
-      "policy": "track10_milestones",
-      "successes": 7,
-      "attempts": 10,
-      "starts": "curriculum",
-      "scope": "Original author evaluation, 2026-11-01",
-      "checkpoint_sha256": "ede508b38ec546d5aed22aa8c00204ba17d999fd13a57f1fa57b0b253ae508a0",
-      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10_milestones/selection.json",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam"
+      "control_hz": 30,
+      "substeps": 5,
+      "physics_hz": 150
     }
   ],
   "receipt_root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1/central",
@@ -4694,164 +4445,6 @@
       }
     ]
   },
-  "source_fr3v2_benchmarks": [
-    {
-      "task": "fr3v2_jf_pick",
-      "kind": "pick_teacher",
-      "object_id": 6671,
-      "attempts": 1024,
-      "successes": 1019,
-      "protocol": "Source FR3v2 teacher evaluation on this object.",
-      "checkpoint_sha256": "96136219111f94041528c18eb99afce1161054ad681740a7e540641bca053648",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_pick",
-      "kind": "pick_teacher",
-      "object_id": 6672,
-      "attempts": 1024,
-      "successes": 1016,
-      "protocol": "Source FR3v2 teacher evaluation on this object.",
-      "checkpoint_sha256": "f74ec9b397f43e36ef7217cfd7d2d0ba25fcb6c42c0096419e17b1f9a27fe994",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_pick",
-      "kind": "pick_teacher",
-      "object_id": 6673,
-      "attempts": 1024,
-      "successes": 1015,
-      "protocol": "Source FR3v2 teacher evaluation on this object.",
-      "checkpoint_sha256": "81b289c81f7f0158da0a7458b07c5df254c314d719ca17fdbeb6874aab3c0f68",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_pick",
-      "kind": "pick_teacher",
-      "object_id": 6674,
-      "attempts": 1024,
-      "successes": 1024,
-      "protocol": "Source FR3v2 teacher evaluation on this object.",
-      "checkpoint_sha256": "15c76c45806b7b1538d4f9831a5e2dce25104b07b58402e7de4dadedd361c2b3",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_pick",
-      "kind": "pick_teacher",
-      "object_id": 6675,
-      "attempts": 1024,
-      "successes": 1018,
-      "protocol": "Source FR3v2 teacher evaluation on this object.",
-      "checkpoint_sha256": "c4d2c49bdcca29bb9cf4b0edb138e0c0048c271be47eaaec5c7357c5773da01b",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_place",
-      "kind": "place_teacher",
-      "object_id": 6671,
-      "attempts": 496,
-      "successes": 496,
-      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
-      "checkpoint_sha256": "7598d2a35b516948392bf9e863d9c05becaa1d30cfb44d1a3089423ef4611148",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_place",
-      "kind": "place_teacher",
-      "object_id": 6672,
-      "attempts": 574,
-      "successes": 572,
-      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
-      "checkpoint_sha256": "c71b8e74b278faa4da185035685903471254055e4dc03924dc8d24174ee0ed69",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_place",
-      "kind": "place_teacher",
-      "object_id": 6673,
-      "attempts": 358,
-      "successes": 357,
-      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
-      "checkpoint_sha256": "a6b3d3970c7c36cbe3775efb5fbf2eaf2653e54b5f8ec383b76f54071b18b17a",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_place",
-      "kind": "place_teacher",
-      "object_id": 6674,
-      "attempts": 70,
-      "successes": 69,
-      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Development selection.",
-      "checkpoint_sha256": "e4bcc8408a9dd00236cb51ca6e14b6448d4aa8bcf748a44b4c27044ecc59218b",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_place",
-      "kind": "place_teacher",
-      "object_id": 6675,
-      "attempts": 481,
-      "successes": 479,
-      "protocol": "FR3v2 Place teacher on admitted handoffs in normal, perturbed, and teacher-prefix starts. Formal qualification.",
-      "checkpoint_sha256": "6c7598f2dddf7b9e1c7cc6d508f396cc1ca7dc60d19c5603fa624973157dfb48",
-      "server_receipt": "store/jf-source/my_manipgen/runs/final_pick_place_20261106/place_teachers.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_pick",
-      "kind": "pick_student",
-      "object_id": null,
-      "attempts": 640,
-      "successes": 630,
-      "protocol": "FR3v2 visual Pick student, 128 episodes on each of five objects.",
-      "checkpoint_sha256": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
-      "server_receipt": "store/jf-source/my_manipgen/runs/universal_pick_teacher_aligned_flashsac_20261103/best.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_place",
-      "kind": "place_student",
-      "object_id": null,
-      "attempts": 282,
-      "successes": 282,
-      "protocol": "FR3v2 visual Place student, development set with valid pre-action handoffs.",
-      "checkpoint_sha256": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8",
-      "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/best_student.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "task": "fr3v2_jf_place",
-      "kind": "place_student",
-      "object_id": null,
-      "attempts": 478,
-      "successes": 465,
-      "protocol": "Expanded BBQ sauce cohort. Nine failed initializations excluded before student handoff.",
-      "checkpoint_sha256": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8",
-      "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/bbq_expanded_20261106/valid_handoff_result.json",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    }
-  ],
   "source_fr3v2_full_episodes": [
     {
       "object_id": 6671,
@@ -4865,8 +4458,8 @@
       "place_successes": 3,
       "seed": 2311006713,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/students-6671/eval_000.json",
-      "receipt_sha256": "22c4497ef887e18efaa406d236562b9eb75f5518bc51853e7843b0cf89835d6e",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6671/eval_000.json",
+      "receipt_sha256": "a9549c4988f28a7d06c1544acc570a976b7a930e31247d2af804fd14c896430f",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -4883,8 +4476,8 @@
       "place_successes": 3,
       "seed": 2311006714,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/students-6672/eval_000.json",
-      "receipt_sha256": "3ef90cc015805984e52e287b05f25af61b78fbd217365e624c1a62f5e3d18bee",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6672/eval_000.json",
+      "receipt_sha256": "469030ad24edef6ed94d2bd97fcf39630e2b93fe7b4190977da00ee270c58aad",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -4901,8 +4494,8 @@
       "place_successes": 2,
       "seed": 2311006715,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/students-6673/eval_000.json",
-      "receipt_sha256": "7b68702a530a92ec537f24be2784dad663c1de22e40fbfea2e3c81c2e46ec0ec",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6673/eval_000.json",
+      "receipt_sha256": "58a555bc085268682cce34f0c1c6053af40c29a2c3dd5382ecc6cde2557cd483",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -4919,8 +4512,8 @@
       "place_successes": 1,
       "seed": 2311006716,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/students-6674/eval_000.json",
-      "receipt_sha256": "9e6238cc78767d9ad7cae674ff99ec678244aa2a2494302ae86e13fb2b86ab14",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6674/eval_000.json",
+      "receipt_sha256": "2cf0155b6225c086da3d700fc8a437778265faf9d7a3acdb8484eacf5f1c0db8",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -4937,8 +4530,8 @@
       "place_successes": 2,
       "seed": 2311006717,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/students-6675/eval_000.json",
-      "receipt_sha256": "09d2ca56d7b30d2736a737e63e42a285950f423e914e617eb979210f653ad8bd",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6675/eval_000.json",
+      "receipt_sha256": "e6c2aef5c0a65ef8181707c798cd654ecb9d811eea743560b0d17c4bc6d4b050",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -4955,8 +4548,8 @@
       "place_successes": 2,
       "seed": 2311006713,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/teachers-6671/eval_000.json",
-      "receipt_sha256": "e7b38164d6b3b5cd8261d8d5c4d7c7203c26a86c1ec50515f3ee39be1f78168b",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6671/eval_000.json",
+      "receipt_sha256": "054122909660c1e35a3e56a818c2a5230559d0f9a3d979e9fcb9301f09769348",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -4973,8 +4566,8 @@
       "place_successes": 3,
       "seed": 2311006714,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/teachers-6672/eval_000.json",
-      "receipt_sha256": "24ca62eac9c596560a01d898b800439b761cbbd8ae6a4a00d40e489cb891fa6d",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6672/eval_000.json",
+      "receipt_sha256": "ad44bb203f347cacffc0ab63691044a26f467b8bb812d666c26f3def9d0b77d4",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -4991,8 +4584,8 @@
       "place_successes": 3,
       "seed": 2311006715,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/teachers-6673/eval_000.json",
-      "receipt_sha256": "52b6e6952be35f03eb2271f805a2d2a360a76b675523818a177947181180f9dd",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6673/eval_000.json",
+      "receipt_sha256": "f7596e4564062fe1965a54aaff8270d929290e381f332d3b9273ab5f03c2e1a7",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -5009,8 +4602,8 @@
       "place_successes": 0,
       "seed": 2311006716,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/teachers-6674/eval_000.json",
-      "receipt_sha256": "733e882587ae60b2b258d030fc2282609504ccb3c6801624b5e6814d7ea8a521",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6674/eval_000.json",
+      "receipt_sha256": "52ef7616de5d25e91a656beea25ec8d3031f97b8a556ffb46bbc9b99ed6f8127",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -5027,9 +4620,9 @@
       "place_successes": 4,
       "seed": 2311007716,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/teachers-6674-extra/eval_000.json",
-      "receipt_sha256": "3329799c71264e0d18affd5f60788355233d43cad3eddaf0f1bd9ec8ed74e6ae",
-      "sampling_note": "Additional seed after the initial four normal starts yielded zero valid Place handoffs. Both cohorts are reported.",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6674-extra/eval_000.json",
+      "receipt_sha256": "86387e81bad6bf1fba56be1d9f02a31fc0f2a93b50a706ec24037356b9261a36",
+      "sampling_note": "Additional eight normal starts using the same seed and cohort size as the previous qualification.",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
@@ -5046,82 +4639,20 @@
       "place_successes": 3,
       "seed": 2311006717,
       "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/jf-episode-receipts/teachers-6675/eval_000.json",
-      "receipt_sha256": "32a6791addc8631bf389979b2d474ebabdc6ae5e08aad05d42892f420bcda78f",
+      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6675/eval_000.json",
+      "receipt_sha256": "204f4c69bb4ac0fba9c008cb0afe40bff2fc7c3dd2202d338367bd2a15425b66",
       "task": "fr3v2_jf_pick_place",
       "training_embodiment": "franka_fr3v2",
       "evaluation_embodiment": "franka_fr3v2"
     }
   ],
   "arx10717_availability_receipt": "receipts/arx10717-source-search.json",
-  "additional_source_benchmarks": {
-    "10724": [
-      {
-        "policy": "Retained ARX five-stage chain",
-        "attempts": 15,
-        "successes": 7,
-        "protocol": "Development layouts, policy seed 773. The independent policy-noise seed 1543 also scored 7/15 on the same layouts.",
-        "task": "10724",
-        "training_embodiment": "dual_arx_x5",
-        "evaluation_embodiment": "dual_arx_x5"
-      },
-      {
-        "policy": "Retained ARX five-stage chain",
-        "attempts": 117,
-        "successes": 77,
-        "protocol": "Full training partition, policy seed 773.",
-        "task": "10724",
-        "training_embodiment": "dual_arx_x5",
-        "evaluation_embodiment": "dual_arx_x5"
-      }
-    ],
-    "10717": [
-      {
-        "policy": "October ARX native policy",
-        "attempts": 150,
-        "successes": 144,
-        "protocol": "Archived original ARX official cases. Actor unavailable for a fresh rollout.",
-        "task": "10717",
-        "training_embodiment": "dual_arx_x5",
-        "evaluation_embodiment": "dual_arx_x5"
-      }
-    ],
-    "i2rt_task10717": [
-      {
-        "policy": "Approved I2RT Press v20 controller",
-        "attempts": 150,
-        "successes": 149,
-        "protocol": "Original digit requests; fixed I2RT layout and fresh default robot start.",
-        "task": "i2rt_task10717",
-        "training_embodiment": "i2rt_yam",
-        "evaluation_embodiment": "i2rt_yam"
-      },
-      {
-        "policy": "Approved I2RT Press v20 controller",
-        "attempts": 150,
-        "successes": 148,
-        "protocol": "Repeated fixed digits [1,2] on the same layout.",
-        "task": "i2rt_task10717",
-        "training_embodiment": "i2rt_yam",
-        "evaluation_embodiment": "i2rt_yam"
-      },
-      {
-        "policy": "Atomic Press actor",
-        "attempts": 1800,
-        "successes": 1789,
-        "protocol": "Held-out single-skill test at the source.",
-        "task": "i2rt_task10717",
-        "training_embodiment": "i2rt_yam",
-        "evaluation_embodiment": "i2rt_yam"
-      }
-    ]
-  },
   "i2rt_physics_qualification": {
     "robot": "I2RT ABC Box V4, dual arm",
     "robot_sha256": "6d3909b56fc24b2a958384ab719b2d5f6e6a8237ef4f6902f862e24234ac2a24",
     "physics_hz": 150,
-    "control_hz": 15,
-    "substeps": 10,
+    "control_hz": 30,
+    "substeps": 5,
     "solver": "TGS",
     "position_iterations": 64,
     "velocity_iterations": 1,
@@ -5141,6 +4672,6 @@
       "contact_offsets",
       "rest_offsets"
     ],
-    "server_receipt": "evaluations/shared-tabletop-final/qualification.json"
+    "server_receipt": "evaluations/experts-30hz-1116/qualification.json"
   }
 }

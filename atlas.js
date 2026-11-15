@@ -1,7 +1,7 @@
 /* The atlas reads its packaged records directly so the same page works over HTTP and file URLs. */
 (() => {
   'use strict';
-  const { tasks: registry, revision, nativeBenchmarks = {}, bestExperts = {} } = window.AXIS_ATLAS;
+  const { tasks: registry, revision, bestExperts = {} } = window.AXIS_ATLAS;
   const tasks = registry.filter(task => !task.libraryOnly);
   const nativeI2rt = new Set(registry.filter(task => task.libraryOnly).map(task => task.id));
   const byId = new Map(tasks.flatMap(task => [task.id, ...task.aliases].map(id => [id, task])));
@@ -193,10 +193,6 @@
     body.append(conditions,act,obs);
     const expert = task.expert?.runnable ? task.expert : null;
     const result = targetEvaluation(task);
-    const previous = expert?.previousEvaluation;
-    const hasPrevious = trainedHere(task, previous) && hasScore(previous) && previous.taskId === task.id && previous.revision !== task.taskRevision;
-    const benchmark = nativeBenchmarks[task.id];
-    const showNative = trainedHere(task, benchmark) && benchmark.taskId === task.id && hasScore(benchmark);
     const best = bestExpert(task);
     if (best || expert) {
       const ex = section(best ? 'Highest-scoring expert' : 'Trained expert');
@@ -210,9 +206,7 @@
       if (expert) {
         const info = facts([['Policy',expert.name],[task.profile === 'Shared tabletop' ? 'Shared success' : 'Success on this setup',result && successRate(result)],
           ['Evaluation',result?.protocol],
-          ['Earlier shared evaluation',hasPrevious && successRate(previous) + ' on the ' + previous.obsDim + '-value task. ' + previous.protocol],
-          ['Archived native success',showNative && successRate(benchmark)],
-          ['Native evaluation',showNative && benchmark.protocol],['Recipe',expert.recipe],['Trained by',expert.trainer]]);
+          ['Recipe',expert.recipe],['Trained by',expert.trainer]]);
         if (best) {
           const details = el('details');
           details.append(el('summary',null,expert.name + ' details'),info);
@@ -228,7 +222,7 @@
     }
     const refs = section('Reference trajectories');
     refs.append(facts([['Count',formatCount(task.refs.count)],['Collection',task.refs.summary],
-      ['Length distribution',task.refs.length],['Trajectory success',task.refs.success],['Scope',task.refs.notes]]));
+      ['Length distribution',task.refs.length],['Scope',task.refs.notes]]));
     if (task.refs.quartiles) refs.append(lengthPlot(task.refs.quartiles));
     if (!expert && !best) refs.classList.add('wide');
     body.append(refs);
@@ -236,7 +230,7 @@
     const sources = el('div','panel-sources');
     sources.append(el('span','detail-kicker','Sources'));
     const seen = new Set();
-    for (const source of [...task.sources, ...(expert?.sources || []), ...(showNative ? [benchmark.source] : []), ...task.refs.sources]) {
+    for (const source of [...task.sources, ...(expert?.sources || []), ...task.refs.sources]) {
       if (!source.path || seen.has(source.path)) continue;
       seen.add(source.path);
       sources.append(sourceItem(source.label,source.path));

@@ -5,6 +5,7 @@ import json
 
 web = Path(__file__).resolve().parents[1]
 full = json.loads((web / "task-library.json").read_text())
+physics = full["i2rt_physics_qualification"]
 rows = full["tasks"]
 by = {r["id"]: r for r in rows}
 scores = full["evaluations"]
@@ -118,8 +119,8 @@ parts = [
     '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Task library and expert evaluations · Axis OmniReset</title><style>'
     + style
     + '</style></head><body><header><strong>AXIS / OmniReset</strong><a href="index.html">Task atlas</a></header><main><h1>Task library</h1>',
-    f"<p>{full['coverage']['implementations']} OmniReset environments, {len(rows) - len(core)} aliases and {len(full['coverage']['native_source_tasks'])} original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. For tasks with several evaluated experts, the summary shows the highest measured success rate on that task and robot. Results below identify the policy and evaluation conditions. Updated {full['as_of']}.</p>",
-    f"<p>All {full['i2rt_physics_qualification']['tasks_verified']} I2RT tasks share the dual-arm ABC Box V4 robot, its USD joint gains and friction, and a 15 Hz control loop over ten 150 Hz physics ticks. PhysX uses TGS with 64 position iterations and one velocity iteration. Each task passed a live robot-parameter comparison on axis.</p>",
+    f"<p>{full['coverage']['implementations']} OmniReset environments, {len(rows) - len(core)} aliases and {len(full['coverage']['native_source_tasks'])} original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. All success rates come from the latest evaluation. For tasks with several evaluated experts, the summary shows the highest rate on that task and robot. Each result identifies its policy and evaluation conditions. Updated {full['as_of']}.</p>",
+    f"<p>All {physics['tasks_verified']} I2RT tasks use the dual-arm ABC Box V4 robot with joint gains and friction from its USD. Each {physics['control_hz']} Hz control action runs for {physics['substeps']} physics steps at {physics['physics_hz']} Hz. PhysX uses {h(physics['solver'])} with {physics['position_iterations']} position iterations and {physics['velocity_iterations']} velocity iteration. Each task’s timing and robot parameters were checked on axis.</p>",
     "<p>Server library root <code>"
     + h(full["root"])
     + '</code>. Resource paths are relative to this directory. <a href="task-library.json">Download the inventory and evaluation results</a>.</p>',
@@ -235,53 +236,6 @@ for i, g in enumerate(groups):
             parts.append("</tbody></table>")
         if fresh:
             parts.append(native_table(r, fresh))
-        jf = [
-            e
-            for e in full.get("source_fr3v2_benchmarks", [])
-            if e["task"] == k and matches(r, e)
-        ]
-        if jf:
-            parts.append(
-                "<table><caption>Original FR3v2 source evaluations</caption><thead><tr><th>Network</th><th>Success</th><th>Population</th></tr></thead><tbody>"
-            )
-            for e in jf:
-                label = e["kind"].replace("_", " ").capitalize() + (
-                    f" · {e['object_id']}" if e["object_id"] else ""
-                )
-                parts.append(
-                    f"<tr><td>{h(label)}</td><td>{fmt(e)}</td><td>{h(e['protocol'])}</td></tr>"
-                )
-            parts.append("</tbody></table>")
-        if r.get("prior_physics_evaluations"):
-            parts.append("<details><summary>Archived evaluations on earlier physics</summary><ul>")
-            for z in r["prior_physics_evaluations"]:
-                if matches(r, z):
-                    parts.append(f"<li>{h(z['policy'])} · {fmt(z)}. {h(z['protocol'])}</li>")
-            parts.append("</ul></details>")
-        if r.get("archived_scores"):
-            parts.append("<p><b>Original author evaluations</b> (1 Nov 2026)</p><ul>")
-            for j in r["archived_scores"]:
-                z = full["archived_evaluations"][j]
-                if z["task"] != k or not matches(r, z):
-                    continue
-                parts.append(
-                    f"<li>{h(z['policy'])} · {fmt(z)} · {h(z['starts'])} starts.</li>"
-                )
-            parts.append("</ul>")
-        if k in full.get("additional_source_benchmarks", {}):
-            parts.append("<p><b>Archived source benchmarks</b></p><ul>")
-            for z in full["additional_source_benchmarks"][k]:
-                if z["task"] != k or not matches(r, z):
-                    continue
-                parts.append(
-                    f"<li>{h(z['policy'])} · {fmt(z)} · {h(z['protocol'])}</li>"
-                )
-            parts.append("</ul>")
-        if "original_benchmark" in r and matches(r, r["original_benchmark"]):
-            z = r["original_benchmark"]
-            parts.append(
-                f"<p><b>Archived fixed-I1 A100 delivery benchmark</b> · 97.9933% ({z['successes']:,}/{z['attempts']:,}). {h(z['protocol'])}</p>"
-            )
         parts.append("<dl>")
         for role, label in names.items():
             v = r["resources"][role]

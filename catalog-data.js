@@ -1,6 +1,6 @@
 /* Registry and evidence snapshot. This file also loads with file://. */
 window.AXIS_ATLAS = {
-  "revision": "f06da37b1c9bd5c227971eee1b384d33084f6c0b",
+  "revision": "f97139a7c2336afb3ac803beb3bc81550e090469",
   "tasks": [
     {
       "id": "i2rt_grasp1000",
@@ -13,7 +13,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 1039,
       "obs": "981 source-layout features include virtual Panda left-hand channels, object shape, contact and milestone state, and controller history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -35,7 +35,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The fixed-home grasp task samples object poses. Each of the 1,000 slots identifies an object instance. Frozen-policy evaluation episodes are a separate population.",
         "sources": [
           {
@@ -54,7 +53,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Shared robot and grasp population with fixed home and sampled object pose.",
       "successCondition": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.",
@@ -69,7 +68,7 @@ window.AXIS_ATLAS = {
       "profile": "Shared tabletop",
       "actionDim": 14,
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "id": "i2rt_jf_pick",
       "title": "JF object pick",
       "description": "Lift one of six objects by 5 cm and hold it with the same two fingertips for 0.4 seconds.",
@@ -96,7 +95,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "Fresh procedural layouts",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The reset sampler draws object positions and yaw from the scene configuration.",
         "sources": []
       },
@@ -106,7 +104,7 @@ window.AXIS_ATLAS = {
         "source": "Seeded RTX render on axis, seed 42, environment 0, JF 6671",
         "caption": "Shared I2RT desk at reset, object 6671. The inset shows the butter at its measured pose."
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "sourceExpertLabel": "No I2RT expert",
       "sourceExpertNote": "No I2RT-trained checkpoint located.",
       "embodimentId": "i2rt_yam",
@@ -121,7 +119,7 @@ window.AXIS_ATLAS = {
       "profile": "Shared tabletop",
       "actionDim": 14,
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "id": "i2rt_jf_place",
       "title": "JF object placement",
       "description": "Grasp an object from the desk and release it in its container. The object must stay stable for 0.4 seconds.",
@@ -148,7 +146,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "Fresh procedural layouts",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The reset sampler draws object positions and yaw from the scene configuration.",
         "sources": []
       },
@@ -158,7 +155,7 @@ window.AXIS_ATLAS = {
         "source": "Seeded RTX render on axis, seed 42, environment 0, JF 6703",
         "caption": "Shared I2RT desk at reset, object 6703. The inset shows the marker at its measured pose."
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "sourceExpertLabel": "No I2RT expert",
       "sourceExpertNote": "No I2RT-trained checkpoint located.",
       "embodimentId": "i2rt_yam",
@@ -196,12 +193,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "5033",
-          "revision": "e465d482",
+          "revision": "f97139a7",
           "obsDim": 105,
           "actionDim": 7,
-          "successes": 27,
+          "successes": 26,
           "attempts": 28,
-          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. See the full task library for checkpoints and evaluation receipts.",
+          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
           "trainingEmbodiment": "franka_panda",
           "evaluationEmbodiment": "franka_panda"
         }
@@ -210,8 +207,7 @@ window.AXIS_ATLAS = {
         "count": 302,
         "summary": "Source Franka recordings",
         "length": "Source controls at 5 Hz: min 13, Q1 41, median 54, Q3 83, max 475.",
-        "success": "100% (302/302) carry the original goal-achieved label. Separately, 259/302 passed the source replay qualification.",
-        "notes": "One Chess scene. 22,541 archived states including one initial frame per recording. The percentages describe the supplied recordings.",
+        "notes": "One Chess scene. 22,541 archived states including one initial frame per recording.",
         "sources": [
           {
             "label": "V48 archive reproduction",
@@ -239,7 +235,7 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/task5033-scene.jpg"
       },
-      "taskRevision": "e465d482",
+      "taskRevision": "f97139a7",
       "embodimentId": "franka_panda",
       "start": "Native Franka reset bank with qualified chess starts.",
       "successCondition": "Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.",
@@ -272,7 +268,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The registered native task consumes RoboDojo press-by-number layouts. The asset manifest lists 431 files for this task and no reference recording bundle.",
         "sources": [
           {
@@ -292,7 +287,7 @@ window.AXIS_ATLAS = {
         "source": "environment-snapshots/task10717-scene.jpg"
       },
       "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
-      "sourceExpertNote": "The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256. The archived original score was 144/150.",
+      "sourceExpertNote": "The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256.",
       "embodimentId": "dual_arx_x5",
       "start": "RoboDojo card and button layout with both arms at home.",
       "successCondition": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
@@ -311,7 +306,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 130,
       "obs": "Two 13-value block states, goal XYZ and active-block-to-goal vector, contact forces, grasp and release flags, stable time and episode progress. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -333,7 +328,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "Reset-state bank only",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "27,561 source states are available for retargeted resets. The 32 native Panda teacher episodes use a different robot, observation and action contract and have no shared-I2RT trajectory conversion.",
         "sources": [
           {
@@ -348,7 +342,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Role bank mapped into the shared left-arm workspace. Start with the second cube held and the base supported.",
       "successCondition": "Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.",
@@ -380,7 +374,6 @@ window.AXIS_ATLAS = {
         "count": 1202,
         "summary": "Verified production human demonstrations",
         "length": "143,681 source frames (119.5 mean). Nominal recording spans at 5 Hz: 610 episodes at or below 22 s; 592 above 22 s.",
-        "success": "100% (1,202/1,202) by the source goal and verification labels in this selected cohort. Native replay success is unreported.",
         "notes": "165 ARX layouts; train/dev/test contain 971/95/136 recordings. The published split uses 116,975/11,285/15,421 frames respectively. The environment acts at 25 Hz.",
         "sources": [
           {
@@ -437,12 +430,12 @@ window.AXIS_ATLAS = {
         "trainer": "Franka1000 delivery team (jupiter2143).",
         "evaluation": {
           "taskId": "panda_grasp1000",
-          "revision": "e465d482",
+          "revision": "f97139a7",
           "obsDim": 981,
           "actionDim": 7,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42. See the full task library for checkpoints and evaluation receipts.",
+          "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42.",
           "trainingEmbodiment": "franka_panda",
           "evaluationEmbodiment": "franka_panda"
         },
@@ -456,24 +449,12 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/grasp1000_evaluation.py"
           }
         ],
-        "availability": "Evaluated on axis",
-        "previousEvaluation": {
-          "taskId": "panda_grasp1000",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
-          "obsDim": 981,
-          "actionDim": 7,
-          "successes": 4,
-          "attempts": 4,
-          "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout.",
-          "trainingEmbodiment": "franka_panda",
-          "evaluationEmbodiment": "franka_panda"
-        }
+        "availability": "Evaluated on axis"
       },
       "refs": {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The fixed-home grasp task samples object poses. Each of the 1,000 slots identifies an object instance. Frozen-policy evaluation episodes are a separate population.",
         "sources": [
           {
@@ -492,7 +473,7 @@ window.AXIS_ATLAS = {
         "kind": "Evaluation frame",
         "source": "reports/shared-i2rt/grasp1000-integration/panda.mp4"
       },
-      "taskRevision": "e465d482",
+      "taskRevision": "f97139a7",
       "embodimentId": "franka_panda",
       "start": "Fixed Franka home, sampled object pose in the 1,000-slot grasp population.",
       "successCondition": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls."
@@ -508,7 +489,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 110,
       "obs": "Joint positions and velocities for both arms (32), key pose (7), key linear and angular velocity (6), and slot pose (7). Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -526,7 +507,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The shared task uses the RoboDojo key and slot. Its training and visualization records are separate from a task reference.",
         "sources": [
           {
@@ -541,7 +521,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Folded shared-robot home with key and fixed slot.",
       "successCondition": "Keep the key bottom more than 25 mm below the slot top and above the base minus 2 mm. XY error must be under 7 mm, tilt within 7°, and key-to-slot alignment within 30° for three consecutive controls.",
@@ -559,7 +539,7 @@ window.AXIS_ATLAS = {
       "action": "Twelve bimanual TCP translation and rotation increments followed by the two gripper increments.",
       "obsDim": 209,
       "obs": "Bimanual joint and TCP state, butter pose and twist, target and relative poses, gripper contacts, action and stage history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -575,10 +555,10 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "handover_butter",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 209,
           "actionDim": 14,
-          "successes": 113,
+          "successes": 244,
           "attempts": 300,
           "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
           "trainingEmbodiment": "i2rt_yam",
@@ -589,8 +569,7 @@ window.AXIS_ATLAS = {
         "count": 1200,
         "summary": "Retained successful demonstrations",
         "length": "Native controls at 30 Hz: min 563, Q1 627, median 650, Q3 674, max 748.",
-        "success": "100% (1,200/1,200) of the saved trajectories meet the source task’s label.",
-        "notes": "The full chain spans pickup, handover and placement. The collector completed 1,622 physical attempts for 1,200 successful requests.",
+        "notes": "The full chain spans pickup, handover and placement.",
         "sources": [
           {
             "label": "Five-task demonstration inventory",
@@ -618,9 +597,8 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/handover_butter-scene.jpg"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "sourceExpertLabel": "Frozen controller",
-      "sourceExpertNote": "Native MA-v2 chain scored 95% (285/300). Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
       "embodimentId": "i2rt_yam",
       "start": "Native demonstration bank. Select skill_index 0, 1 or 2 for grasp, handover or complete placement.",
       "successCondition": "Stage 0 ends at donor capture. Stage 1 requires receiver capture and donor release. The full course ends after placement on the target mat and receiver release.",
@@ -659,12 +637,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "panda_wood_stack_second",
-          "revision": "e465d482",
+          "revision": "f97139a7",
           "obsDim": 122,
           "actionDim": 6,
           "successes": 3,
           "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts.",
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
           "trainingEmbodiment": "franka_fr3v2",
           "evaluationEmbodiment": "franka_fr3v2"
         }
@@ -673,7 +651,6 @@ window.AXIS_ATLAS = {
         "count": 32,
         "summary": "Source teacher episodes on lyg2135",
         "length": "Decision intervals: min 37, Q1 64.25, median 77.5, Q3 91, max 107. Elapsed physics time: 8.13–22.1 s (median 16.17 s).",
-        "success": "100% (32/32) in the selected source teacher file. Every final interval is valid, terminal, untruncated and carries the source success reward.",
         "notes": "27,561 restored initial states are packaged on axis. The source teacher trajectories reside on lyg2135 in the author’s checkout.",
         "sources": [
           {
@@ -702,7 +679,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482",
+      "taskRevision": "f97139a7",
       "embodimentId": "franka_fr3v2",
       "start": "Role-specific physical reset bank. Start with the second cube held and the base supported.",
       "successCondition": "Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.",
@@ -741,12 +718,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "franka1000",
-          "revision": "e465d482",
+          "revision": "f97139a7",
           "obsDim": 981,
           "actionDim": 7,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42. See the full task library for checkpoints and evaluation receipts.",
+          "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42.",
           "trainingEmbodiment": "franka_panda",
           "evaluationEmbodiment": "franka_panda"
         }
@@ -755,7 +732,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The fixed-home grasp task samples object poses. Each of the 1,000 slots identifies an object instance. Frozen-policy evaluation episodes are a separate population.",
         "sources": [
           {
@@ -774,7 +750,7 @@ window.AXIS_ATLAS = {
         "kind": "Evaluation frame",
         "source": "reports/shared-i2rt/grasp1000-integration/panda.mp4"
       },
-      "taskRevision": "e465d482",
+      "taskRevision": "f97139a7",
       "embodimentId": "franka_panda",
       "start": "Fixed Franka home, sampled object pose in the 1,000-slot grasp population.",
       "successCondition": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.",
@@ -815,12 +791,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "panda_wood_pick",
-          "revision": "e465d482",
+          "revision": "f97139a7",
           "obsDim": 122,
           "actionDim": 6,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts.",
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
           "trainingEmbodiment": "franka_fr3v2",
           "evaluationEmbodiment": "franka_fr3v2"
         }
@@ -829,7 +805,6 @@ window.AXIS_ATLAS = {
         "count": 64,
         "summary": "Source teacher episodes on lyg2135",
         "length": "Decision intervals: min 17, Q1 27, median 34.5, Q3 46, max 56. Elapsed physics time: 4.23–12.03 s (median 7.72 s).",
-        "success": "100% (64/64) in the selected source teacher file. Every final interval is valid, terminal, untruncated and carries the source success reward.",
         "notes": "30,530 restored initial states are packaged on axis. The source teacher trajectories reside on lyg2135 in the author’s checkout.",
         "sources": [
           {
@@ -858,7 +833,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482",
+      "taskRevision": "f97139a7",
       "embodimentId": "franka_fr3v2",
       "start": "Role-specific physical reset bank. Designated 20 mm cube unheld.",
       "successCondition": "Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.",
@@ -877,7 +852,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 130,
       "obs": "Two 13-value block states, goal XYZ and active-block-to-goal vector, contact forces, grasp and release flags, stable time and episode progress. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -899,7 +874,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "Reset-state bank only",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "30,530 source states are available for retargeted resets. The 64 native Panda teacher episodes use a different robot, observation and action contract and have no shared-I2RT trajectory conversion.",
         "sources": [
           {
@@ -914,7 +888,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Role bank mapped into the shared left-arm workspace. Designated 20 mm cube unheld.",
       "successCondition": "Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.",
@@ -954,12 +928,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "panda_wood_place_base",
-          "revision": "e465d482",
+          "revision": "f97139a7",
           "obsDim": 122,
           "actionDim": 6,
           "successes": 3,
           "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts.",
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
           "trainingEmbodiment": "franka_fr3v2",
           "evaluationEmbodiment": "franka_fr3v2"
         }
@@ -968,7 +942,6 @@ window.AXIS_ATLAS = {
         "count": 64,
         "summary": "Source teacher episodes on lyg2135",
         "length": "Decision intervals: min 34, Q1 39.75, median 47, Q3 58.5, max 118. Elapsed physics time: 7.54–24.41 s (median 10.23 s).",
-        "success": "100% (64/64) in the selected source teacher file. Every final interval is valid, terminal, untruncated and carries the source success reward.",
         "notes": "29,604 restored initial states are packaged on axis. The source teacher trajectories reside on lyg2135 in the author’s checkout.",
         "sources": [
           {
@@ -997,7 +970,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "e465d482",
+      "taskRevision": "f97139a7",
       "embodimentId": "franka_fr3v2",
       "start": "Role-specific physical reset bank. Start with the base cube held.",
       "successCondition": "Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.",
@@ -1016,7 +989,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 130,
       "obs": "Two 13-value block states, goal XYZ and active-block-to-goal vector, contact forces, grasp and release flags, stable time and episode progress. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1038,7 +1011,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "Reset-state bank only",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "29,604 source states are available for retargeted resets. The 64 native Panda teacher episodes use a different robot, observation and action contract and have no shared-I2RT trajectory conversion.",
         "sources": [
           {
@@ -1053,7 +1025,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Role bank mapped into the shared left-arm workspace. Start with the base cube held.",
       "successCondition": "Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.",
@@ -1089,12 +1061,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "5716",
-          "revision": "e465d482",
+          "revision": "f97139a7",
           "obsDim": 116,
           "actionDim": 7,
           "successes": 29,
           "attempts": 29,
-          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. See the full task library for checkpoints and evaluation receipts.",
+          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
           "trainingEmbodiment": "franka_panda",
           "evaluationEmbodiment": "franka_panda"
         }
@@ -1103,8 +1075,7 @@ window.AXIS_ATLAS = {
         "count": 1202,
         "summary": "Source Franka recordings",
         "length": "Source controls at 5 Hz: min 12, Q1 32, median 38, Q3 47, max 403.",
-        "success": "100% (1,202/1,202) carry the original goal-achieved label.",
-        "notes": "Two Apple scenes, with 603 and 599 recordings. 51,602 archived states including one initial frame per recording. The percentages describe the supplied recordings.",
+        "notes": "Two Apple scenes, with 603 and 599 recordings. 51,602 archived states including one initial frame per recording.",
         "sources": [
           {
             "label": "V48 archive reproduction",
@@ -1132,7 +1103,7 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/task5716-scene.jpg"
       },
-      "taskRevision": "e465d482",
+      "taskRevision": "f97139a7",
       "embodimentId": "franka_panda",
       "start": "Native V48 apple scenes with physically admitted placement or curriculum starts.",
       "successCondition": "Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.",
@@ -1151,7 +1122,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 174,
       "obs": "The 116 source-layout channels use a virtual Panda wrist representation, basket and object state, goal geometry and command history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1169,7 +1140,6 @@ window.AXIS_ATLAS = {
         "count": 1202,
         "summary": "Retargeted source recordings",
         "length": "Source controls at 5 Hz: min 12, Q1 32, median 38, Q3 47, max 403.",
-        "success": "These retargeted recordings have no measured I2RT completion rate.",
         "notes": "Two Apple scenes, with 603 and 599 recordings. All 51,602 frames were mapped; 1,313 fell outside the IK tolerance and were retained in the unscreened reset bank. A pose replay does not score closed-loop task completion.",
         "sources": [
           {
@@ -1198,7 +1168,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Folded shared-robot home and apple layout. Optional retargeted reference banks.",
       "successCondition": "Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.",
@@ -1216,7 +1186,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 163,
       "obs": "The 105 source-layout channels use a virtual Panda wrist representation, measured prop state, goal geometry and command history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1234,7 +1204,6 @@ window.AXIS_ATLAS = {
         "count": 302,
         "summary": "Retargeted source recordings",
         "length": "Source controls at 5 Hz: min 13, Q1 41, median 54, Q3 83, max 475.",
-        "success": "These retargeted recordings have no measured I2RT completion rate.",
         "notes": "One Chess scene. All 22,541 frames were mapped; 550 fell outside the IK tolerance and were retained in the unscreened reset bank. A pose replay does not score closed-loop task completion.",
         "sources": [
           {
@@ -1263,7 +1232,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Folded shared-robot home and chess layout. Optional retargeted reference banks.",
       "successCondition": "Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.",
@@ -1281,7 +1250,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 172,
       "obs": "Robot and button joint states, drive targets, TCP and button geometry, requested digits, press counts, phase and action history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1301,10 +1270,10 @@ window.AXIS_ATLAS = {
         "availability": "Evaluated on axis",
         "evaluation": {
           "taskId": "i2rt_task10717",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 172,
           "actionDim": 14,
-          "successes": 12,
+          "successes": 4,
           "attempts": 12,
           "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
           "trainingEmbodiment": "i2rt_yam",
@@ -1315,7 +1284,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "Buttons uses fresh starts. The digit combination and button poses describe the scene, and the reference-reset registry provides no recorded button trajectory.",
         "sources": [
           {
@@ -1330,7 +1298,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Home pose, released spring buttons, card-defined counts. Default digits are 1 and 2.",
       "successCondition": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
@@ -1362,7 +1330,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The key and slot use a deterministic reset. The integration recording documents a control test; the package ships no insertion demonstration.",
         "sources": [
           {
@@ -1396,7 +1363,7 @@ window.AXIS_ATLAS = {
       "action": "Absolute environment-local executing-arm TCP position (3), WXYZ quaternion (4), and gripper opening [0, 1]. The other arm holds its start target. The hybrid controller owns descent, release and retreat.",
       "obsDim": 1205,
       "obs": "Robot state and targets, object and basket poses, task roles, contact and release history, and sampled geometry from both objects. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1410,7 +1377,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The six portable watch cases contain 20,153 sampled starts. The native contract restores independent state snapshots and requalifies them in physics.",
         "sources": [
           {
@@ -1429,7 +1395,7 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/i2rt_watch_basket_place-scene.jpg"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "One wristwatch already held in a physically requalified native start.",
       "successCondition": "Place the whole watch in the basket, release onto bottom support and withdraw. The watch must stay stable and clear of the robot. The hybrid controller handles descent, release and retreat.",
@@ -1446,7 +1412,7 @@ window.AXIS_ATLAS = {
       "action": "14 normalized values, seven per arm. The policy supplies six world-frame TCP increments for the executing arm, up to 0.01 m of translation and 0.04 rad of rotation per axis. The passive arm holds its reset pose. The release controller opens the gripper when the footprint, height and clearance checks pass.",
       "obsDim": 247,
       "obs": "189 task values cover both arms and their drive targets, six rigid bodies, TCP poses, the selected object and arm, geometry, contacts and release history. Another 58 values describe the measured state of both arms. The final nine values give the target XYZ in scene axes, the TCP-to-target vector in TCP axes, and the target offset from the center and bottom of the object’s footprint in scene axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "At reset, the target can be offset up to ±25 mm along the tray and ±8 mm across it. Success requires physical containment after release. The task reports XY distance to the requested point separately.",
       "sources": [
@@ -1473,10 +1439,10 @@ window.AXIS_ATLAS = {
         "availability": "Evaluated on axis",
         "evaluation": {
           "taskId": "i2rt_watch_place",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 247,
           "actionDim": 14,
-          "successes": 15,
+          "successes": 13,
           "attempts": 16,
           "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings.",
           "trainingEmbodiment": "i2rt_yam",
@@ -1487,7 +1453,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "51,000 held reset snapshots",
         "length": "One physical endpoint per row.",
-        "success": "Episodes are scored during rollout.",
         "notes": "50,000 R2 training rows, 500 DEV rows and 500 TEST rows. All five objects and both executing arms occur in each split. The runtime package uses these banks.",
         "sources": []
       },
@@ -1497,7 +1462,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "RTX render from the measured shared Isaac scene on axis, R2 seed 42, slot 0."
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "One of five objects already held by the left or right arm over a rectangular tray.",
       "successCondition": "Lower until the release gate opens. The object must separate from the hand inside the 5 mm tray inset and meet floor/rim height bounds. Tray displacement must be ≤15 mm.",
@@ -1514,7 +1479,7 @@ window.AXIS_ATLAS = {
       "action": "Left TCP translation and rotation-vector increments (6) plus an incremental gripper-opening command.",
       "obsDim": 1033,
       "obs": "Proprioception, object and TCP state, target grasp, object shape descriptor, scene-distance probes, contacts and grasp history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1530,12 +1495,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "pick10",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 1033,
           "actionDim": 7,
           "successes": 16,
           "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
           "trainingEmbodiment": "i2rt_yam",
           "evaluationEmbodiment": "i2rt_yam"
         }
@@ -1544,7 +1509,6 @@ window.AXIS_ATLAS = {
         "count": 10000,
         "summary": "Retained successful demonstrations",
         "length": "Native controls at 30 Hz: min 135, Q1 194, median 220, Q3 251, max 300.",
-        "success": "100% (10,000/10,000) of the saved trajectories meet the source task’s label.",
         "notes": "Each of 2,500 training starts contributes four demonstrations; both the first-success index and terminal frame are stored.",
         "sources": [
           {
@@ -1573,7 +1537,7 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/pick10-scene.jpg"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Native ten-object layouts and demonstration-derived starts.",
       "successCondition": "Grasp with both fingertips and hold the object bottom more than 5 cm above the basket rim for nine controls.",
@@ -1590,7 +1554,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 1033,
       "obs": "Proprioception, object and TCP state, target grasp, object shape descriptor, scene-distance probes, contacts and grasp history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1610,7 +1574,7 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_pick10",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 1033,
           "actionDim": 14,
           "successes": 0,
@@ -1635,7 +1599,6 @@ window.AXIS_ATLAS = {
         "count": 10,
         "summary": "Shared reference-bank recordings",
         "length": "Stored pose frames including the initial frame: min 173, Q1 202.75, median 221, Q3 235.5, max 264.",
-        "success": "Source selection: 10/10 successful. Shared-I2RT trajectory completion is unscored.",
         "notes": "One recording per object, drawn from 10,000 native Pick10 demonstrations.",
         "sources": [
           {
@@ -1668,7 +1631,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Shared home and selected object layout. Default cube_2. Optional reference starts.",
       "successCondition": "Grasp with both fingertips and hold the object bottom more than 5 cm above the basket rim for nine controls.",
@@ -1685,7 +1648,7 @@ window.AXIS_ATLAS = {
       "action": "Left TCP translation and rotation-vector increments (6) plus an incremental gripper-opening command.",
       "obsDim": 1034,
       "obs": "Default tabletop policy features include joint and object state, TCP and target geometry, a shape descriptor, probes, contacts, and milestone history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "The default dual-arm recipe uses 976 task features. Explicit single-arm free-grasp recipes have their own encoder and append 29 robot values.",
       "sources": [
@@ -1701,10 +1664,10 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "pick100",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 1034,
           "actionDim": 7,
-          "successes": 177,
+          "successes": 206,
           "attempts": 512,
           "protocol": "Deterministic author checkpoint on 512 reset-bank slots, seed 42, original policy observation prefix.",
           "trainingEmbodiment": "i2rt_yam",
@@ -1715,7 +1678,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "Free-grasp SAC trains online from randomized starts without action demonstrations. The object catalog and initial-state bank count different things.",
         "sources": [
           {
@@ -1730,7 +1692,7 @@ window.AXIS_ATLAS = {
         "kind": "Source-bank rendering",
         "source": "lyg2135:/data/jupiter2143/axis-omnireset/artifacts/pick100_sa_v3_1b, initials.pt, state 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "100-object population with randomized ungrasped starts. The audited recipe used 512 slots.",
       "successCondition": "Meet adjacent approach and orientation deadlines, establish bilateral grasp, clear the 1 cm and 3 cm lift milestones and hold the bottom ≥5 cm above the table for nine controls.",
@@ -1747,7 +1709,7 @@ window.AXIS_ATLAS = {
       "action": "Left TCP translation and rotation-vector increments (6). The gripper stays open.",
       "obsDim": 1023,
       "obs": "Robot and object state, target displacement, object shape, workspace probes, contact evidence and recent actions. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1763,12 +1725,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "push10",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 1023,
           "actionDim": 6,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
           "trainingEmbodiment": "i2rt_yam",
           "evaluationEmbodiment": "i2rt_yam"
         }
@@ -1777,8 +1739,7 @@ window.AXIS_ATLAS = {
         "count": 10000,
         "summary": "Retained successful demonstrations",
         "length": "Native controls at 30 Hz: min 114, Q1 209, median 258, Q3 296, max 400.",
-        "success": "100% (10,000/10,000) of the saved trajectories meet the source task’s label.",
-        "notes": "The collection retained 10,000 unique successes in 1,855,286 attempts (0.539% unique acceptance).",
+        "notes": "The collection contains distinct successful demonstrations.",
         "sources": [
           {
             "label": "Five-task demonstration inventory",
@@ -1806,7 +1767,7 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/push10-scene.jpg"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Native ten-object layouts and demonstration-derived push starts.",
       "successCondition": "Keep the gripper open and push the object into a table-supported goal within 5 mm on each position axis.",
@@ -1823,7 +1784,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 1023,
       "obs": "Robot and object state, target displacement, object shape, workspace probes, contact evidence and recent actions. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1843,7 +1804,7 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_push10",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 1023,
           "actionDim": 14,
           "successes": 0,
@@ -1868,7 +1829,6 @@ window.AXIS_ATLAS = {
         "count": 10,
         "summary": "Shared reference-bank recordings",
         "length": "Stored pose frames including the initial frame: min 115, Q1 152, median 177, Q3 194.5, max 254.",
-        "success": "Source selection: 10/10 successful. Shared-I2RT trajectory completion is unscored.",
         "notes": "One recording per object, drawn from 10,000 native Push10 demonstrations.",
         "sources": [
           {
@@ -1901,7 +1861,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Shared home and selected object on the table. Optional reference starts.",
       "successCondition": "Keep the gripper open and push the object into a table-supported goal within 5 mm on each position axis.",
@@ -1918,7 +1878,7 @@ window.AXIS_ATLAS = {
       "action": "Left TCP translation and rotation-vector increments (6) plus an incremental gripper-opening command.",
       "obsDim": 1097,
       "obs": "Robot and object state, goal pose, object and obstacle surface features, clearance probes, contacts, and transport history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -1934,12 +1894,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "track10",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 1097,
           "actionDim": 7,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
           "trainingEmbodiment": "i2rt_yam",
           "evaluationEmbodiment": "i2rt_yam"
         }
@@ -1948,7 +1908,6 @@ window.AXIS_ATLAS = {
         "count": 10000,
         "summary": "Retained successful demonstrations",
         "length": "Native controls at 30 Hz: min 326, Q1 459, median 499, Q3 535, max 600.",
-        "success": "100% (10,000/10,000) of the saved trajectories meet the source task’s label.",
         "notes": "The success frame and object identity are stored for each trajectory.",
         "sources": [
           {
@@ -1977,7 +1936,7 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/track10-scene.jpg"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Native ten-object layouts with demonstration first-frame or intermediate starts.",
       "successCondition": "Grasp, lift at least 25 mm, move past the obstacles and release on the goal support. For six controls require position error under 12 mm, angle error under 0.12 rad, speed under 25 mm/s and clearance from disqualifying collisions.",
@@ -1994,7 +1953,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 1097,
       "obs": "Robot and object state, goal pose, object and obstacle surface features, clearance probes, contacts, and transport history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -2014,7 +1973,7 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_track10",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 1097,
           "actionDim": 14,
           "successes": 0,
@@ -2039,7 +1998,6 @@ window.AXIS_ATLAS = {
         "count": 10,
         "summary": "Shared reference-bank recordings",
         "length": "Stored pose frames including the initial frame: min 447, Q1 486, median 509, Q3 526.25, max 541.",
-        "success": "Source selection: 10/10 successful. Shared-I2RT trajectory completion is unscored.",
         "notes": "One recording per object, drawn from 10,000 native Track10 demonstrations.",
         "sources": [
           {
@@ -2072,7 +2030,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Shared home, selected object, obstacles and goal. Optional reference starts.",
       "successCondition": "Grasp, lift at least 25 mm, move past the obstacles and release on the goal support. For six controls require position error under 12 mm, angle error under 0.12 rad, speed under 25 mm/s and clearance from disqualifying collisions.",
@@ -2089,7 +2047,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 209,
       "obs": "Bimanual joint and TCP state, butter pose and twist, target and relative poses, gripper contacts, action and stage history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -2109,10 +2067,10 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_handover_butter",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 209,
           "actionDim": 14,
-          "successes": 0,
+          "successes": 10,
           "attempts": 16,
           "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
           "trainingEmbodiment": "i2rt_yam",
@@ -2134,7 +2092,6 @@ window.AXIS_ATLAS = {
         "count": 1,
         "summary": "One recording, two course views",
         "length": "197 stored pose frames for the default first-capture course; 697 for the full chain. Both derive from native row 0.",
-        "success": "The source recording is a successful native handover (1/1). Shared-I2RT trajectory completion is unscored.",
         "notes": "The two imported courses reuse one source episode from the 1,200-trajectory native corpus.",
         "sources": [
           {
@@ -2157,7 +2114,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Shared home, butter and target mat. The default course starts at milestone zero.",
       "successCondition": "Stage 0 ends at donor capture. Stage 1 requires receiver capture and donor release. The full course ends after placement on the target mat and receiver release.",
@@ -2174,7 +2131,7 @@ window.AXIS_ATLAS = {
       "action": "Six rate-limited left arm joint increments, anchored to the drive target. The source prefix controller has a separate action interface.",
       "obsDim": 616,
       "obs": "An 18-frame window of 31 proprioceptive values per frame (558). A separate privileged critic can inspect assembly state. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -2190,12 +2147,12 @@ window.AXIS_ATLAS = {
         "sources": [],
         "evaluation": {
           "taskId": "blind_assembly",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 616,
           "actionDim": 6,
-          "successes": 3,
+          "successes": 12,
           "attempts": 32,
-          "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 15 Hz.",
+          "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz.",
           "trainingEmbodiment": "i2rt_yam",
           "evaluationEmbodiment": "i2rt_yam"
         }
@@ -2204,8 +2161,7 @@ window.AXIS_ATLAS = {
         "count": 24000,
         "summary": "Retained successful demonstrations",
         "length": "Native controls at 30 Hz: min 290, Q1 419, median 453, Q3 504, max 770.",
-        "success": "100% (24,000/24,000) of the saved trajectories meet the source task’s label.",
-        "notes": "The 15 trajectory shards contain 24 variants and explicit success flags. The collection accepted 24,000 out of 43,008 attempted rows (55.8%).",
+        "notes": "The 15 trajectory shards contain 24 geometry variants and terminal success labels.",
         "sources": [
           {
             "label": "Five-task demonstration inventory",
@@ -2233,7 +2189,7 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/blind_assembly-scene.jpg"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Native peg/fixture geometry and insertion starts. The evaluated cascade includes a grasp prefix across 24 geometries.",
       "successCondition": "Align the peg and matching fixture. Capture the peg in the opening, then maintain slow, stable seating for the checker’s required interval.",
@@ -2250,7 +2206,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 616,
       "obs": "An 18-frame window of 31 proprioceptive values per frame (558). A separate privileged critic can inspect assembly state. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -2270,7 +2226,7 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_blind_assembly",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 616,
           "actionDim": 14,
           "successes": 0,
@@ -2295,7 +2251,6 @@ window.AXIS_ATLAS = {
         "count": 24,
         "summary": "Shared reference-bank recordings",
         "length": "Stored pose frames including the initial frame: min 346, Q1 403, median 427, Q3 507.25, max 606.",
-        "success": "Source selection: 24/24 successful. Shared-I2RT trajectory completion is unscored.",
         "notes": "One successful left-arm training recording per assembly variant, drawn from 24,000 source demonstrations. Across the 10,749 mapped frames, 6,001 exceeded the IK tolerance; the unscreened import retains them.",
         "sources": [
           {
@@ -2328,7 +2283,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Fresh upright tabletop peg in the default shared scene. Variant 00 by default. Optional reference banks.",
       "successCondition": "Align the peg and matching fixture. Capture the peg in the opening, then maintain slow, stable seating for the checker’s required interval.",
@@ -2359,7 +2314,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "Empty robot-and-desk task. The bounded motion check exercises the controls.",
         "sources": [
           {
@@ -2390,7 +2344,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 90,
       "obs": "The original 32 channels contain per-arm joint positions and velocities. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -2408,7 +2362,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "Empty shared tabletop and authored robot home pose.",
         "sources": [
           {
@@ -2423,7 +2376,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Two YAM arms and grippers over the shared desk.",
       "successCondition": "Base scene. It exposes motion and state with no task success condition.",
@@ -2454,7 +2407,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The point-mass teaching environment generates initial positions and goals.",
         "sources": [
           {
@@ -2485,7 +2437,7 @@ window.AXIS_ATLAS = {
       "action": "Per arm: three TCP translation increments, three rotation-vector increments and one absolute gripper command. Left arm first, then right. The normalized range is [−1, 1], with 0.01 m and 0.04 rad per axis. Grippers map from closed to 0.0475 m.",
       "obsDim": 64,
       "obs": "Planar left TCP position, velocity and displacement to the goal (6). Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "schemaNote": "",
       "sources": [
@@ -2505,7 +2457,7 @@ window.AXIS_ATLAS = {
         "availability": "Evaluated on axis",
         "evaluation": {
           "taskId": "i2rt_example",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 64,
           "actionDim": 14,
           "successes": 4,
@@ -2519,7 +2471,6 @@ window.AXIS_ATLAS = {
         "count": 0,
         "summary": "No reference recordings bundled",
         "length": "No recorded episodes.",
-        "success": "No recorded episodes to score.",
         "notes": "The reach target is generated at reset.",
         "sources": [
           {
@@ -2534,7 +2485,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Target is 10 cm forward of the left TCP at reset.",
       "successCondition": "Move the left TCP to within 5 cm of the target.",
@@ -2551,7 +2502,7 @@ window.AXIS_ATLAS = {
       "obsDim": 957,
       "action": "Three Cartesian translation commands, three rotation commands and one incremental gripper command.",
       "obs": "Ordered state and object geometry features used by the frozen policy.",
-      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
       "sources": [],
       "schemaNote": "",
@@ -2562,16 +2513,16 @@ window.AXIS_ATLAS = {
         "availability": "Evaluated on axis",
         "evaluation": {
           "taskId": "i2rt_pick5000",
-          "revision": "f06da37b",
+          "revision": "f97139a7",
           "obsDim": 957,
           "actionDim": 7,
-          "successes": 11,
+          "successes": 13,
           "attempts": 16,
           "protocol": "Four qualified objects with four resets each, seed 42. Frozen I1-trained mean actor, left arm of the shared dual-arm robot.",
           "trainingEmbodiment": "i2rt_yam",
           "evaluationEmbodiment": "i2rt_yam"
         },
-        "recipe": "The original fixed-I1 delivery recorded 29,398 successes in 30,000 episodes (97.9933%)."
+        "recipe": "Frozen left-arm actor trained using the fixed I1 calibration."
       },
       "refs": {
         "count": 48,
@@ -2584,7 +2535,7 @@ window.AXIS_ATLAS = {
         "alt": "I2RT left-arm Pick5000 rollout on axis",
         "caption": "A frame from the fixed-I1 expert rollout. The Rendering page includes the full episode."
       },
-      "taskRevision": "f06da37b",
+      "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",
       "start": "Left arm at its source home on the shared dual-arm robot, a settled object on the table and a sampled object pose. The full population covers 5,000 objects.",
       "successCondition": "Establish bilateral finger contact, lift the object 5 cm clear of its support, and hold the final condition for 14 control steps.",
@@ -2612,12 +2563,12 @@ window.AXIS_ATLAS = {
         "availability": "2 evaluated checkpoints",
         "evaluation": {
           "taskId": "franka_push5000",
-          "revision": "e465d482",
+          "revision": "f97139a7",
           "obsDim": 984,
           "actionDim": 6,
           "successes": 2,
           "attempts": 4,
-          "protocol": "franka_push5000-baked. Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run. See the full task library for checkpoints and evaluation receipts.",
+          "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
           "trainingEmbodiment": "franka_panda",
           "evaluationEmbodiment": "franka_panda"
         }
@@ -2633,7 +2584,7 @@ window.AXIS_ATLAS = {
         "alt": "Franka Push5000 training curve",
         "caption": "Training progress recorded by the task authors. The axis results use separate frozen evaluations."
       },
-      "taskRevision": "e465d482",
+      "taskRevision": "f97139a7",
       "embodimentId": "franka_panda",
       "start": "Open gripper, one prepared object and a sampled reachable tabletop start and XY goal. The audited recipe instantiated 5,000 slots.",
       "successCondition": "Make contact for two controls, pass the progress milestones, and leave the object supported within 20 mm of the goal at ≤20 mm/s XY speed for four controls."
@@ -2789,96 +2740,10 @@ window.AXIS_ATLAS = {
       }
     }
   ],
-  "nativeBenchmarks": {
-    "pick10": {
-      "successes": 97,
-      "attempts": 100,
-      "protocol": "Ten demonstration-first-frame starts per object/layout, sampled from the training bank with seed 42.",
-      "source": {
-        "label": "Native pick10 evaluation receipt",
-        "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      },
-      "taskId": "pick10",
-      "trainingEmbodiment": "i2rt_yam",
-      "evaluationEmbodiment": "i2rt_yam"
-    },
-    "push10": {
-      "successes": 0,
-      "attempts": 100,
-      "protocol": "Ten demonstration-first-frame starts per object/layout, sampled from the training bank with seed 42. This probe used the registered native controller with a bank from an earlier physics revision.",
-      "source": {
-        "label": "Native push10 evaluation receipt",
-        "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      },
-      "taskId": "push10",
-      "trainingEmbodiment": "i2rt_yam",
-      "evaluationEmbodiment": "i2rt_yam"
-    },
-    "track10": {
-      "successes": 0,
-      "attempts": 100,
-      "protocol": "Ten demonstration-first-frame starts per object/layout, sampled from the training bank with seed 42.",
-      "source": {
-        "label": "Native track10 evaluation receipt",
-        "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      },
-      "taskId": "track10",
-      "trainingEmbodiment": "i2rt_yam",
-      "evaluationEmbodiment": "i2rt_yam"
-    },
-    "handover_butter": {
-      "successes": 285,
-      "attempts": 300,
-      "protocol": "Full three-policy handover chain on 250 training and 50 validation starts.",
-      "source": {
-        "label": "Native handover_butter evaluation receipt",
-        "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      },
-      "taskId": "handover_butter",
-      "trainingEmbodiment": "i2rt_yam",
-      "evaluationEmbodiment": "i2rt_yam"
-    },
-    "blind_assembly": {
-      "successes": 6093,
-      "attempts": 7200,
-      "protocol": "SAC approach followed by PPO insertion in continuous physics, 300 starts for each of 24 geometries across training and validation.",
-      "source": {
-        "label": "Native blind_assembly evaluation receipt",
-        "path": "doc/assets/original_author_experts_20261108/original-expert-comparison.json"
-      },
-      "taskId": "blind_assembly",
-      "trainingEmbodiment": "i2rt_yam",
-      "evaluationEmbodiment": "i2rt_yam"
-    },
-    "i2rt_multi_place_cascade": {
-      "successes": 482,
-      "attempts": 500,
-      "protocol": "Five-object tray Place at 25 Hz. The frozen actor ran on 500 held-out TEST starts, 50 per object and arm. The denominator includes one rejected reset.",
-      "source": {
-        "label": "Native five-object Place evaluation receipt",
-        "path": "./expert-evidence.json"
-      },
-      "taskId": "i2rt_multi_place_cascade",
-      "trainingEmbodiment": "i2rt_yam",
-      "evaluationEmbodiment": "i2rt_yam"
-    },
-    "franka1000": {
-      "successes": 89807,
-      "attempts": 90000,
-      "protocol": "Frozen Panda actor, three independent fixed-home evaluations of 30,000 starts each across 1,000 object slots.",
-      "source": {
-        "label": "Native Panda fixed-home evaluation",
-        "path": "doc/pipeline/active/state_rl/general_grasp/franka1000.md"
-      },
-      "taskId": "franka1000",
-      "trainingEmbodiment": "franka_panda",
-      "evaluationEmbodiment": "franka_panda"
-    }
-  },
   "bestExperts": {
     "blind_assembly": {
       "policy": "Archived SAC approach and PPO insertion",
-      "successes": 5,
+      "successes": 14,
       "attempts": 24,
       "protocol": "Continuous frozen SAC approach and PPO insertion from home. One layout in each of the 24 geometry variants. The robot and object were never reset between stages.",
       "tiedPolicies": 1,
@@ -2886,7 +2751,7 @@ window.AXIS_ATLAS = {
     },
     "handover_butter": {
       "policy": "Native MA-v2 chain",
-      "successes": 113,
+      "successes": 244,
       "attempts": 300,
       "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
       "tiedPolicies": 1,
@@ -2910,25 +2775,25 @@ window.AXIS_ATLAS = {
     },
     "i2rt_task10717": {
       "policy": "Approved I2RT v20 four-call Press controller",
-      "successes": 12,
+      "successes": 4,
       "attempts": 12,
       "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
       "tiedPolicies": 1,
       "embodimentId": "i2rt_yam"
     },
     "pick10": {
-      "policy": "archive-pick10",
+      "policy": "pick10",
       "successes": 16,
       "attempts": 16,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
-      "tiedPolicies": 2,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "tiedPolicies": 1,
       "embodimentId": "i2rt_yam"
     },
     "push10": {
       "policy": "archive-push10",
       "successes": 0,
       "attempts": 16,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "tiedPolicies": 3,
       "embodimentId": "i2rt_yam"
     },
@@ -2936,7 +2801,7 @@ window.AXIS_ATLAS = {
       "policy": "archive-track10",
       "successes": 0,
       "attempts": 16,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 15 Hz.",
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
       "tiedPolicies": 3,
       "embodimentId": "i2rt_yam"
     },

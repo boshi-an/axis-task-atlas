@@ -31,6 +31,12 @@
       <figure><a href="images/rendering/dual-arx.jpg"><img src="images/rendering/dual-arx.jpg" width="960" height="720" alt="ARX X5 insertion environment viewed from the working side"></a><figcaption><strong>Dual ARX X5</strong><br>Insertion · <code>inserting</code></figcaption></figure>
     </div>
     <p>These images are reset frames from simulations on the axis server. The I2RT and Panda cameras look in from negative Y. The ARX camera looks in from positive Y.</p>
+    <h2>I2RT Pick5000 expert replay</h2>
+    <video controls playsinline preload="metadata" width="960" height="720" style="display:block;width:100%;max-width:680px;height:auto;border-radius:8px" poster="images/rendering/i2rt-pick5000.jpg">
+      <source src="assets/rendering/i2rt-pick5000.mp4" type="video/mp4">
+      <a href="assets/rendering/i2rt-pick5000.mp4">Download the recorded episode</a>
+    </video>
+    <p>The frozen left-arm expert picked the object successfully in 175 control steps on axis. This episode uses the fixed I1 configuration, seed 42, environment 0. The recorder captured the reset and every control step without dropping a frame. In the separate 16-attempt evaluation, the actor succeeded 15 times across four objects with four replicas each.</p>
     <h2>What a recording contains</h2>
     <p>Each recording bundles the scene geometry, mesh hashes, and timestamped poses in metres with Z up. A pose contains XYZ followed by a WXYZ quaternion. Reset and terminal events identify episode boundaries. Task-specific objects, goal markers, and available status fields stay with the recording.</p>
     <h2>Replay and video</h2>

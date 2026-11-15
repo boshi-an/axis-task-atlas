@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="How Axis OmniReset tasks record and display robot motion across I2RT, Panda, and dual ARX X5.">
+  <title>Task rendering · Axis OmniReset</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="atlas.css">
+  <style>
+    .render-guide {padding-block:clamp(32px,6vw,72px);max-width:1120px;margin:auto;width:92%}
+    .render-guide h1 {font-size:clamp(36px,5.5vw,66px);line-height:1.05;margin:0 0 20px}
+    .render-guide p {max-width:72ch;line-height:1.6;margin:14px 0}
+    .render-guide h2 {margin:36px 0 12px;font-size:24px}
+    .render-guide .views {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+    .render-guide figure {margin:0}
+    .render-guide img {display:block;width:100%;height:auto;border-radius:8px;background:#233931}
+    .render-guide figcaption {font-size:14px;line-height:1.5;margin-top:8px}
+    .render-guide pre {background:#edf0eb;padding:14px;overflow:auto;border-radius:6px}
+    .render-guide a {text-decoration:underline}
+  </style>
+</head>
+<body>
+  <header class="mast"><div class="mast-inner wrap"><a class="brand" href="./"><span class="axis-mark" aria-hidden="true"></span><strong>AXIS</strong><span class="brand-divider"></span><span>OmniReset</span></a><nav aria-label="Documentation"><a href="./">Task atlas</a></nav></div></header>
+  <main class="render-guide">
+    <h1>Task rendering</h1>
+    <p>The spectator viewer follows measured robot links and task objects. Tasks on the same embodiment share their default camera direction and recording format. The viewer fits the camera to the moving parts, so a small tabletop scene and a larger robot can both fill the frame.</p>
+    <div class="views">
+      <figure><a href="images/rendering/i2rt.jpg"><img src="images/rendering/i2rt.jpg" width="960" height="720" alt="Dual I2RT arms at the button-pressing workstation"></a><figcaption><strong>I2RT YAM</strong><br>Button pressing · <code>i2rt_task10717</code></figcaption></figure>
+      <figure><a href="images/rendering/panda.jpg"><img src="images/rendering/panda.jpg" width="960" height="720" alt="Panda robot and task objects on the worktable in environment 5716"></a><figcaption><strong>Franka / Panda</strong><br>Environment <code>5716</code></figcaption></figure>
+      <figure><a href="images/rendering/dual-arx.jpg"><img src="images/rendering/dual-arx.jpg" width="960" height="720" alt="ARX X5 insertion environment viewed from the working side"></a><figcaption><strong>Dual ARX X5</strong><br>Insertion · <code>inserting</code></figcaption></figure>
+    </div>
+    <p>These images are reset frames from simulations on the axis server. The I2RT and Panda cameras look in from negative Y. The ARX camera looks in from positive Y.</p>
+    <h2>What a recording contains</h2>
+    <p>Each recording bundles the scene geometry, mesh hashes, and timestamped poses in metres with Z up. A pose contains XYZ followed by a WXYZ quaternion. Reset and terminal events identify episode boundaries. Task-specific objects, goal markers, and available status fields stay with the recording.</p>
+    <h2>Replay and video</h2>
+    <p>From the OmniReset checkout on axis, replay a recording in the interactive viewer or export one episode as a 960 × 720 H.264 MP4 at 30 frames per second. The export holds sampled poses according to their simulation timestamps.</p>
+    <pre><code>PYTHONPATH=src .venv-viser/bin/python tools/diagnostics/visualizer.py replay \
+  --recording runs/inspect/recording --port 18080
+
+PYTHONPATH=src .venv-video/bin/python tools/diagnostics/visualizer.py video \
+  --recording runs/inspect/recording --episode 0 --output runs/inspect/video</code></pre>
+    <p>Calibrated camera replay is a separate data product for tasks with sensor recordings. It uses each camera’s recorded intrinsics, resolution, and timing. The point-mass teaching example uses the spectator recording format with its own geometry.</p>
+  </main>
+</body>
+</html>

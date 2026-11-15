@@ -1,0 +1,3586 @@
+{
+  "as_of": "2026-11-15",
+  "host": "axis",
+  "root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1",
+  "source_revision": "e465d482f48173be015a2bb776ec7e9ec621d2b2",
+  "coverage": {
+    "registry_ids": 44,
+    "implementations": 39,
+    "aliases": {
+      "panda_task5033": "5033",
+      "panda_task5716": "5716",
+      "wood_pick": "panda_wood_pick",
+      "wood_place_base": "panda_wood_place_base",
+      "wood_stack_second": "panda_wood_stack_second"
+    },
+    "view": ".task-views/40b82027e3e84faec61d5ac1841f3fc6a16ee71797a9d0fbe9ef8e5ddfa524be",
+    "base_packages": 28,
+    "base_files": 84503,
+    "base_bytes": 36753962229,
+    "transfer_groups": {
+      "axis-supplements": 92222,
+      "butter-frozen-left_to_right": 1885,
+      "butter-frozen-right_to_left": 1885,
+      "butter-left_to_right": 3,
+      "butter-online-runtime": 18,
+      "butter-right_to_left": 3,
+      "butter-seed-scene": 6,
+      "butter-stage-system-id": 5,
+      "jf-models": 12,
+      "native-experts": 132,
+      "panda-trajectories": 130,
+      "pick-bank": 6,
+      "pick-expert": 20,
+      "pick-objects": 14046,
+      "pick-rollouts": 21,
+      "pick-runtime": 51,
+      "pick-source": 2224,
+      "pick-visual": 14878,
+      "pick100": 1,
+      "pick16-recipe": 1,
+      "push-baked-assets": 90104,
+      "push-baked-selection": 2,
+      "push-contact-profile": 3,
+      "push-selection": 2,
+      "sysid": 8056,
+      "track-milestone-context": 1,
+      "visual-native": 26,
+      "wood-pick": 3,
+      "wood-place": 3,
+      "wood-stack": 3
+    }
+  },
+  "tasks": [
+    {
+      "id": "5033",
+      "embodiment": "Franka Panda",
+      "task": "Chess-piece placement",
+      "start": "Native Franka reset bank with qualified chess starts.",
+      "success": "Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.",
+      "observation_dim": 105,
+      "action_dim": 7,
+      "clock": "24 Hz control · 120 Hz physics · 5 substeps",
+      "canonical_id": "5033",
+      "resources": {
+        "assets": [
+          "packages/v48/task5033"
+        ],
+        "trajectories": [
+          "packages/v48/task5033/source/records",
+          "central/store/axis/runs/original_author_eval_20261108/native_5033_retry1/rollout.npz"
+        ],
+        "reset_banks": [
+          "packages/v48/task5033/source_qualified.pt",
+          "packages/v48/task5033/source_replay_unqualified.pt",
+          "packages/v48/task5033/product_inputs/resets.pt"
+        ],
+        "experts": [
+          "packages/v48/task5033/checkpoint.pt"
+        ]
+      },
+      "by_task": "by-task/5033",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        0
+      ],
+      "archived_scores": [],
+      "aliases": [
+        "panda_task5033"
+      ]
+    },
+    {
+      "id": "panda_task5033",
+      "embodiment": "Franka Panda",
+      "task": "Chess-piece placement",
+      "start": "Native Franka reset bank with qualified chess starts.",
+      "success": "Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.",
+      "observation_dim": 105,
+      "action_dim": 7,
+      "clock": "24 Hz control · 120 Hz physics · 5 substeps",
+      "canonical_id": "5033",
+      "resources": {
+        "assets": [
+          "packages/v48/task5033"
+        ],
+        "trajectories": [
+          "packages/v48/task5033/source/records",
+          "central/store/axis/runs/original_author_eval_20261108/native_5033_retry1/rollout.npz"
+        ],
+        "reset_banks": [
+          "packages/v48/task5033/source_qualified.pt",
+          "packages/v48/task5033/source_replay_unqualified.pt",
+          "packages/v48/task5033/product_inputs/resets.pt"
+        ],
+        "experts": [
+          "packages/v48/task5033/checkpoint.pt"
+        ]
+      },
+      "by_task": "by-task/panda_task5033",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        0
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "5716",
+      "embodiment": "Franka Panda",
+      "task": "Apple to basket",
+      "start": "Native V48 apple scenes with physically admitted placement or curriculum starts.",
+      "success": "Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.",
+      "observation_dim": 116,
+      "action_dim": 7,
+      "clock": "24 Hz control · 120 Hz physics · 5 substeps",
+      "canonical_id": "5716",
+      "resources": {
+        "assets": [
+          "packages/v48/task5716"
+        ],
+        "trajectories": [
+          "packages/v48/task5716/source/raw"
+        ],
+        "reset_banks": [
+          "packages/v48/task5716/candidates.pt"
+        ],
+        "experts": [
+          "packages/v48/task5716/checkpoint.pt"
+        ]
+      },
+      "by_task": "by-task/5716",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        1
+      ],
+      "archived_scores": [],
+      "aliases": [
+        "panda_task5716"
+      ]
+    },
+    {
+      "id": "panda_task5716",
+      "embodiment": "Franka Panda",
+      "task": "Apple to basket",
+      "start": "Native V48 apple scenes with physically admitted placement or curriculum starts.",
+      "success": "Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.",
+      "observation_dim": 116,
+      "action_dim": 7,
+      "clock": "24 Hz control · 120 Hz physics · 5 substeps",
+      "canonical_id": "5716",
+      "resources": {
+        "assets": [
+          "packages/v48/task5716"
+        ],
+        "trajectories": [
+          "packages/v48/task5716/source/raw"
+        ],
+        "reset_banks": [
+          "packages/v48/task5716/candidates.pt"
+        ],
+        "experts": [
+          "packages/v48/task5716/checkpoint.pt"
+        ]
+      },
+      "by_task": "by-task/panda_task5716",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        1
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "franka1000",
+      "embodiment": "Franka Panda",
+      "task": "Grasp1000 training environment",
+      "start": "Fixed Franka home, sampled object pose in the 1,000-slot grasp population.",
+      "success": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.",
+      "observation_dim": 981,
+      "action_dim": 7,
+      "clock": "20 Hz control · 120 Hz physics · 6 substeps",
+      "canonical_id": "franka1000",
+      "resources": {
+        "assets": [
+          "packages/grasp1000",
+          "packages/franka-runtime"
+        ],
+        "trajectories": [
+          "central/store/a100/deliveries/franka1000_replay_20261107"
+        ],
+        "reset_banks": [],
+        "experts": [
+          "packages/grasp1000/experts/franka1000_fixed_home_average_sysid20_v1/actor.pt"
+        ]
+      },
+      "by_task": "by-task/franka1000",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        5
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "panda_grasp1000",
+      "embodiment": "Franka Panda",
+      "task": "Grasp1000",
+      "start": "Fixed Franka home, sampled object pose in the 1,000-slot grasp population.",
+      "success": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.",
+      "observation_dim": 981,
+      "action_dim": 7,
+      "clock": "20 Hz control · 120 Hz physics · 6 substeps",
+      "canonical_id": "panda_grasp1000",
+      "resources": {
+        "assets": [
+          "packages/grasp1000",
+          "packages/franka-runtime"
+        ],
+        "trajectories": [
+          "central/store/a100/deliveries/franka1000_replay_20261107"
+        ],
+        "reset_banks": [],
+        "experts": [
+          "packages/grasp1000/experts/franka1000_fixed_home_average_sysid20_v1/actor.pt"
+        ]
+      },
+      "by_task": "by-task/panda_grasp1000",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        14
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "franka_push5000",
+      "embodiment": "Franka Panda",
+      "task": "Franka Push5000",
+      "start": "Open gripper, one prepared object and a sampled reachable tabletop start and XY goal. The audited recipe instantiated 5,000 slots.",
+      "success": "Make contact for two controls, pass the progress milestones, and leave the object supported within 20 mm of the goal at ≤20 mm/s XY speed for four controls.",
+      "observation_dim": 984,
+      "action_dim": 6,
+      "clock": "20 Hz control · 120 Hz physics · 6 substeps",
+      "canonical_id": "franka_push5000",
+      "resources": {
+        "assets": [
+          "packages/grasp1000/franka1000_small18_nativeposes_20261108/robot.usdc",
+          "packages/franka-runtime",
+          "central/store/axis/runs/task-audit-20261113/franka_push5000_20261113",
+          "central/store/a100/artifacts/franka_push5000_safe_baked_v3",
+          "central/store/a100/artifacts/franka_push5000_safe_contact_v3",
+          "central/runtime/franka_push5000_safe_contact_recipe.json"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": [
+          "central/store/a100/runs/franka_push5000_replay2x_20261113/history/before_safe_contact_control35096/checkpoints/best_frozen.pt",
+          "central/store/a100/runs/franka_push5000_replay2x_20261113/baseline_repair_continuation/history/training_control43911/checkpoints/best_frozen.pt"
+        ]
+      },
+      "by_task": "by-task/franka_push5000",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        6
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "panda_wood_pick",
+      "embodiment": "Franka FR3v2",
+      "task": "Wood block pick",
+      "start": "Role-specific physical reset bank. Designated 20 mm cube unheld.",
+      "success": "Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.",
+      "observation_dim": 122,
+      "action_dim": 6,
+      "clock": "Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals",
+      "canonical_id": "panda_wood_pick",
+      "resources": {
+        "assets": [
+          "packages/wood",
+          "packages/franka-runtime"
+        ],
+        "trajectories": [
+          "packages/wood-demonstrations/wood_blocks_bc_rl_recovery_20261023_v1/runs/A_b79_stop_teacher64_v1_001/TRAIN_TEACHER_SELECTED64.json"
+        ],
+        "reset_banks": [
+          "packages/wood/pick.sqlite"
+        ],
+        "experts": [
+          "central/store/wood/runs/wood_pick_expand20_resume_20261106_001/checkpoint_final/learner/actor.pt"
+        ]
+      },
+      "by_task": "by-task/panda_wood_pick",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        15
+      ],
+      "archived_scores": [],
+      "aliases": [
+        "wood_pick"
+      ]
+    },
+    {
+      "id": "wood_pick",
+      "embodiment": "Franka FR3v2",
+      "task": "Wood block pick",
+      "start": "Role-specific physical reset bank. Designated 20 mm cube unheld.",
+      "success": "Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.",
+      "observation_dim": 122,
+      "action_dim": 6,
+      "clock": "Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals",
+      "canonical_id": "panda_wood_pick",
+      "resources": {
+        "assets": [
+          "packages/wood",
+          "packages/franka-runtime"
+        ],
+        "trajectories": [
+          "packages/wood-demonstrations/wood_blocks_bc_rl_recovery_20261023_v1/runs/A_b79_stop_teacher64_v1_001/TRAIN_TEACHER_SELECTED64.json"
+        ],
+        "reset_banks": [
+          "packages/wood/pick.sqlite"
+        ],
+        "experts": [
+          "central/store/wood/runs/wood_pick_expand20_resume_20261106_001/checkpoint_final/learner/actor.pt"
+        ]
+      },
+      "by_task": "by-task/wood_pick",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        15
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "panda_wood_place_base",
+      "embodiment": "Franka FR3v2",
+      "task": "Place the base block",
+      "start": "Role-specific physical reset bank. Start with the base cube held.",
+      "success": "Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.",
+      "observation_dim": 122,
+      "action_dim": 6,
+      "clock": "Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals",
+      "canonical_id": "panda_wood_place_base",
+      "resources": {
+        "assets": [
+          "packages/wood",
+          "packages/franka-runtime"
+        ],
+        "trajectories": [
+          "packages/wood-demonstrations/wood_pick_mp20_training_integration_20261102_v1/teachers/place.json"
+        ],
+        "reset_banks": [
+          "packages/wood/place_base.sqlite"
+        ],
+        "experts": [
+          "central/store/wood/runs/migration23500_place64_001/checkpoint_final/learner/actor.pt"
+        ]
+      },
+      "by_task": "by-task/panda_wood_place_base",
+      "expert_status": "Frozen weights on axis",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": [
+        "wood_place_base"
+      ]
+    },
+    {
+      "id": "wood_place_base",
+      "embodiment": "Franka FR3v2",
+      "task": "Place the base block",
+      "start": "Role-specific physical reset bank. Start with the base cube held.",
+      "success": "Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.",
+      "observation_dim": 122,
+      "action_dim": 6,
+      "clock": "Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals",
+      "canonical_id": "panda_wood_place_base",
+      "resources": {
+        "assets": [
+          "packages/wood",
+          "packages/franka-runtime"
+        ],
+        "trajectories": [
+          "packages/wood-demonstrations/wood_pick_mp20_training_integration_20261102_v1/teachers/place.json"
+        ],
+        "reset_banks": [
+          "packages/wood/place_base.sqlite"
+        ],
+        "experts": [
+          "central/store/wood/runs/migration23500_place64_001/checkpoint_final/learner/actor.pt"
+        ]
+      },
+      "by_task": "by-task/wood_place_base",
+      "expert_status": "Frozen weights on axis",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "panda_wood_stack_second",
+      "embodiment": "Franka FR3v2",
+      "task": "Stack the second block",
+      "start": "Role-specific physical reset bank. Start with the second cube held and the base supported.",
+      "success": "Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.",
+      "observation_dim": 122,
+      "action_dim": 6,
+      "clock": "Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals",
+      "canonical_id": "panda_wood_stack_second",
+      "resources": {
+        "assets": [
+          "packages/wood",
+          "packages/franka-runtime"
+        ],
+        "trajectories": [
+          "packages/wood-demonstrations/wood_pick_mp20_training_integration_20261102_v1/teachers/stack.json"
+        ],
+        "reset_banks": [
+          "packages/wood/stack_second.sqlite"
+        ],
+        "experts": [
+          "central/store/wood/runs/fusion_stack_second_formal_20261110_v2/checkpoint_final/learner/actor.pt"
+        ]
+      },
+      "by_task": "by-task/panda_wood_stack_second",
+      "expert_status": "Frozen weights on axis",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": [
+        "wood_stack_second"
+      ]
+    },
+    {
+      "id": "wood_stack_second",
+      "embodiment": "Franka FR3v2",
+      "task": "Stack the second block",
+      "start": "Role-specific physical reset bank. Start with the second cube held and the base supported.",
+      "success": "Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.",
+      "observation_dim": 122,
+      "action_dim": 6,
+      "clock": "Nominal 5 Hz decisions · 120 Hz physics · event-driven STOP intervals",
+      "canonical_id": "panda_wood_stack_second",
+      "resources": {
+        "assets": [
+          "packages/wood",
+          "packages/franka-runtime"
+        ],
+        "trajectories": [
+          "packages/wood-demonstrations/wood_pick_mp20_training_integration_20261102_v1/teachers/stack.json"
+        ],
+        "reset_banks": [
+          "packages/wood/stack_second.sqlite"
+        ],
+        "experts": [
+          "central/store/wood/runs/fusion_stack_second_formal_20261110_v2/checkpoint_final/learner/actor.pt"
+        ]
+      },
+      "by_task": "by-task/wood_stack_second",
+      "expert_status": "Frozen weights on axis",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_base",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Dual-arm base",
+      "start": "Two YAM arms and grippers over the shared desk.",
+      "success": "Base scene. It exposes motion and state with no task success condition.",
+      "observation_dim": 90,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_base",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": []
+      },
+      "by_task": "by-task/i2rt_base",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_example",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "TCP reach",
+      "start": "Target is 10 cm forward of the left TCP at reset.",
+      "success": "Move the left TCP to within 5 cm of the target.",
+      "observation_dim": 64,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_example",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": [
+          "central/store/axis/runs/shared_i2rt_experts_20261103/campaign/i2rt_example_default/attempt_00/latest",
+          "central/store/axis/runs/shared_i2rt_reward_v31_20261103/campaign/i2rt_example_default/attempt_00/latest",
+          "central/store/axis/runs/shared_i2rt_scale_20261103/campaign/i2rt_example_default/attempt_00/latest"
+        ]
+      },
+      "by_task": "by-task/i2rt_example",
+      "expert_status": "Historical fixed-layout checkpoints",
+      "scores": [
+        21,
+        22,
+        23
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_inserting",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Key insertion",
+      "start": "Folded shared-robot home with key and fixed slot.",
+      "success": "Keep the key bottom more than 25 mm below the slot top and above the base minus 2 mm. XY error must be under 7 mm, tilt within 7°, and key-to-slot alignment within 30° for three consecutive controls.",
+      "observation_dim": 110,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_inserting",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/inserting",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": []
+      },
+      "by_task": "by-task/i2rt_inserting",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_task5033",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Chess-piece placement",
+      "start": "Folded shared-robot home and chess layout. Optional retargeted reference banks.",
+      "success": "Lift the piece 5 cm with bilateral contact. Move it at least 15 mm horizontally, then open the gripper and leave it supported in the goal region relative to the figurine.",
+      "observation_dim": 163,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_task5033",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/task5033",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/all_trajectories/i2rt_task5033/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_task5033_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_task5033_default/bank.pt"
+        ],
+        "reset_banks": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/all_trajectories/i2rt_task5033/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks/i2rt_task5033_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/corrected_physics/i2rt_task5033_home_archive/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/corrected_physics/i2rt_task5033_home_recording/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_task5033_v3/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_task5033_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_task5033_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_task5033_default/provider.json"
+        ],
+        "experts": []
+      },
+      "by_task": "by-task/i2rt_task5033",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_task5716",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Apple to basket",
+      "start": "Folded shared-robot home and apple layout. Optional retargeted reference banks.",
+      "success": "Move the apple at least 18 mm horizontally into the basket’s local goal region. The basket must be within 30° of upright, the fingers open, and the apple in contact with the basket.",
+      "observation_dim": 174,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_task5716",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/task5716",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/all_trajectories/i2rt_task5716/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_task5716_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_task5716_default/bank.pt"
+        ],
+        "reset_banks": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/all_trajectories/i2rt_task5716/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks/i2rt_task5716_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/corrected_physics/i2rt_task5716_home_active/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/corrected_physics/i2rt_task5716_home_archive/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_task5716_v4/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_task5716_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_task5716_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_task5716_default/provider.json"
+        ],
+        "experts": []
+      },
+      "by_task": "by-task/i2rt_task5716",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_task10717",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Press by number",
+      "start": "Home pose, released spring buttons, card-defined counts. Default digits are 1 and 2.",
+      "success": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
+      "observation_dim": 172,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_task10717",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/buttons",
+          "packages/tabletop-variants/i2rt_task10717_1_1/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_1_3/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_1_4/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_1_5/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_1_6/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_1_7/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_1_8/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_1_9/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_1/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_2/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_3/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_4/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_5/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_6/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_7/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_8/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_2_9/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_3_1/provider.json",
+          "packages/tabletop-variants/i2rt_task10717_3_2/provider.json",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": [
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_task10717_1_1/attempt_00/latest"
+        ]
+      },
+      "by_task": "by-task/i2rt_task10717",
+      "expert_status": "Historical fixed-layout checkpoints",
+      "scores": [
+        32
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_pick10",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Pick10",
+      "start": "Shared home and selected object layout. Default cube_2. Optional reference starts.",
+      "success": "Grasp with both fingertips and hold the object bottom more than 5 cm above the basket rim for nine controls.",
+      "observation_dim": 1033,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_pick10",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/pick10/cube_2",
+          "packages/tabletop-variants/i2rt_pick10_bottle_16/provider.json",
+          "packages/tabletop-variants/i2rt_pick10_can_1/provider.json",
+          "packages/tabletop-variants/i2rt_pick10_chocolate_bar_14/provider.json",
+          "packages/tabletop-variants/i2rt_pick10_electric_toothbrush_6/provider.json",
+          "packages/tabletop-variants/i2rt_pick10_hammer_16/provider.json",
+          "packages/tabletop-variants/i2rt_pick10_matryoshka_doll_1/provider.json",
+          "packages/tabletop-variants/i2rt_pick10_mouse_48/provider.json",
+          "packages/tabletop-variants/i2rt_pick10_mug_54/provider.json",
+          "packages/tabletop-variants/i2rt_pick10_t_shaped_block_0/provider.json",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_bottle_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_can_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_chocolate_bar_14/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_electric_toothbrush_6/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_hammer_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_matryoshka_doll_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_mouse_48/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_mug_54/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_t_shaped_block_0/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_bottle_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_can_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_chocolate_bar_14/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_electric_toothbrush_6/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_hammer_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_matryoshka_doll_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_mouse_48/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_mug_54/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_t_shaped_block_0/bank.pt"
+        ],
+        "reset_banks": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks/i2rt_pick10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks1024/i2rt_pick10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_pick10_v6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_pick10_t_shaped_block_0/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_pick10_t_shaped_block_0/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_pick10_t_shaped_block_0/provider.json"
+        ],
+        "experts": [
+          "packages/robot-interface/pick10.pt"
+        ]
+      },
+      "by_task": "by-task/i2rt_pick10",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        10
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_push10",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Push10",
+      "start": "Shared home and selected object on the table. Optional reference starts.",
+      "success": "Keep the gripper open and push the object into a table-supported goal within 5 mm on each position axis.",
+      "observation_dim": 1023,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_push10",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/push10",
+          "packages/tabletop-variants/i2rt_push10_bottle_16/provider.json",
+          "packages/tabletop-variants/i2rt_push10_can_1/provider.json",
+          "packages/tabletop-variants/i2rt_push10_chocolate_bar_14/provider.json",
+          "packages/tabletop-variants/i2rt_push10_electric_toothbrush_6/provider.json",
+          "packages/tabletop-variants/i2rt_push10_hammer_16/provider.json",
+          "packages/tabletop-variants/i2rt_push10_matryoshka_doll_1/provider.json",
+          "packages/tabletop-variants/i2rt_push10_mouse_48/provider.json",
+          "packages/tabletop-variants/i2rt_push10_mug_54/provider.json",
+          "packages/tabletop-variants/i2rt_push10_t_shaped_block_0/provider.json",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_bottle_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_can_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_chocolate_bar_14/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_electric_toothbrush_6/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_hammer_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_matryoshka_doll_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_mouse_48/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_mug_54/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_t_shaped_block_0/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_bottle_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_can_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_chocolate_bar_14/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_electric_toothbrush_6/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_hammer_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_matryoshka_doll_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_mouse_48/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_mug_54/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_t_shaped_block_0/bank.pt"
+        ],
+        "reset_banks": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks/i2rt_push10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks1024/i2rt_push10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_push10_v2/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_push10_v6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_push10_t_shaped_block_0/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_push10_t_shaped_block_0/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_push10_t_shaped_block_0/provider.json"
+        ],
+        "experts": [
+          "packages/robot-interface/push10.pt",
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_push10_bottle_16/attempt_00/latest",
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_push10_can_1/attempt_00/latest",
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_push10_chocolate_bar_14/attempt_00/latest",
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_push10_default/attempt_00/latest",
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_push10_hammer_16/attempt_00/latest",
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_push10_mouse_48/attempt_00/best",
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_push10_mug_54/attempt_00/latest",
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_push10_t_shaped_block_0/attempt_00/latest"
+        ]
+      },
+      "by_task": "by-task/i2rt_push10",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        12,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_track10",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Track10",
+      "start": "Shared home, selected object, obstacles and goal. Optional reference starts.",
+      "success": "Grasp, lift at least 25 mm, move past the obstacles and release on the goal support. For six controls require position error under 12 mm, angle error under 0.12 rad, speed under 25 mm/s and clearance from disqualifying collisions.",
+      "observation_dim": 1097,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_track10",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/track10/cube_2",
+          "packages/tabletop-variants/i2rt_track10_bottle_16/provider.json",
+          "packages/tabletop-variants/i2rt_track10_can_1/provider.json",
+          "packages/tabletop-variants/i2rt_track10_chocolate_bar_14/provider.json",
+          "packages/tabletop-variants/i2rt_track10_electric_toothbrush_6/provider.json",
+          "packages/tabletop-variants/i2rt_track10_hammer_16/provider.json",
+          "packages/tabletop-variants/i2rt_track10_matryoshka_doll_1/provider.json",
+          "packages/tabletop-variants/i2rt_track10_mouse_48/provider.json",
+          "packages/tabletop-variants/i2rt_track10_mug_54/provider.json",
+          "packages/tabletop-variants/i2rt_track10_t_shaped_block_0/provider.json",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_bottle_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_can_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_chocolate_bar_14/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_electric_toothbrush_6/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_hammer_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_matryoshka_doll_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_mouse_48/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_mug_54/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_t_shaped_block_0/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_bottle_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_can_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_chocolate_bar_14/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_electric_toothbrush_6/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_hammer_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_matryoshka_doll_1/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_mouse_48/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_mug_54/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_t_shaped_block_0/bank.pt"
+        ],
+        "reset_banks": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks/i2rt_track10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks1024/i2rt_track10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_track10_v6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_track10_t_shaped_block_0/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_track10_t_shaped_block_0/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_bottle_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_can_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_chocolate_bar_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_electric_toothbrush_6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_hammer_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_matryoshka_doll_1/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_mouse_48/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_mug_54/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_track10_t_shaped_block_0/provider.json"
+        ],
+        "experts": [
+          "packages/robot-interface/track10.pt"
+        ]
+      },
+      "by_task": "by-task/i2rt_track10",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        13
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_handover_butter",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Butter handover",
+      "start": "Shared home, butter and target mat. The default course starts at milestone zero.",
+      "success": "Stage 0 ends at donor capture. Stage 1 requires receiver capture and donor release. The full course ends after placement on the target mat and receiver release.",
+      "observation_dim": 209,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_handover_butter",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/handover_butter",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_handover_butter_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_handover_butter_full/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_handover_butter_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_handover_butter_full/bank.pt"
+        ],
+        "reset_banks": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks/i2rt_handover_butter_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/banks1024/i2rt_handover_butter_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_handover_butter_v2/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_handover_butter_v6/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_handover_butter_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_handover_butter_full/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_handover_butter_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_handover_butter_full/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_handover_butter_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_handover_butter_full/provider.json"
+        ],
+        "experts": [
+          "packages/robot-interface/butter0.pt",
+          "packages/robot-interface/butter1.pt",
+          "packages/robot-interface/butter2.pt"
+        ]
+      },
+      "by_task": "by-task/i2rt_handover_butter",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        9
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_blind_assembly",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Blind assembly",
+      "start": "Fresh upright tabletop peg in the default shared scene. Variant 00 by default. Optional reference banks.",
+      "success": "Align the peg and matching fixture. Capture the peg in the opening, then maintain slow, stable seating for the checker’s required interval.",
+      "observation_dim": 616,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_blind_assembly",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/tabletop/blind_assembly/variant_00",
+          "packages/tabletop-variants/i2rt_blind_assembly_01/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_02/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_03/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_04/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_05/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_06/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_07/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_08/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_09/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_10/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_11/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_12/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_13/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_14/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_15/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_16/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_17/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_18/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_19/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_20/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_21/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_22/provider.json",
+          "packages/tabletop-variants/i2rt_blind_assembly_23/provider.json",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_01/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_02/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_03/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_04/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_05/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_06/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_07/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_08/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_09/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_10/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_11/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_12/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_13/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_14/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_15/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_17/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_18/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_19/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_20/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_21/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_22/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_23/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_default/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_complete_recordings/i2rt_blind_assembly_05/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_01/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_02/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_03/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_04/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_05/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_06/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_07/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_08/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_09/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_10/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_11/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_12/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_13/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_14/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_15/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_16/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_17/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_18/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_19/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_20/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_21/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_22/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_23/bank.pt",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_default/bank.pt"
+        ],
+        "reset_banks": [
+          "packages/reset-banks/shared_i2rt_reference_20261107/qualify_blind_assembly_v2/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_01/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_02/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_03/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_04/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_05/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_06/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_07/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_08/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_09/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_10/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_11/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_12/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_13/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_15/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_17/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_18/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_19/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_20/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_21/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_22/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_23/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_banks/i2rt_blind_assembly_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/aligned_complete_recordings/i2rt_blind_assembly_05/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_01/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_02/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_03/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_04/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_05/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_06/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_07/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_08/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_09/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_10/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_11/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_12/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_13/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_15/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_17/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_18/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_19/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_20/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_21/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_22/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_23/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/banks/i2rt_blind_assembly_default/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_01/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_02/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_03/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_04/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_05/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_06/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_07/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_08/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_09/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_10/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_11/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_12/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_13/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_14/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_15/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_16/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_17/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_18/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_19/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_20/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_21/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_22/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_23/provider.json",
+          "packages/reset-banks/shared_i2rt_reference_scratch_20261108/training_banks/i2rt_blind_assembly_default/provider.json"
+        ],
+        "experts": [
+          "packages/robot-interface/skill_0_complete.pt",
+          "packages/robot-interface/blind_assembly.pt"
+        ]
+      },
+      "by_task": "by-task/i2rt_blind_assembly",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        7
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_watch_place",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Five-object tray Place",
+      "start": "One of five objects already held by the left or right arm over a rectangular tray.",
+      "success": "Lower until the release gate opens. The object must separate from the hand inside the 5 mm tray inset and meet floor/rim height bounds. Tray displacement must be ≤15 mm.",
+      "observation_dim": 247,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_watch_place",
+      "resources": {
+        "assets": [
+          "packages/cascade-place-v3/candy_0.usdc",
+          "packages/cascade-place-v3/candy_0_texture_map.png",
+          "packages/cascade-place-v3/geometry.pt",
+          "packages/cascade-place-v3/lego_brick_0.usdc",
+          "packages/cascade-place-v3/lego_brick_0_texture_map.png",
+          "packages/cascade-place-v3/macadamia_nut_0.usdc",
+          "packages/cascade-place-v3/macadamia_nut_0_texture_map.png",
+          "packages/cascade-place-v3/rectangular_tray_0.usdc",
+          "packages/cascade-place-v3/rectangular_tray_0_texture_map.png",
+          "packages/cascade-place-v3/robot.usdc",
+          "packages/cascade-place-v3/robot_contract.json",
+          "packages/cascade-place-v3/scene.json",
+          "packages/cascade-place-v3/strawberry_0.usdc",
+          "packages/cascade-place-v3/strawberry_0_texture_map.png",
+          "packages/cascade-place-v3/walnut_0.usdc",
+          "packages/cascade-place-v3/walnut_0_texture_map.png",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [
+          "packages/cascade-place-v3/R2.pt",
+          "packages/cascade-place-v3/DEV.pt",
+          "packages/cascade-place-v3/TEST.pt"
+        ],
+        "experts": [
+          "packages/cascade-place-v3/actor.pt"
+        ]
+      },
+      "by_task": "by-task/i2rt_watch_place",
+      "expert_status": "Frozen weights on axis",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_grasp1000",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Grasp1000",
+      "start": "Shared robot and grasp population with fixed home and sampled object pose.",
+      "success": "Hold the object with both fingertips and maintain 5 cm of bottom clearance above the table for nine controls.",
+      "observation_dim": 1039,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_grasp1000",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/grasp1000",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": [
+          "packages/grasp1000/experts/franka1000_fixed_home_average_sysid20_v1/actor.pt"
+        ]
+      },
+      "by_task": "by-task/i2rt_grasp1000",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        8
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_wood_pick",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Wood block pick",
+      "start": "Role bank mapped into the shared left-arm workspace. Designated 20 mm cube unheld.",
+      "success": "Acquire it with bilateral contact and maintain ≥30 mm bottom clearance for 0.30 s.",
+      "observation_dim": 130,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_wood_pick",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/wood",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [
+          "packages/wood/pick.sqlite"
+        ],
+        "experts": []
+      },
+      "by_task": "by-task/i2rt_wood_pick",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_wood_place_base",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Place the base block",
+      "start": "Role bank mapped into the shared left-arm workspace. Start with the base cube held.",
+      "success": "Release at the tower target and withdraw. Keep the upright supported cube within 5 mm of target for 0.50 s.",
+      "observation_dim": 130,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_wood_place_base",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/wood",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [
+          "packages/wood/place_base.sqlite"
+        ],
+        "experts": []
+      },
+      "by_task": "by-task/i2rt_wood_place_base",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_wood_stack_second",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "Stack the second block",
+      "start": "Role bank mapped into the shared left-arm workspace. Start with the second cube held and the base supported.",
+      "success": "Release on the base and withdraw. Maintain ≤3 mm center offset, ≥80% overlap and a stable tower for 1 s.",
+      "observation_dim": 130,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_wood_stack_second",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/wood",
+          "packages/robot-interface",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [
+          "packages/wood/stack_second.sqlite"
+        ],
+        "experts": []
+      },
+      "by_task": "by-task/i2rt_wood_stack_second",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_jf_pick",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "JF object pick",
+      "start": "Randomized clutter layout with one of six target objects. Butter is the default.",
+      "success": "Lift the target center of mass by 5 cm. For 0.4 s, both fingertips of the same hand must exceed 0.001 N and other measured contacts must stay at or below that threshold.",
+      "observation_dim": 172,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_jf_pick",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/jf",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": [
+          "central/store/jf/models/pick_teacher",
+          "central/store/jf/models/pick_student"
+        ]
+      },
+      "by_task": "by-task/i2rt_jf_pick",
+      "expert_status": "Five source FR3v2 teachers and one visual student passed CPU inference checks. A registered I2RT policy adapter is unavailable.",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_jf_place",
+      "embodiment": "Dual I2RT/YAM · shared tabletop",
+      "task": "JF object placement",
+      "start": "Target starts on the table among clutter. Five groceries use a basket. The marker uses a box.",
+      "success": "Grasp, carry and release inside the container with all fingers clear. Meet container tilt and contact checks and stabilize for two 0.2 s intervals within 2 mm and 0.05 rad.",
+      "observation_dim": 172,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_jf_place",
+      "resources": {
+        "assets": [
+          "packages/tabletop/provider.json",
+          "packages/jf",
+          "packages/yam-geometry-20261106"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": [
+          "central/store/jf/models/place_teacher",
+          "central/store/jf/models/place_student"
+        ]
+      },
+      "by_task": "by-task/i2rt_jf_place",
+      "expert_status": "Five source FR3v2 teachers and one visual student passed CPU inference checks. A registered I2RT policy adapter is unavailable.",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "pick10",
+      "embodiment": "I2RT/YAM · task-specific scenes",
+      "task": "Pick10",
+      "start": "Native ten-object layouts and demonstration-derived starts.",
+      "success": "Grasp with both fingertips and hold the object bottom more than 5 cm above the basket rim for nine controls.",
+      "observation_dim": 1033,
+      "action_dim": 7,
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
+      "canonical_id": "pick10",
+      "resources": {
+        "assets": [
+          "packages/native-i2rt"
+        ],
+        "trajectories": [
+          "packages/native-i2rt/artifacts/pick10_sac_compact/bank.pt",
+          "central/store/a100/artifacts/state_rl_policy_replays/2026-11-01/pick10"
+        ],
+        "reset_banks": [
+          "packages/native-i2rt/artifacts/pick10_sac_compact/bank.pt"
+        ],
+        "experts": [
+          "packages/robot-interface/pick10.pt",
+          "central/store/a100/artifacts/state_rl_experts/pick10"
+        ]
+      },
+      "by_task": "by-task/pick10",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        16
+      ],
+      "archived_scores": [
+        2
+      ],
+      "aliases": []
+    },
+    {
+      "id": "pick100",
+      "embodiment": "I2RT/YAM · task-specific scenes",
+      "task": "Pick100",
+      "start": "100-object population with randomized ungrasped starts. The audited recipe used 512 slots.",
+      "success": "Meet adjacent approach and orientation deadlines, establish bilateral grasp, clear the 1 cm and 3 cm lift milestones and hold the bottom ≥5 cm above the table for nine controls.",
+      "observation_dim": 1034,
+      "action_dim": 7,
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
+      "canonical_id": "pick100",
+      "resources": {
+        "assets": [
+          "packages/pick100"
+        ],
+        "trajectories": [],
+        "reset_banks": [
+          "packages/pick100/artifacts/pick100_sa_v3_1b/initials.pt"
+        ],
+        "experts": [
+          "central/store/a100/runs/pick100_sa_v3_1b_20000/checkpoints/skill_00.pt"
+        ]
+      },
+      "by_task": "by-task/pick100",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        17
+      ],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "push10",
+      "embodiment": "I2RT/YAM · task-specific scenes",
+      "task": "Push10",
+      "start": "Native ten-object layouts and demonstration-derived push starts.",
+      "success": "Keep the gripper open and push the object into a table-supported goal within 5 mm on each position axis.",
+      "observation_dim": 1023,
+      "action_dim": 6,
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
+      "canonical_id": "push10",
+      "resources": {
+        "assets": [
+          "packages/native-i2rt"
+        ],
+        "trajectories": [
+          "packages/native-i2rt/artifacts/push10_single_push_low_v1/bank.pt",
+          "central/store/a100/artifacts/state_rl_policy_replays/2026-11-01/push10"
+        ],
+        "reset_banks": [
+          "packages/native-i2rt/artifacts/push10_single_push_low_v1/bank.pt"
+        ],
+        "experts": [
+          "packages/robot-interface/push10.pt",
+          "central/store/a100/artifacts/state_rl_experts/push10",
+          "central/store/a100/artifacts/state_rl_experts/push10_per"
+        ]
+      },
+      "by_task": "by-task/push10",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        18
+      ],
+      "archived_scores": [
+        3
+      ],
+      "aliases": []
+    },
+    {
+      "id": "track10",
+      "embodiment": "I2RT/YAM · task-specific scenes",
+      "task": "Track10",
+      "start": "Native ten-object layouts with demonstration first-frame or intermediate starts.",
+      "success": "Grasp, lift at least 25 mm, move past the obstacles and release on the goal support. For six controls require position error under 12 mm, angle error under 0.12 rad, speed under 25 mm/s and clearance from disqualifying collisions.",
+      "observation_dim": 1097,
+      "action_dim": 7,
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
+      "canonical_id": "track10",
+      "resources": {
+        "assets": [
+          "packages/native-i2rt"
+        ],
+        "trajectories": [
+          "packages/native-i2rt/artifacts/track10_policy_sac/bank.pt",
+          "central/store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10",
+          "central/store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10_demonstrations",
+          "central/store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10_milestones"
+        ],
+        "reset_banks": [
+          "packages/native-i2rt/artifacts/track10_policy_sac/bank.pt",
+          "central/store/a100/artifacts/state_rl_experts/track10/reset_qualification.pt",
+          "central/store/a100/artifacts/state_rl_experts/track10_milestones/reset_qualification.pt",
+          "central/store/a100/artifacts/track10_policy_sac/milestone_context.pt"
+        ],
+        "experts": [
+          "packages/robot-interface/track10.pt",
+          "central/store/a100/artifacts/state_rl_experts/track10",
+          "central/store/a100/artifacts/state_rl_experts/track10_milestones"
+        ]
+      },
+      "by_task": "by-task/track10",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        19
+      ],
+      "archived_scores": [
+        4,
+        5
+      ],
+      "aliases": []
+    },
+    {
+      "id": "handover_butter",
+      "embodiment": "I2RT/YAM · task-specific scenes",
+      "task": "Butter handover",
+      "start": "Native demonstration bank. Select skill_index 0, 1 or 2 for grasp, handover or complete placement.",
+      "success": "Stage 0 ends at donor capture. Stage 1 requires receiver capture and donor release. The full course ends after placement on the target mat and receiver release.",
+      "observation_dim": 209,
+      "action_dim": 14,
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
+      "canonical_id": "handover_butter",
+      "resources": {
+        "assets": [
+          "packages/native-i2rt",
+          "central/store/a100/artifacts/handover_butter_flashsac_online",
+          "central/store/a100/runs/handover_butter_final_20261112/left_to_right/source/src/axis_omnireset/tasks/handover_butter",
+          "central/store/a100/runs/handover_butter_final_20261112/right_to_left/source/src/axis_omnireset/tasks/handover_butter",
+          "central/store/a100/artifacts/system_id/20261031_preliminary_v1"
+        ],
+        "trajectories": [
+          "packages/native-i2rt/artifacts/skill_pipeline/handover_butter_v2/bank.pt",
+          "central/store/a100/artifacts/state_rl_policy_replays/2026-11-01/handover_butter_skills"
+        ],
+        "reset_banks": [
+          "packages/native-i2rt/artifacts/skill_pipeline/handover_butter_v2/bank.pt"
+        ],
+        "experts": [
+          "packages/native-handover-experts/skill_00_complete.pt",
+          "packages/native-handover-experts/skill_01_complete.pt",
+          "packages/native-handover-experts/skill_02_complete.pt",
+          "central/store/a100/artifacts/state_rl_experts/butter_ma_v2_frozen",
+          "central/store/a100/artifacts/state_rl_experts/handover_butter_sac",
+          "central/store/a100/artifacts/state_rl_experts/handover_butter_skills",
+          "central/store/a100/runs/handover_butter_final_20261112/left_to_right/training/checkpoints/best_frozen.pt",
+          "central/store/a100/runs/handover_butter_final_20261112/right_to_left/training/checkpoints/best_frozen.pt"
+        ]
+      },
+      "by_task": "by-task/handover_butter",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        3,
+        4,
+        20
+      ],
+      "archived_scores": [
+        0
+      ],
+      "aliases": []
+    },
+    {
+      "id": "blind_assembly",
+      "embodiment": "I2RT/YAM · task-specific scenes",
+      "task": "Blind assembly",
+      "start": "Native peg/fixture geometry and insertion starts. The evaluated cascade includes a grasp prefix across 24 geometries.",
+      "success": "Align the peg and matching fixture. Capture the peg in the opening, then maintain slow, stable seating for the checker’s required interval.",
+      "observation_dim": 616,
+      "action_dim": 6,
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
+      "canonical_id": "blind_assembly",
+      "resources": {
+        "assets": [
+          "packages/native-i2rt"
+        ],
+        "trajectories": [
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00000.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00001.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00002.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00003.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00004.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00005.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00006.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00007.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00008.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00009.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00010.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00011.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00012.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00013.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/trajectories/batch_00014.pt",
+          "central/store/a100/artifacts/state_rl_policy_replays/2026-11-01/i2rt_blind_assembly"
+        ],
+        "reset_banks": [
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/ppo_capture_boundaries_d6e7b2b6888654d2.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/ppo_contact_bank_a45f08b11c0f9e50.pt",
+          "packages/native-i2rt/artifacts/assembly/task_i2rt_blind_assembly/ppo_curriculum_bank_a8df4304efa1d499.pt",
+          "central/store/a100/artifacts/state_rl_experts/i2rt_blind_assembly/03_upstream_success.pt"
+        ],
+        "experts": [
+          "packages/robot-interface/skill_0_complete.pt",
+          "packages/robot-interface/blind_assembly.pt",
+          "central/store/a100/artifacts/state_rl_experts/i2rt_blind_assembly"
+        ]
+      },
+      "by_task": "by-task/blind_assembly",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        2
+      ],
+      "archived_scores": [
+        1
+      ],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_watch_basket_place",
+      "embodiment": "I2RT/YAM · task-specific scenes",
+      "task": "Watch into basket",
+      "start": "One wristwatch already held in a physically requalified native start.",
+      "success": "Place the whole watch in the basket, release onto bottom support and withdraw. The watch must stay stable and clear of the robot. The hybrid controller handles descent, release and retreat.",
+      "observation_dim": 1205,
+      "action_dim": 8,
+      "clock": "25 Hz control · 250 Hz physics · 10 substeps",
+      "canonical_id": "i2rt_watch_basket_place",
+      "resources": {
+        "assets": [
+          "packages/watch"
+        ],
+        "trajectories": [],
+        "reset_banks": [
+          "packages/watch/154b08a93bb1/starts.pt",
+          "packages/watch/3539343be2a1/starts.pt",
+          "packages/watch/6189e0d69468/starts.pt",
+          "packages/watch/630c08502ab5/starts.pt",
+          "packages/watch/71e3eb8edf13/starts.pt",
+          "packages/watch/c7aa35040dc6/starts.pt",
+          "packages/watch/6189e0d69468/supplement.pt"
+        ],
+        "experts": []
+      },
+      "by_task": "by-task/i2rt_watch_basket_place",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "dual_arx_x5",
+      "embodiment": "Dual ARX X5",
+      "task": "Dual-arm base",
+      "start": "Two ARX arms and grippers over an empty desk.",
+      "success": "Base scene. It exposes motion and state with no task success condition.",
+      "observation_dim": 32,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "dual_arx_x5",
+      "resources": {
+        "assets": [
+          "packages/arx"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": []
+      },
+      "by_task": "by-task/dual_arx_x5",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "inserting",
+      "embodiment": "Dual ARX X5",
+      "task": "Key insertion",
+      "start": "Reset the ARX arm and key poses against a fixed slot.",
+      "success": "Keep the key bottom more than 25 mm below the slot top and above the base minus 2 mm. XY error must be under 7 mm, tilt within 7°, and key-to-slot alignment within 30° for three consecutive controls.",
+      "observation_dim": 52,
+      "action_dim": 14,
+      "clock": "15 Hz control · 150 Hz physics · 10 substeps",
+      "canonical_id": "inserting",
+      "resources": {
+        "assets": [
+          "packages/key-insertion"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": []
+      },
+      "by_task": "by-task/inserting",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "10717",
+      "embodiment": "Dual ARX X5",
+      "task": "Press by number",
+      "start": "RoboDojo card and button layout with both arms at home.",
+      "success": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
+      "observation_dim": 114,
+      "action_dim": 12,
+      "clock": "25 Hz control · 250 Hz physics · 10 substeps",
+      "canonical_id": "10717",
+      "resources": {
+        "assets": [
+          "packages/v48/task10717"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": []
+      },
+      "by_task": "by-task/10717",
+      "expert_status": "The original five-stage ARX checkpoint is missing from its documented delivery.",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "10724",
+      "embodiment": "Dual ARX X5",
+      "task": "Stack three blocks",
+      "start": "RoboDojo layout with three differently textured blocks.",
+      "success": "Stack all three in any order to the layout’s alignment criterion, then return both arms home.",
+      "observation_dim": 151,
+      "action_dim": 14,
+      "clock": "25 Hz control · 250 Hz physics · 10 substeps",
+      "canonical_id": "10724",
+      "resources": {
+        "assets": [
+          "packages/v48/task10724"
+        ],
+        "trajectories": [
+          "packages/v48/task10724/source_v1/raw",
+          "packages/v48/task10724/native_actual_pair_transport_radial_v9",
+          "packages/v48/task10724/native_actual_pair_transport_reachable_face_v12",
+          "packages/v48/task10724/native_cartesian_geometry_v1",
+          "packages/v48/task10724/native_current_neural_handoff_corrections_both_v54",
+          "packages/v48/task10724/native_current_neural_transport_variant_corrections_v62",
+          "packages/v48/task10724/native_feedback_early_v1",
+          "packages/v48/task10724/native_feedback_perturbed_v1",
+          "packages/v48/task10724/native_feedback_suffixes_v1",
+          "packages/v48/task10724/native_geometry_feedback_v1",
+          "packages/v48/task10724/native_imitation_v1",
+          "packages/v48/task10724/native_imitation_v2",
+          "packages/v48/task10724/native_imitation_v3",
+          "packages/v48/task10724/native_neural_transport_objectlevel_v2",
+          "packages/v48/task10724/native_neural_transport_objectlevel_v3",
+          "packages/v48/task10724/native_neural_transport_pose_v1",
+          "packages/v48/task10724/native_pair_endpoint_full_suffix_v1",
+          "packages/v48/task10724/native_phase1_corrective_prefix_v1",
+          "packages/v48/task10724/native_phase1_multiseed_v1",
+          "packages/v48/task10724/native_prefixes_v2",
+          "packages/v48/task10724/native_prefixes_v3"
+        ],
+        "reset_banks": [
+          "packages/v48/task10724/native_first_place_current_grasp_v1",
+          "packages/v48/task10724/native_grasp_starts_v1",
+          "packages/v48/task10724/native_pair_supported_unreleased_v1",
+          "packages/v48/task10724/native_phase0_pair_cap_carry60_held_v7",
+          "packages/v48/task10724/native_phase0_pair_cap_dense_neural_held_v8",
+          "packages/v48/task10724/native_phase0_pair_cap_neural_held_v5",
+          "packages/v48/task10724/native_phase0_pair_cap_neural_held_v6",
+          "packages/v48/task10724/native_phase0_pair_cap_strong_dense_held_v8",
+          "packages/v48/task10724/native_phase0_pair_endpoints_v1",
+          "packages/v48/task10724/native_phase0_pair_held_coverage_v3",
+          "packages/v48/task10724/native_phase0_pair_held_dense_v2",
+          "packages/v48/task10724/native_phase0_pair_held_recovery_20261018_114254",
+          "packages/v48/task10724/native_phase0_pair_held_v1",
+          "packages/v48/task10724/native_phase0_pair_neural_held_v4",
+          "packages/v48/task10724/native_phase1_held_v2",
+          "packages/v48/task10724/native_phase1_neural_handoffs_v1",
+          "packages/v48/task10724/native_phase1_split_extra_v1",
+          "packages/v48/task10724/native_phase1_split_grouped_v1",
+          "packages/v48/task10724/native_phase1_split_v1",
+          "packages/v48/task10724/native_placement_starts_v2",
+          "packages/v48/task10724/native_skill_handoffs_v1",
+          "packages/v48/task10724/native_third_grasp_from_pair_endpoints_v1",
+          "packages/v48/task10724/native_third_grasp_from_pair_endpoints_v2",
+          "packages/v48/task10724/reset_states_stage_quotas_v2",
+          "packages/v48/task10724/reset_states_v1"
+        ],
+        "experts": []
+      },
+      "by_task": "by-task/10724",
+      "expert_status": "Pair-placement checkpoint is access-restricted at the source.",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "example",
+      "embodiment": "Planar point mass",
+      "task": "Point-mass reach",
+      "start": "Default scene starts at (0, 0) with zero velocity and a goal at (1, 1).",
+      "success": "Accelerate in XY to within 5 cm of the goal before the 100-step horizon.",
+      "observation_dim": 6,
+      "action_dim": 2,
+      "clock": "20 Hz integration",
+      "canonical_id": "example",
+      "resources": {
+        "assets": [
+          "packages/example"
+        ],
+        "trajectories": [],
+        "reset_banks": [],
+        "experts": []
+      },
+      "by_task": "by-task/example",
+      "expert_status": "No checkpoint located",
+      "scores": [],
+      "archived_scores": [],
+      "aliases": []
+    },
+    {
+      "id": "i2rt_pick5000",
+      "canonical_id": "i2rt_pick5000",
+      "embodiment": "I2RT/YAM · task-specific scenes",
+      "task": "Left-arm Pick5000",
+      "start": "Fixed I1 home, a settled object on the table and a sampled object pose. The full population covers 5,000 objects.",
+      "success": "Establish bilateral finger contact, lift the object 5 cm clear of its support, and hold the final condition for 14 control steps.",
+      "observation_dim": 957,
+      "action_dim": 7,
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
+      "resources": {
+        "assets": [
+          "central/source/tasks/i2rt_pick5000/sysid.json",
+          "central/store/sysid/yam_sysid_giver_clearance_20261112/package",
+          "central/runtime/i2rt_pick5000_i1",
+          "central/runtime/i2rt_pick5000_i1_worlds8_zoh",
+          "central/runtime/pick16",
+          "central/store/a100/artifacts/franka5000_qualified",
+          "central/store/a100/artifacts/i2rt_pick5000_visual_v1"
+        ],
+        "trajectories": [
+          "central/store/sysid/yam_sysid_giver_clearance_20261112/outputs/pick5000_i1_zoh_validation_20261114/collect",
+          "central/store/a100/temp/i2rt_pick5000_full_visual_20261115/roll16_absolute"
+        ],
+        "reset_banks": [
+          "central/store/a100/runs/i2rt_pick5000_i1_zoh_resume_20261114/out/checkpoints/latest.pt"
+        ],
+        "experts": [
+          "central/store/a100/deliveries/i2rt_pick5000_i1_best_20261114"
+        ]
+      },
+      "by_task": "by-task/i2rt_pick5000",
+      "expert_status": "Frozen weights on axis",
+      "scores": [
+        11
+      ],
+      "archived_scores": [],
+      "aliases": [],
+      "original_benchmark": {
+        "successes": 29398,
+        "attempts": 30000,
+        "protocol": "Original A100 frozen I1 full population. Six trials per object across 5,000 objects."
+      }
+    }
+  ],
+  "evaluations": [
+    {
+      "task": "5033",
+      "policy": "5033",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 28,
+      "successes": 27,
+      "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
+      "checkpoint_sha256": {
+        "checkpoint.pt": "0c84df428c69f4c94f62df16652943207c05fc23907e5233280f1ab1a17aaf22"
+      },
+      "receipt_sha256": "8c6efb3c0407053f0a17cab2c90081c6ad600e25246de49ef30f8e14dcfcb8c5",
+      "server_receipt": "evaluations/pinned/5033/result.json",
+      "seed": 42,
+      "controls": 384,
+      "timeouts": 28,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "5716",
+      "policy": "5716",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 29,
+      "successes": 29,
+      "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
+      "checkpoint_sha256": {
+        "checkpoint.pt": "a452cb75e04e15fd346245cc68dae715b80aa48a460956fa57ba27aac97a975a"
+      },
+      "receipt_sha256": "4e2573a10b51cf92d7c4109d7f55a7fd2d2e43b839f3a4dccbeb1f0e69c423ec",
+      "server_receipt": "evaluations/pinned/5716/result.json",
+      "seed": 42,
+      "controls": 384,
+      "timeouts": 29,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "blind_assembly",
+      "policy": "blind_assembly",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 32,
+      "successes": 15,
+      "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz.",
+      "checkpoint_sha256": {
+        "policy": "312c0c84deb68bd51f781ad0c13e7656188577f3768f4e5711e2460028be8a70"
+      },
+      "receipt_sha256": "bfed2cf7838973b42f6189ea78abc4e355e4ad295468ca1990087099bd607e6a",
+      "server_receipt": "evaluations/pinned/blind_assembly/result.json",
+      "seed": 42,
+      "controls": 150,
+      "timeouts": 17,
+      "episode_success": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "handover_butter",
+      "policy": "butter-left_to_right",
+      "scope": "related protocol",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 16,
+      "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 30 Hz; left_to_right",
+      "checkpoint_sha256": {
+        "best_frozen.pt": "69e9c7efcaf0331fee5404b6c4dcdea83eb716c618e458f4e751f61343f68c8c"
+      },
+      "receipt_sha256": "869fb18e0bdfadf1fe6b3c84a6bf46aa0cb2b4d720e62eccfdddf92eb57523ba",
+      "server_receipt": "evaluations/pinned/butter-left_to_right/result.json",
+      "seed": 42,
+      "controls": 167,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "handover_butter",
+      "policy": "butter-right_to_left",
+      "scope": "related protocol",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 16,
+      "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 30 Hz; right_to_left",
+      "checkpoint_sha256": {
+        "best_frozen.pt": "49f810f84b284f95d6a8be695072c140d6507e2d34effc1b509ac7f3b4d82610"
+      },
+      "receipt_sha256": "b3812eee5df8799a3ca9245bd70b9c81fd5862122bba522c5a87ee977124e2bc",
+      "server_receipt": "evaluations/pinned/butter-right_to_left/result.json",
+      "seed": 42,
+      "controls": 176,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "franka1000",
+      "policy": "franka1000",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42.",
+      "checkpoint_sha256": {
+        "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
+      },
+      "receipt_sha256": "cd81300d426a5414c909bdf14fcbcec8ef97b881b7656b716ab587a959184ff0",
+      "server_receipt": "evaluations/pinned/franka1000/result.json",
+      "seed": 42,
+      "controls": 61,
+      "timeouts": 0,
+      "failures": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "franka_push5000",
+      "policy": "franka_push5000-legacy",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 2,
+      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
+      "checkpoint_sha256": {
+        "best_frozen.pt": "4341f41d2cbaba105a3d1fb91de50ef2f5094fc097ad0f8f4601273171269615"
+      },
+      "receipt_sha256": "4a38b7e8822fd467e236c1c9451d06648df02e6d598d7d0ab30b5f429d2ea764",
+      "server_receipt": "evaluations/pinned/franka_push5000-legacy/result.json",
+      "seed": 42,
+      "controls": 128,
+      "timeouts": 1,
+      "success_by_env": [
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_blind_assembly",
+      "policy": "i2rt_blind_assembly",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "checkpoint_sha256": {
+        "blind_assembly.pt": "312c0c84deb68bd51f781ad0c13e7656188577f3768f4e5711e2460028be8a70",
+        "skill_0_complete.pt": "9773fcc871a5bf8867b3d3e59fc5bda12e93b8adf27d045c610df104c789ef23"
+      },
+      "receipt_sha256": "e2823e1388ea566851aa3e0a135785086f53bb82f8e5721b93598809f7648126",
+      "server_receipt": "evaluations/pinned/i2rt_blind_assembly/result.json",
+      "seed": 42,
+      "controls": 75,
+      "timeouts": 16,
+      "failures": 0,
+      "success_by_env": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "i2rt_grasp1000",
+      "policy": "i2rt_grasp1000",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 0,
+      "protocol": "Frozen grasp actor on the shared I2RT tabletop with the Panda policy projection, four starts, seed 42.",
+      "checkpoint_sha256": {
+        "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
+      },
+      "receipt_sha256": "d193d619cc8687a8363283d60f9d7f3fcd812ac79f67c4c4fbb957eec15a34d1",
+      "server_receipt": "evaluations/pinned/i2rt_grasp1000/result.json",
+      "seed": 42,
+      "controls": 128,
+      "timeouts": 4,
+      "failures": 0,
+      "success_by_env": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "i2rt_handover_butter",
+      "policy": "i2rt_handover_butter",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "checkpoint_sha256": {
+        "butter0.pt": "341437eea1893f629e9a76bc55f675817431403eee8db541f1389fa5bd943870",
+        "butter1.pt": "64c835a84c8e4d94a3a484dc2d533e07d7a5ce1f19db5a9c42a7c4ac4ee0a925",
+        "butter2.pt": "3643aede5829cbe4e5ade636d37e84e6b2df0e080b82d1dea57ea7f7a96aab48"
+      },
+      "receipt_sha256": "71e4c1511e9806417644be6b3df95d6f37fa7fb849368c83f0055ffd373ef9a7",
+      "server_receipt": "evaluations/pinned/i2rt_handover_butter/result.json",
+      "seed": 42,
+      "controls": 468,
+      "timeouts": 16,
+      "failures": 0,
+      "success_by_env": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "i2rt_pick10",
+      "policy": "i2rt_pick10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "checkpoint_sha256": {
+        "pick10.pt": "a32b7f4b8f5628fa5e65fd87c7aba904be1bf34118a6591ae92626c8c836e67f"
+      },
+      "receipt_sha256": "57a01fdf16743fb98243cd5c0bb2bb3431e328f62341ef6e8b2a2d0e4326d503",
+      "server_receipt": "evaluations/pinned/i2rt_pick10/result.json",
+      "seed": 42,
+      "controls": 150,
+      "timeouts": 16,
+      "failures": 0,
+      "success_by_env": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "i2rt_pick5000",
+      "policy": "i2rt_pick5000",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 15,
+      "protocol": "Deterministic mean policy from fixed I1 home, 30 Hz control over five 150 Hz physics steps, four qualified objects with four replicas each, seed 42.",
+      "checkpoint_sha256": {
+        "actor.pt": "8388b39d348b5a4bc5aa70e3749512b5e38b58af2e6d8b4e6c6dde07c3aaadae"
+      },
+      "receipt_sha256": "ddfb0e2cf192d353fe2369e4fb29db63a53565e63230b501ed0ca396fbf32dff",
+      "server_receipt": "evaluations/pinned/i2rt_pick5000/result.json",
+      "seed": 42,
+      "controls": 256,
+      "timeouts": 1,
+      "failures": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "checkpoint_sha256": {
+        "push10.pt": "08d279ce7fa38f81e334671932e4df4636825ccdf8538bf5e8d57b23ab5b06e8"
+      },
+      "receipt_sha256": "1b33b6c7658ee7458c250561bcafafdec14967fa9113242906d8f3e390f9f077",
+      "server_receipt": "evaluations/pinned/i2rt_push10/result.json",
+      "seed": 42,
+      "controls": 150,
+      "timeouts": 16,
+      "failures": 0,
+      "success_by_env": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "i2rt_track10",
+      "policy": "i2rt_track10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
+      "checkpoint_sha256": {
+        "track10.pt": "0b0a641029f6d9f135c3873100fcfe9e1838ba24bd7f13d4f905d59847ce04f9"
+      },
+      "receipt_sha256": "a07142d476e82379239b832aca85371dd5b805fb4b4eb5f3c73656aca62873ff",
+      "server_receipt": "evaluations/pinned/i2rt_track10/result.json",
+      "seed": 42,
+      "controls": 92,
+      "timeouts": 0,
+      "failures": 16,
+      "success_by_env": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "panda_grasp1000",
+      "policy": "panda_grasp1000",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42.",
+      "checkpoint_sha256": {
+        "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
+      },
+      "receipt_sha256": "81263000dce6b02c4bbf6120b760d309ec35b1f3c6239b9a30b22b0236ca836f",
+      "server_receipt": "evaluations/pinned/panda_grasp1000/result.json",
+      "seed": 42,
+      "controls": 61,
+      "timeouts": 0,
+      "failures": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "panda_wood_pick",
+      "policy": "panda_wood_pick",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four sampled native Panda course states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "checkpoint_sha256": {
+        "actor.pt": "2c4ccc8451e48eccb00fec30071a4c2da1d10a911cc9af9f82219c0b9444704a"
+      },
+      "receipt_sha256": "ad58934f7db6db4d4c224723c3529197514d238fa8b40018adbda38ef627a159",
+      "server_receipt": "evaluations/pinned/panda_wood_pick/result.json",
+      "seed": 42,
+      "controls": 58,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "pick10",
+      "policy": "pick10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 16,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "checkpoint_sha256": {
+        "policy": "a32b7f4b8f5628fa5e65fd87c7aba904be1bf34118a6591ae92626c8c836e67f"
+      },
+      "receipt_sha256": "d0aa6c5d5b10eba9c4e4cb3b94f55d625308e50d56c5d3bba326b59332426847",
+      "server_receipt": "evaluations/pinned/pick10/result.json",
+      "seed": 42,
+      "controls": 165,
+      "timeouts": 0,
+      "episode_success": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "pick100",
+      "policy": "pick100",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 512,
+      "successes": 247,
+      "protocol": "Deterministic author checkpoint on 512 native reset-bank slots, seed 42, original policy observation prefix.",
+      "checkpoint_sha256": {
+        "skill_00.pt": "51051c5484734a4defcec4eaee9ac34b1dd1514ce0ad6aa495011d845222beaf"
+      },
+      "receipt_sha256": "38bc7511cc198e5460ddd8eb2b03a40c4151b17785bb1b8751405e63173e0ce6",
+      "server_receipt": "evaluations/pinned/pick100/result.json",
+      "seed": 42,
+      "controls": 153,
+      "timeouts": 0,
+      "failures": 265,
+      "success_by_env": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "push10",
+      "policy": "push10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "checkpoint_sha256": {
+        "policy": "08d279ce7fa38f81e334671932e4df4636825ccdf8538bf5e8d57b23ab5b06e8"
+      },
+      "receipt_sha256": "d1523b7d4d1221cd275e33e4b9295dfd009a135b035d8bd7cd758b36a9c60999",
+      "server_receipt": "evaluations/pinned/push10/result.json",
+      "seed": 42,
+      "controls": 394,
+      "timeouts": 16,
+      "episode_success": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "track10",
+      "policy": "track10",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 0,
+      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "checkpoint_sha256": {
+        "policy": "0b0a641029f6d9f135c3873100fcfe9e1838ba24bd7f13d4f905d59847ce04f9"
+      },
+      "receipt_sha256": "6390a4e2fb423d3ec13120cd8ec639bfdae785e79ee7dd0b63259ec1c16469d1",
+      "server_receipt": "evaluations/pinned/track10/result.json",
+      "seed": 42,
+      "controls": 230,
+      "timeouts": 0,
+      "episode_success": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "task": "handover_butter",
+      "policy": "Native MA-v2 chain",
+      "scope": "native delivery",
+      "revision": "frozen MA-v2 delivery",
+      "attempts": 300,
+      "successes": 285,
+      "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
+      "checkpoint_sha256": {
+        "stage_0": "73bac3db4f255da9f2ae09eae33cf058ba8b03914c76bbd2ab70c50f801ee61c",
+        "stage_1": "e65d96a15e0788581265e0143662b508d3a3c91edfc5859a973470aa88fdddd9",
+        "stage_2": "af864fd1e6838eee75abfe7b3f87c2e7f227405106b0f606632d45a9d631afea"
+      },
+      "receipt_sha256": "b509b7ed7f9e0d8ca27e147c071898b824190165998869ad311c45af2baf8a0e",
+      "server_receipt": "evaluations/pinned/handover_butter/evaluation/result.json",
+      "controls": 674
+    },
+    {
+      "task": "i2rt_example",
+      "policy": "i2rt_example_default · 0095a6ff",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default.",
+      "checkpoint_sha256": {
+        "actor.pt": "0095a6ff754d2e59bf7be708d246135bca4c73bf6445ff240e96297fb4c9e4c0"
+      },
+      "receipt_sha256": "b209061d6a6e23c475e93fffd90eec7dcca1bc6f95afd8074e612f0a9d797e21",
+      "server_receipt": "evaluations/historical/i2rt_example-0095a6ff754d/result.json",
+      "seed": 42,
+      "controls": 7,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_example",
+      "policy": "i2rt_example_default · 009a421c",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default.",
+      "checkpoint_sha256": {
+        "actor.pt": "009a421cf531956fd0bbb9f670a51fdcc596fdbf7211b3a3ade1872946e73850"
+      },
+      "receipt_sha256": "416bc58d808707ff1c268a740a9b1a459ebc6cd29515343ca490acc374ff93b7",
+      "server_receipt": "evaluations/historical/i2rt_example-009a421cf531/result.json",
+      "seed": 42,
+      "controls": 7,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_example",
+      "policy": "i2rt_example_default · 340f3253",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default.",
+      "checkpoint_sha256": {
+        "actor.pt": "340f32539acb941e5803b102ca209cbe5b0d6d7da7624f176524eacf423ccdf1"
+      },
+      "receipt_sha256": "676c214385ce56bc9c1f29f1e382578fd55d5eed35e19bbd082fdfb5a2593006",
+      "server_receipt": "evaluations/historical/i2rt_example-340f32539acb/result.json",
+      "seed": 42,
+      "controls": 12,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_bottle_16 · 45742742",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_bottle_16.",
+      "checkpoint_sha256": {
+        "actor.pt": "45742742503df16c98f7d3ac56d7df5f9e209f641a8b839e868ccea4808b2b8d"
+      },
+      "receipt_sha256": "09390f72d1d74c93de3cd3ba96a130e399d02404cd3280fdec27980f21fcadb1",
+      "server_receipt": "evaluations/historical/i2rt_push10-45742742503d/result.json",
+      "seed": 42,
+      "controls": 35,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_can_1 · 4fa34a6e",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_can_1.",
+      "checkpoint_sha256": {
+        "actor.pt": "4fa34a6e0656c264fe36042b6c18f06eef16d87e6df395248a5b601a1329fd3f"
+      },
+      "receipt_sha256": "7e3966f20ba68fef48b29fc3f6114017f48725c6cffec8159f7860359ad1c09e",
+      "server_receipt": "evaluations/historical/i2rt_push10-4fa34a6e0656/result.json",
+      "seed": 42,
+      "controls": 101,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_chocolate_bar_14 · 59c40805",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_chocolate_bar_14.",
+      "checkpoint_sha256": {
+        "actor.pt": "59c40805e8c1342c787f8bea0380739d75fa3dd9c8c85e791c81e7c30f331477"
+      },
+      "receipt_sha256": "09784178956090d9bfe609328f51d611030bbfaf9787075a935d844ee8d91565",
+      "server_receipt": "evaluations/historical/i2rt_push10-59c40805e8c1/result.json",
+      "seed": 42,
+      "controls": 31,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_mug_54 · 83725ab5",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_mug_54.",
+      "checkpoint_sha256": {
+        "actor.pt": "83725ab5d2119f9bc82303ec2d360b50d7877496aed3110376643353ccf1ebc0"
+      },
+      "receipt_sha256": "5fc0f9c10f57496cdf8675ab6aacb41b9b8d127cb926b94732be462c12b8b58e",
+      "server_receipt": "evaluations/historical/i2rt_push10-83725ab5d211/result.json",
+      "seed": 42,
+      "controls": 32,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_mouse_48 · 8c970bb0",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_mouse_48.",
+      "checkpoint_sha256": {
+        "actor.pt": "8c970bb0e0b3a726c4171493a4edfaa4758a8c777accc15a346772814c72527a"
+      },
+      "receipt_sha256": "ab31cbb355ed00649fa1e8353e1596c70da82884e7725f03c362aae9ee3185fb",
+      "server_receipt": "evaluations/historical/i2rt_push10-8c970bb0e0b3/result.json",
+      "seed": 42,
+      "controls": 58,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_t_shaped_block_0 · 9e51ad6c",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_t_shaped_block_0.",
+      "checkpoint_sha256": {
+        "actor.pt": "9e51ad6c6b0b3b45bbc70039c24985b16d7f08aa6d3b75755c506c3c40d96ffe"
+      },
+      "receipt_sha256": "f88749ef34ab36f44f6688cab22d864e66839b6dff033127f71284466c7ebb0a",
+      "server_receipt": "evaluations/historical/i2rt_push10-9e51ad6c6b0b/result.json",
+      "seed": 42,
+      "controls": 31,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_default · e61f8a48",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_default.",
+      "checkpoint_sha256": {
+        "actor.pt": "e61f8a4868eef2ff5ded6fb8768d7e282baef70d842080c9a9ac4e009a3dff8d"
+      },
+      "receipt_sha256": "c173ae5d5370f5b851a14a4a046d4bc74013d4c10334a2e4ee49cd3f938cde8c",
+      "server_receipt": "evaluations/historical/i2rt_push10-e61f8a4868ee/result.json",
+      "seed": 42,
+      "controls": 27,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_push10",
+      "policy": "i2rt_push10_hammer_16 · eaac1616",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_hammer_16.",
+      "checkpoint_sha256": {
+        "actor.pt": "eaac161698c48a9d39e72a929198cd0607370c5c8a813cd885f2e7f3e5a97058"
+      },
+      "receipt_sha256": "533b80996275de3cd2e7b59897ac80c182429a6af2e23bf87e6c88f9290ebc89",
+      "server_receipt": "evaluations/historical/i2rt_push10-eaac161698c4/result.json",
+      "seed": 42,
+      "controls": 35,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "i2rt_task10717_1_1 · 63bab1cf",
+      "scope": "historical",
+      "revision": "8c7391e0",
+      "attempts": 4,
+      "successes": 4,
+      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_task10717_1_1.",
+      "checkpoint_sha256": {
+        "actor.pt": "63bab1cf299bd9718e4453349a6fce6a0b71e598c3f856d3c94a5896fe1a3cf3"
+      },
+      "receipt_sha256": "0249f815fb70dd81dcf6471f03eb5ad31724964205291976dbe4ceb95136e3ea",
+      "server_receipt": "evaluations/historical/i2rt_task10717-63bab1cf299b/result.json",
+      "seed": 42,
+      "controls": 46,
+      "timeouts": 0,
+      "config_identity_matches": true,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "archived_evaluations": [
+    {
+      "task": "handover_butter",
+      "policy": "handover_butter_skills",
+      "successes": 46,
+      "attempts": 128,
+      "starts": "curriculum",
+      "scope": "Original author evaluation, 2026-11-01",
+      "checkpoint_sha256": "6043a8763bb87bcb35cd01f20eede2a9930d1e060faf6c754ca3ce7502849aef",
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/handover_butter_skills/selection.json"
+    },
+    {
+      "task": "blind_assembly",
+      "policy": "i2rt_blind_assembly",
+      "successes": 89,
+      "attempts": 96,
+      "starts": "curriculum",
+      "scope": "Original author evaluation, 2026-11-01",
+      "checkpoint_sha256": "74df074853415fdd736dca9ef4fea46108ca8426b75180245592ad520d6a093b",
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/i2rt_blind_assembly/selection.json"
+    },
+    {
+      "task": "pick10",
+      "policy": "pick10",
+      "successes": 115,
+      "attempts": 120,
+      "starts": "curriculum",
+      "scope": "Original author evaluation, 2026-11-01",
+      "checkpoint_sha256": "1ec714409a780856ae43b95f114eccc334b262c0b2ca2d5a45e916bf1d8415a9",
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/pick10/selection.json"
+    },
+    {
+      "task": "push10",
+      "policy": "push10",
+      "successes": 84,
+      "attempts": 120,
+      "starts": "curriculum",
+      "scope": "Original author evaluation, 2026-11-01",
+      "checkpoint_sha256": "caa38f9378a1b3bab7c4541bd8e0cd956d394c203fe757e3a5e9bca3be848fcc",
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/push10/selection.json"
+    },
+    {
+      "task": "track10",
+      "policy": "track10",
+      "successes": 4,
+      "attempts": 10,
+      "starts": "curriculum",
+      "scope": "Original author evaluation, 2026-11-01",
+      "checkpoint_sha256": "8614364e5e52a7418168efe9f4a52e768fb526c0dbd0b47c32cc34c1b0267e3d",
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10/selection.json"
+    },
+    {
+      "task": "track10",
+      "policy": "track10_milestones",
+      "successes": 7,
+      "attempts": 10,
+      "starts": "curriculum",
+      "scope": "Original author evaluation, 2026-11-01",
+      "checkpoint_sha256": "ede508b38ec546d5aed22aa8c00204ba17d999fd13a57f1fa57b0b253ae508a0",
+      "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10_milestones/selection.json"
+    }
+  ],
+  "smoke_tests": {
+    "implementations": 39,
+    "server_directory": "receipts/task-smokes",
+    "pick5000_robot_randomization_receipt": "evaluations/pinned/i2rt_pick5000-randomization/smoke.json"
+  },
+  "source_network_check": {
+    "server_receipt": "evaluations/jf-network-check.json",
+    "passed": true,
+    "device": "cpu",
+    "models": [
+      {
+        "kind": "pick_teacher",
+        "task_id": 6671,
+        "strict_load": true,
+        "parameters": 69298208
+      },
+      {
+        "kind": "pick_teacher",
+        "task_id": 6672,
+        "strict_load": true,
+        "parameters": 69298208
+      },
+      {
+        "kind": "pick_teacher",
+        "task_id": 6673,
+        "strict_load": true,
+        "parameters": 69298208
+      },
+      {
+        "kind": "pick_teacher",
+        "task_id": 6674,
+        "strict_load": true,
+        "parameters": 69298208
+      },
+      {
+        "kind": "pick_teacher",
+        "task_id": 6675,
+        "strict_load": true,
+        "parameters": 69298208
+      },
+      {
+        "kind": "place_teacher",
+        "task_id": 6671,
+        "strict_load": true,
+        "parameters": 67399908
+      },
+      {
+        "kind": "place_teacher",
+        "task_id": 6672,
+        "strict_load": true,
+        "parameters": 67399908
+      },
+      {
+        "kind": "place_teacher",
+        "task_id": 6673,
+        "strict_load": true,
+        "parameters": 67399908
+      },
+      {
+        "kind": "place_teacher",
+        "task_id": 6674,
+        "strict_load": true,
+        "parameters": 67399908
+      },
+      {
+        "kind": "place_teacher",
+        "task_id": 6675,
+        "strict_load": true,
+        "parameters": 67399908
+      },
+      {
+        "kind": "pick_student",
+        "task_id": null,
+        "strict_load": true,
+        "parameters": 28435880
+      },
+      {
+        "kind": "place_student",
+        "task_id": null,
+        "strict_load": true,
+        "parameters": 28435880
+      }
+    ]
+  }
+}

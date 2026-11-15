@@ -90,7 +90,7 @@
     const stats = el('span','metrics');
     stats.append(metric('Expert',task.expert?.runnable ? (task.expert.availability || 'Available') : 'None verified'));
     const result = targetEvaluation(task);
-    if (task.profile === 'Shared tabletop' && result) stats.append(metric('Shared success',successRate(result)));
+    if (result) stats.append(metric('Expert success',successRate(result)));
     stats.append(metric('Trajectories',formatCount(task.refs.count)));
     button.append(photo, copy, stats);
     button.addEventListener('click', () => {
@@ -200,7 +200,8 @@
       seen.add(source.path);
       sources.append(sourceItem(source.label,source.path));
     }
-    const full = sourceItem('Open scene image','./' + task.render.file);
+    sources.append(sourceItem('Server resources and evaluations','./library.html#'+task.id));
+    const full = sourceItem(task.render.kind === 'training curve' ? 'Open training curve' : 'Open scene image','./' + task.render.file);
     sources.append(full);
     bottom.append(sources);
     if (task.render.caption) bottom.append(el('p','panel-note',task.render.caption));

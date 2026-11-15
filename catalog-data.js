@@ -1,6 +1,6 @@
 /* Registry and evidence snapshot. This file also loads with file://. */
 window.AXIS_ATLAS = {
-  "revision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+  "revision": "e465d482f48173be015a2bb776ec7e9ec621d2b2",
   "tasks": [
     {
       "id": "i2rt_grasp1000",
@@ -37,12 +37,12 @@ window.AXIS_ATLAS = {
         "trainer": "Franka1000 delivery team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_grasp1000",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "revision": "e465d482",
           "obsDim": 1039,
           "actionDim": 14,
           "successes": 0,
           "attempts": 4,
-          "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout."
+          "protocol": "Frozen grasp actor on the shared I2RT tabletop with the Panda policy projection, four starts, seed 42. See the full task library for checkpoints and evaluation receipts."
         },
         "sources": [
           {
@@ -54,7 +54,17 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/grasp1000_evaluation.py"
           }
         ],
-        "nativeBenchmark": "franka1000"
+        "nativeBenchmark": "franka1000",
+        "availability": "Evaluated on axis",
+        "previousEvaluation": {
+          "taskId": "i2rt_grasp1000",
+          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "obsDim": 1039,
+          "actionDim": 14,
+          "successes": 0,
+          "attempts": 4,
+          "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout."
+        }
       },
       "refs": {
         "count": 0,
@@ -79,7 +89,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b"
+      "taskRevision": "e465d482"
     },
     {
       "robot": "Dual I2RT",
@@ -123,7 +133,8 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Seeded RTX render on axis, seed 42, environment 0, JF 6671",
         "caption": "Shared I2RT desk at reset, object 6671. The inset shows the butter at its measured pose."
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "robot": "Dual I2RT",
@@ -167,7 +178,8 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Seeded RTX render on axis, seed 42, environment 0, JF 6703",
         "caption": "Shared I2RT desk at reset, object 6703. The inset shows the marker at its measured pose."
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "5033",
@@ -191,7 +203,21 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/task5033/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "5033 frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "5033",
+          "revision": "e465d482",
+          "obsDim": 105,
+          "actionDim": 7,
+          "successes": 27,
+          "attempts": 28,
+          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 302,
         "summary": "Source Franka recordings",
@@ -224,7 +250,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/task5033-scene.jpg"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "10717",
@@ -269,7 +296,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/task10717-scene.jpg"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "i2rt_wood_stack_second",
@@ -318,7 +346,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The inset shows the working object in the same reset. The physically authored I2RT link primitives are displayed in slate.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "10724",
@@ -363,7 +392,8 @@ window.AXIS_ATLAS = {
         "caption": "Official RoboDojo layout 0, rendered at the authored transforms with the dual ARX X5 home configuration. The inset shows blocks 9, 18 and 15 before rollout.",
         "kind": "Source-layout rendering",
         "source": "RoboDojo-Benchmark/RoboDojo@35efbc7dedfdbeeb6e95fb749bd885d73d483e41; Assets/Eval_Layout/RoboDojo/arx_x5/0/stack_blocks_0.json"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "panda_grasp1000",
@@ -396,12 +426,12 @@ window.AXIS_ATLAS = {
         "trainer": "Franka1000 delivery team (jupiter2143).",
         "evaluation": {
           "taskId": "panda_grasp1000",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "revision": "e465d482",
           "obsDim": 981,
           "actionDim": 7,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout."
+          "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42. See the full task library for checkpoints and evaluation receipts."
         },
         "sources": [
           {
@@ -413,7 +443,17 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/grasp1000_evaluation.py"
           }
         ],
-        "nativeBenchmark": "franka1000"
+        "nativeBenchmark": "franka1000",
+        "availability": "Evaluated on axis",
+        "previousEvaluation": {
+          "taskId": "panda_grasp1000",
+          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "obsDim": 981,
+          "actionDim": 7,
+          "successes": 4,
+          "attempts": 4,
+          "protocol": "Four episodes on the default four-slot population, one fresh start per slot, seed 42. Each episode ran to termination or timeout."
+        }
       },
       "refs": {
         "count": 0,
@@ -438,7 +478,7 @@ window.AXIS_ATLAS = {
         "kind": "Evaluation frame",
         "source": "reports/shared-i2rt/grasp1000-integration/panda.mp4"
       },
-      "taskRevision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b"
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_inserting",
@@ -483,7 +523,8 @@ window.AXIS_ATLAS = {
         "caption": "Simulator reset viewed from across the table. From the arms, the key is on the left and the slot is on the right, 24 cm apart at the same reach depth.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "handover_butter",
@@ -538,7 +579,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/handover_butter-scene.jpg"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "panda_wood_stack_second",
@@ -595,7 +637,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The inset shows the working object in the same reset.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "franka1000",
@@ -621,7 +664,21 @@ window.AXIS_ATLAS = {
           "path": "doc/pipeline/active/state_rl/general_grasp/shared_grasp1000.md"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "franka1000 frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "franka1000",
+          "revision": "e465d482",
+          "obsDim": 981,
+          "actionDim": 7,
+          "successes": 4,
+          "attempts": 4,
+          "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 0,
         "summary": "No reference recordings bundled",
@@ -644,7 +701,8 @@ window.AXIS_ATLAS = {
         "caption": "Measured Grasp1000 evaluation frame from the Panda wrapper of the native task.",
         "kind": "Evaluation frame",
         "source": "reports/shared-i2rt/grasp1000-integration/panda.mp4"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "panda_wood_pick",
@@ -672,7 +730,21 @@ window.AXIS_ATLAS = {
           "path": "doc/pipeline/active/state_rl/atomic_skills/wood_blocks.md"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "panda_wood_pick frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "panda_wood_pick",
+          "revision": "e465d482",
+          "obsDim": 122,
+          "actionDim": 6,
+          "successes": 4,
+          "attempts": 4,
+          "protocol": "Four sampled native Panda course states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 64,
         "summary": "Source teacher episodes",
@@ -701,7 +773,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The inset shows the working object in the same reset.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_wood_pick",
@@ -750,7 +823,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The inset shows the working object in the same reset. The physically authored I2RT link primitives are displayed in slate.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "panda_wood_place_base",
@@ -807,7 +881,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The inset shows the working object in the same reset.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "i2rt_wood_place_base",
@@ -856,7 +931,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The inset shows the working object in the same reset. The physically authored I2RT link primitives are displayed in slate.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "5716",
@@ -880,7 +956,21 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/task5716/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "5716 frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "5716",
+          "revision": "e465d482",
+          "obsDim": 116,
+          "actionDim": 7,
+          "successes": 29,
+          "attempts": 29,
+          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 1202,
         "summary": "Source Franka recordings",
@@ -913,7 +1003,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/task5716-scene.jpg"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_task5716",
@@ -972,7 +1063,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The physically authored I2RT link primitives are displayed in slate.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "i2rt_task5033",
@@ -1031,7 +1123,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The physically authored I2RT link primitives are displayed in slate.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "i2rt_task10717",
@@ -1076,7 +1169,8 @@ window.AXIS_ATLAS = {
         "caption": "Simulator reset viewed from across the table. The red, red and blue buttons form a row across the arms. Each digit card sits 12 cm farther from the arms than its red button.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "inserting",
@@ -1117,7 +1211,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/inserting-scene.jpg"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "i2rt_watch_basket_place",
@@ -1162,7 +1257,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/i2rt_watch_basket_place-scene.jpg"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "i2rt_watch_place",
@@ -1247,7 +1343,21 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/pick10/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "pick10 frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "pick10",
+          "revision": "e465d482",
+          "obsDim": 1033,
+          "actionDim": 7,
+          "successes": 16,
+          "attempts": 16,
+          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 10000,
         "summary": "Retained successful demonstrations",
@@ -1280,7 +1390,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/pick10-scene.jpg"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_pick10",
@@ -1313,12 +1424,12 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_pick10",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "revision": "e465d482",
           "obsDim": 1033,
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
         },
         "sources": [
           {
@@ -1330,7 +1441,17 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "pick10"
+        "nativeBenchmark": "pick10",
+        "availability": "Evaluated on axis",
+        "previousEvaluation": {
+          "taskId": "i2rt_pick10",
+          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "obsDim": 1033,
+          "actionDim": 14,
+          "successes": 0,
+          "attempts": 16,
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+        }
       },
       "refs": {
         "count": 10,
@@ -1369,7 +1490,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b"
+      "taskRevision": "e465d482"
     },
     {
       "id": "pick100",
@@ -1391,7 +1512,21 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/pick100/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "pick100 frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "pick100",
+          "revision": "e465d482",
+          "obsDim": 1034,
+          "actionDim": 7,
+          "successes": 247,
+          "attempts": 512,
+          "protocol": "Deterministic author checkpoint on 512 native reset-bank slots, seed 42, original policy observation prefix. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 0,
         "summary": "No reference recordings bundled",
@@ -1410,7 +1545,8 @@ window.AXIS_ATLAS = {
         "caption": "Saved native Pick100 nominal start 0, action_camera_0. Both arms and target use the source joint and object poses; the overview and inset show the same pre-jitter state. Collision meshes are shaded for visibility.",
         "kind": "Source-bank rendering",
         "source": "Prepared Pick100 initial-state bank, state 0"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "push10",
@@ -1432,7 +1568,21 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/push10/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "push10 frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "push10",
+          "revision": "e465d482",
+          "obsDim": 1023,
+          "actionDim": 6,
+          "successes": 0,
+          "attempts": 16,
+          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 10000,
         "summary": "Retained successful demonstrations",
@@ -1465,7 +1615,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/push10-scene.jpg"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_push10",
@@ -1498,12 +1649,12 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_push10",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "revision": "e465d482",
           "obsDim": 1023,
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
         },
         "sources": [
           {
@@ -1515,7 +1666,17 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "push10"
+        "nativeBenchmark": "push10",
+        "availability": "Evaluated on axis",
+        "previousEvaluation": {
+          "taskId": "i2rt_push10",
+          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "obsDim": 1023,
+          "actionDim": 14,
+          "successes": 0,
+          "attempts": 16,
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+        }
       },
       "refs": {
         "count": 10,
@@ -1554,7 +1715,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b"
+      "taskRevision": "e465d482"
     },
     {
       "id": "track10",
@@ -1576,7 +1737,21 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/track10/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "track10 frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "track10",
+          "revision": "e465d482",
+          "obsDim": 1097,
+          "actionDim": 7,
+          "successes": 0,
+          "attempts": 16,
+          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 10000,
         "summary": "Retained successful demonstrations",
@@ -1609,7 +1784,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/track10-scene.jpg"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_track10",
@@ -1642,12 +1818,12 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_track10",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "revision": "e465d482",
           "obsDim": 1097,
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
         },
         "sources": [
           {
@@ -1659,7 +1835,17 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "track10"
+        "nativeBenchmark": "track10",
+        "availability": "Evaluated on axis",
+        "previousEvaluation": {
+          "taskId": "i2rt_track10",
+          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "obsDim": 1097,
+          "actionDim": 14,
+          "successes": 0,
+          "attempts": 16,
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used cube_2."
+        }
       },
       "refs": {
         "count": 10,
@@ -1698,7 +1884,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b"
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_handover_butter",
@@ -1731,12 +1917,12 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_handover_butter",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "revision": "e465d482",
           "obsDim": 209,
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. The default checker ends at the donor’s first capture (milestone 0)."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
         },
         "sources": [
           {
@@ -1748,7 +1934,17 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "handover_butter"
+        "nativeBenchmark": "handover_butter",
+        "availability": "Evaluated on axis",
+        "previousEvaluation": {
+          "taskId": "i2rt_handover_butter",
+          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "obsDim": 209,
+          "actionDim": 14,
+          "successes": 0,
+          "attempts": 16,
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. The default checker ends at the donor’s first capture (milestone 0)."
+        }
       },
       "refs": {
         "count": 1,
@@ -1777,7 +1973,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b"
+      "taskRevision": "e465d482"
     },
     {
       "id": "blind_assembly",
@@ -1799,7 +1995,21 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/blind_assembly/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "blind_assembly frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "blind_assembly",
+          "revision": "e465d482",
+          "obsDim": 616,
+          "actionDim": 6,
+          "successes": 15,
+          "attempts": 32,
+          "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 24000,
         "summary": "Retained successful demonstrations",
@@ -1832,7 +2042,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/blind_assembly-scene.jpg"
-      }
+      },
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_blind_assembly",
@@ -1865,12 +2076,12 @@ window.AXIS_ATLAS = {
         "trainer": "Native I2RT state-RL team (jupiter2143).",
         "evaluation": {
           "taskId": "i2rt_blind_assembly",
-          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "revision": "e465d482",
           "obsDim": 616,
           "actionDim": 14,
           "successes": 0,
           "attempts": 16,
-          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used peg variant 00. None reached the handoff to the insertion policy."
+          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout. See the full task library for checkpoints and evaluation receipts."
         },
         "sources": [
           {
@@ -1882,7 +2093,17 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "nativeBenchmark": "blind_assembly"
+        "nativeBenchmark": "blind_assembly",
+        "availability": "Evaluated on axis",
+        "previousEvaluation": {
+          "taskId": "i2rt_blind_assembly",
+          "revision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b",
+          "obsDim": 616,
+          "actionDim": 14,
+          "successes": 0,
+          "attempts": 16,
+          "protocol": "Sixteen parallel episodes with the same default scene configuration, fresh resets and deterministic actions, seed 42. All replicas used peg variant 00. None reached the handoff to the insertion policy."
+        }
       },
       "refs": {
         "count": 24,
@@ -1921,7 +2142,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "4d8c53421496f5ce8bb49a97621bf1b99964eb9b"
+      "taskRevision": "e465d482"
     },
     {
       "id": "dual_arx_x5",
@@ -1962,7 +2183,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/dual_arx_x5-scene.jpg"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "i2rt_base",
@@ -2007,7 +2229,8 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The physically authored I2RT link primitives are displayed in slate.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "example",
@@ -2048,7 +2271,8 @@ window.AXIS_ATLAS = {
         "caption": "Task scene rendered by the native Viser adapter.",
         "kind": "Viser snapshot",
         "source": "environment-snapshots/example-scene.jpg"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
     },
     {
       "id": "i2rt_example",
@@ -2093,7 +2317,95 @@ window.AXIS_ATLAS = {
         "caption": "RTX rendering of a seeded simulator reset. The physically authored I2RT link primitives are displayed in slate.",
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
-      }
+      },
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+    },
+    {
+      "id": "i2rt_pick5000",
+      "title": "Left-arm Pick5000",
+      "group": "I2RT",
+      "robot": "I2RT left arm",
+      "profile": "Fixed I1",
+      "description": "Establish bilateral finger contact, lift the object 5 cm clear of its support, and hold the final condition for 14 control steps.",
+      "actionDim": 7,
+      "obsDim": 957,
+      "action": "Three Cartesian translation commands, three rotation commands and one incremental gripper command.",
+      "obs": "Ordered state and object geometry features used by the frozen policy.",
+      "clock": "30 Hz control · 150 Hz physics · 5 substeps",
+      "aliases": [],
+      "sources": [],
+      "schemaNote": "",
+      "expert": {
+        "runnable": true,
+        "name": "Fixed-I1 Pick5000",
+        "sources": [],
+        "availability": "Evaluated on axis",
+        "evaluation": {
+          "taskId": "i2rt_pick5000",
+          "revision": "e465d482",
+          "obsDim": 957,
+          "actionDim": 7,
+          "successes": 15,
+          "attempts": 16,
+          "protocol": "Deterministic mean policy from fixed I1 home, 30 Hz control over five 150 Hz physics steps, four qualified objects with four replicas each, seed 42. See the full task library for checkpoints and evaluation receipts."
+        },
+        "recipe": "The original fixed-I1 delivery recorded 29,398 successes in 30,000 episodes (97.9933%)."
+      },
+      "refs": {
+        "count": 48,
+        "summary": "16 teacher rollouts and 32 source-controller validation trajectories.",
+        "sources": []
+      },
+      "render": {
+        "file": "images/rendering/i2rt-pick5000.jpg",
+        "kind": "scene",
+        "alt": "I2RT left-arm Pick5000 rollout on axis",
+        "caption": "A frame from the fixed-I1 expert rollout. The Rendering page includes the full episode."
+      },
+      "taskRevision": "e465d482"
+    },
+    {
+      "id": "franka_push5000",
+      "title": "Franka Push5000",
+      "group": "Panda",
+      "robot": "Franka Panda",
+      "profile": "Native Panda",
+      "description": "Make contact for two controls, pass the progress milestones, and leave the object supported within 20 mm of the goal at ≤20 mm/s XY speed for four controls.",
+      "actionDim": 6,
+      "obsDim": 984,
+      "action": "Six Cartesian tool increments with the gripper open.",
+      "obs": "Ordered state and object geometry features used by the frozen policy.",
+      "clock": "20 Hz control · 120 Hz physics · 6 substeps",
+      "aliases": [],
+      "sources": [],
+      "schemaNote": "",
+      "expert": {
+        "runnable": true,
+        "name": "Push5000 frozen policy",
+        "sources": [],
+        "availability": "Evaluated on axis",
+        "evaluation": {
+          "taskId": "franka_push5000",
+          "revision": "e465d482",
+          "obsDim": 984,
+          "actionDim": 6,
+          "successes": 2,
+          "attempts": 4,
+          "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
+      "refs": {
+        "count": null,
+        "summary": "See the server inventory.",
+        "sources": []
+      },
+      "render": {
+        "file": "images/franka_push5000.png",
+        "kind": "training curve",
+        "alt": "Franka Push5000 training curve",
+        "caption": "Training progress recorded by the task authors. The axis results use separate frozen evaluations."
+      },
+      "taskRevision": "e465d482"
     }
   ],
   "nativeBenchmarks": {

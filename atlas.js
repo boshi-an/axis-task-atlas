@@ -88,7 +88,7 @@
     heading.append(title, symbol);
     copy.append(heading, el('code','env-id',task.id), el('span','card-desc',task.description));
     const stats = el('span','metrics');
-    stats.append(metric('Expert',task.expert?.runnable ? (task.expert.availability || 'Available') : 'None verified'));
+    stats.append(metric('Expert',task.expert?.runnable ? (task.expert.availability || 'Available') : (task.sourceExpertLabel || 'None verified')));
     const result = targetEvaluation(task);
     if (result) stats.append(metric('Expert success',successRate(result)));
     stats.append(metric('Trajectories',formatCount(task.refs.count)));
@@ -184,6 +184,11 @@
         ['Native success',showNative && successRate(benchmark)],
         ['Native evaluation',showNative && benchmark.protocol],['Recipe',expert.recipe],['Trained by',expert.trainer]]));
       body.append(ex);
+    }
+    if (task.sourceExpertNote) {
+      const sources = section('Source policy');
+      sources.append(el('p',null,task.sourceExpertNote));
+      body.append(sources);
     }
     const refs = section('Reference trajectories');
     refs.append(facts([['Count',formatCount(task.refs.count)],['Collection',task.refs.summary],

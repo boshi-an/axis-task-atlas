@@ -13,11 +13,13 @@
       "wood_place_base": "panda_wood_place_base",
       "wood_stack_second": "panda_wood_stack_second"
     },
-    "view": ".task-views/40b82027e3e84faec61d5ac1841f3fc6a16ee71797a9d0fbe9ef8e5ddfa524be",
+    "view": ".task-views/e636250e63776110f0a484cc1de329cecd07a45b5d8955ba1873d35654683554",
     "base_packages": 28,
     "base_files": 84503,
     "base_bytes": 36753962229,
     "transfer_groups": {
+      "arx10724-experts": 53,
+      "arx10724-replay": 73,
       "axis-supplements": 92222,
       "butter-frozen-left_to_right": 1885,
       "butter-frozen-right_to_left": 1885,
@@ -26,7 +28,11 @@
       "butter-right_to_left": 3,
       "butter-seed-scene": 6,
       "butter-stage-system-id": 5,
+      "i2rt-press-banks-and-traces": 66,
+      "i2rt-press-delivery": 4940,
       "jf-models": 12,
+      "jf-native-reports": 7,
+      "jf-native-scene": 178,
       "native-experts": 132,
       "panda-trajectories": 130,
       "pick-bank": 6,
@@ -246,7 +252,7 @@
       "by_task": "by-task/panda_grasp1000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        23
+        24
       ],
       "archived_scores": [],
       "aliases": []
@@ -314,7 +320,7 @@
       "by_task": "by-task/panda_wood_pick",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        24
+        25
       ],
       "archived_scores": [],
       "aliases": [
@@ -349,7 +355,7 @@
       "by_task": "by-task/wood_pick",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        24
+        25
       ],
       "archived_scores": [],
       "aliases": []
@@ -381,7 +387,9 @@
       },
       "by_task": "by-task/panda_wood_place_base",
       "expert_status": "Frozen weights on axis",
-      "scores": [],
+      "scores": [
+        26
+      ],
       "archived_scores": [],
       "aliases": [
         "wood_place_base"
@@ -414,7 +422,9 @@
       },
       "by_task": "by-task/wood_place_base",
       "expert_status": "Frozen weights on axis",
-      "scores": [],
+      "scores": [
+        26
+      ],
       "archived_scores": [],
       "aliases": []
     },
@@ -533,9 +543,9 @@
       "by_task": "by-task/i2rt_example",
       "expert_status": "Historical fixed-layout checkpoints",
       "scores": [
-        30,
-        31,
-        32
+        34,
+        35,
+        36
       ],
       "archived_scores": [],
       "aliases": []
@@ -680,18 +690,70 @@
           "packages/tabletop-variants/i2rt_task10717_3_1/provider.json",
           "packages/tabletop-variants/i2rt_task10717_3_2/provider.json",
           "packages/robot-interface",
-          "packages/yam-geometry-20261106"
+          "packages/yam-geometry-20261106",
+          "central/store/arx/task10717_i2rt_press_20261114_v1/assets/buttons"
         ],
-        "trajectories": [],
-        "reset_banks": [],
+        "trajectories": [
+          "central/store/arx/task10717_i2rt_press_20261114_v1/evaluation",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_000/teacher_execution.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_001/teacher_execution.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_002/teacher_execution.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_003/teacher_execution.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_004/teacher_execution.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_005/teacher_execution.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_006/teacher_execution.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/replenishment_00/wave_000/teacher_execution.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/replenishment_01/wave_000/teacher_execution.npz"
+        ],
+        "reset_banks": [
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00000.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00001.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00002.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00003.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00004.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00005.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00006.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00007.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00008.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00009.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00010.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00011.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00012.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00013.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00014.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00015.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00016.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00017.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00018.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00019.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00020.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00021.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_000.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_000/evaluation_initials.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_001.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_001/evaluation_initials.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_002.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_002/evaluation_initials.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_003.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_003/evaluation_initials.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_004.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_004/evaluation_initials.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_005.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_005/evaluation_initials.npz",
+          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_006.npz",
+          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_006/evaluation_initials.npz"
+        ],
         "experts": [
-          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_task10717_1_1/attempt_00/latest"
+          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_task10717_1_1/attempt_00/latest",
+          "central/store/arx/task10717_i2rt_press_20261114_v1/approved_bundle_v1",
+          "central/store/arx/task10717_i2rt_press_20261114_v1/execution_source_v20"
         ]
       },
       "by_task": "by-task/i2rt_task10717",
-      "expert_status": "Historical fixed-layout checkpoints",
+      "expert_status": "Approved I2RT Press actor, normalization, four-call controller, native button assets and replay evidence, plus a historical fixed-layout checkpoint.",
       "scores": [
-        41
+        33,
+        45
       ],
       "archived_scores": [],
       "aliases": []
@@ -891,14 +953,14 @@
       "expert_status": "Frozen weights on axis",
       "scores": [
         21,
-        33,
-        34,
-        35,
-        36,
         37,
         38,
         39,
-        40
+        40,
+        41,
+        42,
+        43,
+        44
       ],
       "archived_scores": [],
       "aliases": []
@@ -1269,7 +1331,9 @@
       },
       "by_task": "by-task/i2rt_watch_place",
       "expert_status": "Frozen weights on axis",
-      "scores": [],
+      "scores": [
+        23
+      ],
       "archived_scores": [],
       "aliases": []
     },
@@ -1404,17 +1468,21 @@
         "assets": [
           "packages/tabletop/provider.json",
           "packages/jf",
-          "packages/yam-geometry-20261106"
+          "packages/yam-geometry-20261106",
+          "central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028",
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts"
         ],
         "trajectories": [],
-        "reset_banks": [],
+        "reset_banks": [
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data"
+        ],
         "experts": [
           "central/store/jf/models/pick_teacher",
           "central/store/jf/models/pick_student"
         ]
       },
       "by_task": "by-task/i2rt_jf_pick",
-      "expert_status": "Five source FR3v2 teachers and one visual student passed CPU inference checks. A registered I2RT policy adapter is unavailable.",
+      "expert_status": "Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable.",
       "scores": [],
       "archived_scores": [],
       "aliases": []
@@ -1433,17 +1501,21 @@
         "assets": [
           "packages/tabletop/provider.json",
           "packages/jf",
-          "packages/yam-geometry-20261106"
+          "packages/yam-geometry-20261106",
+          "central/store/jf-source/my_manipgen/runs/six_task_sysid_20261028",
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/project/artifacts"
         ],
         "trajectories": [],
-        "reset_banks": [],
+        "reset_banks": [
+          "central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data"
+        ],
         "experts": [
           "central/store/jf/models/place_teacher",
           "central/store/jf/models/place_student"
         ]
       },
       "by_task": "by-task/i2rt_jf_place",
-      "expert_status": "Five source FR3v2 teachers and one visual student passed CPU inference checks. A registered I2RT policy adapter is unavailable.",
+      "expert_status": "Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable.",
       "scores": [],
       "archived_scores": [],
       "aliases": []
@@ -1478,7 +1550,7 @@
       "expert_status": "Frozen weights on axis",
       "scores": [
         5,
-        25
+        27
       ],
       "archived_scores": [
         2
@@ -1510,7 +1582,7 @@
       "by_task": "by-task/pick100",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        26
+        28
       ],
       "archived_scores": [],
       "aliases": []
@@ -1547,7 +1619,7 @@
       "scores": [
         6,
         7,
-        27
+        29
       ],
       "archived_scores": [
         3
@@ -1591,7 +1663,7 @@
       "scores": [
         8,
         9,
-        28
+        30
       ],
       "archived_scores": [
         4,
@@ -1642,7 +1714,7 @@
         4,
         11,
         12,
-        29
+        31
       ],
       "archived_scores": [
         0
@@ -1748,7 +1820,7 @@
       "canonical_id": "dual_arx_x5",
       "resources": {
         "assets": [
-          "packages/arx"
+          "central/store/arx"
         ],
         "trajectories": [],
         "reset_banks": [],
@@ -1803,7 +1875,7 @@
         "experts": []
       },
       "by_task": "by-task/10717",
-      "expert_status": "The original five-stage ARX checkpoint is missing from its documented delivery.",
+      "expert_status": "The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256.",
       "scores": [],
       "archived_scores": [],
       "aliases": []
@@ -1820,7 +1892,8 @@
       "canonical_id": "10724",
       "resources": {
         "assets": [
-          "packages/v48/task10724"
+          "packages/v48/task10724",
+          "central/runtime/arx10724-v107/setup.json"
         ],
         "trajectories": [
           "packages/v48/task10724/source_v1/raw",
@@ -1843,7 +1916,21 @@
           "packages/v48/task10724/native_phase1_corrective_prefix_v1",
           "packages/v48/task10724/native_phase1_multiseed_v1",
           "packages/v48/task10724/native_prefixes_v2",
-          "packages/v48/task10724/native_prefixes_v3"
+          "packages/v48/task10724/native_prefixes_v3",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_pair_grasp_BC1500_v45/bc_step500/replay_buffer.pt",
+          "central/store/arx/task10724_staged_reward_20261018_162900/phase0b_multiseed_real_replay_offline_SAC_v89/offline_update8192/replay_buffer.pt",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_grasp_BC1500_v45/bc_step1500/replay_buffer.pt",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_place_BC1500_v45/bc_step1500/replay_buffer.pt",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_home_BC1500_v45/bc_step1500/replay_buffer.pt",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic773_original_DEV_seed0_v92",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic1543_original_DEV_seed1_v101",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic773_original_TRAIN39_seed2_v95",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic773_original_DEV_seed1_v92",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic1543_original_DEV_seed0_v101",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic773_original_DEV_seed2_v92",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic1543_original_DEV_seed2_v101",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic773_original_TRAIN39_seed0_v95",
+          "central/store/arx/task10724_staged_reward_20261018_162900/five_actor_pair_multiseed_offline8192_stochastic773_original_TRAIN39_seed1_v95_retry1"
         ],
         "reset_banks": [
           "packages/v48/task10724/native_first_place_current_grasp_v1",
@@ -1870,13 +1957,25 @@
           "packages/v48/task10724/native_third_grasp_from_pair_endpoints_v1",
           "packages/v48/task10724/native_third_grasp_from_pair_endpoints_v2",
           "packages/v48/task10724/reset_states_stage_quotas_v2",
-          "packages/v48/task10724/reset_states_v1"
+          "packages/v48/task10724/reset_states_v1",
+          "central/store/arx/task10724_staged_reward_20261018_162900/phase0b_multiseed_real_replay_offline_SAC_v89/offline_update8192/state_sampler.pt",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_grasp_BC1500_v45/bc_step1500/state_sampler.pt",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_place_BC1500_v45/bc_step1500/state_sampler.pt",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_home_BC1500_v45/bc_step1500/state_sampler.pt"
         ],
-        "experts": []
+        "experts": [
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_pair_grasp_BC1500_v45/bc_step500",
+          "central/store/arx/task10724_staged_reward_20261018_162900/phase0b_multiseed_real_replay_offline_SAC_v89/offline_update8192",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_grasp_BC1500_v45/bc_step1500",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_place_BC1500_v45/bc_step1500",
+          "central/store/arx/task10724_staged_reward_20261018_162900/whole_teacher_success_home_BC1500_v45/bc_step1500"
+        ]
       },
       "by_task": "by-task/10724",
-      "expert_status": "Pair-placement checkpoint is access-restricted at the source.",
-      "scores": [],
+      "expert_status": "All five frozen actors from the retained v107 chain are on axis, including the v89 pair-placement SAC policy.",
+      "scores": [
+        32
+      ],
       "archived_scores": [],
       "aliases": []
     },
@@ -2727,6 +2826,42 @@
       ]
     },
     {
+      "task": "i2rt_watch_place",
+      "policy": "i2rt_watch_place",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 15,
+      "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings.",
+      "checkpoint_sha256": {
+        "actor.pt": "65088d07aed797a795ea25992ade091142fed7381b89d0256a148a294b190969"
+      },
+      "receipt_sha256": "1708392c6add48da679957a3079b6be4899f25b417652d5e1f8f60ac4a694c15",
+      "server_receipt": "evaluations/pinned/i2rt_watch_place/result.json",
+      "seed": 42,
+      "controls": 480,
+      "timeouts": 1,
+      "failures": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
       "task": "panda_grasp1000",
       "policy": "panda_grasp1000",
       "scope": "registered task",
@@ -2757,7 +2892,7 @@
       "revision": "e465d482",
       "attempts": 4,
       "successes": 4,
-      "protocol": "Four sampled native Panda course states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
       "checkpoint_sha256": {
         "actor.pt": "2c4ccc8451e48eccb00fec30071a4c2da1d10a911cc9af9f82219c0b9444704a"
       },
@@ -2770,6 +2905,29 @@
         true,
         true,
         true,
+        true
+      ]
+    },
+    {
+      "task": "panda_wood_place_base",
+      "policy": "panda_wood_place_base",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 3,
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "checkpoint_sha256": {
+        "actor.pt": "bee209c3e63908b53d43da89b5ff65446c74b8ed4e45eb30ddbe3bd53072ae32"
+      },
+      "receipt_sha256": "3c55541aa6b85f06adbdf747829b8399b54c4a10b518ccd8b8db71795e07560a",
+      "server_receipt": "evaluations/pinned/panda_wood_place_base/result.json",
+      "seed": 42,
+      "controls": 230,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        false,
         true
       ]
     },
@@ -3428,6 +3586,64 @@
       "controls": 674
     },
     {
+      "task": "10724",
+      "policy": "Five-stage ARX v107 chain",
+      "scope": "native delivery",
+      "revision": "retained v107 evaluation snapshot",
+      "attempts": 15,
+      "successes": 6,
+      "protocol": "Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode.",
+      "checkpoint_sha256": {
+        "pair_grasp.pt": "39a7e8cece064b62dca79e1483220df0a29f7ca57bfb980d35c119db15964c3e",
+        "pair_place.pt": "069632f79658cdad1bb6877486b0301d4ef2b30719ce7e759f2c149833e3e2ec",
+        "grasp.pt": "5dc280f518b5fc2140000b8415134292f27ea553b9f1817559f073f766147573",
+        "place.pt": "f7cf21c39c1cae2fd1a43a5ae6e792d7b4157a3c2f22e69a9a0006eb1c9c3d69",
+        "home.pt": "cb586d46d8f4bd2616f700bdacdc65915fee37e7ee41eb2cf55dde6b833faa37"
+      },
+      "receipt_sha256": "3f4936052b1143c7942998bc996ba12f9a628cc52d8bc900276f53f4cbb64e15",
+      "server_receipt": "evaluations/arx10724-v107/result.json",
+      "episode_success": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "source_receipts": {
+        "evaluations/arx10724-v107/dev-seed0/ledger.json": "087bf225bd36c546cb63cc1af9c21f10c39d1cdfbe358376c7a04ffdda5f73b5",
+        "evaluations/arx10724-v107/dev-seed1/ledger.json": "a5249059bc84f6d5a112207051bc5ec72f583c7c6531d8a42dc64509a46f159b",
+        "evaluations/arx10724-v107/dev-seed2/ledger.json": "fc8dde4a19f55fb5072893066113a267f8759b08288c67a1088103434c0b4ff1"
+      }
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "Approved I2RT v20 four-call Press controller",
+      "scope": "native delivery",
+      "revision": "frozen v20 I2RT delivery",
+      "attempts": 12,
+      "successes": 12,
+      "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
+      "checkpoint_sha256": {
+        "actor.pt": "6654440688e2ff9a5ef1100ae9aacdc4d08c839384f493a63445748b5f0056cf",
+        "normalization.pt": "000f9189f04131001c241ef0a7d7ccbde227b5a77e4f292ce28ea21335c79321"
+      },
+      "receipt_sha256": "4b45305235ecac86b4214fb3470bdc0cf2a70bc0f7326e39fb09f16d9308b527",
+      "server_receipt": "evaluations/press-v20/result.json",
+      "source_receipts": {
+        "evaluations/press-v20/cohort.json": "d07216f95f78dad90eb2bc23e7e0400ff4c1a6bc4d80e3325c71dd7a802c08d7"
+      }
+    },
+    {
       "task": "i2rt_example",
       "policy": "i2rt_example_default · 0095a6ff",
       "scope": "historical",
@@ -3778,6 +3994,7 @@
       "server_receipt": "store/a100/artifacts/state_rl_policy_replays/2026-11-01/track10_milestones/selection.json"
     }
   ],
+  "receipt_root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1/central",
   "smoke_tests": {
     "implementations": 39,
     "server_directory": "receipts/task-smokes",
@@ -3994,5 +4211,216 @@
       "server_receipt": "store/jf-source/my_manipgen/runs/place_pick_aligned_flashsac_20261105/bbq_expanded_20261106/valid_handoff_result.json"
     }
   ],
-  "source_fr3v2_full_episodes": []
+  "source_fr3v2_full_episodes": [
+    {
+      "object_id": 6671,
+      "policy": "student",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 3,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 3,
+      "place_successes": 3,
+      "seed": 2311006713,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/students-6671/eval_000.json",
+      "receipt_sha256": "22c4497ef887e18efaa406d236562b9eb75f5518bc51853e7843b0cf89835d6e"
+    },
+    {
+      "object_id": 6672,
+      "policy": "student",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 3,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 3,
+      "place_successes": 3,
+      "seed": 2311006714,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/students-6672/eval_000.json",
+      "receipt_sha256": "3ef90cc015805984e52e287b05f25af61b78fbd217365e624c1a62f5e3d18bee"
+    },
+    {
+      "object_id": 6673,
+      "policy": "student",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 2,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 2,
+      "place_successes": 2,
+      "seed": 2311006715,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/students-6673/eval_000.json",
+      "receipt_sha256": "7b68702a530a92ec537f24be2784dad663c1de22e40fbfea2e3c81c2e46ec0ec"
+    },
+    {
+      "object_id": 6674,
+      "policy": "student",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 1,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 1,
+      "place_successes": 1,
+      "seed": 2311006716,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/students-6674/eval_000.json",
+      "receipt_sha256": "9e6238cc78767d9ad7cae674ff99ec678244aa2a2494302ae86e13fb2b86ab14"
+    },
+    {
+      "object_id": 6675,
+      "policy": "student",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 2,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 2,
+      "place_successes": 2,
+      "seed": 2311006717,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/students-6675/eval_000.json",
+      "receipt_sha256": "09d2ca56d7b30d2736a737e63e42a285950f423e914e617eb979210f653ad8bd"
+    },
+    {
+      "object_id": 6671,
+      "policy": "teacher",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 2,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 2,
+      "place_successes": 2,
+      "seed": 2311006713,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/teachers-6671/eval_000.json",
+      "receipt_sha256": "e7b38164d6b3b5cd8261d8d5c4d7c7203c26a86c1ec50515f3ee39be1f78168b"
+    },
+    {
+      "object_id": 6672,
+      "policy": "teacher",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 3,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 4,
+      "place_successes": 3,
+      "seed": 2311006714,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/teachers-6672/eval_000.json",
+      "receipt_sha256": "24ca62eac9c596560a01d898b800439b761cbbd8ae6a4a00d40e489cb891fa6d"
+    },
+    {
+      "object_id": 6673,
+      "policy": "teacher",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 3,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 3,
+      "place_successes": 3,
+      "seed": 2311006715,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/teachers-6673/eval_000.json",
+      "receipt_sha256": "52b6e6952be35f03eb2271f805a2d2a360a76b675523818a177947181180f9dd"
+    },
+    {
+      "object_id": 6674,
+      "policy": "teacher",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 0,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 0,
+      "place_successes": 0,
+      "seed": 2311006716,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/teachers-6674/eval_000.json",
+      "receipt_sha256": "733e882587ae60b2b258d030fc2282609504ccb3c6801624b5e6814d7ea8a521"
+    },
+    {
+      "object_id": 6674,
+      "policy": "teacher",
+      "host": "axis2",
+      "attempts": 8,
+      "successes": 4,
+      "pick_attempts": 8,
+      "picked": 8,
+      "place_attempts": 4,
+      "place_successes": 4,
+      "seed": 2311007716,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/teachers-6674-extra/eval_000.json",
+      "receipt_sha256": "3329799c71264e0d18affd5f60788355233d43cad3eddaf0f1bd9ec8ed74e6ae"
+    },
+    {
+      "object_id": 6675,
+      "policy": "teacher",
+      "host": "axis2",
+      "attempts": 4,
+      "successes": 3,
+      "pick_attempts": 4,
+      "picked": 4,
+      "place_attempts": 3,
+      "place_successes": 3,
+      "seed": 2311006717,
+      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
+      "server_receipt": "evaluations/jf-episode-receipts/teachers-6675/eval_000.json",
+      "receipt_sha256": "32a6791addc8631bf389979b2d474ebabdc6ae5e08aad05d42892f420bcda78f"
+    }
+  ],
+  "arx10717_availability_receipt": "receipts/arx10717-source-search.json",
+  "additional_source_benchmarks": {
+    "10724": [
+      {
+        "policy": "Retained ARX five-stage chain",
+        "attempts": 15,
+        "successes": 7,
+        "protocol": "Development layouts, policy seed 773. The independent policy-noise seed 1543 also scored 7/15 on the same layouts."
+      },
+      {
+        "policy": "Retained ARX five-stage chain",
+        "attempts": 117,
+        "successes": 77,
+        "protocol": "Full training partition, policy seed 773."
+      }
+    ],
+    "10717": [
+      {
+        "policy": "October ARX native policy",
+        "attempts": 150,
+        "successes": 144,
+        "protocol": "Archived original ARX official cases. Actor unavailable for a fresh rollout."
+      }
+    ],
+    "i2rt_task10717": [
+      {
+        "policy": "Approved I2RT Press v20 controller",
+        "attempts": 150,
+        "successes": 149,
+        "protocol": "Original digit requests; fixed I2RT layout and fresh default robot start."
+      },
+      {
+        "policy": "Approved I2RT Press v20 controller",
+        "attempts": 150,
+        "successes": 148,
+        "protocol": "Repeated fixed digits [1,2] on the same layout."
+      },
+      {
+        "policy": "Atomic Press actor",
+        "attempts": 1800,
+        "successes": 1789,
+        "protocol": "Held-out single-skill test at the source."
+      }
+    ]
+  }
 }

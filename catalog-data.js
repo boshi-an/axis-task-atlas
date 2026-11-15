@@ -134,7 +134,9 @@ window.AXIS_ATLAS = {
         "source": "Seeded RTX render on axis, seed 42, environment 0, JF 6671",
         "caption": "Shared I2RT desk at reset, object 6671. The inset shows the butter at its measured pose."
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "sourceExpertLabel": "FR3v2 policies",
+      "sourceExpertNote": "Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable."
     },
     {
       "robot": "Dual I2RT",
@@ -179,7 +181,9 @@ window.AXIS_ATLAS = {
         "source": "Seeded RTX render on axis, seed 42, environment 0, JF 6703",
         "caption": "Shared I2RT desk at reset, object 6703. The inset shows the marker at its measured pose."
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "sourceExpertLabel": "FR3v2 policies",
+      "sourceExpertNote": "Five FR3v2 teachers and one visual student passed inference checks and ran in their original simulator. A registered I2RT policy adapter is unavailable."
     },
     {
       "id": "5033",
@@ -297,7 +301,8 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/task10717-scene.jpg"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "sourceExpertNote": "The documented October ARX delivery is missing. A privileged source search found no checkpoint matching the published SHA-256. The archived original score was 144/150."
     },
     {
       "id": "i2rt_wood_stack_second",
@@ -393,7 +398,9 @@ window.AXIS_ATLAS = {
         "kind": "Source-layout rendering",
         "source": "RoboDojo-Benchmark/RoboDojo@35efbc7dedfdbeeb6e95fb749bd885d73d483e41; Assets/Eval_Layout/RoboDojo/arx_x5/0/stack_blocks_0.json"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "sourceExpertLabel": "Frozen controller",
+      "sourceExpertNote": "Five-stage ARX v107 chain scored 40% (6/15). Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode."
     },
     {
       "id": "panda_grasp1000",
@@ -594,7 +601,9 @@ window.AXIS_ATLAS = {
         "kind": "Viser snapshot",
         "source": "environment-snapshots/handover_butter-scene.jpg"
       },
-      "taskRevision": "e465d482"
+      "taskRevision": "e465d482",
+      "sourceExpertLabel": "Frozen controller",
+      "sourceExpertNote": "Native MA-v2 chain scored 95% (285/300). Three frozen MA-v2 stages on the author’s 300 train/validation starting points."
     },
     {
       "id": "panda_wood_stack_second",
@@ -756,7 +765,7 @@ window.AXIS_ATLAS = {
           "actionDim": 6,
           "successes": 4,
           "attempts": 4,
-          "protocol": "Four sampled native Panda course states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts."
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts."
         }
       },
       "refs": {
@@ -866,7 +875,21 @@ window.AXIS_ATLAS = {
           "path": "doc/pipeline/active/state_rl/atomic_skills/wood_blocks.md"
         }
       ],
-      "expert": null,
+      "expert": {
+        "runnable": true,
+        "availability": "Evaluated on axis",
+        "name": "panda_wood_place_base frozen policy",
+        "sources": [],
+        "evaluation": {
+          "taskId": "panda_wood_place_base",
+          "revision": "e465d482",
+          "obsDim": 122,
+          "actionDim": 6,
+          "successes": 3,
+          "attempts": 4,
+          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding. See the full task library for checkpoints and evaluation receipts."
+        }
+      },
       "refs": {
         "count": 64,
         "summary": "Source teacher episodes",
@@ -896,7 +919,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "e465d482"
     },
     {
       "id": "i2rt_wood_place_base",
@@ -1184,7 +1207,9 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "sourceExpertLabel": "Frozen controller",
+      "sourceExpertNote": "Approved I2RT v20 four-call Press controller scored 100% (12/12). Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds."
     },
     {
       "id": "inserting",
@@ -1283,7 +1308,7 @@ window.AXIS_ATLAS = {
       "description": "Either arm starts holding one of five objects. Carry it to a requested point in the tray and release it. The default target is the center of the tray floor.",
       "actionDim": 14,
       "action": "14 normalized values, seven per arm. The policy supplies six world-frame TCP increments for the executing arm, up to 0.01 m of translation and 0.04 rad of rotation per axis. The passive arm holds its reset pose. The release controller opens the gripper when the footprint, height and clearance checks pass.",
-      "obsDim": 256,
+      "obsDim": 247,
       "obs": "189 task values cover both arms and their drive targets, six rigid bodies, TCP poses, the selected object and arm, geometry, contacts and release history. Another 58 values describe the measured state of both arms. The final nine values give the target XYZ in scene axes, the TCP-to-target vector in TCP axes, and the target offset from the center and bottom of the object’s footprint in scene axes.",
       "clock": "15 Hz control · 150 Hz physics · 10 substeps",
       "aliases": [],
@@ -1300,7 +1325,7 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "name": "The bundled containment policy handles center targets. For off-center targets, supply a goal-conditioned checkpoint that reads all 256 values. A success rate for the goal-conditioned task has yet to be reported.",
+        "name": "Goal-conditioned Place policy",
         "trainer": "Chenan’s I2RT Place team.",
         "recipe": "The bundled center policy used behavior cloning on successful episodes, followed by FlashSAC training with a frozen PointNet on intermediate states and held starts.",
         "sources": [
@@ -1310,7 +1335,7 @@ window.AXIS_ATLAS = {
           }
         ],
         "nativeBenchmark": "i2rt_multi_place_cascade",
-        "availability": "Center policy bundled",
+        "availability": "Evaluated on axis",
         "previousEvaluation": {
           "taskId": "i2rt_watch_place",
           "revision": "1de0b6147b8e830d4b647d9f946e4d76b59484c2",
@@ -1319,6 +1344,15 @@ window.AXIS_ATLAS = {
           "successes": 9,
           "attempts": 10,
           "protocol": "Ten held-out TEST starts selected with seed 42, one per object and arm. All ten passed shared-physics reset qualification. Deterministic episodes ran to termination or the 32 s limit. The right-arm candy episode ended on a physical validity check."
+        },
+        "evaluation": {
+          "taskId": "i2rt_watch_place",
+          "revision": "e465d482",
+          "obsDim": 247,
+          "actionDim": 14,
+          "successes": 15,
+          "attempts": 16,
+          "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings. See the full task library for checkpoints and evaluation receipts."
         }
       },
       "refs": {
@@ -1335,7 +1369,7 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "RTX render from the measured shared Isaac scene on axis, R2 seed 42, slot 0."
       },
-      "taskRevision": "d9ebd2af7426446d997608a75139cb13122d0f54"
+      "taskRevision": "e465d482"
     },
     {
       "id": "pick10",
@@ -2332,7 +2366,9 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087"
+      "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+      "sourceExpertLabel": "Archived policy",
+      "sourceExpertNote": "Historical fixed-layout checkpoints"
     },
     {
       "id": "i2rt_pick5000",

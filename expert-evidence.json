@@ -1194,6 +1194,42 @@
       ]
     },
     {
+      "task": "i2rt_watch_place",
+      "policy": "i2rt_watch_place",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 16,
+      "successes": 15,
+      "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings.",
+      "checkpoint_sha256": {
+        "actor.pt": "65088d07aed797a795ea25992ade091142fed7381b89d0256a148a294b190969"
+      },
+      "receipt_sha256": "1708392c6add48da679957a3079b6be4899f25b417652d5e1f8f60ac4a694c15",
+      "server_receipt": "evaluations/pinned/i2rt_watch_place/result.json",
+      "seed": 42,
+      "controls": 480,
+      "timeouts": 1,
+      "failures": 0,
+      "success_by_env": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
       "task": "panda_grasp1000",
       "policy": "panda_grasp1000",
       "scope": "registered task",
@@ -1224,7 +1260,7 @@
       "revision": "e465d482",
       "attempts": 4,
       "successes": 4,
-      "protocol": "Four sampled native Panda course states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
       "checkpoint_sha256": {
         "actor.pt": "2c4ccc8451e48eccb00fec30071a4c2da1d10a911cc9af9f82219c0b9444704a"
       },
@@ -1237,6 +1273,29 @@
         true,
         true,
         true,
+        true
+      ]
+    },
+    {
+      "task": "panda_wood_place_base",
+      "policy": "panda_wood_place_base",
+      "scope": "registered task",
+      "revision": "e465d482",
+      "attempts": 4,
+      "successes": 3,
+      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
+      "checkpoint_sha256": {
+        "actor.pt": "bee209c3e63908b53d43da89b5ff65446c74b8ed4e45eb30ddbe3bd53072ae32"
+      },
+      "receipt_sha256": "3c55541aa6b85f06adbdf747829b8399b54c4a10b518ccd8b8db71795e07560a",
+      "server_receipt": "evaluations/pinned/panda_wood_place_base/result.json",
+      "seed": 42,
+      "controls": 230,
+      "timeouts": 0,
+      "success_by_env": [
+        true,
+        true,
+        false,
         true
       ]
     },
@@ -1893,6 +1952,64 @@
       "receipt_sha256": "b509b7ed7f9e0d8ca27e147c071898b824190165998869ad311c45af2baf8a0e",
       "server_receipt": "evaluations/pinned/handover_butter/evaluation/result.json",
       "controls": 674
+    },
+    {
+      "task": "10724",
+      "policy": "Five-stage ARX v107 chain",
+      "scope": "native delivery",
+      "revision": "retained v107 evaluation snapshot",
+      "attempts": 15,
+      "successes": 6,
+      "protocol": "Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode.",
+      "checkpoint_sha256": {
+        "pair_grasp.pt": "39a7e8cece064b62dca79e1483220df0a29f7ca57bfb980d35c119db15964c3e",
+        "pair_place.pt": "069632f79658cdad1bb6877486b0301d4ef2b30719ce7e759f2c149833e3e2ec",
+        "grasp.pt": "5dc280f518b5fc2140000b8415134292f27ea553b9f1817559f073f766147573",
+        "place.pt": "f7cf21c39c1cae2fd1a43a5ae6e792d7b4157a3c2f22e69a9a0006eb1c9c3d69",
+        "home.pt": "cb586d46d8f4bd2616f700bdacdc65915fee37e7ee41eb2cf55dde6b833faa37"
+      },
+      "receipt_sha256": "3f4936052b1143c7942998bc996ba12f9a628cc52d8bc900276f53f4cbb64e15",
+      "server_receipt": "evaluations/arx10724-v107/result.json",
+      "episode_success": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "source_receipts": {
+        "evaluations/arx10724-v107/dev-seed0/ledger.json": "087bf225bd36c546cb63cc1af9c21f10c39d1cdfbe358376c7a04ffdda5f73b5",
+        "evaluations/arx10724-v107/dev-seed1/ledger.json": "a5249059bc84f6d5a112207051bc5ec72f583c7c6531d8a42dc64509a46f159b",
+        "evaluations/arx10724-v107/dev-seed2/ledger.json": "fc8dde4a19f55fb5072893066113a267f8759b08288c67a1088103434c0b4ff1"
+      }
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "Approved I2RT v20 four-call Press controller",
+      "scope": "native delivery",
+      "revision": "frozen v20 I2RT delivery",
+      "attempts": 12,
+      "successes": 12,
+      "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
+      "checkpoint_sha256": {
+        "actor.pt": "6654440688e2ff9a5ef1100ae9aacdc4d08c839384f493a63445748b5f0056cf",
+        "normalization.pt": "000f9189f04131001c241ef0a7d7ccbde227b5a77e4f292ce28ea21335c79321"
+      },
+      "receipt_sha256": "4b45305235ecac86b4214fb3470bdc0cf2a70bc0f7326e39fb09f16d9308b527",
+      "server_receipt": "evaluations/press-v20/result.json",
+      "source_receipts": {
+        "evaluations/press-v20/cohort.json": "d07216f95f78dad90eb2bc23e7e0400ff4c1a6bc4d80e3325c71dd7a802c08d7"
+      }
     },
     {
       "task": "i2rt_example",

@@ -2530,10 +2530,10 @@ window.AXIS_ATLAS = {
         "sources": []
       },
       "render": {
-        "file": "images/rendering/i2rt-pick5000.jpg",
+        "file": "images/rendering/i2rt-pick5000.jpg?v=0468c243d7",
         "kind": "scene",
-        "alt": "I2RT left-arm Pick5000 rollout on axis",
-        "caption": "A frame from the fixed-I1 expert rollout. The Rendering page includes the full episode."
+        "alt": "Left arm lifting an object on the shared dual-arm I2RT tabletop robot",
+        "caption": "The frozen Pick5000 expert lifts the object with the left arm of the shared ABC Box V4 robot."
       },
       "taskRevision": "f97139a7",
       "embodimentId": "i2rt_yam",

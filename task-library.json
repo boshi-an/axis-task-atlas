@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-16",
+  "as_of": "2026-11-19",
   "host": "axis",
   "root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1",
   "source_revision": "f97139a7c2336afb3ac803beb3bc81550e090469",
@@ -586,9 +586,9 @@
       "by_task": "by-task/i2rt_example",
       "expert_status": "Historical fixed-layout checkpoints",
       "scores": [
+        33,
         34,
-        35,
-        36
+        35
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -744,76 +744,66 @@
           "packages/tabletop-variants/i2rt_task10717_3_1/provider.json",
           "packages/tabletop-variants/i2rt_task10717_3_2/provider.json",
           "packages/robot-interface",
-          "packages/yam-geometry-20261106",
-          "central/store/arx/task10717_i2rt_press_20261114_v1/assets/buttons"
+          "packages/yam-geometry-20261106"
         ],
         "trajectories": [
-          "central/store/arx/task10717_i2rt_press_20261114_v1/evaluation",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_000/teacher_execution.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_001/teacher_execution.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_002/teacher_execution.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_003/teacher_execution.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_004/teacher_execution.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_005/teacher_execution.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_006/teacher_execution.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/replenishment_00/wave_000/teacher_execution.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/replenishment_01/wave_000/teacher_execution.npz"
+          "central/store/arx/i2rt_press_30hz_20261116_v1/native_FINAL_seed0_v22/recording",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bc_records.jsonl"
         ],
         "reset_banks": [
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00000.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00001.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00002.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00003.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00004.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00005.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00006.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00007.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00008.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00009.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00010.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00011.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00012.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00013.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00014.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00015.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00016.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00017.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00018.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00019.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00020.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/bank_00021.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_000.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_000/evaluation_initials.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_001.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_001/evaluation_initials.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_002.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_002/evaluation_initials.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_003.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_003/evaluation_initials.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_004.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_004/evaluation_initials.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_005.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_005/evaluation_initials.npz",
-          "central/store/arx/i2rt_press_20261114_v1/native_data_v3/evaluation_006.npz",
-          "central/store/arx/i2rt_press_20261114_v1/formal_data_v2/wave_006/evaluation_initials.npz"
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00000.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00001.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00002.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00003.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00004.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00005.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00006.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00007.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00008.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00009.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00010.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00011.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00012.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00013.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00014.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00015.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00016.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/bank_00017.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/evaluation_000.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/evaluation_001.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/evaluation_002.npz",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/data/formal_v04/fresh_TEST/TEST_1800.npz"
         ],
         "experts": [
-          "central/store/axis/runs/shared_i2rt_video_20261103/campaign/i2rt_task10717_1_1/attempt_00/latest",
-          "central/store/arx/task10717_i2rt_press_20261114_v1/approved_bundle_v1",
-          "central/store/arx/task10717_i2rt_press_20261114_v1/execution_source_v20"
+          "by-task/i2rt_task10717/experts/current",
+          "central/store/arx/i2rt_press_30hz_20261116_v1/execution_source_v22_final"
         ]
       },
       "by_task": "by-task/i2rt_task10717",
-      "expert_status": "Approved I2RT Press actor, normalization, four-call controller, native button assets and replay evidence, plus a historical fixed-layout checkpoint.",
+      "expert_status": "Certified 30 Hz actor, normalization and inter-call home controller on axis. Native full-task results and atomic-skill results are provided with their evaluated conditions.",
       "scores": [
-        33,
-        45
+        44
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
       "original_task": "10717",
-      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_task10717/physics.json"
+      "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_task10717/physics.json",
+      "expert_delivery": "by-task/i2rt_task10717/experts/current",
+      "expert_input": "127 policy features (69 skill features and 58 measured robot features), assembled from the native task. Seven active-arm commands are expanded into the 14-dimensional task action.",
+      "atomic_skill": {
+        "successes": 1770,
+        "attempts": 1800,
+        "buckets": 36,
+        "cases_per_bucket": 50,
+        "minimum_bucket_successes": 43,
+        "minimum_bucket_attempts": 50,
+        "policy_observation_dim": 127,
+        "policy_action_dim": 7,
+        "scope": "Four supported arm/button pairs on three fixed buttons, one to nine presses per call.",
+        "server_receipt": "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/atomic_TEST_result.json",
+        "receipt_sha256": "462ffb94c060b8d48fda8dfb6372c974294b5549f18afb66f1deea1f59f1b22b"
+      }
     },
     {
       "id": "i2rt_pick10",
@@ -1012,14 +1002,14 @@
       "expert_status": "Frozen weights on axis",
       "scores": [
         20,
+        36,
         37,
         38,
         39,
         40,
         41,
         42,
-        43,
-        44
+        43
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -3976,30 +3966,6 @@
       }
     },
     {
-      "task": "i2rt_task10717",
-      "policy": "Approved I2RT v20 four-call Press controller",
-      "scope": "native delivery",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "actor.pt": "6654440688e2ff9a5ef1100ae9aacdc4d08c839384f493a63445748b5f0056cf",
-        "normalization.pt": "000f9189f04131001c241ef0a7d7ccbde227b5a77e4f292ce28ea21335c79321"
-      },
-      "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
-      "failures": {
-        "official_timeout_missing_presses": 8
-      },
-      "successes": 4,
-      "attempts": 12,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/press-v20/cohort.json",
-      "receipt_sha256": "2cf288cf61747604055105f8c4cecee42d55ddbc1e194a4f663fec880074cf7a",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
       "task": "i2rt_example",
       "policy": "i2rt_example_default · 0095a6ff",
       "scope": "historical",
@@ -4331,33 +4297,58 @@
     },
     {
       "task": "i2rt_task10717",
-      "policy": "i2rt_task10717_1_1 · 63bab1cf",
-      "scope": "historical",
+      "policy": "Certified 30 Hz Press actor with inter-call home",
+      "scope": "full native task",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "actor.pt": "63bab1cf299bd9718e4453349a6fce6a0b71e598c3f856d3c94a5896fe1a3cf3"
-      },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_task10717_1_1. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 900,
-      "timeouts": 4,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false
-      ],
-      "config_identity_matches": true,
-      "successes": 0,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_task10717-63bab1cf299b/result.json",
-      "receipt_sha256": "4c2679da389b716562cf4c62244aa6d8d93ac1f9dc86d54f69470895b3866d57",
+      "successes": 300,
+      "attempts": 300,
+      "revision": "43db29dcbfdd9bf41fe39f8877143f15ed884c22",
+      "protocol": "Three source batches on axis2, seeds 0, 1 and 2, with 100 episodes each. Default fixed button layout and digits 1 and 2. Four calls to the frozen actor, with public-action home movements between skills. One reset per episode and a 28-second, 840-action budget. Scored by I2RTTask10717.step info[success]. This measures repeated execution on the default scene. A seed-0 reproduction on axis completed 100/100 episodes.",
+      "evaluation_host": "axis2",
+      "evaluation_date": "2026-11-16",
       "physics": "shared_i2rt_tabletop",
       "control_hz": 30,
       "substeps": 5,
-      "physics_hz": 150
+      "physics_hz": 150,
+      "checkpoint_sha256": {
+        "actor.pt": "4b222ac5a034e3e02494857978d212f5d416c5611d93c779738a5eb7f75e719c",
+        "normalization.pt": "000f9189f04131001c241ef0a7d7ccbde227b5a77e4f292ce28ea21335c79321",
+        "coordinator.json": "6f5b776a9625e325c89075c8858b5f5bf4a6184c9535c4d93d9d5d72d2216074"
+      },
+      "receipt_sha256": "386136b44620e2b122f407f61289010f72500bd9eea2441fe6308c45dd31b047",
+      "server_receipt": "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation_summary.json",
+      "source_receipts": {
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed0_protocol.json": "e123e7b884061fdb19291f0596576e193ae40cce8294c3c25da057bfe32366a8",
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed0_receipt.json": "c77f64e0eb707ba302821d0f4bd780e561fac493476b16470ad7056bea87da89",
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed0_result.json": "38c83efc3ef17157b9535098b6ca5eee3976594929a846808e65705828e42e90",
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed1_protocol.json": "8a646fd6267d9f02a4d217180d2dcc96ab90ff50ee0c9648535d56412e773cc7",
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed1_receipt.json": "178e1e36a9545f236eb4e06f15d585cc65ed8137b232ce9fe1f1d934ac7b9b96",
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed1_result.json": "38c83efc3ef17157b9535098b6ca5eee3976594929a846808e65705828e42e90",
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed2_protocol.json": "7ed493a96db5bc60c725ad88161149489dffc3a068ca64a3cccc55471901fedb",
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed2_receipt.json": "4a90c1f4bbe33c09e2af838d0101574d64962f5a25680f9bd948a55eb108513f",
+        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed2_result.json": "38c83efc3ef17157b9535098b6ca5eee3976594929a846808e65705828e42e90"
+      },
+      "axis_reproduction": {
+        "successes": 100,
+        "attempts": 100,
+        "seed": 0,
+        "server_receipt": "evaluations/task10717-30hz-20261119/native-seed0/receipt.json",
+        "receipt_sha256": "860bb65b087da38655cfa837a49e7de87a9e76d5cffd05ba09d064411b75b6a4"
+      },
+      "atomic_skill": {
+        "successes": 1770,
+        "attempts": 1800,
+        "buckets": 36,
+        "cases_per_bucket": 50,
+        "minimum_bucket_successes": 43,
+        "minimum_bucket_attempts": 50,
+        "policy_observation_dim": 127,
+        "policy_action_dim": 7,
+        "scope": "Four supported arm/button pairs on three fixed buttons, one to nine presses per call.",
+        "server_receipt": "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/atomic_TEST_result.json",
+        "receipt_sha256": "462ffb94c060b8d48fda8dfb6372c974294b5549f18afb66f1deea1f59f1b22b"
+      }
     }
   ],
   "receipt_root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1/central",

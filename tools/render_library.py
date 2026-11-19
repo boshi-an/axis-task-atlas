@@ -193,6 +193,7 @@ for i, g in enumerate(groups):
             ("Objects", r.get("variants")),
             ("Runtime", r.get("entrypoint")),
             ("Expert availability", r["expert_status"]),
+            ("Expert input", r.get("expert_input")),
         ]
         if winner_label:
             vals.append(("Highest-scoring policy", winner_label))
@@ -224,7 +225,7 @@ for i, g in enumerate(groups):
             f"<dt>Server directory</dt><dd><code>{h(r['by_task'])}/</code></dd></dl>"
         )
         if ranked:
-            location = "axis2" if fresh else "axis"
+            location = "axis2" if fresh else ", ".join(sorted({e.get("evaluation_host", "axis") for e in ranked}))
             parts.append(
                 f"<table><caption>Frozen-policy evaluations on {location}</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>"
             )
@@ -234,6 +235,14 @@ for i, g in enumerate(groups):
                     f"<tr><td>{h(e['policy'])}</td><td>{fmt(e)}</td><td>{h(e['protocol'])}{code}</td></tr>"
                 )
             parts.append("</tbody></table>")
+        atomic = r.get("atomic_skill")
+        if atomic:
+            parts.append(
+                f"<p><strong>Atomic Press skill TEST</strong> · {fmt(atomic)}. "
+                f"{atomic['buckets']} conditions with {atomic['cases_per_bucket']} cases each. "
+                f"Minimum condition success {atomic['minimum_bucket_successes']}/{atomic['minimum_bucket_attempts']}. "
+                f"{h(atomic['scope'])}</p>"
+            )
         if fresh:
             parts.append(native_table(r, fresh))
         parts.append("<dl>")

@@ -1252,7 +1252,7 @@ window.AXIS_ATLAS = {
       "obs": "Robot and button joint states, drive targets, TCP and button geometry, requested digits, press counts, phase and action history. Both physical arms add 58 measured values in this order: 16 joint positions, 16 joint velocities, 6 TCP positions, 6 TCP linear velocities, 8 TCP orientations (WXYZ), and 6 TCP angular velocities. Each field is left then right. Positions are environment-local, and twists use world axes.",
       "clock": "30 Hz control · 150 Hz physics · 5 substeps",
       "aliases": [],
-      "schemaNote": "",
+      "schemaNote": "127 policy features (69 skill features and 58 measured robot features), assembled from the native task. Seven active-arm commands are expanded into the 14-dimensional task action.",
       "sources": [
         {
           "label": "Environment implementation",
@@ -1266,31 +1266,27 @@ window.AXIS_ATLAS = {
       "expert": {
         "runnable": true,
         "sources": [],
-        "name": "Approved I2RT v20 four-call Press controller",
-        "availability": "Evaluated on axis",
+        "name": "Certified 30 Hz Press actor with inter-call home",
+        "availability": "Certified on axis2 and reproduced on axis",
         "evaluation": {
           "taskId": "i2rt_task10717",
-          "revision": "f97139a7",
+          "revision": "43db29dcbfdd9bf41fe39f8877143f15ed884c22",
           "obsDim": 172,
           "actionDim": 14,
-          "successes": 4,
-          "attempts": 12,
-          "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
+          "successes": 300,
+          "attempts": 300,
+          "protocol": "Three source batches on axis2, seeds 0, 1 and 2, with 100 episodes each. Default fixed button layout and digits 1 and 2. Four calls to the frozen actor, with public-action home movements between skills. One reset per episode and a 28-second, 840-action budget. Scored by I2RTTask10717.step info[success]. This measures repeated execution on the default scene. A seed-0 reproduction on axis completed 100/100 episodes.",
           "trainingEmbodiment": "i2rt_yam",
           "evaluationEmbodiment": "i2rt_yam"
-        }
+        },
+        "recipe": "Frozen actor with a 30 Hz skill adapter and public-action home movements between four Press calls."
       },
       "refs": {
-        "count": 0,
-        "summary": "No reference recordings bundled",
-        "length": "No recorded episodes.",
-        "notes": "Buttons uses fresh starts. The digit combination and button poses describe the scene, and the reference-reset registry provides no recorded button trajectory.",
-        "sources": [
-          {
-            "label": "Reference reset and adaptation record",
-            "path": "doc/pipeline/active/state_rl/atomic_skills/shared_i2rt_reference_resets.md"
-          }
-        ]
+        "count": 4,
+        "summary": "Four recorded full-task episodes from the final seed-0 batch on axis2, with 2,002 measured PhysX frames.",
+        "length": "Full four-skill episodes including inter-call home movements.",
+        "notes": "The recording manifest reports two dropped frames. Qualified skill reset banks and BC trajectories are stored separately on axis.",
+        "sources": []
       },
       "render": {
         "file": "images/i2rt_task10717.webp",
@@ -1298,12 +1294,13 @@ window.AXIS_ATLAS = {
         "kind": "Simulator reset",
         "source": "Reset-only Isaac capture on axis, seed 42, env 0"
       },
-      "taskRevision": "f97139a7",
+      "taskRevision": "43db29dcbfdd9bf41fe39f8877143f15ed884c22",
       "embodimentId": "i2rt_yam",
       "start": "Home pose, released spring buttons, card-defined counts. Default digits are 1 and 2.",
       "successCondition": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
       "originalTask": "10717",
-      "libraryOnly": false
+      "libraryOnly": false,
+      "sourceExpertNote": "Atomic Press skill TEST achieved 98.33% (1,770/1,800), with 50 cases in each of 36 arm/button/count combinations and a minimum bucket of 43/50. Verified for the three fixed buttons and one to nine presses per call."
     },
     {
       "id": "inserting",
@@ -2771,14 +2768,6 @@ window.AXIS_ATLAS = {
       "attempts": 4,
       "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_bottle_16. The actor receives its training-time observation fields from the active scene.",
       "tiedPolicies": 8,
-      "embodimentId": "i2rt_yam"
-    },
-    "i2rt_task10717": {
-      "policy": "Approved I2RT v20 four-call Press controller",
-      "successes": 4,
-      "attempts": 12,
-      "protocol": "Four official digit requests from each of three source seeds, on the fixed I2RT button layout. The full task begins from the default robot pose, closes both grippers, executes all four skills and returns home. The original RoboDojo rules sample at 25 Hz over 28 seconds.",
-      "tiedPolicies": 1,
       "embodimentId": "i2rt_yam"
     },
     "pick10": {

@@ -188,19 +188,19 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
-        "name": "5033 frozen policy",
+        "availability": "Evaluated",
+        "name": "5033",
         "sources": [],
         "evaluation": {
           "taskId": "5033",
           "revision": "f97139a7",
           "obsDim": 105,
           "actionDim": 7,
-          "successes": 26,
-          "attempts": 28,
-          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
           "trainingEmbodiment": "franka_panda",
-          "evaluationEmbodiment": "franka_panda"
+          "evaluationEmbodiment": "franka_panda",
+          "successes": 121,
+          "attempts": 160,
+          "protocol": "Complete 40 initial states × 4 product cases"
         }
       },
       "refs": {
@@ -369,7 +369,23 @@ window.AXIS_ATLAS = {
           "path": "src/axis_omnireset/tasks/task10724/task.py"
         }
       ],
-      "expert": null,
+      "expert": {
+        "sources": [],
+        "name": "Five-stage ARX v107 chain",
+        "runnable": true,
+        "availability": "Evaluated",
+        "evaluation": {
+          "taskId": "10724",
+          "revision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
+          "obsDim": 151,
+          "actionDim": 14,
+          "trainingEmbodiment": "dual_arx_x5",
+          "evaluationEmbodiment": "dual_arx_x5",
+          "successes": 90,
+          "attempts": 150,
+          "protocol": "OFFICIAL panel across three seeds"
+        }
+      },
       "refs": {
         "count": 1202,
         "summary": "Verified production human demonstrations",
@@ -394,7 +410,6 @@ window.AXIS_ATLAS = {
       },
       "taskRevision": "9130fe15f5eafaec55d88d327678c9e6b0a67087",
       "sourceExpertLabel": "Frozen controller",
-      "sourceExpertNote": "Five-stage ARX v107 chain scored 40% (6/15). Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode.",
       "embodimentId": "dual_arx_x5",
       "start": "RoboDojo layout with three differently textured blocks.",
       "successCondition": "Stack all three in any order to the layout’s alignment criterion, then return both arms home."
@@ -425,20 +440,9 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "name": "Fixed-home Grasp1000",
+        "name": "panda_grasp1000",
         "recipe": "FlashSAC with 3-step returns, a 0.99 discount, BPS object features and 20 Hz SysID control. The frozen policy averages actor parameters and batch-normalization statistics from rounds 15 and 20.",
         "trainer": "Franka1000 delivery team (jupiter2143).",
-        "evaluation": {
-          "taskId": "panda_grasp1000",
-          "revision": "f97139a7",
-          "obsDim": 981,
-          "actionDim": 7,
-          "successes": 4,
-          "attempts": 4,
-          "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42.",
-          "trainingEmbodiment": "franka_panda",
-          "evaluationEmbodiment": "franka_panda"
-        },
         "sources": [
           {
             "label": "Evaluation receipts",
@@ -449,7 +453,18 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/grasp1000_evaluation.py"
           }
         ],
-        "availability": "Evaluated on axis"
+        "availability": "Evaluated",
+        "evaluation": {
+          "taskId": "panda_grasp1000",
+          "revision": "f97139a7",
+          "obsDim": 981,
+          "actionDim": 7,
+          "trainingEmbodiment": "franka_panda",
+          "evaluationEmbodiment": "franka_panda",
+          "successes": 997,
+          "attempts": 1000,
+          "protocol": "All 1000 delivered named object slots (982 distinct collision geometries), one fixed seeded continuous-home request per slot. Native 20 Hz SysID controller and original bilateral-grasp/lift checker, no actor update. Initial observations are saved before policy execution."
+        }
       },
       "refs": {
         "count": 0,
@@ -550,7 +565,7 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
+        "availability": "Evaluated",
         "name": "Native MA-v2 chain",
         "sources": [],
         "evaluation": {
@@ -558,11 +573,11 @@ window.AXIS_ATLAS = {
           "revision": "f97139a7",
           "obsDim": 209,
           "actionDim": 14,
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam",
           "successes": 244,
           "attempts": 300,
-          "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
+          "protocol": "All 300 native points, three-skill chain without an intermediate reset"
         }
       },
       "refs": {
@@ -634,18 +649,7 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "availability": "Evaluated on axis",
         "name": "panda_wood_stack_second frozen policy",
-        "sources": [],
-        "evaluation": {
-          "taskId": "panda_wood_stack_second",
-          "revision": "f97139a7",
-          "obsDim": 122,
-          "actionDim": 6,
-          "successes": 3,
-          "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
-          "trainingEmbodiment": "franka_fr3v2",
-          "evaluationEmbodiment": "franka_fr3v2"
-        }
+        "sources": []
       },
       "refs": {
         "count": 32,
@@ -713,19 +717,19 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
-        "name": "franka1000 frozen policy",
+        "availability": "Evaluated",
+        "name": "franka1000",
         "sources": [],
         "evaluation": {
           "taskId": "franka1000",
           "revision": "f97139a7",
           "obsDim": 981,
           "actionDim": 7,
-          "successes": 4,
-          "attempts": 4,
-          "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42.",
           "trainingEmbodiment": "franka_panda",
-          "evaluationEmbodiment": "franka_panda"
+          "evaluationEmbodiment": "franka_panda",
+          "successes": 996,
+          "attempts": 1000,
+          "protocol": "All 1000 delivered named object slots (982 distinct collision geometries), one fixed seeded continuous-home request per slot. Native 20 Hz SysID controller and original bilateral-grasp/lift checker, no actor update. Initial observations are saved before policy execution."
         }
       },
       "refs": {
@@ -788,18 +792,7 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "availability": "Evaluated on axis",
         "name": "panda_wood_pick frozen policy",
-        "sources": [],
-        "evaluation": {
-          "taskId": "panda_wood_pick",
-          "revision": "f97139a7",
-          "obsDim": 122,
-          "actionDim": 6,
-          "successes": 4,
-          "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
-          "trainingEmbodiment": "franka_fr3v2",
-          "evaluationEmbodiment": "franka_fr3v2"
-        }
+        "sources": []
       },
       "refs": {
         "count": 64,
@@ -925,18 +918,7 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "availability": "Evaluated on axis",
         "name": "panda_wood_place_base frozen policy",
-        "sources": [],
-        "evaluation": {
-          "taskId": "panda_wood_place_base",
-          "revision": "f97139a7",
-          "obsDim": 122,
-          "actionDim": 6,
-          "successes": 3,
-          "attempts": 4,
-          "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
-          "trainingEmbodiment": "franka_fr3v2",
-          "evaluationEmbodiment": "franka_fr3v2"
-        }
+        "sources": []
       },
       "refs": {
         "count": 64,
@@ -1056,19 +1038,19 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
-        "name": "5716 frozen policy",
+        "availability": "Evaluated",
+        "name": "5716",
         "sources": [],
         "evaluation": {
           "taskId": "5716",
           "revision": "f97139a7",
           "obsDim": 116,
           "actionDim": 7,
-          "successes": 29,
-          "attempts": 29,
-          "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
           "trainingEmbodiment": "franka_panda",
-          "evaluationEmbodiment": "franka_panda"
+          "evaluationEmbodiment": "franka_panda",
+          "successes": 32703,
+          "attempts": 36836,
+          "protocol": "Every one of the 36,836 published Isaac-qualified curriculum states exactly once. The 11,160 offline-rejected candidates are outside this qualified pool; online reset rejection remains in the full requested denominator. Original geometry, physical gates, stage clocks and native Gaussian mean actions; curriculum coverage, not a product evaluation."
         }
       },
       "refs": {
@@ -1267,19 +1249,19 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "sources": [],
         "name": "Certified 30 Hz Press actor with inter-call home",
-        "availability": "Certified on axis2 and reproduced on axis",
+        "availability": "Evaluated",
+        "recipe": "Frozen actor with a 30 Hz skill adapter and public-action home movements between four Press calls.",
         "evaluation": {
           "taskId": "i2rt_task10717",
           "revision": "43db29dcbfdd9bf41fe39f8877143f15ed884c22",
           "obsDim": 172,
           "actionDim": 14,
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam",
           "successes": 300,
           "attempts": 300,
-          "protocol": "Three source batches on axis2, seeds 0, 1 and 2, with 100 episodes each. Default fixed button layout and digits 1 and 2. Four calls to the frozen actor, with public-action home movements between skills. One reset per episode and a 28-second, 840-action budget. Scored by I2RTTask10717.step info[success]. This measures repeated execution on the default scene. A seed-0 reproduction on axis completed 100/100 episodes.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        },
-        "recipe": "Frozen actor with a 30 Hz skill adapter and public-action home movements between four Press calls."
+          "protocol": "Two commands with a return home"
+        }
       },
       "refs": {
         "count": 4,
@@ -1299,8 +1281,7 @@ window.AXIS_ATLAS = {
       "start": "Home pose, released spring buttons, card-defined counts. Default digits are 1 and 2.",
       "successCondition": "Read the two digits. Press and release the first red button the indicated number of times, confirm on blue, repeat for the second red button, confirm on blue, then return both hands home.",
       "originalTask": "10717",
-      "libraryOnly": false,
-      "sourceExpertNote": "Atomic Press skill TEST achieved 98.33% (1,770/1,800), with 50 cases in each of 36 arm/button/count combinations and a minimum bucket of 43/50. Verified for the three fixed buttons and one to nine presses per call."
+      "libraryOnly": false
     },
     {
       "id": "inserting",
@@ -1424,7 +1405,7 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "name": "Goal-conditioned Place policy",
+        "name": "goal256 41276",
         "trainer": "Chenan’s I2RT Place team.",
         "recipe": "The bundled center policy used behavior cloning on successful episodes, followed by FlashSAC training with a frozen PointNet on intermediate states and held starts.",
         "sources": [
@@ -1433,17 +1414,17 @@ window.AXIS_ATLAS = {
             "path": "./expert-evidence.json"
           }
         ],
-        "availability": "Evaluated on axis",
+        "availability": "Evaluated",
         "evaluation": {
           "taskId": "i2rt_watch_place",
           "revision": "f97139a7",
           "obsDim": 247,
           "actionDim": 14,
-          "successes": 13,
-          "attempts": 16,
-          "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings.",
           "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 486,
+          "attempts": 500,
+          "protocol": "Published goal256 TEST500"
         }
       },
       "refs": {
@@ -1489,18 +1470,7 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "availability": "Evaluated on axis",
         "name": "pick10 frozen policy",
-        "sources": [],
-        "evaluation": {
-          "taskId": "pick10",
-          "revision": "f97139a7",
-          "obsDim": 1033,
-          "actionDim": 7,
-          "successes": 16,
-          "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        }
+        "sources": []
       },
       "refs": {
         "count": 10000,
@@ -1566,20 +1536,9 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "name": "Pick10 SA-v3.1",
+        "name": "i2rt_pick10",
         "recipe": "SA-v3.1 SAC with first-frame and intermediate demonstration resets. The frozen actor reads the original task features and its commands are converted to the shared controller.",
         "trainer": "Native I2RT state-RL team (jupiter2143).",
-        "evaluation": {
-          "taskId": "i2rt_pick10",
-          "revision": "f97139a7",
-          "obsDim": 1033,
-          "actionDim": 14,
-          "successes": 0,
-          "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        },
         "sources": [
           {
             "label": "Evaluation receipts",
@@ -1590,7 +1549,18 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "availability": "Evaluated on axis"
+        "availability": "Evaluated",
+        "evaluation": {
+          "taskId": "i2rt_pick10",
+          "revision": "f97139a7",
+          "obsDim": 1033,
+          "actionDim": 14,
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 0,
+          "attempts": 1000,
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples."
+        }
       },
       "refs": {
         "count": 10,
@@ -1656,19 +1626,19 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
-        "name": "pick100 frozen policy",
+        "availability": "Evaluated",
+        "name": "pick100",
         "sources": [],
         "evaluation": {
           "taskId": "pick100",
           "revision": "f97139a7",
           "obsDim": 1034,
           "actionDim": 7,
-          "successes": 206,
-          "attempts": 512,
-          "protocol": "Deterministic author checkpoint on 512 reset-bank slots, seed 42, original policy observation prefix.",
           "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 8022,
+          "attempts": 20000,
+          "protocol": "All 20 banks"
         }
       },
       "refs": {
@@ -1719,18 +1689,7 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "availability": "Evaluated on axis",
         "name": "push10 frozen policy",
-        "sources": [],
-        "evaluation": {
-          "taskId": "push10",
-          "revision": "f97139a7",
-          "obsDim": 1023,
-          "actionDim": 6,
-          "successes": 0,
-          "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        }
+        "sources": []
       },
       "refs": {
         "count": 10000,
@@ -1796,20 +1755,9 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "name": "Push10 SA-v3.1",
+        "name": "i2rt_push10_default · e61f8a48",
         "recipe": "SA-v3.1 SAC with demonstration-stage and first-frame resets. The frozen actor reads the original task features and its commands are converted to the shared controller.",
         "trainer": "Native I2RT state-RL team (jupiter2143).",
-        "evaluation": {
-          "taskId": "i2rt_push10",
-          "revision": "f97139a7",
-          "obsDim": 1023,
-          "actionDim": 14,
-          "successes": 0,
-          "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        },
         "sources": [
           {
             "label": "Evaluation receipts",
@@ -1820,7 +1768,18 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "availability": "Evaluated on axis"
+        "availability": "Evaluated",
+        "evaluation": {
+          "taskId": "i2rt_push10",
+          "revision": "f97139a7",
+          "obsDim": 1023,
+          "actionDim": 14,
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 1000,
+          "attempts": 1000,
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts."
+        }
       },
       "refs": {
         "count": 10,
@@ -1888,18 +1847,7 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "availability": "Evaluated on axis",
         "name": "track10 frozen policy",
-        "sources": [],
-        "evaluation": {
-          "taskId": "track10",
-          "revision": "f97139a7",
-          "obsDim": 1097,
-          "actionDim": 7,
-          "successes": 0,
-          "attempts": 16,
-          "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        }
+        "sources": []
       },
       "refs": {
         "count": 10000,
@@ -1965,20 +1913,9 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "name": "Track10 SA-v3.1",
+        "name": "i2rt_track10",
         "recipe": "SA-v3.1 SAC with intermediate demonstration states. The frozen actor reads the original task features and its commands are converted to the shared controller.",
         "trainer": "Native I2RT state-RL team (jupiter2143).",
-        "evaluation": {
-          "taskId": "i2rt_track10",
-          "revision": "f97139a7",
-          "obsDim": 1097,
-          "actionDim": 14,
-          "successes": 0,
-          "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        },
         "sources": [
           {
             "label": "Evaluation receipts",
@@ -1989,7 +1926,18 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "availability": "Evaluated on axis"
+        "availability": "Evaluated",
+        "evaluation": {
+          "taskId": "i2rt_track10",
+          "revision": "f97139a7",
+          "obsDim": 1097,
+          "actionDim": 14,
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 0,
+          "attempts": 1000,
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples."
+        }
       },
       "refs": {
         "count": 10,
@@ -2059,20 +2007,9 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "name": "Butter milestone policies",
+        "name": "i2rt_handover_butter",
         "recipe": "Demonstration-conditioned FlashSAC with separate grasp, handover and placement policies. The evaluator selects the policy for the current milestone.",
         "trainer": "Native I2RT state-RL team (jupiter2143).",
-        "evaluation": {
-          "taskId": "i2rt_handover_butter",
-          "revision": "f97139a7",
-          "obsDim": 209,
-          "actionDim": 14,
-          "successes": 10,
-          "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        },
         "sources": [
           {
             "label": "Evaluation receipts",
@@ -2083,7 +2020,18 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "availability": "Evaluated on axis"
+        "availability": "Evaluated",
+        "evaluation": {
+          "taskId": "i2rt_handover_butter",
+          "revision": "f97139a7",
+          "obsDim": 209,
+          "actionDim": 14,
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 1000,
+          "attempts": 1000,
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples."
+        }
       },
       "refs": {
         "count": 1,
@@ -2139,19 +2087,19 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "availability": "Evaluated on axis",
-        "name": "blind_assembly frozen policy",
+        "availability": "Evaluated",
+        "name": "Archived SAC approach and PPO insertion",
         "sources": [],
         "evaluation": {
           "taskId": "blind_assembly",
           "revision": "f97139a7",
           "obsDim": 616,
           "actionDim": 6,
-          "successes": 12,
-          "attempts": 32,
-          "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz.",
           "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 4053,
+          "attempts": 7200,
+          "protocol": "All 6000 training and 1200 validation home-to-insertion layouts"
         }
       },
       "refs": {
@@ -2218,20 +2166,9 @@ window.AXIS_ATLAS = {
       ],
       "expert": {
         "runnable": true,
-        "name": "SAC grasp and PPO insertion",
+        "name": "i2rt_blind_assembly",
         "recipe": "A frozen SAC grasp policy precedes a proprioceptive PPO insertion policy. The round-1320 PPO used 32,768 environments and 32-step rollouts.",
         "trainer": "Native I2RT state-RL team (jupiter2143).",
-        "evaluation": {
-          "taskId": "i2rt_blind_assembly",
-          "revision": "f97139a7",
-          "obsDim": 616,
-          "actionDim": 14,
-          "successes": 0,
-          "attempts": 16,
-          "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-          "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        },
         "sources": [
           {
             "label": "Evaluation receipts",
@@ -2242,7 +2179,18 @@ window.AXIS_ATLAS = {
             "path": "src/axis_omnireset/training/shared_frozen_experts.py"
           }
         ],
-        "availability": "Evaluated on axis"
+        "availability": "Evaluated",
+        "evaluation": {
+          "taskId": "i2rt_blind_assembly",
+          "revision": "f97139a7",
+          "obsDim": 616,
+          "actionDim": 14,
+          "trainingEmbodiment": "i2rt_yam",
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 0,
+          "attempts": 1000,
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples."
+        }
       },
       "refs": {
         "count": 24,
@@ -2451,17 +2399,17 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "sources": [],
         "name": "i2rt_example_default · 0095a6ff",
-        "availability": "Evaluated on axis",
+        "availability": "Evaluated",
         "evaluation": {
           "taskId": "i2rt_example",
           "revision": "f97139a7",
           "obsDim": 64,
           "actionDim": 14,
-          "successes": 4,
-          "attempts": 4,
-          "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
           "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 1000,
+          "attempts": 1000,
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts."
         }
       },
       "refs": {
@@ -2505,21 +2453,21 @@ window.AXIS_ATLAS = {
       "schemaNote": "",
       "expert": {
         "runnable": true,
-        "name": "Pick5000 left-arm actor trained on fixed I1",
+        "name": "i2rt_pick5000",
         "sources": [],
-        "availability": "Evaluated on axis",
+        "availability": "Evaluated",
+        "recipe": "Frozen left-arm actor trained using the fixed I1 calibration.",
         "evaluation": {
           "taskId": "i2rt_pick5000",
           "revision": "f97139a7",
           "obsDim": 957,
           "actionDim": 7,
-          "successes": 13,
-          "attempts": 16,
-          "protocol": "Four qualified objects with four resets each, seed 42. Frozen I1-trained mean actor, left arm of the shared dual-arm robot.",
           "trainingEmbodiment": "i2rt_yam",
-          "evaluationEmbodiment": "i2rt_yam"
-        },
-        "recipe": "Frozen left-arm actor trained using the fixed I1 calibration."
+          "evaluationEmbodiment": "i2rt_yam",
+          "successes": 27581,
+          "attempts": 30000,
+          "protocol": "All original home slots across eight worlds"
+        }
       },
       "refs": {
         "count": 48,
@@ -2557,18 +2505,7 @@ window.AXIS_ATLAS = {
         "runnable": true,
         "name": "Push5000 frozen policy",
         "sources": [],
-        "availability": "2 evaluated checkpoints",
-        "evaluation": {
-          "taskId": "franka_push5000",
-          "revision": "f97139a7",
-          "obsDim": 984,
-          "actionDim": 6,
-          "successes": 2,
-          "attempts": 4,
-          "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
-          "trainingEmbodiment": "franka_panda",
-          "evaluationEmbodiment": "franka_panda"
-        }
+        "availability": "2 evaluated checkpoints"
       },
       "refs": {
         "count": null,
@@ -2606,8 +2543,8 @@ window.AXIS_ATLAS = {
       "taskRevision": "JF frozen delivery 2026-11-06",
       "sources": [],
       "expert": {
-        "name": "Frozen visual student",
-        "availability": "Source policies",
+        "name": "pick_student",
+        "availability": "Evaluated",
         "runnable": true,
         "sources": [],
         "evaluation": {
@@ -2617,9 +2554,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "trainingEmbodiment": "franka_fr3v2",
           "evaluationEmbodiment": "franka_fr3v2",
-          "successes": 20,
-          "attempts": 20,
-          "protocol": "Five groceries, four normal starts per object. Local Pick entries after the planned approach."
+          "successes": 993,
+          "attempts": 1000,
+          "protocol": "Pick from sealed home starts across all five groceries"
         }
       },
       "refs": {
@@ -2657,8 +2594,8 @@ window.AXIS_ATLAS = {
       "taskRevision": "JF frozen delivery 2026-11-06",
       "sources": [],
       "expert": {
-        "name": "Frozen visual student",
-        "availability": "Source policies",
+        "name": "place_student",
+        "availability": "Evaluated",
         "runnable": true,
         "sources": [],
         "evaluation": {
@@ -2668,9 +2605,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "trainingEmbodiment": "franka_fr3v2",
           "evaluationEmbodiment": "franka_fr3v2",
-          "successes": 11,
-          "attempts": 11,
-          "protocol": "Five groceries, four normal starts per object. Valid physical handoffs before the first Place action."
+          "successes": 550,
+          "attempts": 554,
+          "protocol": "Place from valid physical handoffs across all five groceries"
         }
       },
       "refs": {
@@ -2696,7 +2633,7 @@ window.AXIS_ATLAS = {
       "embodimentId": "franka_fr3v2",
       "profile": "Native JF",
       "description": "Complete Pick, carry the held object and complete Place in the same simulation episode. Failed grasps, transport failures and failed releases all count. The physical completion checker gates both stages.",
-      "start": "One randomized home scene per episode, with an open gripper, a target, a basket and clutter. Global depth guides the approach and transport. The published normal-start cohort has four starts per grocery.",
+      "start": "One randomized home scene per episode, with an open gripper, a target, a basket and clutter. Global depth guides the approach and transport.",
       "successCondition": "Complete Pick, carry the held object and complete Place in the same simulation episode. Failed grasps, transport failures and failed releases all count. The physical completion checker gates both stages.",
       "aliases": [],
       "actionDim": 7,
@@ -2708,8 +2645,8 @@ window.AXIS_ATLAS = {
       "taskRevision": "JF frozen delivery 2026-11-06",
       "sources": [],
       "expert": {
-        "name": "Frozen visual Pick and Place students",
-        "availability": "Source policies",
+        "name": "pick + place student",
+        "availability": "Evaluated",
         "runnable": true,
         "sources": [],
         "evaluation": {
@@ -2719,9 +2656,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "trainingEmbodiment": "franka_fr3v2",
           "evaluationEmbodiment": "franka_fr3v2",
-          "successes": 11,
-          "attempts": 20,
-          "protocol": "Five groceries, four normal starts per object. Every admitted home start, including failures during transport."
+          "successes": 550,
+          "attempts": 1000,
+          "protocol": "Full chain from sealed home starts across all five groceries"
         }
       },
       "refs": {
@@ -2738,93 +2675,29 @@ window.AXIS_ATLAS = {
     }
   ],
   "bestExperts": {
-    "blind_assembly": {
-      "policy": "Archived SAC approach and PPO insertion",
-      "successes": 14,
-      "attempts": 24,
-      "protocol": "Continuous frozen SAC approach and PPO insertion from home. One layout in each of the 24 geometry variants. The robot and object were never reset between stages.",
-      "tiedPolicies": 1,
-      "embodimentId": "i2rt_yam"
-    },
-    "handover_butter": {
-      "policy": "Native MA-v2 chain",
-      "successes": 244,
-      "attempts": 300,
-      "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
-      "tiedPolicies": 1,
-      "embodimentId": "i2rt_yam"
-    },
     "i2rt_example": {
       "policy": "i2rt_example_default · 0095a6ff",
-      "successes": 4,
-      "attempts": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
+      "successes": 1000,
+      "attempts": 1000,
+      "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
       "tiedPolicies": 3,
       "embodimentId": "i2rt_yam"
     },
     "i2rt_push10": {
-      "policy": "i2rt_push10_bottle_16 · 45742742",
-      "successes": 4,
-      "attempts": 4,
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_bottle_16. The actor receives its training-time observation fields from the active scene.",
-      "tiedPolicies": 8,
-      "embodimentId": "i2rt_yam"
-    },
-    "pick10": {
-      "policy": "pick10",
-      "successes": 16,
-      "attempts": 16,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
+      "policy": "i2rt_push10_default · e61f8a48",
+      "successes": 1000,
+      "attempts": 1000,
+      "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
       "tiedPolicies": 1,
       "embodimentId": "i2rt_yam"
     },
-    "push10": {
-      "policy": "archive-push10",
-      "successes": 0,
-      "attempts": 16,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "tiedPolicies": 3,
-      "embodimentId": "i2rt_yam"
-    },
-    "track10": {
-      "policy": "archive-track10",
-      "successes": 0,
-      "attempts": 16,
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "tiedPolicies": 3,
-      "embodimentId": "i2rt_yam"
-    },
-    "franka_push5000": {
-      "policy": "franka_push5000-baked",
-      "successes": 2,
-      "attempts": 4,
-      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
+    "i2rt_task10717": {
+      "policy": "Certified 30 Hz Press actor with inter-call home",
+      "successes": 300,
+      "attempts": 300,
+      "protocol": "Two commands with a return home",
       "tiedPolicies": 2,
-      "embodimentId": "franka_panda"
-    },
-    "fr3v2_jf_pick": {
-      "policy": "Visual student",
-      "successes": 20,
-      "attempts": 20,
-      "protocol": "Normal starts on axis2, all five groceries. Scored over Pick entries.",
-      "tiedPolicies": 6,
-      "embodimentId": "franka_fr3v2"
-    },
-    "fr3v2_jf_pick_place": {
-      "policy": "Orange juice state teacher",
-      "successes": 3,
-      "attempts": 4,
-      "protocol": "Normal starts on axis2, orange juice. Scored over full episodes from home.",
-      "tiedPolicies": 3,
-      "embodimentId": "franka_fr3v2"
-    },
-    "fr3v2_jf_place": {
-      "policy": "Visual student",
-      "successes": 11,
-      "attempts": 11,
-      "protocol": "Normal starts on axis2, all five groceries. Scored over valid Place handoffs.",
-      "tiedPolicies": 5,
-      "embodimentId": "franka_fr3v2"
+      "embodimentId": "i2rt_yam"
     }
   }
 };

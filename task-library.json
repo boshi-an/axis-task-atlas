@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-19",
+  "as_of": "2026-11-21",
   "host": "axis",
   "root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1",
   "source_revision": "f97139a7c2336afb3ac803beb3bc81550e090469",
@@ -237,7 +237,7 @@
       "by_task": "by-task/franka1000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        13
+        5
       ],
       "aliases": [],
       "embodiment_id": "franka_panda",
@@ -272,7 +272,7 @@
       "by_task": "by-task/panda_grasp1000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        23
+        12
       ],
       "aliases": [],
       "embodiment_id": "franka_panda",
@@ -306,10 +306,7 @@
       },
       "by_task": "by-task/franka_push5000",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        14,
-        15
-      ],
+      "scores": [],
       "aliases": [],
       "embodiment_id": "franka_panda",
       "runtime": "OmniReset"
@@ -341,9 +338,7 @@
       },
       "by_task": "by-task/panda_wood_pick",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        24
-      ],
+      "scores": [],
       "aliases": [
         "wood_pick"
       ],
@@ -380,9 +375,7 @@
       },
       "by_task": "by-task/wood_pick",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        24
-      ],
+      "scores": [],
       "aliases": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "OmniReset"
@@ -414,9 +407,7 @@
       },
       "by_task": "by-task/panda_wood_place_base",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        25
-      ],
+      "scores": [],
       "aliases": [
         "wood_place_base"
       ],
@@ -453,9 +444,7 @@
       },
       "by_task": "by-task/wood_place_base",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        25
-      ],
+      "scores": [],
       "aliases": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "OmniReset"
@@ -487,9 +476,7 @@
       },
       "by_task": "by-task/panda_wood_stack_second",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        26
-      ],
+      "scores": [],
       "aliases": [
         "wood_stack_second"
       ],
@@ -526,9 +513,7 @@
       },
       "by_task": "by-task/wood_stack_second",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        26
-      ],
+      "scores": [],
       "aliases": [],
       "embodiment_id": "franka_fr3v2",
       "runtime": "OmniReset"
@@ -586,9 +571,9 @@
       "by_task": "by-task/i2rt_example",
       "expert_status": "Historical fixed-layout checkpoints",
       "scores": [
-        33,
-        34,
-        35
+        16,
+        17,
+        18
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -782,7 +767,13 @@
       "by_task": "by-task/i2rt_task10717",
       "expert_status": "Certified 30 Hz actor, normalization and inter-call home controller on axis. Native full-task results and atomic-skill results are provided with their evaluated conditions.",
       "scores": [
-        44
+        27,
+        28,
+        29,
+        59,
+        60,
+        61,
+        62
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -790,20 +781,7 @@
       "original_task": "10717",
       "physics_receipt": "evaluations/experts-30hz-1116/verify-i2rt_task10717/physics.json",
       "expert_delivery": "by-task/i2rt_task10717/experts/current",
-      "expert_input": "127 policy features (69 skill features and 58 measured robot features), assembled from the native task. Seven active-arm commands are expanded into the 14-dimensional task action.",
-      "atomic_skill": {
-        "successes": 1770,
-        "attempts": 1800,
-        "buckets": 36,
-        "cases_per_bucket": 50,
-        "minimum_bucket_successes": 43,
-        "minimum_bucket_attempts": 50,
-        "policy_observation_dim": 127,
-        "policy_action_dim": 7,
-        "scope": "Four supported arm/button pairs on three fixed buttons, one to nine presses per call.",
-        "server_receipt": "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/atomic_TEST_result.json",
-        "receipt_sha256": "462ffb94c060b8d48fda8dfb6372c974294b5549f18afb66f1deea1f59f1b22b"
-      }
+      "expert_input": "127 policy features (69 skill features and 58 measured robot features), assembled from the native task. Seven active-arm commands are expanded into the 14-dimensional task action."
     },
     {
       "id": "i2rt_pick10",
@@ -895,7 +873,7 @@
       "by_task": "by-task/i2rt_pick10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        18
+        8
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -1001,15 +979,15 @@
       "by_task": "by-task/i2rt_push10",
       "expert_status": "Frozen weights on axis",
       "scores": [
+        10,
+        19,
         20,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -1106,7 +1084,7 @@
       "by_task": "by-task/i2rt_track10",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        21
+        11
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -1157,7 +1135,7 @@
       "by_task": "by-task/i2rt_handover_butter",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        17
+        7
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -1339,7 +1317,7 @@
       "by_task": "by-task/i2rt_blind_assembly",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        16
+        6
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -1389,7 +1367,8 @@
       "by_task": "by-task/i2rt_watch_place",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        22
+        30,
+        31
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -1607,10 +1586,7 @@
       },
       "by_task": "by-task/pick10",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        5,
-        27
-      ],
+      "scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
@@ -1641,7 +1617,7 @@
       "by_task": "by-task/pick100",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        28
+        13
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -1677,11 +1653,7 @@
       },
       "by_task": "by-task/push10",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        6,
-        7,
-        29
-      ],
+      "scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
@@ -1721,11 +1693,7 @@
       },
       "by_task": "by-task/track10",
       "expert_status": "Frozen weights on axis",
-      "scores": [
-        8,
-        9,
-        30
-      ],
+      "scores": [],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
       "runtime": "OmniReset",
@@ -1772,9 +1740,7 @@
       "scores": [
         3,
         4,
-        11,
-        12,
-        31
+        14
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -1828,8 +1794,7 @@
       "by_task": "by-task/blind_assembly",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        2,
-        10
+        2
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -2045,7 +2010,7 @@
       "by_task": "by-task/10724",
       "expert_status": "All five frozen actors from the retained v107 chain are on axis, including the v89 pair-placement SAC policy.",
       "scores": [
-        32
+        15
       ],
       "aliases": [],
       "embodiment_id": "dual_arx_x5",
@@ -2110,7 +2075,7 @@
       "by_task": "by-task/i2rt_pick5000",
       "expert_status": "Frozen weights on axis",
       "scores": [
-        19
+        9
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -2148,7 +2113,17 @@
       },
       "aliases": [],
       "by_task": "by-task/fr3v2_jf_pick",
-      "scores": [],
+      "scores": [
+        32,
+        34,
+        36,
+        38,
+        39,
+        42,
+        44,
+        46,
+        48
+      ],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator",
       "i2rt_variants": [
@@ -2186,7 +2161,17 @@
       },
       "aliases": [],
       "by_task": "by-task/fr3v2_jf_place",
-      "scores": [],
+      "scores": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator",
       "i2rt_variants": [
@@ -2198,7 +2183,7 @@
       "canonical_id": "fr3v2_jf_pick_place",
       "task": "JF pick and place",
       "embodiment": "Franka FR3v2",
-      "start": "One randomized home scene per episode, with an open gripper, a target, a basket and clutter. Global depth guides the approach and transport. The published normal-start cohort has four starts per grocery.",
+      "start": "One randomized home scene per episode, with an open gripper, a target, a basket and clutter. Global depth guides the approach and transport.",
       "success": "Complete Pick, carry the held object and complete Place in the same simulation episode. Failed grasps, transport failures and failed releases all count. The physical completion checker gates both stages.",
       "observation_dim": "Pick 1,033 / Place 107",
       "observation_detail": "26 proprioceptive values and three 84 × 84 wrist channels (current depth, initial depth and initial target mask). The mask identifies the object for Pick and the container for Place.",
@@ -2226,7 +2211,17 @@
       },
       "aliases": [],
       "by_task": "by-task/fr3v2_jf_pick_place",
-      "scores": [],
+      "scores": [
+        33,
+        35,
+        37,
+        40,
+        41,
+        43,
+        45,
+        47,
+        49
+      ],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator"
     }
@@ -2235,659 +2230,157 @@
     {
       "task": "5033",
       "policy": "5033",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "Complete 40 initial states × 4 product cases",
       "training_embodiment": "franka_panda",
       "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "checkpoint.pt": "0c84df428c69f4c94f62df16652943207c05fc23907e5233280f1ab1a17aaf22"
       },
-      "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
-      "seed": 42,
-      "controls": 384,
-      "timeouts": 28,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 26,
-      "attempts": 28,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/5033/result.json",
-      "receipt_sha256": "56fa195553414a483de5f35f550c309dd1d09b86f29c71c5f4de505787d0fd37"
+      "successes": 121,
+      "attempts": 160,
+      "evidence": [
+        {
+          "receipt": "5033-product",
+          "protocol": "Complete 40 initial states × 4 product cases",
+          "successes": 121,
+          "attempts": 160
+        }
+      ]
     },
     {
       "task": "5716",
       "policy": "5716",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "Every one of the 36,836 published Isaac-qualified curriculum states exactly once. The 11,160 offline-rejected candidates are outside this qualified pool; online reset rejection remains in the full requested denominator. Original geometry, physical gates, stage clocks and native Gaussian mean actions; curriculum coverage, not a product evaluation.",
       "training_embodiment": "franka_panda",
       "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "checkpoint.pt": "a452cb75e04e15fd346245cc68dae715b80aa48a460956fa57ba27aac97a975a"
       },
-      "protocol": "First complete episode on each initially admitted native curriculum slot, deterministic RSL-RL inference.",
-      "seed": 42,
-      "controls": 384,
-      "timeouts": 29,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 29,
-      "attempts": 29,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/5716/result.json",
-      "receipt_sha256": "4e2573a10b51cf92d7c4109d7f55a7fd2d2e43b839f3a4dccbeb1f0e69c423ec"
+      "successes": 32703,
+      "attempts": 36836,
+      "evidence": [
+        {
+          "receipt": "5716",
+          "protocol": "Every one of the 36,836 published Isaac-qualified curriculum states exactly once. The 11,160 offline-rejected candidates are outside this qualified pool; online reset rejection remains in the full requested denominator. Original geometry, physical gates, stage clocks and native Gaussian mean actions; curriculum coverage, not a product evaluation.",
+          "successes": 32703,
+          "attempts": 36836
+        }
+      ]
     },
     {
       "task": "blind_assembly",
       "policy": "Archived SAC approach and PPO insertion",
-      "scope": "source protocol",
+      "group": "primary",
+      "protocol": "All 6000 training and 1200 validation home-to-insertion layouts",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "approach.pt": "9773fcc871a5bf8867b3d3e59fc5bda12e93b8adf27d045c610df104c789ef23",
         "ppo.pt": "74df074853415fdd736dca9ef4fea46108ca8426b75180245592ad520d6a093b"
       },
-      "protocol": "Continuous frozen SAC approach and PPO insertion from home. One layout in each of the 24 geometry variants. The robot and object were never reset between stages.",
-      "successes": 14,
-      "attempts": 24,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/archive-assembly-cascade/result.json",
-      "receipt_sha256": "c11641a265cf6c4fd6c13dd3becd9587b90da171124aeaa383a488b41d387886",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "handover_butter",
-      "policy": "archive-handover_butter_sac",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "original.pt": "e25213944f0e4b1a14c45c2d0ebab5f9e5f6896f9de05270a2f16b7f24ccfdcf",
-        "actor-pack.pt": "30b4e0a9478206cfb4848fc3b4670af5bf2e7855c5e9a9cbe93b1d72e2a956cd"
-      },
-      "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
-      "seed": 42,
-      "controls": 254,
-      "timeouts": 16,
-      "episode_success": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/archive-handover_butter_sac/result.json",
-      "receipt_sha256": "90282bfb4cba8164b217721a248deefad30de51b4ccaa8d62ec2552ed6fe6f4b",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "handover_butter",
-      "policy": "archive-handover_butter_skills",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "original.pt": "6043a8763bb87bcb35cd01f20eede2a9930d1e060faf6c754ca3ce7502849aef",
-        "actor-pack.pt": "38e638d51d9b26c0bb1a6d4ee2a4e5206486593d79287bc7208599d9386f8468"
-      },
-      "protocol": "Sixteen native registered stage-zero bank starts, seed 42. Success means the first butter handover skill reached its milestone.",
-      "seed": 42,
-      "controls": 254,
-      "timeouts": 16,
-      "episode_success": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/archive-handover_butter_skills/result.json",
-      "receipt_sha256": "e9531b7aab44c1c3c7dde2d2527580717fedf4f607a59f5033f14f0fac468fcd",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "pick10",
-      "policy": "archive-pick10",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "original.pt": "1ec714409a780856ae43b95f114eccc334b262c0b2ca2d5a45e916bf1d8415a9",
-        "actor-pack.pt": "824bb4616ae22e2123e54476aab336541a43ef7e04e4a0add045473814ca7715"
-      },
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "seed": 42,
-      "controls": 297,
-      "timeouts": 1,
-      "episode_success": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 15,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/archive-pick10/result.json",
-      "receipt_sha256": "7d7ba19d866a5b9d627ff9d29d42fcfae030a2ccd4813b279b64798580ac9953",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "push10",
-      "policy": "archive-push10",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "original.pt": "caa38f9378a1b3bab7c4541bd8e0cd956d394c203fe757e3a5e9bca3be848fcc",
-        "actor-pack.pt": "ad1c132223eae87ffa5e73c79bfe3e12532b6628c602435946280702649ca128"
-      },
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "seed": 42,
-      "controls": 394,
-      "timeouts": 16,
-      "episode_success": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/archive-push10/result.json",
-      "receipt_sha256": "c269c49e17bafe6293ea7a8973752f9a38435db9bd88dbfcdd774f12c68c9759",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "push10",
-      "policy": "archive-push10_per",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "original.pt": "99006380d4c633ef024cbc8da9ac8528a9ed577836f121c16d06291c76b1ce96",
-        "actor-pack.pt": "16d835f14e952bd4b94da4c2bb68eb7997d10cbc1d399bf1712ce425d01587d5"
-      },
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "seed": 42,
-      "controls": 394,
-      "timeouts": 16,
-      "episode_success": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/archive-push10_per/result.json",
-      "receipt_sha256": "fe52242141894ebda5ba5e9e0cacdbb193a43d5352cd8e32ab4fc8931af490e9",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "track10",
-      "policy": "Archived lift and target milestone actor",
-      "scope": "source protocol",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "original.pt": "ede508b38ec546d5aed22aa8c00204ba17d999fd13a57f1fa57b0b253ae508a0"
-      },
-      "protocol": "Source milestone feature and reward contract. One qualified first-frame trajectory per available object, seed 42. Episodes ran to termination or their native horizon.",
-      "seed": 42,
-      "controls": 679,
-      "successes": 0,
-      "attempts": 10,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/archive-track-milestones/result.json",
-      "receipt_sha256": "294de4d32411b8ee871c876d24d99a1e885031df144e56f7d0ac08461a25f047",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "track10",
-      "policy": "archive-track10",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "original.pt": "8614364e5e52a7418168efe9f4a52e768fb526c0dbd0b47c32cc34c1b0267e3d",
-        "actor-pack.pt": "e91d421fdfceb1ac4e0ded0aff5d6fe006d683ae58b4577c90cc19aadea53c19"
-      },
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "seed": 42,
-      "controls": 544,
-      "timeouts": 1,
-      "episode_success": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/archive-track10/result.json",
-      "receipt_sha256": "7d0a02027cd36c5dc19f29d68ed4de5b27900ba4e6ba2f53a504460c34c9363a",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "blind_assembly",
-      "policy": "blind_assembly",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "policy": "312c0c84deb68bd51f781ad0c13e7656188577f3768f4e5711e2460028be8a70"
-      },
-      "protocol": "Deterministic insertion PPO on 32 qualified native insertion-state resets, seed 42, at 30 Hz.",
-      "seed": 42,
-      "controls": 150,
-      "timeouts": 20,
-      "episode_success": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true
-      ],
-      "successes": 12,
-      "attempts": 32,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/blind_assembly/result.json",
-      "receipt_sha256": "a928c815c0e516186c67de611e493124242745992bc6df26445cbec856b30a11",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 4053,
+      "attempts": 7200,
+      "evidence": [
+        {
+          "receipt": "archive-assembly-cascade-full",
+          "protocol": "All 6000 training and 1200 validation home-to-insertion layouts",
+          "successes": 4053,
+          "attempts": 7200
+        }
+      ]
     },
     {
       "task": "handover_butter",
       "policy": "butter-left_to_right",
-      "scope": "related protocol",
+      "group": "left to right",
+      "protocol": "Complete left to right handover from 1,000 sealed layouts",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "best_frozen.pt": "69e9c7efcaf0331fee5404b6c4dcdea83eb716c618e458f4e751f61343f68c8c"
       },
-      "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 30 Hz; left_to_right",
-      "seed": 42,
-      "controls": 266,
-      "timeouts": 12,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false
-      ],
-      "successes": 4,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/butter-left_to_right/result.json",
-      "receipt_sha256": "50bc294d78f811beb0f1bee1b5de087bbfe2f7e1b3b395ec6b5abb4b9b24147c",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 212,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "butter-left_to_right",
+          "protocol": "1000 CPU-generated sealed continuous home layouts from the original source and target distributions, seed 20261119; every layout once; deterministic directional actor; complete handover success.",
+          "successes": 212,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "handover_butter",
       "policy": "butter-right_to_left",
-      "scope": "related protocol",
+      "group": "right to left",
+      "protocol": "Complete right to left handover from 1,000 sealed layouts",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "best_frozen.pt": "49f810f84b284f95d6a8be695072c140d6507e2d34effc1b509ac7f3b4d82610"
       },
-      "protocol": "Directional online training contract, 16 continuous home starts, deterministic binary-gripper mean actor at 30 Hz; right_to_left",
-      "seed": 42,
-      "controls": 272,
-      "timeouts": 9,
-      "success_by_env": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        true,
-        false
-      ],
-      "successes": 7,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/butter-right_to_left/result.json",
-      "receipt_sha256": "8a9f046713259a131ea56dbfd5a2c7f14f7c131d0885ae81db9dc641c298aabb",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 428,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "butter-right_to_left",
+          "protocol": "1000 CPU-generated sealed continuous home layouts from the original source and target distributions, seed 20261119; every layout once; deterministic directional actor; complete handover success.",
+          "successes": 428,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "franka1000",
       "policy": "franka1000",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "All 1000 delivered named object slots (982 distinct collision geometries), one fixed seeded continuous-home request per slot. Native 20 Hz SysID controller and original bilateral-grasp/lift checker, no actor update. Initial observations are saved before policy execution.",
       "training_embodiment": "franka_panda",
       "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
       },
-      "protocol": "Deterministic delivered Panda actor, four fixed-home native slots, seed 42.",
-      "seed": 42,
-      "controls": 61,
-      "timeouts": 0,
-      "failures": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/franka1000/result.json",
-      "receipt_sha256": "cd81300d426a5414c909bdf14fcbcec8ef97b881b7656b716ab587a959184ff0"
-    },
-    {
-      "task": "franka_push5000",
-      "policy": "franka_push5000-baked",
-      "scope": "registered task",
-      "training_embodiment": "franka_panda",
-      "evaluation_embodiment": "franka_panda",
-      "checkpoint_sha256": {
-        "best_frozen.pt": "f2ce99de72f1d769820fa23ea0441d6ad42a83b64b377ca9186849d468ecf3d5"
-      },
-      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
-      "seed": 42,
-      "controls": 156,
-      "timeouts": 2,
-      "success_by_env": [
-        true,
-        false,
-        true,
-        false
-      ],
-      "successes": 2,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/franka_push5000-baked/result.json",
-      "receipt_sha256": "ac1e6bae193430edfd00b5718b8ab8d9488295011114dc00e2b061cce7bed83c"
-    },
-    {
-      "task": "franka_push5000",
-      "policy": "franka_push5000-legacy",
-      "scope": "registered task",
-      "training_embodiment": "franka_panda",
-      "evaluation_embodiment": "franka_panda",
-      "checkpoint_sha256": {
-        "best_frozen.pt": "4341f41d2cbaba105a3d1fb91de50ef2f5094fc097ad0f8f4601273171269615"
-      },
-      "protocol": "Four-object fixed-checkpoint transfer on the registered Push5000 task, seed 42. This small prepared population is a separate evaluation from the original frozen run.",
-      "seed": 42,
-      "controls": 128,
-      "timeouts": 1,
-      "success_by_env": [
-        false,
-        false,
-        true,
-        true
-      ],
-      "successes": 2,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/franka_push5000-legacy/result.json",
-      "receipt_sha256": "4a38b7e8822fd467e236c1c9451d06648df02e6d598d7d0ab30b5f429d2ea764"
+      "successes": 996,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "franka1000",
+          "protocol": "All 1000 delivered named object slots (982 distinct collision geometries), one fixed seeded continuous-home request per slot. Native 20 Hz SysID controller and original bilateral-grasp/lift checker, no actor update. Initial observations are saved before policy execution.",
+          "successes": 996,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_blind_assembly",
       "policy": "i2rt_blind_assembly",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "blind_assembly.pt": "312c0c84deb68bd51f781ad0c13e7656188577f3768f4e5711e2460028be8a70",
         "skill_0_complete.pt": "9773fcc871a5bf8867b3d3e59fc5bda12e93b8adf27d045c610df104c789ef23"
       },
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-      "seed": 42,
-      "controls": 150,
-      "timeouts": 16,
-      "failures": 0,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
       "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/i2rt_blind_assembly/result.json",
-      "receipt_sha256": "77ec9742c1872fc89980991dd20415c671d90ffc7c7e5c6e6a3be5cd8c0d67ec",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "shared-blind_assembly",
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
+          "successes": 0,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_handover_butter",
       "policy": "i2rt_handover_butter",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
@@ -2895,1015 +2388,496 @@
         "butter1.pt": "64c835a84c8e4d94a3a484dc2d533e07d7a5ce1f19db5a9c42a7c4ac4ee0a925",
         "butter2.pt": "3643aede5829cbe4e5ade636d37e84e6b2df0e080b82d1dea57ea7f7a96aab48"
       },
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-      "seed": 42,
-      "controls": 935,
-      "timeouts": 6,
-      "failures": 0,
-      "success_by_env": [
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 10,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/i2rt_handover_butter/result.json",
-      "receipt_sha256": "6c28871da387db548d950640a3ef69e21b1e8f8a64fd000ab66dc24e489628df",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "shared-handover_butter",
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_pick10",
       "policy": "i2rt_pick10",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "pick10.pt": "a32b7f4b8f5628fa5e65fd87c7aba904be1bf34118a6591ae92626c8c836e67f"
       },
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-      "seed": 42,
-      "controls": 300,
-      "timeouts": 16,
-      "failures": 0,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
       "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/i2rt_pick10/result.json",
-      "receipt_sha256": "2756be0a18c2af3b7dc110907d9e45fd2762cd620cc575b5f739c380bdf63102",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "shared-pick10",
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
+          "successes": 0,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_pick5000",
       "policy": "i2rt_pick5000",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "All original home slots across eight worlds",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "8388b39d348b5a4bc5aa70e3749512b5e38b58af2e6d8b4e6c6dde07c3aaadae"
       },
-      "protocol": "Four qualified objects with four resets each, seed 42. Frozen I1-trained mean actor, left arm of the shared dual-arm robot.",
-      "seed": 42,
-      "controls": 328,
-      "timeouts": 3,
-      "failures": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 13,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/i2rt_pick5000/result.json",
-      "receipt_sha256": "f96e3fbc173b51cb21015c77351ff3b1304c12cfc8efafc67b8d5102dc58d19d",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 27581,
+      "attempts": 30000,
+      "evidence": [
+        {
+          "receipt": "pick5000-small-0-0",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 702,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-0-1",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 693,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-0-2",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 693,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-0-3",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 692,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-0-4",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 676,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-1-0",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 696,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-1-1",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 680,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-1-2",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 682,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-1-3",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 682,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-1-4",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 675,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-2-0",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 696,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-2-1",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 684,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-2-2",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 683,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-2-3",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 684,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-2-4",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 701,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-3-0",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 689,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-3-1",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 672,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-3-2",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 688,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-3-3",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 699,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-3-4",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 688,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-4-0",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 698,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-4-1",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 689,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-4-2",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 679,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-4-3",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 685,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-4-4",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 690,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-5-0",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 691,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-5-1",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 691,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-5-2",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 679,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-5-3",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 685,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-5-4",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 687,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-6-0",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 698,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-6-1",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 711,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-6-2",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 697,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-6-3",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 697,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-6-4",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 705,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-7-0",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 691,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-7-1",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 693,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-7-2",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 685,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-7-3",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 695,
+          "attempts": 750
+        },
+        {
+          "receipt": "pick5000-small-7-4",
+          "protocol": "One of eight disjoint complete-home worlds; 5000 assets times six replicas = 30000 pinned home requests overall, original global-asset/replica seed 324159, shared I2RT robot and 30 Hz / five 150 Hz steps. No curriculum starts or actor updates.",
+          "successes": 680,
+          "attempts": 750
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "push10.pt": "08d279ce7fa38f81e334671932e4df4636825ccdf8538bf5e8d57b23ab5b06e8"
       },
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-      "seed": 42,
-      "controls": 300,
-      "timeouts": 16,
-      "failures": 0,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
       "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/i2rt_push10/result.json",
-      "receipt_sha256": "757d45e3fdb96ab2a59b158d62d0081622f921864956fab4499161df8f498fa0",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "shared-push10",
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
+          "successes": 0,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_track10",
       "policy": "i2rt_track10",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "track10.pt": "0b0a641029f6d9f135c3873100fcfe9e1838ba24bd7f13d4f905d59847ce04f9"
       },
-      "protocol": "Frozen author policy on 16 fresh shared-tabletop starts, seed 42. Each episode ran to success, failure or timeout.",
-      "seed": 42,
-      "controls": 154,
-      "timeouts": 0,
-      "failures": 16,
-      "success_by_env": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
       "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/i2rt_track10/result.json",
-      "receipt_sha256": "42d0dbec7c6326eba9a629e5c91e5a146c76453bf4b092b4dedad53ba159ffb1",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "i2rt_watch_place",
-      "policy": "i2rt_watch_place",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "actor.pt": "65088d07aed797a795ea25992ade091142fed7381b89d0256a148a294b190969"
-      },
-      "protocol": "Deterministic mean actor on shared tabletop. 16 episodes with the task evaluator’s reset settings.",
-      "seed": 42,
-      "controls": 960,
-      "timeouts": 1,
-      "failures": 2,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false
-      ],
-      "successes": 13,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/i2rt_watch_place/result.json",
-      "receipt_sha256": "c423816dc9f0a3fbe20ecd6b3d3315063cb29bcfe51b6eb347899664b5ebf0ff",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "shared-track10",
+          "protocol": "Complete delivered shared-tabletop fixed layout, repeated 1000 times. Original expert adapter and shared I2RT 30 Hz / five 150 Hz steps. Fixed-layout repeatability, not 1000 distinct geometry samples.",
+          "successes": 0,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "panda_grasp1000",
       "policy": "panda_grasp1000",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "All 1000 delivered named object slots (982 distinct collision geometries), one fixed seeded continuous-home request per slot. Native 20 Hz SysID controller and original bilateral-grasp/lift checker, no actor update. Initial observations are saved before policy execution.",
       "training_embodiment": "franka_panda",
       "evaluation_embodiment": "franka_panda",
       "checkpoint_sha256": {
         "actor.pt": "71b5ecdb2613564bd60a6986bb9fb0f9a3d5c91cba34801f15443e5b1ee91b00"
       },
-      "protocol": "Frozen grasp actor on the native Panda setup, four starts, seed 42.",
-      "seed": 42,
-      "controls": 61,
-      "timeouts": 0,
-      "failures": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/panda_grasp1000/result.json",
-      "receipt_sha256": "b9b4857ccabbf8c140173a0d3683f23860371a5fe4d14d3aa1c5009f4461613a"
-    },
-    {
-      "task": "panda_wood_pick",
-      "policy": "panda_wood_pick",
-      "scope": "registered task",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2",
-      "checkpoint_sha256": {
-        "actor.pt": "2c4ccc8451e48eccb00fec30071a4c2da1d10a911cc9af9f82219c0b9444704a"
-      },
-      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
-      "seed": 42,
-      "controls": 58,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/panda_wood_pick/result.json",
-      "receipt_sha256": "ad58934f7db6db4d4c224723c3529197514d238fa8b40018adbda38ef627a159"
-    },
-    {
-      "task": "panda_wood_place_base",
-      "policy": "panda_wood_place_base",
-      "scope": "registered task",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2",
-      "checkpoint_sha256": {
-        "actor.pt": "bee209c3e63908b53d43da89b5ff65446c74b8ed4e45eb30ddbe3bd53072ae32"
-      },
-      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
-      "seed": 42,
-      "controls": 230,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        false,
-        true
-      ],
-      "successes": 3,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/panda_wood_place_base/result.json",
-      "receipt_sha256": "3c55541aa6b85f06adbdf747829b8399b54c4a10b518ccd8b8db71795e07560a"
-    },
-    {
-      "task": "panda_wood_stack_second",
-      "policy": "panda_wood_stack_second",
-      "scope": "registered task",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2",
-      "checkpoint_sha256": {
-        "actor.pt": "db88a9b485c9f7fdd0110f0593068a949ad6acf8008dad117b0b186c620a4568"
-      },
-      "protocol": "Four sampled native FR3v2 wood reset-bank states, seed 42. Each admitted start ran to termination; action scheduling and STOP phases used the native wood binding.",
-      "seed": 42,
-      "controls": 272,
-      "timeouts": 1,
-      "success_by_env": [
-        false,
-        true,
-        true,
-        true
-      ],
-      "successes": 3,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/panda_wood_stack_second/result.json",
-      "receipt_sha256": "a04ba73d55e5d4dd1124ebf18a8f9c6e4b9ae08af6fcd45e30a1e5c8bb52c7de"
-    },
-    {
-      "task": "pick10",
-      "policy": "pick10",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "policy": "a32b7f4b8f5628fa5e65fd87c7aba904be1bf34118a6591ae92626c8c836e67f"
-      },
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "seed": 42,
-      "controls": 157,
-      "timeouts": 0,
-      "episode_success": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
-      ],
-      "successes": 16,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/pick10/result.json",
-      "receipt_sha256": "498b0696980d8fdbf5ad0422a188d00d5fe51d601e27aabe999d980724888531",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 997,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "panda_grasp1000",
+          "protocol": "All 1000 delivered named object slots (982 distinct collision geometries), one fixed seeded continuous-home request per slot. Native 20 Hz SysID controller and original bilateral-grasp/lift checker, no actor update. Initial observations are saved before policy execution.",
+          "successes": 997,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "pick100",
       "policy": "pick100",
-      "scope": "registered task",
+      "group": "primary",
+      "protocol": "All 20 banks",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "skill_00.pt": "51051c5484734a4defcec4eaee9ac34b1dd1514ce0ad6aa495011d845222beaf"
       },
-      "protocol": "Deterministic author checkpoint on 512 reset-bank slots, seed 42, original policy observation prefix.",
-      "seed": 42,
-      "controls": 153,
-      "timeouts": 0,
-      "failures": 306,
-      "success_by_env": [
-        false,
-        true,
-        false,
-        false,
-        true,
-        true,
-        false,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        true,
-        true,
-        false,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        true,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        true,
-        false,
-        true,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        true,
-        true,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        true,
-        true,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        true,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        true,
-        true,
-        false,
-        true,
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        true,
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 206,
-      "attempts": 512,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/pick100/result.json",
-      "receipt_sha256": "0177f8dfe463af06e877ec8c14397b7169529c95082a4a8742b698330801731b",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "push10",
-      "policy": "push10",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "policy": "08d279ce7fa38f81e334671932e4df4636825ccdf8538bf5e8d57b23ab5b06e8"
-      },
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "seed": 42,
-      "controls": 394,
-      "timeouts": 16,
-      "episode_success": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/push10/result.json",
-      "receipt_sha256": "854f7e36d0a8d3b54c1f72b3ec013433b493ba46f8e88061cefc548ff40bfd67",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
-    },
-    {
-      "task": "track10",
-      "policy": "track10",
-      "scope": "registered task",
-      "training_embodiment": "i2rt_yam",
-      "evaluation_embodiment": "i2rt_yam",
-      "checkpoint_sha256": {
-        "policy": "0b0a641029f6d9f135c3873100fcfe9e1838ba24bd7f13d4f905d59847ce04f9"
-      },
-      "protocol": "Deterministic frozen actor on 16 native first-frame bank starts, seed 42, at 30 Hz.",
-      "seed": 42,
-      "controls": 229,
-      "timeouts": 0,
-      "episode_success": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 0,
-      "attempts": 16,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/track10/result.json",
-      "receipt_sha256": "6054edb829494bd108748f2faad061e1341d5a350749fd00ab3fedb13df4abef",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 8022,
+      "attempts": 20000,
+      "evidence": [
+        {
+          "receipt": "pick100-bank0",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 427,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank1",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 573,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank2",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 492,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank3",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 598,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank4",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 581,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank5",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 476,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank6",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 466,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank7",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 456,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank8-rigid-visual",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 581,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank9-rigid-visual",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 383,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank10",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 325,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank11",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 280,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank12",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 266,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank13",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 339,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank14",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 208,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank15",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 323,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank16",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 275,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank17",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 131,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank18",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 434,
+          "attempts": 1000
+        },
+        {
+          "receipt": "pick100-bank19",
+          "protocol": "Disjoint 1000-row shard of the complete 20000-row Pick100 initial bank. Geometry is prepared from exactly these requested state IDs, original reset and success gates, current shared I2RT physics.",
+          "successes": 408,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "handover_butter",
       "policy": "Native MA-v2 chain",
-      "scope": "native delivery",
+      "group": "primary",
+      "protocol": "All 300 native points, three-skill chain without an intermediate reset",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
@@ -3911,22 +2885,22 @@
         "stage_1": "e65d96a15e0788581265e0143662b508d3a3c91edfc5859a973470aa88fdddd9",
         "stage_2": "af864fd1e6838eee75abfe7b3f87c2e7f227405106b0f606632d45a9d631afea"
       },
-      "protocol": "Three frozen MA-v2 stages on the author’s 300 train/validation starting points.",
-      "controls": 842,
       "successes": 244,
       "attempts": 300,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/ma-v2/result.json",
-      "receipt_sha256": "6ced0dcff56d9f4780bbd373e33124624c4d98d2b21c4667b02e29908721a986",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "evidence": [
+        {
+          "receipt": "ma-v2-full",
+          "protocol": "All 300 native points, three-skill chain without an intermediate reset",
+          "successes": 244,
+          "attempts": 300
+        }
+      ]
     },
     {
       "task": "10724",
       "policy": "Five-stage ARX v107 chain",
-      "scope": "native delivery",
+      "group": "primary",
+      "protocol": "OFFICIAL panel across three seeds",
       "training_embodiment": "dual_arx_x5",
       "evaluation_embodiment": "dual_arx_x5",
       "checkpoint_sha256": {
@@ -3936,422 +2910,1129 @@
         "place.pt": "f7cf21c39c1cae2fd1a43a5ae6e792d7b4157a3c2f22e69a9a0006eb1c9c3d69",
         "home.pt": "cb586d46d8f4bd2616f700bdacdc65915fee37e7ee41eb2cf55dde6b833faa37"
       },
-      "protocol": "Five original development layouts for each of three scene seeds, with one 550-action clock per layout. The pair-placement actor samples from its frozen policy (seed 773). Four other actors use their means. The native stack-and-return-home checker scores the full episode.",
-      "episode_success": [
-        false,
-        false,
-        true,
-        false,
-        false,
-        true,
-        true,
-        false,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false
-      ],
-      "successes": 6,
-      "attempts": 15,
-      "revision": "retained v107 evaluation snapshot",
-      "server_receipt": "evaluations/experts-30hz-1116/arx10724-v107/result.json",
-      "receipt_sha256": "47ba715de097998f27f1f90caa34d8febff24dc97cfd694647850ad831e325b0",
-      "source_receipts": {
-        "evaluations/experts-30hz-1116/arx10724-v107/dev-seed0/ledger.json": "c5607e18a5cbc8dd11ce57268626b5b4bc2d97254c0245b0086fc49171751ee4",
-        "evaluations/experts-30hz-1116/arx10724-v107/dev-seed1/ledger.json": "a36331e5a5c2762b9f8860375ffb075cf10e653ada729c5bc65f9862bab59278",
-        "evaluations/experts-30hz-1116/arx10724-v107/dev-seed2/ledger.json": "0e01b0b6eee28c4a3cf0e0175deffe681147b932c92f37bd41c35f028700495a"
-      }
+      "successes": 90,
+      "attempts": 150,
+      "evidence": [
+        {
+          "receipt": "arx10724-official-seed0",
+          "protocol": "Full original OFFICIAL panel, native five-stage checker",
+          "successes": 32,
+          "attempts": 50
+        },
+        {
+          "receipt": "arx10724-official-seed1",
+          "protocol": "Full original OFFICIAL panel, native five-stage checker",
+          "successes": 28,
+          "attempts": 50
+        },
+        {
+          "receipt": "arx10724-official-seed2",
+          "protocol": "Full original OFFICIAL panel, native five-stage checker",
+          "successes": 30,
+          "attempts": 50
+        }
+      ]
     },
     {
       "task": "i2rt_example",
       "policy": "i2rt_example_default · 0095a6ff",
-      "scope": "historical",
+      "group": "primary",
+      "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "0095a6ff754d2e59bf7be708d246135bca4c73bf6445ff240e96297fb4c9e4c0"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 11,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_example-0095a6ff754d/result.json",
-      "receipt_sha256": "3f6ab4087ebdeee40e265e361fd0eab455f9ee15f28864f036b2b40c424151c0",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-0095a6ff754d",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_example",
       "policy": "i2rt_example_default · 009a421c",
-      "scope": "historical",
+      "group": "primary",
+      "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "009a421cf531956fd0bbb9f670a51fdcc596fdbf7211b3a3ade1872946e73850"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 11,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_example-009a421cf531/result.json",
-      "receipt_sha256": "caf41e683a17aa98127b8eba07dbee72bfeafe3a1d598c4b9de97f577ff4849b",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-009a421cf531",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_example",
       "policy": "i2rt_example_default · 340f3253",
-      "scope": "historical",
+      "group": "primary",
+      "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "340f32539acb941e5803b102ca209cbe5b0d6d7da7624f176524eacf423ccdf1"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_example_default. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 21,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_example-340f32539acb/result.json",
-      "receipt_sha256": "b881b3b09d101f9d79c58ba531105b768af71f6ef09d81f1c1719b7f71d016fc",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-340f32539acb",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10_bottle_16 · 45742742",
-      "scope": "historical",
+      "group": "object-specific layout",
+      "protocol": "Fixed-layout repeatability for the object named by the policy",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "45742742503df16c98f7d3ac56d7df5f9e209f641a8b839e868ccea4808b2b8d"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_bottle_16. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 58,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-45742742503d/result.json",
-      "receipt_sha256": "9f5d011e9f92e45be28548b54db46d440f3232cd37f6304ecfd552ae091497e9",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-45742742503d",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10_can_1 · 4fa34a6e",
-      "scope": "historical",
+      "group": "object-specific layout",
+      "protocol": "Fixed-layout repeatability for the object named by the policy",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "4fa34a6e0656c264fe36042b6c18f06eef16d87e6df395248a5b601a1329fd3f"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_can_1. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 177,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-4fa34a6e0656/result.json",
-      "receipt_sha256": "118a3725f3a804c9df37d9f5503d1c37132c5a2a804eb3dde842e77e13b41c0e",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-4fa34a6e0656",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10_chocolate_bar_14 · 59c40805",
-      "scope": "historical",
+      "group": "object-specific layout",
+      "protocol": "Fixed-layout repeatability for the object named by the policy",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "59c40805e8c1342c787f8bea0380739d75fa3dd9c8c85e791c81e7c30f331477"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_chocolate_bar_14. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 51,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-59c40805e8c1/result.json",
-      "receipt_sha256": "4a5492d408899dee50236ff0f83c8436146336c63db02037bb3f52629c5b6df5",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-59c40805e8c1",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10_mug_54 · 83725ab5",
-      "scope": "historical",
+      "group": "object-specific layout",
+      "protocol": "Fixed-layout repeatability for the object named by the policy",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "83725ab5d2119f9bc82303ec2d360b50d7877496aed3110376643353ccf1ebc0"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_mug_54. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 53,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-83725ab5d211/result.json",
-      "receipt_sha256": "4e1708ff63a55007edcd8f7e2d9756b3563c97550df2b081fa4b8951e16b5b3b",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-83725ab5d211",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10_mouse_48 · 8c970bb0",
-      "scope": "historical",
+      "group": "object-specific layout",
+      "protocol": "Fixed-layout repeatability for the object named by the policy",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "8c970bb0e0b3a726c4171493a4edfaa4758a8c777accc15a346772814c72527a"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_mouse_48. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 102,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-8c970bb0e0b3/result.json",
-      "receipt_sha256": "167498ee35984c3f6e1660025479e07f332007ad000fbe7465dc292afb03a713",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-8c970bb0e0b3",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10_t_shaped_block_0 · 9e51ad6c",
-      "scope": "historical",
+      "group": "object-specific layout",
+      "protocol": "Fixed-layout repeatability for the object named by the policy",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "9e51ad6c6b0b3b45bbc70039c24985b16d7f08aa6d3b75755c506c3c40d96ffe"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_t_shaped_block_0. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 51,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-9e51ad6c6b0b/result.json",
-      "receipt_sha256": "71eab9688c59931e2b472d1da9621d58bf6a6af49bedad192abbe671edf5795f",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-9e51ad6c6b0b",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10_default · e61f8a48",
-      "scope": "historical",
+      "group": "primary",
+      "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "e61f8a4868eef2ff5ded6fb8768d7e282baef70d842080c9a9ac4e009a3dff8d"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_default. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 45,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-e61f8a4868ee/result.json",
-      "receipt_sha256": "590275de9cc32a0c95bd0c25be2e53b30e643f198d0ec99406021e78c9e2537f",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-e61f8a4868ee",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_push10",
       "policy": "i2rt_push10_hammer_16 · eaac1616",
-      "scope": "historical",
+      "group": "object-specific layout",
+      "protocol": "Fixed-layout repeatability for the object named by the policy",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
       "checkpoint_sha256": {
         "actor.pt": "eaac161698c48a9d39e72a929198cd0607370c5c8a813cd885f2e7f3e5a97058"
       },
-      "protocol": "Four fresh starts using archived fixed-layout configuration i2rt_push10_hammer_16. The actor receives its training-time observation fields from the active scene.",
-      "seed": 42,
-      "controls": 59,
-      "timeouts": 0,
-      "success_by_env": [
-        true,
-        true,
-        true,
-        true
-      ],
-      "config_identity_matches": true,
-      "successes": 4,
-      "attempts": 4,
-      "revision": "f97139a7",
-      "server_receipt": "evaluations/experts-30hz-1116/historical/i2rt_push10-eaac161698c4/result.json",
-      "receipt_sha256": "71fe098f71c6e3cfcb31c1b53cc52fce795c67d53c7210b2668e0a9fdc456085",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150
+      "successes": 1000,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-eaac161698c4",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 1000,
+          "attempts": 1000
+        }
+      ]
     },
     {
       "task": "i2rt_task10717",
       "policy": "Certified 30 Hz Press actor with inter-call home",
-      "scope": "full native task",
+      "group": "primary",
+      "protocol": "Two commands with a return home",
       "training_embodiment": "i2rt_yam",
       "evaluation_embodiment": "i2rt_yam",
-      "successes": 300,
-      "attempts": 300,
-      "revision": "43db29dcbfdd9bf41fe39f8877143f15ed884c22",
-      "protocol": "Three source batches on axis2, seeds 0, 1 and 2, with 100 episodes each. Default fixed button layout and digits 1 and 2. Four calls to the frozen actor, with public-action home movements between skills. One reset per episode and a 28-second, 840-action budget. Scored by I2RTTask10717.step info[success]. This measures repeated execution on the default scene. A seed-0 reproduction on axis completed 100/100 episodes.",
-      "evaluation_host": "axis2",
-      "evaluation_date": "2026-11-16",
-      "physics": "shared_i2rt_tabletop",
-      "control_hz": 30,
-      "substeps": 5,
-      "physics_hz": 150,
       "checkpoint_sha256": {
         "actor.pt": "4b222ac5a034e3e02494857978d212f5d416c5611d93c779738a5eb7f75e719c",
         "normalization.pt": "000f9189f04131001c241ef0a7d7ccbde227b5a77e4f292ce28ea21335c79321",
         "coordinator.json": "6f5b776a9625e325c89075c8858b5f5bf4a6184c9535c4d93d9d5d72d2216074"
       },
-      "receipt_sha256": "386136b44620e2b122f407f61289010f72500bd9eea2441fe6308c45dd31b047",
-      "server_receipt": "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation_summary.json",
-      "source_receipts": {
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed0_protocol.json": "e123e7b884061fdb19291f0596576e193ae40cce8294c3c25da057bfe32366a8",
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed0_receipt.json": "c77f64e0eb707ba302821d0f4bd780e561fac493476b16470ad7056bea87da89",
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed0_result.json": "38c83efc3ef17157b9535098b6ca5eee3976594929a846808e65705828e42e90",
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed1_protocol.json": "8a646fd6267d9f02a4d217180d2dcc96ab90ff50ee0c9648535d56412e773cc7",
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed1_receipt.json": "178e1e36a9545f236eb4e06f15d585cc65ed8137b232ce9fe1f1d934ac7b9b96",
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed1_result.json": "38c83efc3ef17157b9535098b6ca5eee3976594929a846808e65705828e42e90",
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed2_protocol.json": "7ed493a96db5bc60c725ad88161149489dffc3a068ca64a3cccc55471901fedb",
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed2_receipt.json": "4a90c1f4bbe33c09e2af838d0101574d64962f5a25680f9bd948a55eb108513f",
-        "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/native_seed2_result.json": "38c83efc3ef17157b9535098b6ca5eee3976594929a846808e65705828e42e90"
+      "successes": 300,
+      "attempts": 300,
+      "evidence": [
+        {
+          "receipt": "press-native-seed0",
+          "protocol": "Original native commands 1 then 2 with inter-call home, all 100 slots",
+          "successes": 100,
+          "attempts": 100
+        },
+        {
+          "receipt": "press-native-seed1",
+          "protocol": "Original native commands 1 then 2 with inter-call home, all 100 slots",
+          "successes": 100,
+          "attempts": 100
+        },
+        {
+          "receipt": "press-native-seed2",
+          "protocol": "Original native commands 1 then 2 with inter-call home, all 100 slots",
+          "successes": 100,
+          "attempts": 100
+        }
+      ]
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "Certified 30 Hz Press actor with inter-call home",
+      "group": "atomic-test",
+      "protocol": "Atomic Press TEST",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "4b222ac5a034e3e02494857978d212f5d416c5611d93c779738a5eb7f75e719c",
+        "normalization.pt": "000f9189f04131001c241ef0a7d7ccbde227b5a77e4f292ce28ea21335c79321",
+        "coordinator.json": "6f5b776a9625e325c89075c8858b5f5bf4a6184c9535c4d93d9d5d72d2216074"
       },
-      "axis_reproduction": {
-        "successes": 100,
-        "attempts": 100,
-        "seed": 0,
-        "server_receipt": "evaluations/task10717-30hz-20261119/native-seed0/receipt.json",
-        "receipt_sha256": "860bb65b087da38655cfa837a49e7de87a9e76d5cffd05ba09d064411b75b6a4"
+      "successes": 1774,
+      "attempts": 1800,
+      "evidence": [
+        {
+          "receipt": "press-atomic-test",
+          "protocol": "Every published TEST atomic case over all 36 goals",
+          "successes": 1774,
+          "attempts": 1800
+        }
+      ]
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "Certified 30 Hz Press actor with inter-call home",
+      "group": "dev",
+      "protocol": "Atomic Press DEV",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "4b222ac5a034e3e02494857978d212f5d416c5611d93c779738a5eb7f75e719c",
+        "normalization.pt": "000f9189f04131001c241ef0a7d7ccbde227b5a77e4f292ce28ea21335c79321",
+        "coordinator.json": "6f5b776a9625e325c89075c8858b5f5bf4a6184c9535c4d93d9d5d72d2216074"
       },
-      "atomic_skill": {
-        "successes": 1770,
-        "attempts": 1800,
-        "buckets": 36,
-        "cases_per_bucket": 50,
-        "minimum_bucket_successes": 43,
-        "minimum_bucket_attempts": 50,
-        "policy_observation_dim": 127,
-        "policy_action_dim": 7,
-        "scope": "Four supported arm/button pairs on three fixed buttons, one to nine presses per call.",
-        "server_receipt": "store/arx/i2rt_press_30hz_20261116_v1/approved_bundle_env16_30hz_v1/evaluation/atomic_TEST_result.json",
-        "receipt_sha256": "462ffb94c060b8d48fda8dfb6372c974294b5549f18afb66f1deea1f59f1b22b"
-      }
+      "successes": 712,
+      "attempts": 720,
+      "evidence": [
+        {
+          "receipt": "press-atomic-dev",
+          "protocol": "Every published DEV atomic case over all 36 goals",
+          "successes": 712,
+          "attempts": 720
+        }
+      ]
+    },
+    {
+      "task": "i2rt_watch_place",
+      "policy": "goal256 41276",
+      "group": "primary",
+      "protocol": "Published goal256 TEST500",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "8baeaec4acf5aa17a6220d3c86436c5a15da3688a0044aba7d1cb372ab1416e1"
+      },
+      "successes": 486,
+      "attempts": 500,
+      "evidence": [
+        {
+          "receipt": "place-goal256-test",
+          "protocol": "Complete sealed goal256 TEST500",
+          "successes": 486,
+          "attempts": 500
+        }
+      ]
+    },
+    {
+      "task": "i2rt_watch_place",
+      "policy": "goal256 41276",
+      "group": "dev",
+      "protocol": "Published goal256 DEV500",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "8baeaec4acf5aa17a6220d3c86436c5a15da3688a0044aba7d1cb372ab1416e1"
+      },
+      "successes": 482,
+      "attempts": 500,
+      "evidence": [
+        {
+          "receipt": "place-goal256-dev",
+          "protocol": "Complete sealed goal256 DEV500; development is reported separately from TEST",
+          "successes": 482,
+          "attempts": 500
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_6671",
+      "group": "object butter",
+      "protocol": "Pick from sealed home starts for butter",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "96136219111f94041528c18eb99afce1161054ad681740a7e540641bca053648"
+      },
+      "successes": 995,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6671-full-retry3-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 995,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place 6671",
+      "group": "object butter",
+      "protocol": "Full chain from sealed home starts for butter",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "96136219111f94041528c18eb99afce1161054ad681740a7e540641bca053648",
+        "place": "7598d2a35b516948392bf9e863d9c05becaa1d30cfb44d1a3089423ef4611148"
+      },
+      "successes": 703,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6671-full-retry3-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 703,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_6672",
+      "group": "object orange juice",
+      "protocol": "Pick from sealed home starts for orange juice",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "f74ec9b397f43e36ef7217cfd7d2d0ba25fcb6c42c0096419e17b1f9a27fe994"
+      },
+      "successes": 991,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 991,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place 6672",
+      "group": "object orange juice",
+      "protocol": "Full chain from sealed home starts for orange juice",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "f74ec9b397f43e36ef7217cfd7d2d0ba25fcb6c42c0096419e17b1f9a27fe994",
+        "place": "c71b8e74b278faa4da185035685903471254055e4dc03924dc8d24174ee0ed69"
+      },
+      "successes": 801,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 801,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_6675",
+      "group": "object tomato sauce",
+      "protocol": "Pick from sealed home starts for tomato sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "c4d2c49bdcca29bb9cf4b0edb138e0c0048c271be47eaaec5c7357c5773da01b"
+      },
+      "successes": 993,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 993,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place 6675",
+      "group": "object tomato sauce",
+      "protocol": "Full chain from sealed home starts for tomato sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "c4d2c49bdcca29bb9cf4b0edb138e0c0048c271be47eaaec5c7357c5773da01b",
+        "place": "6c7598f2dddf7b9e1c7cc6d508f396cc1ca7dc60d19c5603fa624973157dfb48"
+      },
+      "successes": 655,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 655,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_student",
+      "group": "primary",
+      "protocol": "Pick from sealed home starts across all five groceries",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda"
+      },
+      "successes": 993,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6671-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 198,
+          "attempts": 200
+        },
+        {
+          "receipt": "fr3-student-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 200,
+          "attempts": 200
+        },
+        {
+          "receipt": "fr3-student-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 196,
+          "attempts": 200
+        },
+        {
+          "receipt": "fr3-student-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 199,
+          "attempts": 200
+        },
+        {
+          "receipt": "fr3-student-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 200,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_student",
+      "group": "object butter",
+      "protocol": "Pick from sealed home starts for butter",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda"
+      },
+      "successes": 198,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6671-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 198,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place student",
+      "group": "primary",
+      "protocol": "Full chain from sealed home starts across all five groceries",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
+        "place": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 550,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6671-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 133,
+          "attempts": 200
+        },
+        {
+          "receipt": "fr3-student-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 158,
+          "attempts": 200
+        },
+        {
+          "receipt": "fr3-student-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 85,
+          "attempts": 200
+        },
+        {
+          "receipt": "fr3-student-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 52,
+          "attempts": 200
+        },
+        {
+          "receipt": "fr3-student-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 122,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place student",
+      "group": "object butter",
+      "protocol": "Full chain from sealed home starts for butter",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
+        "place": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 133,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6671-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 133,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_student",
+      "group": "object orange juice",
+      "protocol": "Pick from sealed home starts for orange juice",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda"
+      },
+      "successes": 200,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 200,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place student",
+      "group": "object orange juice",
+      "protocol": "Full chain from sealed home starts for orange juice",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
+        "place": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 158,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 158,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_student",
+      "group": "object chocolate pudding",
+      "protocol": "Pick from sealed home starts for chocolate pudding",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda"
+      },
+      "successes": 196,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 196,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place student",
+      "group": "object chocolate pudding",
+      "protocol": "Full chain from sealed home starts for chocolate pudding",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
+        "place": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 85,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 85,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_student",
+      "group": "object barbecue sauce",
+      "protocol": "Pick from sealed home starts for barbecue sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda"
+      },
+      "successes": 199,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 199,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place student",
+      "group": "object barbecue sauce",
+      "protocol": "Full chain from sealed home starts for barbecue sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
+        "place": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 52,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 52,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_student",
+      "group": "object tomato sauce",
+      "protocol": "Pick from sealed home starts for tomato sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda"
+      },
+      "successes": 200,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 200,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place student",
+      "group": "object tomato sauce",
+      "protocol": "Full chain from sealed home starts for tomato sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "3a8e021e4b02ddaa3360f9a60f0a22678e5a2726dad6a8d69f640fa7fafafdda",
+        "place": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 122,
+      "attempts": 200,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 122,
+          "attempts": 200
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_6671",
+      "group": "object butter",
+      "protocol": "Place from valid physical handoffs for butter",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "7598d2a35b516948392bf9e863d9c05becaa1d30cfb44d1a3089423ef4611148"
+      },
+      "successes": 703,
+      "attempts": 703,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6671-full-retry3-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 703,
+          "attempts": 703
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_6672",
+      "group": "object orange juice",
+      "protocol": "Place from valid physical handoffs for orange juice",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "c71b8e74b278faa4da185035685903471254055e4dc03924dc8d24174ee0ed69"
+      },
+      "successes": 801,
+      "attempts": 805,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 801,
+          "attempts": 805
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_6675",
+      "group": "object tomato sauce",
+      "protocol": "Place from valid physical handoffs for tomato sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "6c7598f2dddf7b9e1c7cc6d508f396cc1ca7dc60d19c5603fa624973157dfb48"
+      },
+      "successes": 655,
+      "attempts": 656,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 655,
+          "attempts": 656
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_student",
+      "group": "primary",
+      "protocol": "Place from valid physical handoffs across all five groceries",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 550,
+      "attempts": 554,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6671-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 133,
+          "attempts": 133
+        },
+        {
+          "receipt": "fr3-student-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 158,
+          "attempts": 161
+        },
+        {
+          "receipt": "fr3-student-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 85,
+          "attempts": 85
+        },
+        {
+          "receipt": "fr3-student-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 52,
+          "attempts": 52
+        },
+        {
+          "receipt": "fr3-student-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 122,
+          "attempts": 123
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_student",
+      "group": "object butter",
+      "protocol": "Place from valid physical handoffs for butter",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 133,
+      "attempts": 133,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6671-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 133,
+          "attempts": 133
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_student",
+      "group": "object orange juice",
+      "protocol": "Place from valid physical handoffs for orange juice",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 158,
+      "attempts": 161,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 158,
+          "attempts": 161
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_student",
+      "group": "object chocolate pudding",
+      "protocol": "Place from valid physical handoffs for chocolate pudding",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 85,
+      "attempts": 85,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 85,
+          "attempts": 85
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_student",
+      "group": "object barbecue sauce",
+      "protocol": "Place from valid physical handoffs for barbecue sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 52,
+      "attempts": 52,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 52,
+          "attempts": 52
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_student",
+      "group": "object tomato sauce",
+      "protocol": "Place from valid physical handoffs for tomato sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "4c87a2e262f16132d1757291183e8d30609cd375fc743b0e9fc6ed863d3fbab8"
+      },
+      "successes": 122,
+      "attempts": 123,
+      "evidence": [
+        {
+          "receipt": "fr3-student-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 122,
+          "attempts": 123
+        }
+      ]
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "Retained frame-history actor 63bab1cf299b",
+      "group": "repeatability",
+      "protocol": "Fixed-layout repeatability",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor": "63bab1cf299bd9718e4453349a6fce6a0b71e598c3f856d3c94a5896fe1a3cf3"
+      },
+      "successes": 0,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fixed-63bab1cf299b",
+          "protocol": "All delivered fixed layouts (one for this policy), 1000 deterministic repeated episodes. No random geometry is invented; this is fixed-layout repeatability, not 1000 unique starts.",
+          "successes": 0,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "Press approved_bundle_v1",
+      "group": "primary",
+      "protocol": "Two commands with a return home",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "6654440688e2ff9a5ef1100ae9aacdc4d08c839384f493a63445748b5f0056cf"
+      },
+      "successes": 300,
+      "attempts": 300,
+      "evidence": [
+        {
+          "receipt": "press-approved-v1-native-seed0",
+          "protocol": "Original native command panel",
+          "successes": 100,
+          "attempts": 100
+        },
+        {
+          "receipt": "press-approved-v1-native-seed1",
+          "protocol": "Original native command panel",
+          "successes": 100,
+          "attempts": 100
+        },
+        {
+          "receipt": "press-approved-v1-native-seed2",
+          "protocol": "Original native command panel",
+          "successes": 100,
+          "attempts": 100
+        }
+      ]
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "Press approved_bundle_v1",
+      "group": "atomic-test",
+      "protocol": "Atomic Press TEST",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "6654440688e2ff9a5ef1100ae9aacdc4d08c839384f493a63445748b5f0056cf"
+      },
+      "successes": 1770,
+      "attempts": 1800,
+      "evidence": [
+        {
+          "receipt": "press-approved-v1-atomic-test",
+          "protocol": "All published TEST rows",
+          "successes": 1770,
+          "attempts": 1800
+        }
+      ]
+    },
+    {
+      "task": "i2rt_task10717",
+      "policy": "Press approved_bundle_v1",
+      "group": "dev",
+      "protocol": "Atomic Press DEV",
+      "training_embodiment": "i2rt_yam",
+      "evaluation_embodiment": "i2rt_yam",
+      "checkpoint_sha256": {
+        "actor.pt": "6654440688e2ff9a5ef1100ae9aacdc4d08c839384f493a63445748b5f0056cf"
+      },
+      "successes": 712,
+      "attempts": 720,
+      "evidence": [
+        {
+          "receipt": "press-approved-v1-atomic-dev",
+          "protocol": "All published DEV rows",
+          "successes": 712,
+          "attempts": 720
+        }
+      ]
     }
   ],
-  "receipt_root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1/central",
+  "receipt_root": "/localdisk/boshi/project/axis-omnireset/runs/full-expert-evaluation-20261119",
   "smoke_tests": {
     "implementations": 39,
     "server_directory": "receipts/task-smokes",
@@ -4438,203 +4119,92 @@
   },
   "source_fr3v2_full_episodes": [
     {
-      "object_id": 6671,
-      "policy": "student",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 3,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 3,
-      "place_successes": 3,
-      "seed": 2311006713,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6671/eval_000.json",
-      "receipt_sha256": "a9549c4988f28a7d06c1544acc570a976b7a930e31247d2af804fd14c896430f",
       "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "object_id": 6672,
-      "policy": "student",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 3,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 3,
-      "place_successes": 3,
-      "seed": 2311006714,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6672/eval_000.json",
-      "receipt_sha256": "469030ad24edef6ed94d2bd97fcf39630e2b93fe7b4190977da00ee270c58aad",
-      "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "object_id": 6673,
-      "policy": "student",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 2,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 2,
-      "place_successes": 2,
-      "seed": 2311006715,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6673/eval_000.json",
-      "receipt_sha256": "58a555bc085268682cce34f0c1c6053af40c29a2c3dd5382ecc6cde2557cd483",
-      "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "object_id": 6674,
-      "policy": "student",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 1,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 1,
-      "place_successes": 1,
-      "seed": 2311006716,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6674/eval_000.json",
-      "receipt_sha256": "2cf0155b6225c086da3d700fc8a437778265faf9d7a3acdb8484eacf5f1c0db8",
-      "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "object_id": 6675,
-      "policy": "student",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 2,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 2,
-      "place_successes": 2,
-      "seed": 2311006717,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/students-6675/eval_000.json",
-      "receipt_sha256": "e6c2aef5c0a65ef8181707c798cd654ecb9d811eea743560b0d17c4bc6d4b050",
-      "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
       "object_id": 6671,
       "policy": "teacher",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 2,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 2,
-      "place_successes": 2,
-      "seed": 2311006713,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6671/eval_000.json",
-      "receipt_sha256": "054122909660c1e35a3e56a818c2a5230559d0f9a3d979e9fcb9301f09769348",
-      "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
+      "requested": 1000,
+      "picked": 995,
+      "place_attempts": 703,
+      "place_successes": 703,
+      "server_receipt": "fr3-teacher-6671-full-retry3-fixed-panel",
+      "receipt_sha256": "2f5085b92b7a7bc9fc316327e3bb002e77cbce909b97a02b90479b5a80bb5a70"
     },
     {
+      "task": "fr3v2_jf_pick_place",
       "object_id": 6672,
       "policy": "teacher",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 3,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 4,
-      "place_successes": 3,
-      "seed": 2311006714,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6672/eval_000.json",
-      "receipt_sha256": "ad44bb203f347cacffc0ab63691044a26f467b8bb812d666c26f3def9d0b77d4",
-      "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
+      "requested": 1000,
+      "picked": 991,
+      "place_attempts": 805,
+      "place_successes": 801,
+      "server_receipt": "fr3-teacher-6672-full-fixed-panel",
+      "receipt_sha256": "ab928b6a14e332cded03b85b9a0ebf824c03b50f21630605268f919f098d82c2"
     },
     {
-      "object_id": 6673,
-      "policy": "teacher",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 3,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 3,
-      "place_successes": 3,
-      "seed": 2311006715,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6673/eval_000.json",
-      "receipt_sha256": "f7596e4564062fe1965a54aaff8270d929290e381f332d3b9273ab5f03c2e1a7",
       "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "object_id": 6674,
-      "policy": "teacher",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 0,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 0,
-      "place_successes": 0,
-      "seed": 2311006716,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6674/eval_000.json",
-      "receipt_sha256": "52ef7616de5d25e91a656beea25ec8d3031f97b8a556ffb46bbc9b99ed6f8127",
-      "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
-      "object_id": 6674,
-      "policy": "teacher",
-      "host": "axis2",
-      "attempts": 8,
-      "successes": 4,
-      "pick_attempts": 8,
-      "picked": 8,
-      "place_attempts": 4,
-      "place_successes": 4,
-      "seed": 2311007716,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6674-extra/eval_000.json",
-      "receipt_sha256": "86387e81bad6bf1fba56be1d9f02a31fc0f2a93b50a706ec24037356b9261a36",
-      "sampling_note": "Additional eight normal starts using the same seed and cohort size as the previous qualification.",
-      "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
-    },
-    {
       "object_id": 6675,
       "policy": "teacher",
-      "host": "axis2",
-      "attempts": 4,
-      "successes": 3,
-      "pick_attempts": 4,
-      "picked": 4,
-      "place_attempts": 3,
-      "place_successes": 3,
-      "seed": 2311006717,
-      "protocol": "Original FR3v2 normal starts, physical camera-planned transport and 5 Hz frozen policy. All proposed episodes count toward chain success.",
-      "server_receipt": "evaluations/experts-30hz-1116/jf-episode-receipts/teachers-6675/eval_000.json",
-      "receipt_sha256": "204f4c69bb4ac0fba9c008cb0afe40bff2fc7c3dd2202d338367bd2a15425b66",
+      "requested": 1000,
+      "picked": 993,
+      "place_attempts": 656,
+      "place_successes": 655,
+      "server_receipt": "fr3-teacher-6675-full-fixed-panel",
+      "receipt_sha256": "fd12482defc3f4e2d6ebb5cfaffef7c6ac1fd48df230dae75d36b84635244763"
+    },
+    {
       "task": "fr3v2_jf_pick_place",
-      "training_embodiment": "franka_fr3v2",
-      "evaluation_embodiment": "franka_fr3v2"
+      "object_id": 6671,
+      "policy": "student",
+      "requested": 200,
+      "picked": 198,
+      "place_attempts": 133,
+      "place_successes": 133,
+      "server_receipt": "fr3-student-6671-full-fixed-panel",
+      "receipt_sha256": "de93f234ae09b4eddf63a38e384f95d6804f2ee996c3fa872be7f682746cc4f3"
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "object_id": 6672,
+      "policy": "student",
+      "requested": 200,
+      "picked": 200,
+      "place_attempts": 161,
+      "place_successes": 158,
+      "server_receipt": "fr3-student-6672-full-fixed-panel",
+      "receipt_sha256": "68b976c82f582143e602e3cf332beb83858b45f458ed2bdc2919ec9b95f777b4"
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "object_id": 6673,
+      "policy": "student",
+      "requested": 200,
+      "picked": 196,
+      "place_attempts": 85,
+      "place_successes": 85,
+      "server_receipt": "fr3-student-6673-full-fixed-panel",
+      "receipt_sha256": "e6a9c9686f9196396b5b2188cec26beac910c21b55625bc7518a76805637abfb"
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "object_id": 6674,
+      "policy": "student",
+      "requested": 200,
+      "picked": 199,
+      "place_attempts": 52,
+      "place_successes": 52,
+      "server_receipt": "fr3-student-6674-full-fixed-panel",
+      "receipt_sha256": "0001a37e74f2190456d9a2219da58c2495225ee6c5a9ec81835f4f0e457e4eb0"
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "object_id": 6675,
+      "policy": "student",
+      "requested": 200,
+      "picked": 200,
+      "place_attempts": 123,
+      "place_successes": 122,
+      "server_receipt": "fr3-student-6675-full-fixed-panel",
+      "receipt_sha256": "68b572eee61729b21f4f3a3e9e401d318506013e304bcc8bb49e16a87e6dd8b4"
     }
   ],
   "arx10717_availability_receipt": "receipts/arx10717-source-search.json",
@@ -4664,5 +4234,9 @@
       "rest_offsets"
     ],
     "server_receipt": "evaluations/experts-30hz-1116/qualification.json"
+  },
+  "evaluation_progress": {
+    "completed": 39,
+    "total": 60
   }
 }

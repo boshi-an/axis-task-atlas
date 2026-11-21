@@ -31,73 +31,8 @@ def task_link(key):
     return f'<a href="#{h(key)}">{h(by[key]["task"])} · <code>{h(key)}</code></a>'
 
 
-def native_counts(task, run):
-    if task == "fr3v2_jf_pick":
-        return run["picked"], run["pick_attempts"]
-    if task == "fr3v2_jf_place":
-        return run["place_successes"], run["place_attempts"]
-    return run["successes"], run["attempts"]
-
-
-def stage_rate(wins, count):
-    return fmt({"successes": wins, "attempts": count}) if count else "No valid handoffs"
-
-
-OBJECT_NAMES = {
-    6671: "Butter", 6672: "Orange juice", 6673: "Chocolate pudding",
-    6674: "Barbecue sauce", 6675: "Tomato sauce",
-}
-
-
-def native_policy_scores(task_id, runs):
-    # The visual student shares weights across groceries. Each teacher has its own weights.
-    policies = {}
-    for run in runs:
-        name = ("Visual student" if run["policy"] == "student" else
-                f"{OBJECT_NAMES[run['object_id']]} state teacher")
-        result = policies.setdefault(name, dict(policy=name, successes=0, attempts=0))
-        wins, attempts = native_counts(task_id, run)
-        result["successes"] += wins
-        result["attempts"] += attempts
-    population = {"fr3v2_jf_pick": "Pick entries", "fr3v2_jf_place": "valid Place handoffs",
-                  "fr3v2_jf_pick_place": "full episodes from home"}[task_id]
-    for name, result in policies.items():
-        objects = "all five groceries" if name == "Visual student" else name.removesuffix(" state teacher").lower()
-        result["protocol"] = f"Normal starts on axis2, {objects}. Scored over {population}."
-    return list(policies.values())
-
-
 def success_fraction(run):
     return Fraction(run["successes"], run["attempts"])
-
-
-def native_table(task, runs):
-    key = task["id"]
-    population = {
-        "fr3v2_jf_pick": "Pick entries",
-        "fr3v2_jf_place": "valid Place handoffs",
-        "fr3v2_jf_pick_place": "all home starts",
-    }[key]
-    html = [
-        f"<h3>Frozen FR3v2 evaluations</h3><p>Normal starts on axis2, scored over {population}.</p>"
-    ]
-    for kind in ("student", "teacher"):
-        group = [r for r in runs if r["policy"] == kind]
-        counts = [native_counts(key, r) for r in group]
-        score = stage_rate(sum(w for w, n in counts), sum(n for w, n in counts))
-        html.append(f"<p><strong>{kind.capitalize()}</strong> · {score}</p>")
-    html.append(
-        "<table><caption>Object-level results</caption><thead><tr><th>Object</th><th>Policy</th><th>Seed</th><th>Success</th></tr></thead><tbody>"
-    )
-    for r in runs:
-        wins, n = native_counts(key, r)
-        html.append(
-            f"<tr><td>{h(OBJECT_NAMES[r['object_id']])} ({r['object_id']})</td><td>{h(r['policy'])}</td><td>{r['seed']}</td><td>{stage_rate(wins, n)}</td></tr>"
-        )
-    html.append(
-        "</tbody></table><p>The barbecue sauce teacher had a second batch of eight after the first four starts yielded no valid Place handoffs. Both batches are shown.</p>"
-    )
-    return "".join(html)
 
 
 def heading(r):
@@ -107,6 +42,7 @@ def heading(r):
     }.get(r["embodiment"], r["embodiment"])
 
 
+progress = full['evaluation_progress']
 groups = [
     "I2RT / YAM",
     "Franka Panda",
@@ -119,7 +55,7 @@ parts = [
     '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Task library and expert evaluations · Axis OmniReset</title><style>'
     + style
     + '</style></head><body><header><strong>AXIS / OmniReset</strong><a href="index.html">Task atlas</a></header><main><h1>Task library</h1>',
-    f"<p>{full['coverage']['implementations']} OmniReset environments, {len(rows) - len(core)} aliases and {len(full['coverage']['native_source_tasks'])} original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. All success rates come from the latest evaluation. For tasks with several evaluated experts, the summary shows the highest rate on that task and robot. Each result identifies its policy and evaluation conditions. Updated {full['as_of']}.</p>",
+    f"<p>{full['coverage']['implementations']} OmniReset environments, {len(rows) - len(core)} aliases and {len(full['coverage']['native_source_tasks'])} original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. {progress['completed']} of {progress['total']} expert evaluations are complete. Scores are published after every required start for that model has been evaluated. For tasks with several evaluated experts, the summary shows the highest rate on that task and robot. Each result identifies its policy and evaluation conditions. Updated {full['as_of']}.</p>",
     f"<p>All {physics['tasks_verified']} I2RT tasks use the dual-arm ABC Box V4 robot with joint gains and friction from its USD. Each {physics['control_hz']} Hz control action runs for {physics['substeps']} physics steps at {physics['physics_hz']} Hz. PhysX uses {h(physics['solver'])} with {physics['position_iterations']} position iterations and {physics['velocity_iterations']} velocity iteration. Each task’s timing and robot parameters were checked on axis.</p>",
     "<p>Server library root <code>"
     + h(full["root"])
@@ -144,16 +80,7 @@ for i, g in enumerate(groups):
             for j in r["scores"]
             if matches(r, scores[j]) and scores[j]["task"] == k
         ]
-        fresh = (
-            [run for run in full["source_fr3v2_full_episodes"]
-             if run["task"] == "fr3v2_jf_pick_place" and matches(r, run)]
-            if k in full["coverage"]["native_source_tasks"]
-            else []
-        )
-        candidates = qs.copy()
-        if fresh:
-            candidates.extend(native_policy_scores(k, fresh))
-        ranked = sorted((e for e in candidates if e["attempts"] > 0),
+        ranked = sorted((e for e in qs if e["group"] == "primary" and e["attempts"] > 0),
                         key=lambda e: (success_fraction(e), e["attempts"]), reverse=True)
         multiple = len({e["policy"] for e in ranked}) > 1
         score = r["expert_status"]
@@ -224,27 +151,13 @@ for i, g in enumerate(groups):
         parts.append(
             f"<dt>Server directory</dt><dd><code>{h(r['by_task'])}/</code></dd></dl>"
         )
-        if ranked:
-            location = "axis2" if fresh else ", ".join(sorted({e.get("evaluation_host", "axis") for e in ranked}))
-            parts.append(
-                f"<table><caption>Frozen-policy evaluations on {location}</caption><thead><tr><th>Policy or configuration</th><th>Success</th><th>Protocol</th></tr></thead><tbody>"
-            )
-            for e in ranked:
-                code = f" Code <code>{h(e['revision'])}</code>." if e.get("revision") else ""
-                parts.append(
-                    f"<tr><td>{h(e['policy'])}</td><td>{fmt(e)}</td><td>{h(e['protocol'])}{code}</td></tr>"
-                )
+        if qs:
+            parts.append("<table><caption>Complete frozen-policy evaluations</caption><thead><tr><th>Policy</th><th>Success</th><th>Evaluated conditions</th></tr></thead><tbody>")
+            secondary = [e for e in qs if e not in ranked]
+            for e in ranked + secondary:
+                value = fmt(e) if e["attempts"] else "No valid handoffs"
+                parts.append(f"<tr><td>{h(e['policy'])}</td><td>{value}</td><td>{h(e['protocol'])}</td></tr>")
             parts.append("</tbody></table>")
-        atomic = r.get("atomic_skill")
-        if atomic:
-            parts.append(
-                f"<p><strong>Atomic Press skill TEST</strong> · {fmt(atomic)}. "
-                f"{atomic['buckets']} conditions with {atomic['cases_per_bucket']} cases each. "
-                f"Minimum condition success {atomic['minimum_bucket_successes']}/{atomic['minimum_bucket_attempts']}. "
-                f"{h(atomic['scope'])}</p>"
-            )
-        if fresh:
-            parts.append(native_table(r, fresh))
         parts.append("<dl>")
         for role, label in names.items():
             v = r["resources"][role]

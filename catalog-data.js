@@ -2594,7 +2594,7 @@ window.AXIS_ATLAS = {
       "taskRevision": "JF frozen delivery 2026-11-06",
       "sources": [],
       "expert": {
-        "name": "place_student",
+        "name": "Object-specific state teachers",
         "availability": "Evaluated",
         "runnable": true,
         "sources": [],
@@ -2605,9 +2605,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "trainingEmbodiment": "franka_fr3v2",
           "evaluationEmbodiment": "franka_fr3v2",
-          "successes": 550,
-          "attempts": 554,
-          "protocol": "Place from valid physical handoffs across all five groceries"
+          "successes": 3027,
+          "attempts": 3041,
+          "protocol": "Place from valid physical handoffs across all five groceries using the designated teacher for each object"
         }
       },
       "refs": {
@@ -2645,7 +2645,7 @@ window.AXIS_ATLAS = {
       "taskRevision": "JF frozen delivery 2026-11-06",
       "sources": [],
       "expert": {
-        "name": "pick + place student",
+        "name": "Object-specific state teachers",
         "availability": "Evaluated",
         "runnable": true,
         "sources": [],
@@ -2656,9 +2656,9 @@ window.AXIS_ATLAS = {
           "actionDim": 7,
           "trainingEmbodiment": "franka_fr3v2",
           "evaluationEmbodiment": "franka_fr3v2",
-          "successes": 550,
-          "attempts": 1000,
-          "protocol": "Full chain from sealed home starts across all five groceries"
+          "successes": 3027,
+          "attempts": 5000,
+          "protocol": "Full chain from sealed home starts across all five groceries using the designated teacher for each object"
         }
       },
       "refs": {
@@ -2698,6 +2698,30 @@ window.AXIS_ATLAS = {
       "protocol": "Two commands with a return home",
       "tiedPolicies": 2,
       "embodimentId": "i2rt_yam"
+    },
+    "fr3v2_jf_pick": {
+      "policy": "pick_student",
+      "successes": 993,
+      "attempts": 1000,
+      "protocol": "Pick from sealed home starts across all five groceries",
+      "tiedPolicies": 1,
+      "embodimentId": "franka_fr3v2"
+    },
+    "fr3v2_jf_pick_place": {
+      "policy": "Object-specific state teachers",
+      "successes": 3027,
+      "attempts": 5000,
+      "protocol": "Full chain from sealed home starts across all five groceries using the designated teacher for each object",
+      "tiedPolicies": 1,
+      "embodimentId": "franka_fr3v2"
+    },
+    "fr3v2_jf_place": {
+      "policy": "Object-specific state teachers",
+      "successes": 3027,
+      "attempts": 3041,
+      "protocol": "Place from valid physical handoffs across all five groceries using the designated teacher for each object",
+      "tiedPolicies": 1,
+      "embodimentId": "franka_fr3v2"
     }
   }
 };

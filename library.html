@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Task library and expert evaluations · Axis OmniReset</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{font:16px/1.5 Inter,Arial,sans-serif;color:#232721;background:#f6f6f1;margin:0}@font-face{font-family:Inter;src:url(assets/inter-latin.woff2)}header,main,footer{max-width:1160px;margin:auto;padding:22px clamp(16px,3vw,40px)}header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #bebfb7}header strong{letter-spacing:.08em}a{color:#255d49;text-underline-offset:.18em}h1{font-size:clamp(34px,5vw,62px);line-height:1.05;margin:1em 0 .25em;letter-spacing:-.05em}h2{margin:2em 0 .5em}p{max-width:82ch}nav{display:flex;gap:14px;flex-wrap:wrap}code{font-size:.88em;overflow-wrap:anywhere}details{scroll-margin-top:12px;background:#fff;border:1px solid #ddded7;border-radius:6px;margin:6px 0}details[open]{border-color:#759883}summary{cursor:pointer;padding:14px 16px}summary strong{margin-right:12px}summary small{float:right;color:#43584c}details>div{padding:0 18px 12px}dt{font-weight:650;margin-top:12px}dd{margin:2px 0}ul{padding-left:22px}li{margin:.25em 0}table{border-collapse:collapse;width:100%}td,th{text-align:left;border-bottom:1px solid #ddd;padding:7px 8px;vertical-align:top}input{width:100%;padding:10px 12px;font:inherit;border:1px solid #afb8ae;border-radius:4px}footer{margin-top:3em} @media(max-width:650px){summary small{float:none;display:block}td,th{padding:4px;font-size:14px}}</style></head><body><header><strong>AXIS / OmniReset</strong><a href="index.html">Task atlas</a></header><main><h1>Task library</h1>
-<p>39 OmniReset environments, 5 aliases and 3 original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. 39 of 60 expert evaluations are complete. Scores are published after every required start for that model has been evaluated. For tasks with several evaluated experts, the summary shows the highest rate on that task and robot. Each result identifies its policy and evaluation conditions. Updated 2026-11-21.</p>
+<p>39 OmniReset environments, 5 aliases and 3 original FR3v2 tasks on <code>axis</code>. Open a task for its starting conditions, success criterion, dimensions, files and frozen-policy results. 43 of 60 expert evaluations are complete. Scores are published after every required start for that model has been evaluated. For tasks with several evaluated experts, the summary shows the highest rate on that task and robot. Each result identifies its policy and evaluation conditions. Updated 2026-11-23.</p>
 <p>All 26 I2RT tasks use the dual-arm ABC Box V4 robot with joint gains and friction from its USD. Each 30 Hz control action runs for 5 physics steps at 150 Hz. PhysX uses TGS with 64 position iterations and 1 velocity iteration. Each task’s timing and robot parameters were checked on axis.</p>
 <p>Server library root <code>/localdisk/artifacts_shared/axis-omnireset/task-library/v1</code>. Resource paths are relative to this directory. <a href="task-library.json">Download the inventory and evaluation results</a>.</p>
 <nav aria-label="Embodiments"><a href="#group-0">I2RT / YAM</a><a href="#group-1">Franka Panda</a><a href="#group-2">Franka FR3v2</a><a href="#group-3">Dual ARX X5</a><a href="#group-4">Planar point mass</a></nav><p><label for="filter">Find a task or alias</label><input type="search" id="filter" placeholder="Task ID or name"></p>
@@ -466,7 +466,7 @@
 </dl></div></details>
 </section>
 <section id="group-2"><h2>Franka FR3v2</h2>
-<details id="fr3v2_jf_pick" data-aliases="" data-search="fr3v2_jf_pick jf object pick"><summary><strong>JF object pick</strong><code>fr3v2_jf_pick</code><small>99.3% (993/1,000)</small></summary><div><dl>
+<details id="fr3v2_jf_pick" data-aliases="" data-search="fr3v2_jf_pick jf object pick"><summary><strong>JF object pick</strong><code>fr3v2_jf_pick</code><small>Best expert · 99.3% (993/1,000)</small></summary><div><dl>
 <dt>Start</dt><dd>From randomized object, basket and clutter poses, the arm starts open at home. A global-depth planner brings it to the local Pick entry.</dd>
 <dt>Success</dt><dd>From the Pick-entry baseline, lift the target center of mass at least 3 cm. Both fingertips must each exert more than 0.001 N and every other measured contact must stay at or below 0.001 N for 48 consecutive 120 Hz physics ticks (0.4 s).</dd>
 <dt>Observation / action</dt><dd>1033 / 7 · 5 Hz policy · 120 Hz physics · 24 substeps</dd>
@@ -474,13 +474,17 @@
 <dt>Objects</dt><dd>Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.</dd>
 <dt>Runtime</dt><dd>Source simulator on axis2 via evaluate_jf.py fr3v2_jf_pick</dd>
 <dt>Expert availability</dt><dd>Five object-specific state teachers and one shared visual student.</dd>
+<dt>Highest-scoring policy</dt><dd>pick_student</dd>
 <dt>I2RT versions</dt><dd><a href="#i2rt_jf_pick">JF object pick · <code>i2rt_jf_pick</code></a></dd>
 <dt>Related FR3v2 tasks</dt><dd><a href="#fr3v2_jf_place">JF object placement · <code>fr3v2_jf_place</code></a>, <a href="#fr3v2_jf_pick_place">JF pick and place · <code>fr3v2_jf_pick_place</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/fr3v2_jf_pick/</code></dd></dl>
 <table><caption>Complete frozen-policy evaluations</caption><thead><tr><th>Policy</th><th>Success</th><th>Evaluated conditions</th></tr></thead><tbody>
 <tr><td>pick_student</td><td>99.3% (993/1,000)</td><td>Pick from sealed home starts across all five groceries</td></tr>
+<tr><td>Object-specific state teachers</td><td>99.14% (4,957/5,000)</td><td>Pick from sealed home starts across all five groceries using the designated teacher for each object</td></tr>
 <tr><td>pick_6671</td><td>99.5% (995/1,000)</td><td>Pick from sealed home starts for butter</td></tr>
 <tr><td>pick_6672</td><td>99.1% (991/1,000)</td><td>Pick from sealed home starts for orange juice</td></tr>
+<tr><td>pick_6673</td><td>98.2% (982/1,000)</td><td>Pick from sealed home starts for chocolate pudding</td></tr>
+<tr><td>pick_6674</td><td>99.6% (996/1,000)</td><td>Pick from sealed home starts for barbecue sauce</td></tr>
 <tr><td>pick_6675</td><td>99.3% (993/1,000)</td><td>Pick from sealed home starts for tomato sauce</td></tr>
 <tr><td>pick_student</td><td>99% (198/200)</td><td>Pick from sealed home starts for butter</td></tr>
 <tr><td>pick_student</td><td>100% (200/200)</td><td>Pick from sealed home starts for orange juice</td></tr>
@@ -494,7 +498,7 @@
 <dt>Trajectories and replay</dt><dd>No released resource located.</dd>
 <dt>Reset banks</dt><dd><ul><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data</code></li></ul></dd>
 </dl></div></details>
-<details id="fr3v2_jf_pick_place" data-aliases="" data-search="fr3v2_jf_pick_place jf pick and place"><summary><strong>JF pick and place</strong><code>fr3v2_jf_pick_place</code><small>55% (550/1,000)</small></summary><div><dl>
+<details id="fr3v2_jf_pick_place" data-aliases="" data-search="fr3v2_jf_pick_place jf pick and place"><summary><strong>JF pick and place</strong><code>fr3v2_jf_pick_place</code><small>Best expert · 60.54% (3,027/5,000)</small></summary><div><dl>
 <dt>Start</dt><dd>One randomized home scene per episode, with an open gripper, a target, a basket and clutter. Global depth guides the approach and transport.</dd>
 <dt>Success</dt><dd>Complete Pick, carry the held object and complete Place in the same simulation episode. Failed grasps, transport failures and failed releases all count. The physical completion checker gates both stages.</dd>
 <dt>Observation / action</dt><dd>Pick 1,033 / Place 107 / 7 · 5 Hz policy · 120 Hz physics · 24 substeps</dd>
@@ -502,12 +506,16 @@
 <dt>Objects</dt><dd>Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.</dd>
 <dt>Runtime</dt><dd>Source simulator on axis2 via evaluate_jf.py fr3v2_jf_pick_place</dd>
 <dt>Expert availability</dt><dd>Five object-specific state teachers and one shared visual student for each stage.</dd>
+<dt>Highest-scoring policy</dt><dd>Object-specific state teachers</dd>
 <dt>Related FR3v2 tasks</dt><dd><a href="#fr3v2_jf_pick">JF object pick · <code>fr3v2_jf_pick</code></a>, <a href="#fr3v2_jf_place">JF object placement · <code>fr3v2_jf_place</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/fr3v2_jf_pick_place/</code></dd></dl>
 <table><caption>Complete frozen-policy evaluations</caption><thead><tr><th>Policy</th><th>Success</th><th>Evaluated conditions</th></tr></thead><tbody>
+<tr><td>Object-specific state teachers</td><td>60.54% (3,027/5,000)</td><td>Full chain from sealed home starts across all five groceries using the designated teacher for each object</td></tr>
 <tr><td>pick + place student</td><td>55% (550/1,000)</td><td>Full chain from sealed home starts across all five groceries</td></tr>
 <tr><td>pick + place 6671</td><td>70.3% (703/1,000)</td><td>Full chain from sealed home starts for butter</td></tr>
 <tr><td>pick + place 6672</td><td>80.1% (801/1,000)</td><td>Full chain from sealed home starts for orange juice</td></tr>
+<tr><td>pick + place 6673</td><td>60.2% (602/1,000)</td><td>Full chain from sealed home starts for chocolate pudding</td></tr>
+<tr><td>pick + place 6674</td><td>26.6% (266/1,000)</td><td>Full chain from sealed home starts for barbecue sauce</td></tr>
 <tr><td>pick + place 6675</td><td>65.5% (655/1,000)</td><td>Full chain from sealed home starts for tomato sauce</td></tr>
 <tr><td>pick + place student</td><td>66.5% (133/200)</td><td>Full chain from sealed home starts for butter</td></tr>
 <tr><td>pick + place student</td><td>79% (158/200)</td><td>Full chain from sealed home starts for orange juice</td></tr>
@@ -521,7 +529,7 @@
 <dt>Trajectories and replay</dt><dd>No released resource located.</dd>
 <dt>Reset banks</dt><dd><ul><li><code>central/store/jf-source/a100_sim_migration_20261024/butter_r75_allclutter_20261021_v1/reset_data</code></li></ul></dd>
 </dl></div></details>
-<details id="fr3v2_jf_place" data-aliases="" data-search="fr3v2_jf_place jf object placement"><summary><strong>JF object placement</strong><code>fr3v2_jf_place</code><small>99.28% (550/554)</small></summary><div><dl>
+<details id="fr3v2_jf_place" data-aliases="" data-search="fr3v2_jf_place jf object placement"><summary><strong>JF object placement</strong><code>fr3v2_jf_place</code><small>Best expert · 99.54% (3,027/3,041)</small></summary><div><dl>
 <dt>Start</dt><dd>A Pick policy grasps and lifts the target. A camera-guided planner carries it toward the basket. Local Place starts only at a valid pre-action handoff. A drop before handoff is excluded. All subsequent failures count.</dd>
 <dt>Success</dt><dd>Release the object inside the upright container, satisfy the source placement/contact check, command the jaw open and clear both fingers. Three qualifying samples spaced 0.2 s apart must differ by at most 2 mm in position and 0.05 rad in orientation per interval.</dd>
 <dt>Observation / action</dt><dd>107 / 7 · 5 Hz policy · 120 Hz physics · 24 substeps</dd>
@@ -529,13 +537,17 @@
 <dt>Objects</dt><dd>Five released grocery policies cover butter, orange juice, chocolate pudding, barbecue sauce and tomato sauce with a wicker basket. The source also has a marker and box configuration (6703) with no retained expert.</dd>
 <dt>Runtime</dt><dd>Source simulator on axis2 via evaluate_jf.py fr3v2_jf_place</dd>
 <dt>Expert availability</dt><dd>Five object-specific state teachers and one shared visual student.</dd>
+<dt>Highest-scoring policy</dt><dd>Object-specific state teachers</dd>
 <dt>I2RT versions</dt><dd><a href="#i2rt_jf_place">JF object placement · <code>i2rt_jf_place</code></a></dd>
 <dt>Related FR3v2 tasks</dt><dd><a href="#fr3v2_jf_pick">JF object pick · <code>fr3v2_jf_pick</code></a>, <a href="#fr3v2_jf_pick_place">JF pick and place · <code>fr3v2_jf_pick_place</code></a></dd>
 <dt>Server directory</dt><dd><code>by-task/fr3v2_jf_place/</code></dd></dl>
 <table><caption>Complete frozen-policy evaluations</caption><thead><tr><th>Policy</th><th>Success</th><th>Evaluated conditions</th></tr></thead><tbody>
+<tr><td>Object-specific state teachers</td><td>99.54% (3,027/3,041)</td><td>Place from valid physical handoffs across all five groceries using the designated teacher for each object</td></tr>
 <tr><td>place_student</td><td>99.28% (550/554)</td><td>Place from valid physical handoffs across all five groceries</td></tr>
 <tr><td>place_6671</td><td>100% (703/703)</td><td>Place from valid physical handoffs for butter</td></tr>
 <tr><td>place_6672</td><td>99.5% (801/805)</td><td>Place from valid physical handoffs for orange juice</td></tr>
+<tr><td>place_6673</td><td>99.34% (602/606)</td><td>Place from valid physical handoffs for chocolate pudding</td></tr>
+<tr><td>place_6674</td><td>98.15% (266/271)</td><td>Place from valid physical handoffs for barbecue sauce</td></tr>
 <tr><td>place_6675</td><td>99.85% (655/656)</td><td>Place from valid physical handoffs for tomato sauce</td></tr>
 <tr><td>place_student</td><td>100% (133/133)</td><td>Place from valid physical handoffs for butter</td></tr>
 <tr><td>place_student</td><td>98.14% (158/161)</td><td>Place from valid physical handoffs for orange juice</td></tr>

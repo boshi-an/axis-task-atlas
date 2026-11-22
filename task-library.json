@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-21",
+  "as_of": "2026-11-23",
   "host": "axis",
   "root": "/localdisk/artifacts_shared/axis-omnireset/task-library/v1",
   "source_revision": "f97139a7c2336afb3ac803beb3bc81550e090469",
@@ -770,10 +770,10 @@
         27,
         28,
         29,
-        59,
-        60,
-        61,
-        62
+        68,
+        69,
+        70,
+        71
       ],
       "aliases": [],
       "embodiment_id": "i2rt_yam",
@@ -2115,14 +2115,17 @@
       "by_task": "by-task/fr3v2_jf_pick",
       "scores": [
         32,
-        34,
+        33,
         36,
         38,
-        39,
+        40,
         42,
         44,
-        46,
-        48
+        45,
+        48,
+        50,
+        52,
+        54
       ],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator",
@@ -2162,15 +2165,18 @@
       "aliases": [],
       "by_task": "by-task/fr3v2_jf_place",
       "scores": [
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
         56,
         57,
-        58
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
       ],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator",
@@ -2212,15 +2218,18 @@
       "aliases": [],
       "by_task": "by-task/fr3v2_jf_pick_place",
       "scores": [
-        33,
+        34,
         35,
         37,
-        40,
+        39,
         41,
         43,
-        45,
+        46,
         47,
-        49
+        49,
+        51,
+        53,
+        55
       ],
       "embodiment_id": "franka_fr3v2",
       "runtime": "JF source simulator"
@@ -3309,6 +3318,55 @@
       ]
     },
     {
+      "task": "fr3v2_jf_pick",
+      "policy": "Object-specific state teachers",
+      "group": "primary",
+      "protocol": "Pick from sealed home starts across all five groceries using the designated teacher for each object",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick_6671": "96136219111f94041528c18eb99afce1161054ad681740a7e540641bca053648",
+        "pick_6672": "f74ec9b397f43e36ef7217cfd7d2d0ba25fcb6c42c0096419e17b1f9a27fe994",
+        "pick_6673": "81b289c81f7f0158da0a7458b07c5df254c314d719ca17fdbeb6874aab3c0f68",
+        "pick_6674": "15c76c45806b7b1538d4f9831a5e2dce25104b07b58402e7de4dadedd361c2b3",
+        "pick_6675": "c4d2c49bdcca29bb9cf4b0edb138e0c0048c271be47eaaec5c7357c5773da01b"
+      },
+      "successes": 4957,
+      "attempts": 5000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6671-full-retry3-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 995,
+          "attempts": 1000
+        },
+        {
+          "receipt": "fr3-teacher-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 991,
+          "attempts": 1000
+        },
+        {
+          "receipt": "fr3-teacher-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 982,
+          "attempts": 1000
+        },
+        {
+          "receipt": "fr3-teacher-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 996,
+          "attempts": 1000
+        },
+        {
+          "receipt": "fr3-teacher-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 993,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
       "task": "fr3v2_jf_pick_place",
       "policy": "pick + place 6671",
       "group": "object butter",
@@ -3326,6 +3384,60 @@
           "receipt": "fr3-teacher-6671-full-retry3-fixed-panel",
           "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
           "successes": 703,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "Object-specific state teachers",
+      "group": "primary",
+      "protocol": "Full chain from sealed home starts across all five groceries using the designated teacher for each object",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick_6671": "96136219111f94041528c18eb99afce1161054ad681740a7e540641bca053648",
+        "pick_6672": "f74ec9b397f43e36ef7217cfd7d2d0ba25fcb6c42c0096419e17b1f9a27fe994",
+        "pick_6673": "81b289c81f7f0158da0a7458b07c5df254c314d719ca17fdbeb6874aab3c0f68",
+        "pick_6674": "15c76c45806b7b1538d4f9831a5e2dce25104b07b58402e7de4dadedd361c2b3",
+        "pick_6675": "c4d2c49bdcca29bb9cf4b0edb138e0c0048c271be47eaaec5c7357c5773da01b",
+        "place_6671": "7598d2a35b516948392bf9e863d9c05becaa1d30cfb44d1a3089423ef4611148",
+        "place_6672": "c71b8e74b278faa4da185035685903471254055e4dc03924dc8d24174ee0ed69",
+        "place_6673": "a6b3d3970c7c36cbe3775efb5fbf2eaf2653e54b5f8ec383b76f54071b18b17a",
+        "place_6674": "e4bcc8408a9dd00236cb51ca6e14b6448d4aa8bcf748a44b4c27044ecc59218b",
+        "place_6675": "6c7598f2dddf7b9e1c7cc6d508f396cc1ca7dc60d19c5603fa624973157dfb48"
+      },
+      "successes": 3027,
+      "attempts": 5000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6671-full-retry3-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 703,
+          "attempts": 1000
+        },
+        {
+          "receipt": "fr3-teacher-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 801,
+          "attempts": 1000
+        },
+        {
+          "receipt": "fr3-teacher-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 602,
+          "attempts": 1000
+        },
+        {
+          "receipt": "fr3-teacher-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 266,
+          "attempts": 1000
+        },
+        {
+          "receipt": "fr3-teacher-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 655,
           "attempts": 1000
         }
       ]
@@ -3369,6 +3481,92 @@
           "receipt": "fr3-teacher-6672-full-fixed-panel",
           "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
           "successes": 801,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_6673",
+      "group": "object chocolate pudding",
+      "protocol": "Pick from sealed home starts for chocolate pudding",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "81b289c81f7f0158da0a7458b07c5df254c314d719ca17fdbeb6874aab3c0f68"
+      },
+      "successes": 982,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 982,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place 6673",
+      "group": "object chocolate pudding",
+      "protocol": "Full chain from sealed home starts for chocolate pudding",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "81b289c81f7f0158da0a7458b07c5df254c314d719ca17fdbeb6874aab3c0f68",
+        "place": "a6b3d3970c7c36cbe3775efb5fbf2eaf2653e54b5f8ec383b76f54071b18b17a"
+      },
+      "successes": 602,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 602,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick",
+      "policy": "pick_6674",
+      "group": "object barbecue sauce",
+      "protocol": "Pick from sealed home starts for barbecue sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "15c76c45806b7b1538d4f9831a5e2dce25104b07b58402e7de4dadedd361c2b3"
+      },
+      "successes": 996,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 996,
+          "attempts": 1000
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "policy": "pick + place 6674",
+      "group": "object barbecue sauce",
+      "protocol": "Full chain from sealed home starts for barbecue sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "pick": "15c76c45806b7b1538d4f9831a5e2dce25104b07b58402e7de4dadedd361c2b3",
+        "place": "e4bcc8408a9dd00236cb51ca6e14b6448d4aa8bcf748a44b4c27044ecc59218b"
+      },
+      "successes": 266,
+      "attempts": 1000,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 266,
           "attempts": 1000
         }
       ]
@@ -3745,6 +3943,55 @@
     },
     {
       "task": "fr3v2_jf_place",
+      "policy": "Object-specific state teachers",
+      "group": "primary",
+      "protocol": "Place from valid physical handoffs across all five groceries using the designated teacher for each object",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "place_6671": "7598d2a35b516948392bf9e863d9c05becaa1d30cfb44d1a3089423ef4611148",
+        "place_6672": "c71b8e74b278faa4da185035685903471254055e4dc03924dc8d24174ee0ed69",
+        "place_6673": "a6b3d3970c7c36cbe3775efb5fbf2eaf2653e54b5f8ec383b76f54071b18b17a",
+        "place_6674": "e4bcc8408a9dd00236cb51ca6e14b6448d4aa8bcf748a44b4c27044ecc59218b",
+        "place_6675": "6c7598f2dddf7b9e1c7cc6d508f396cc1ca7dc60d19c5603fa624973157dfb48"
+      },
+      "successes": 3027,
+      "attempts": 3041,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6671-full-retry3-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 703,
+          "attempts": 703
+        },
+        {
+          "receipt": "fr3-teacher-6672-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 801,
+          "attempts": 805
+        },
+        {
+          "receipt": "fr3-teacher-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 602,
+          "attempts": 606
+        },
+        {
+          "receipt": "fr3-teacher-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 266,
+          "attempts": 271
+        },
+        {
+          "receipt": "fr3-teacher-6675-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 655,
+          "attempts": 656
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
       "policy": "place_6672",
       "group": "object orange juice",
       "protocol": "Place from valid physical handoffs for orange juice",
@@ -3761,6 +4008,48 @@
           "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
           "successes": 801,
           "attempts": 805
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_6673",
+      "group": "object chocolate pudding",
+      "protocol": "Place from valid physical handoffs for chocolate pudding",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "a6b3d3970c7c36cbe3775efb5fbf2eaf2653e54b5f8ec383b76f54071b18b17a"
+      },
+      "successes": 602,
+      "attempts": 606,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6673-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 602,
+          "attempts": 606
+        }
+      ]
+    },
+    {
+      "task": "fr3v2_jf_place",
+      "policy": "place_6674",
+      "group": "object barbecue sauce",
+      "protocol": "Place from valid physical handoffs for barbecue sauce",
+      "training_embodiment": "franka_fr3v2",
+      "evaluation_embodiment": "franka_fr3v2",
+      "checkpoint_sha256": {
+        "actor": "e4bcc8408a9dd00236cb51ca6e14b6448d4aa8bcf748a44b4c27044ecc59218b"
+      },
+      "successes": 266,
+      "attempts": 271,
+      "evidence": [
+        {
+          "receipt": "fr3-teacher-6674-full-fixed-panel",
+          "protocol": "Native FR3 fixed normal-home proposals; Pick, conditional Place and complete-chain denominators recorded separately",
+          "successes": 266,
+          "attempts": 271
         }
       ]
     },
@@ -4142,6 +4431,28 @@
     },
     {
       "task": "fr3v2_jf_pick_place",
+      "object_id": 6673,
+      "policy": "teacher",
+      "requested": 1000,
+      "picked": 982,
+      "place_attempts": 606,
+      "place_successes": 602,
+      "server_receipt": "fr3-teacher-6673-full-fixed-panel",
+      "receipt_sha256": "5ffd301afc088c66abb03c9eddcf6800169bcd012fefaa1d225f91a8a5761666"
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
+      "object_id": 6674,
+      "policy": "teacher",
+      "requested": 1000,
+      "picked": 996,
+      "place_attempts": 271,
+      "place_successes": 266,
+      "server_receipt": "fr3-teacher-6674-full-fixed-panel",
+      "receipt_sha256": "5995a03d727d016c10dc8b07053ac9bb85f015a9758d014cfd08495c81a30d73"
+    },
+    {
+      "task": "fr3v2_jf_pick_place",
       "object_id": 6675,
       "policy": "teacher",
       "requested": 1000,
@@ -4236,7 +4547,7 @@
     "server_receipt": "evaluations/experts-30hz-1116/qualification.json"
   },
   "evaluation_progress": {
-    "completed": 39,
+    "completed": 43,
     "total": 60
   }
 }
